@@ -1,0 +1,47 @@
+{
+  "alternate": {
+    "exception_digest": "09949540798f515a6e7ba25aac7d7a605ed9e367b3ed4711305c8a64560d7ea4",
+    "item_plan_digest": "1aa0d21599aab26760a6aedf23ab6c3af36a7cbb866a64c9307a90b17ed9f0b1",
+    "planned_order_count": 2458,
+    "summary": {
+      "effective_exception_min_qty": 40,
+      "effective_grace_days": 2,
+      "effective_max_backlog_days": 14,
+      "effective_pos_cap_days": 20,
+      "exception_count": 90,
+      "item_count": 600,
+      "max_low_level_code": 4,
+      "past_due_count": 90,
+      "planned_order_count": 2458,
+      "position_count": 589,
+      "schema_version": "mrp-plan-v1",
+      "total_net_requirement": 10153984,
+      "total_planned_qty": 19447017
+    }
+  },
+  "broken_planner_sha256": "1f512b3d8efeb7712bcf2d1a3767f4ed772e827692f97d103abde6c1ff4d7556",
+  "primary": {
+    "exception_digest": "a62bbd2c044c528a98fb3f1bb502a8526de41497428c25dbbd588a9da29b4f92",
+    "item_plan_digest": "29515dcf0f4c982afd805c43b1c9dcb1fcbc03f0ad4fc50f3dfca336682e4dce",
+    "planned_order_count": 3348,
+    "summary": {
+      "effective_exception_min_qty": 40,
+      "effective_grace_days": 2,
+      "effective_max_backlog_days": 14,
+      "effective_pos_cap_days": 20,
+      "exception_count": 184,
+      "item_count": 600,
+      "max_low_level_code": 4,
+      "past_due_count": 184,
+      "planned_order_count": 3348,
+      "position_count": 589,
+      "schema_version": "mrp-plan-v1",
+      "total_net_requirement": 9447515,
+      "total_planned_qty": 20330719
+    }
+  },
+  "recovered_position_count": 589,
+  "recovered_positions_digest": "ebf292b6591e05bb9e05a92a646c776ec5537320e6f6b99713f97b2711503b20",
+  "rule_sources_digest": "3e60ba81a8fb7555945b38ea892f6cd7686e13d176967c4cf1cbb26e039ff99e",
+  "shipped_truncated_digest": "d623eb0f5379a3389a6fda2acbc6483025ee471712b9237a94cc0ba55e2464c9"
+}

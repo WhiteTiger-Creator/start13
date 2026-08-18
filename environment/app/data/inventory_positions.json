@@ -1,0 +1,1563 @@
+[
+  {
+    "item_id": "ITM-00001",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00002",
+    "on_hand": 737,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00003",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 48,
+        "qty": 508,
+        "receipt_id": "PO-00003-0"
+      },
+      {
+        "due_day": 37,
+        "qty": 176,
+        "receipt_id": "PO-00003-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00004",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 34,
+        "qty": 466,
+        "receipt_id": "PO-00004-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00005",
+    "on_hand": 849,
+    "scheduled_receipts": [
+      {
+        "due_day": 35,
+        "qty": 113,
+        "receipt_id": "PO-00005-0"
+      },
+      {
+        "due_day": 49,
+        "qty": 355,
+        "receipt_id": "PO-00005-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00006",
+    "on_hand": 186,
+    "scheduled_receipts": [
+      {
+        "due_day": 11,
+        "qty": 228,
+        "receipt_id": "PO-00006-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00007",
+    "on_hand": 605,
+    "scheduled_receipts": [
+      {
+        "due_day": 43,
+        "qty": 398,
+        "receipt_id": "PO-00007-0"
+      },
+      {
+        "due_day": 49,
+        "qty": 490,
+        "receipt_id": "PO-00007-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00008",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00009",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 37,
+        "qty": 67,
+        "receipt_id": "PO-00009-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00010",
+    "on_hand": 864,
+    "scheduled_receipts": [
+      {
+        "due_day": 14,
+        "qty": 278,
+        "receipt_id": "PO-00010-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00011",
+    "on_hand": 467,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00012",
+    "on_hand": 191,
+    "scheduled_receipts": [
+      {
+        "due_day": 30,
+        "qty": 192,
+        "receipt_id": "PO-00012-0"
+      },
+      {
+        "due_day": 34,
+        "qty": 220,
+        "receipt_id": "PO-00012-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00013",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00014",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 8,
+        "qty": 355,
+        "receipt_id": "PO-00014-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00015",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00016",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 10,
+        "qty": 481,
+        "receipt_id": "PO-00016-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00017",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 52,
+        "qty": 392,
+        "receipt_id": "PO-00017-0"
+      },
+      {
+        "due_day": 43,
+        "qty": 268,
+        "receipt_id": "PO-00017-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00018",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00019",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 32,
+        "qty": 590,
+        "receipt_id": "PO-00019-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00020",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 21,
+        "qty": 444,
+        "receipt_id": "PO-00020-0"
+      },
+      {
+        "due_day": 9,
+        "qty": 236,
+        "receipt_id": "PO-00020-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00021",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 58,
+        "qty": 68,
+        "receipt_id": "PO-00021-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00022",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00023",
+    "on_hand": 111,
+    "scheduled_receipts": [
+      {
+        "due_day": 47,
+        "qty": 318,
+        "receipt_id": "PO-00023-0"
+      },
+      {
+        "due_day": 45,
+        "qty": 28,
+        "receipt_id": "PO-00023-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00024",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 58,
+        "qty": 65,
+        "receipt_id": "PO-00024-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00025",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 49,
+        "qty": 94,
+        "receipt_id": "PO-00025-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00026",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 6,
+        "qty": 366,
+        "receipt_id": "PO-00026-0"
+      },
+      {
+        "due_day": 31,
+        "qty": 392,
+        "receipt_id": "PO-00026-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00027",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 51,
+        "qty": 520,
+        "receipt_id": "PO-00027-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00028",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00029",
+    "on_hand": 132,
+    "scheduled_receipts": [
+      {
+        "due_day": 34,
+        "qty": 435,
+        "receipt_id": "PO-00029-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00030",
+    "on_hand": 633,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00031",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 12,
+        "qty": 562,
+        "receipt_id": "PO-00031-0"
+      },
+      {
+        "due_day": 33,
+        "qty": 99,
+        "receipt_id": "PO-00031-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00032",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 29,
+        "qty": 27,
+        "receipt_id": "PO-00032-0"
+      },
+      {
+        "due_day": 40,
+        "qty": 521,
+        "receipt_id": "PO-00032-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00033",
+    "on_hand": 337,
+    "scheduled_receipts": [
+      {
+        "due_day": 1,
+        "qty": 135,
+        "receipt_id": "PO-00033-0"
+      },
+      {
+        "due_day": 10,
+        "qty": 154,
+        "receipt_id": "PO-00033-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00034",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00035",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 58,
+        "qty": 578,
+        "receipt_id": "PO-00035-0"
+      },
+      {
+        "due_day": 44,
+        "qty": 358,
+        "receipt_id": "PO-00035-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00036",
+    "on_hand": 340,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00037",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 20,
+        "qty": 465,
+        "receipt_id": "PO-00037-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00038",
+    "on_hand": 539,
+    "scheduled_receipts": [
+      {
+        "due_day": 36,
+        "qty": 413,
+        "receipt_id": "PO-00038-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00039",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 46,
+        "qty": 194,
+        "receipt_id": "PO-00039-0"
+      },
+      {
+        "due_day": 39,
+        "qty": 93,
+        "receipt_id": "PO-00039-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00040",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00041",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 6,
+        "qty": 170,
+        "receipt_id": "PO-00041-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00042",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 54,
+        "qty": 259,
+        "receipt_id": "PO-00042-0"
+      },
+      {
+        "due_day": 6,
+        "qty": 489,
+        "receipt_id": "PO-00042-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00043",
+    "on_hand": 193,
+    "scheduled_receipts": [
+      {
+        "due_day": 17,
+        "qty": 589,
+        "receipt_id": "PO-00043-0"
+      },
+      {
+        "due_day": 41,
+        "qty": 275,
+        "receipt_id": "PO-00043-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00044",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00045",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 1,
+        "qty": 353,
+        "receipt_id": "PO-00045-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00046",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00047",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00048",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00049",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00050",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 52,
+        "qty": 227,
+        "receipt_id": "PO-00050-0"
+      },
+      {
+        "due_day": 4,
+        "qty": 341,
+        "receipt_id": "PO-00050-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00051",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00052",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00053",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00054",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 42,
+        "qty": 363,
+        "receipt_id": "PO-00054-0"
+      },
+      {
+        "due_day": 25,
+        "qty": 244,
+        "receipt_id": "PO-00054-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00055",
+    "on_hand": 784,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00056",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 42,
+        "qty": 268,
+        "receipt_id": "PO-00056-0"
+      },
+      {
+        "due_day": 14,
+        "qty": 169,
+        "receipt_id": "PO-00056-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00057",
+    "on_hand": 316,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00058",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 59,
+        "qty": 383,
+        "receipt_id": "PO-00058-0"
+      },
+      {
+        "due_day": 40,
+        "qty": 208,
+        "receipt_id": "PO-00058-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00059",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 26,
+        "qty": 370,
+        "receipt_id": "PO-00059-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00060",
+    "on_hand": 554,
+    "scheduled_receipts": [
+      {
+        "due_day": 7,
+        "qty": 39,
+        "receipt_id": "PO-00060-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00061",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 13,
+        "qty": 216,
+        "receipt_id": "PO-00061-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00062",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 3,
+        "qty": 118,
+        "receipt_id": "PO-00062-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00063",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 16,
+        "qty": 34,
+        "receipt_id": "PO-00063-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00064",
+    "on_hand": 19,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00065",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 19,
+        "qty": 351,
+        "receipt_id": "PO-00065-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00066",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00067",
+    "on_hand": 408,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00068",
+    "on_hand": 232,
+    "scheduled_receipts": [
+      {
+        "due_day": 43,
+        "qty": 98,
+        "receipt_id": "PO-00068-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00069",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00070",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 1,
+        "qty": 367,
+        "receipt_id": "PO-00070-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00071",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 2,
+        "qty": 373,
+        "receipt_id": "PO-00071-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00072",
+    "on_hand": 163,
+    "scheduled_receipts": [
+      {
+        "due_day": 59,
+        "qty": 200,
+        "receipt_id": "PO-00072-0"
+      },
+      {
+        "due_day": 44,
+        "qty": 380,
+        "receipt_id": "PO-00072-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00073",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 27,
+        "qty": 260,
+        "receipt_id": "PO-00073-0"
+      },
+      {
+        "due_day": 43,
+        "qty": 264,
+        "receipt_id": "PO-00073-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00074",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 35,
+        "qty": 59,
+        "receipt_id": "PO-00074-0"
+      },
+      {
+        "due_day": 24,
+        "qty": 99,
+        "receipt_id": "PO-00074-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00075",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 45,
+        "qty": 76,
+        "receipt_id": "PO-00075-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00076",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00077",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00078",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00079",
+    "on_hand": 166,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00080",
+    "on_hand": 714,
+    "scheduled_receipts": [
+      {
+        "due_day": 39,
+        "qty": 494,
+        "receipt_id": "PO-00080-0"
+      },
+      {
+        "due_day": 26,
+        "qty": 298,
+        "receipt_id": "PO-00080-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00081",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00082",
+    "on_hand": 543,
+    "scheduled_receipts": [
+      {
+        "due_day": 26,
+        "qty": 349,
+        "receipt_id": "PO-00082-0"
+      },
+      {
+        "due_day": 49,
+        "qty": 591,
+        "receipt_id": "PO-00082-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00083",
+    "on_hand": 569,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00084",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 14,
+        "qty": 275,
+        "receipt_id": "PO-00084-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00085",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 3,
+        "qty": 376,
+        "receipt_id": "PO-00085-0"
+      },
+      {
+        "due_day": 31,
+        "qty": 385,
+        "receipt_id": "PO-00085-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00086",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 34,
+        "qty": 534,
+        "receipt_id": "PO-00086-0"
+      },
+      {
+        "due_day": 38,
+        "qty": 151,
+        "receipt_id": "PO-00086-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00087",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00088",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 3,
+        "qty": 289,
+        "receipt_id": "PO-00088-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00089",
+    "on_hand": 286,
+    "scheduled_receipts": [
+      {
+        "due_day": 29,
+        "qty": 481,
+        "receipt_id": "PO-00089-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00090",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 27,
+        "qty": 158,
+        "receipt_id": "PO-00090-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00091",
+    "on_hand": 384,
+    "scheduled_receipts": [
+      {
+        "due_day": 23,
+        "qty": 436,
+        "receipt_id": "PO-00091-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00092",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00093",
+    "on_hand": 146,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00094",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00095",
+    "on_hand": 570,
+    "scheduled_receipts": [
+      {
+        "due_day": 44,
+        "qty": 348,
+        "receipt_id": "PO-00095-0"
+      },
+      {
+        "due_day": 49,
+        "qty": 80,
+        "receipt_id": "PO-00095-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00096",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00097",
+    "on_hand": 211,
+    "scheduled_receipts": [
+      {
+        "due_day": 43,
+        "qty": 147,
+        "receipt_id": "PO-00097-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00098",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00099",
+    "on_hand": 651,
+    "scheduled_receipts": [
+      {
+        "due_day": 18,
+        "qty": 383,
+        "receipt_id": "PO-00099-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00100",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 9,
+        "qty": 185,
+        "receipt_id": "PO-00100-0"
+      },
+      {
+        "due_day": 45,
+        "qty": 532,
+        "receipt_id": "PO-00100-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00101",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 44,
+        "qty": 489,
+        "receipt_id": "PO-00101-0"
+      },
+      {
+        "due_day": 19,
+        "qty": 272,
+        "receipt_id": "PO-00101-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00102",
+    "on_hand": 849,
+    "scheduled_receipts": [
+      {
+        "due_day": 41,
+        "qty": 250,
+        "receipt_id": "PO-00102-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00103",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 2,
+        "qty": 459,
+        "receipt_id": "PO-00103-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00104",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 48,
+        "qty": 98,
+        "receipt_id": "PO-00104-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00105",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00106",
+    "on_hand": 512,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00107",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 29,
+        "qty": 217,
+        "receipt_id": "PO-00107-0"
+      },
+      {
+        "due_day": 37,
+        "qty": 215,
+        "receipt_id": "PO-00107-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00108",
+    "on_hand": 133,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00109",
+    "on_hand": 658,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00110",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 21,
+        "qty": 595,
+        "receipt_id": "PO-00110-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00111",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 37,
+        "qty": 203,
+        "receipt_id": "PO-00111-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00112",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 53,
+        "qty": 156,
+        "receipt_id": "PO-00112-0"
+      },
+      {
+        "due_day": 28,
+        "qty": 410,
+        "receipt_id": "PO-00112-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00113",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00114",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 5,
+        "qty": 359,
+        "receipt_id": "PO-00114-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00115",
+    "on_hand": 666,
+    "scheduled_receipts": [
+      {
+        "due_day": 43,
+        "qty": 416,
+        "receipt_id": "PO-00115-0"
+      },
+      {
+        "due_day": 30,
+        "qty": 53,
+        "receipt_id": "PO-00115-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00116",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 27,
+        "qty": 574,
+        "receipt_id": "PO-00116-0"
+      },
+      {
+        "due_day": 26,
+        "qty": 296,
+        "receipt_id": "PO-00116-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00117",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 49,
+        "qty": 84,
+        "receipt_id": "PO-00117-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00118",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 4,
+        "qty": 457,
+        "receipt_id": "PO-00118-0"
+      },
+      {
+        "due_day": 32,
+        "qty": 126,
+        "receipt_id": "PO-00118-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00119",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00120",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 6,
+        "qty": 549,
+        "receipt_id": "PO-00120-0"
+      },
+      {
+        "due_day": 14,
+        "qty": 330,
+        "receipt_id": "PO-00120-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00121",
+    "on_hand": 617,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00122",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 2,
+        "qty": 388,
+        "receipt_id": "PO-00122-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00123",
+    "on_hand": 111,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00124",
+    "on_hand": 613,
+    "scheduled_receipts": [
+      {
+        "due_day": 44,
+        "qty": 594,
+        "receipt_id": "PO-00124-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00125",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 5,
+        "qty": 57,
+        "receipt_id": "PO-00125-0"
+      },
+      {
+        "due_day": 39,
+        "qty": 288,
+        "receipt_id": "PO-00125-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00126",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 53,
+        "qty": 529,
+        "receipt_id": "PO-00126-0"
+      },
+      {
+        "due_day": 36,
+        "qty": 217,
+        "receipt_id": "PO-00126-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00127",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00128",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 33,
+        "qty": 276,
+        "receipt_id": "PO-00128-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00129",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00130",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 22,
+        "qty": 372,
+        "receipt_id": "PO-00130-0"
+      },
+      {
+        "due_day": 56,
+        "qty": 76,
+        "receipt_id": "PO-00130-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00131",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 4,
+        "qty": 532,
+        "receipt_id": "PO-00131-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00132",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 21,
+        "qty": 86,
+        "receipt_id": "PO-00132-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00133",
+    "on_hand": 279,
+    "scheduled_receipts": [
+      {
+        "due_day": 57,
+        "qty": 146,
+        "receipt_id": "PO-00133-0"
+      },
+      {
+        "due_day": 47,
+        "qty": 306,
+        "receipt_id": "PO-00133-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00134",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00135",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 2,
+        "qty": 433,
+        "receipt_id": "PO-00135-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00136",
+    "on_hand": 728,
+    "scheduled_receipts": [
+      {
+        "due_day": 38,
+        "qty": 332,
+        "receipt_id": "PO-00136-0"
+      },
+      {
+        "due_day": 23,
+        "qty": 327,
+        "receipt_id": "PO-00136-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00137",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 47,
+        "qty": 207,
+        "receipt_id": "PO-00137-0"
+      },
+      {
+        "due_day": 27,
+        "qty": 39,
+        "receipt_id": "PO-00137-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00138",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00139",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 38,
+        "qty": 177,
+        "receipt_id": "PO-00139-0"
+      },
+      {
+        "due_day": 33,
+        "qty": 182,
+        "receipt_id": "PO-00139-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00140",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00141",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 54,
+        "qty": 41,
+        "receipt_id": "PO-00141-0"
+      },
+      {
+        "due_day": 12,
+        "qty": 268,
+        "receipt_id": "PO-00141-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00142",
+    "on_hand": 651,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00143",
+    "on_hand": 663,
+    "scheduled_receipts": [
+      {
+        "due_day": 42,
+        "qty": 328,
+        "receipt_id": "PO-00143-0"
+      },
+      {
+        "due_day": 21,
+        "qty": 348,
+        "receipt_id": "PO-00143-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00144",
+    "on_hand": 0,
+    "scheduled_receipts": []
+  },
+  {
+    "item_id": "ITM-00145",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 52,
+        "qty": 187,
+        "receipt_id": "PO-00145-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00146",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 26,
+        "qty": 485,
+        "receipt_id": "PO-00146-0"
+      },
+      {
+        "due_day": 51,
+        "qty": 559,
+        "receipt_id": "PO-00146-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00147",
+    "on_hand": 6,
+    "scheduled_receipts": [
+      {
+        "due_day": 27,
+        "qty": 316,
+        "receipt_id": "PO-00147-0"
+      },
+      {
+        "due_day": 53,
+        "qty": 353,
+        "receipt_id": "PO-00147-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00148",
+    "on_hand": 605,
+    "scheduled_receipts": [
+      {
+        "due_day": 56,
+        "qty": 443,
+        "receipt_id": "PO-00148-0"
+      },
+      {
+        "due_day": 38,
+        "qty": 158,
+        "receipt_id": "PO-00148-1"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00149",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 8,
+        "qty": 112,
+        "receipt_id": "PO-00149-0"
+      }
+    ]
+  },
+  {
+    "item_id": "ITM-00150",
+    "on_hand": 0,
+    "scheduled_receipts": [
+      {
+        "due_day": 19,
+        "qty": 196,
+        "receipt_id": "PO-00150-0"
+      }
+    ]
+  }
+]

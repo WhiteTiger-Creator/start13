@@ -1,0 +1,5402 @@
+[
+  {
+    "item_id": "ITM-00001",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 29452
+  },
+  {
+    "item_id": "ITM-00002",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 39284
+  },
+  {
+    "item_id": "ITM-00003",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 20064
+  },
+  {
+    "item_id": "ITM-00004",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 32355
+  },
+  {
+    "item_id": "ITM-00005",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 22787
+  },
+  {
+    "item_id": "ITM-00006",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 36876
+  },
+  {
+    "item_id": "ITM-00007",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 6893
+  },
+  {
+    "item_id": "ITM-00008",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 17565
+  },
+  {
+    "item_id": "ITM-00009",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 6636
+  },
+  {
+    "item_id": "ITM-00010",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 28295
+  },
+  {
+    "item_id": "ITM-00011",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 39594
+  },
+  {
+    "item_id": "ITM-00012",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 14018
+  },
+  {
+    "item_id": "ITM-00013",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 31140
+  },
+  {
+    "item_id": "ITM-00014",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 15160
+  },
+  {
+    "item_id": "ITM-00015",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 1910
+  },
+  {
+    "item_id": "ITM-00016",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 26972
+  },
+  {
+    "item_id": "ITM-00017",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 21707
+  },
+  {
+    "item_id": "ITM-00018",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 19629
+  },
+  {
+    "item_id": "ITM-00019",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 34770
+  },
+  {
+    "item_id": "ITM-00020",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 6272
+  },
+  {
+    "item_id": "ITM-00021",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 15221
+  },
+  {
+    "item_id": "ITM-00022",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 30476
+  },
+  {
+    "item_id": "ITM-00023",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 13193
+  },
+  {
+    "item_id": "ITM-00024",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 39866
+  },
+  {
+    "item_id": "ITM-00025",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 1282
+  },
+  {
+    "item_id": "ITM-00026",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 4474
+  },
+  {
+    "item_id": "ITM-00027",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 22362
+  },
+  {
+    "item_id": "ITM-00028",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 34704
+  },
+  {
+    "item_id": "ITM-00029",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 1704
+  },
+  {
+    "item_id": "ITM-00030",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 33572
+  },
+  {
+    "item_id": "ITM-00031",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 12421
+  },
+  {
+    "item_id": "ITM-00032",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 28480
+  },
+  {
+    "item_id": "ITM-00033",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 15438
+  },
+  {
+    "item_id": "ITM-00034",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 29102
+  },
+  {
+    "item_id": "ITM-00035",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 500,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 31051
+  },
+  {
+    "item_id": "ITM-00036",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 10908
+  },
+  {
+    "item_id": "ITM-00037",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 20660
+  },
+  {
+    "item_id": "ITM-00038",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 150,
+    "unit_cost_cents": 21027
+  },
+  {
+    "item_id": "ITM-00039",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 39572
+  },
+  {
+    "item_id": "ITM-00040",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 15005
+  },
+  {
+    "item_id": "ITM-00041",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 25168
+  },
+  {
+    "item_id": "ITM-00042",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 25,
+    "unit_cost_cents": 25509
+  },
+  {
+    "item_id": "ITM-00043",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 12103
+  },
+  {
+    "item_id": "ITM-00044",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 33525
+  },
+  {
+    "item_id": "ITM-00045",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 18391
+  },
+  {
+    "item_id": "ITM-00046",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 24618
+  },
+  {
+    "item_id": "ITM-00047",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 500,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 11223
+  },
+  {
+    "item_id": "ITM-00048",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 24733
+  },
+  {
+    "item_id": "ITM-00049",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 29353
+  },
+  {
+    "item_id": "ITM-00050",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 23957
+  },
+  {
+    "item_id": "ITM-00051",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 1801
+  },
+  {
+    "item_id": "ITM-00052",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 32812
+  },
+  {
+    "item_id": "ITM-00053",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 31697
+  },
+  {
+    "item_id": "ITM-00054",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 37847
+  },
+  {
+    "item_id": "ITM-00055",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 29109
+  },
+  {
+    "item_id": "ITM-00056",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 4869
+  },
+  {
+    "item_id": "ITM-00057",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 9043
+  },
+  {
+    "item_id": "ITM-00058",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 19239
+  },
+  {
+    "item_id": "ITM-00059",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 37995
+  },
+  {
+    "item_id": "ITM-00060",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 1000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 25856
+  },
+  {
+    "item_id": "ITM-00061",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 500,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 34013
+  },
+  {
+    "item_id": "ITM-00062",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 27841
+  },
+  {
+    "item_id": "ITM-00063",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 26594
+  },
+  {
+    "item_id": "ITM-00064",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 19263
+  },
+  {
+    "item_id": "ITM-00065",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 36225
+  },
+  {
+    "item_id": "ITM-00066",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 20054
+  },
+  {
+    "item_id": "ITM-00067",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 500,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 34636
+  },
+  {
+    "item_id": "ITM-00068",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 29201
+  },
+  {
+    "item_id": "ITM-00069",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 150,
+    "unit_cost_cents": 8359
+  },
+  {
+    "item_id": "ITM-00070",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 4470
+  },
+  {
+    "item_id": "ITM-00071",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 7174
+  },
+  {
+    "item_id": "ITM-00072",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 1000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 11047
+  },
+  {
+    "item_id": "ITM-00073",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 7776
+  },
+  {
+    "item_id": "ITM-00074",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 13617
+  },
+  {
+    "item_id": "ITM-00075",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 18319
+  },
+  {
+    "item_id": "ITM-00076",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 1015
+  },
+  {
+    "item_id": "ITM-00077",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 1000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 25158
+  },
+  {
+    "item_id": "ITM-00078",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 26141
+  },
+  {
+    "item_id": "ITM-00079",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 26650
+  },
+  {
+    "item_id": "ITM-00080",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 10569
+  },
+  {
+    "item_id": "ITM-00081",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 37381
+  },
+  {
+    "item_id": "ITM-00082",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 60,
+    "unit_cost_cents": 30303
+  },
+  {
+    "item_id": "ITM-00083",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 39414
+  },
+  {
+    "item_id": "ITM-00084",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 16203
+  },
+  {
+    "item_id": "ITM-00085",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 24058
+  },
+  {
+    "item_id": "ITM-00086",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 520
+  },
+  {
+    "item_id": "ITM-00087",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 26623
+  },
+  {
+    "item_id": "ITM-00088",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 2573
+  },
+  {
+    "item_id": "ITM-00089",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 500,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 2475
+  },
+  {
+    "item_id": "ITM-00090",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 7092
+  },
+  {
+    "item_id": "ITM-00091",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 21739
+  },
+  {
+    "item_id": "ITM-00092",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 12893
+  },
+  {
+    "item_id": "ITM-00093",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 13488
+  },
+  {
+    "item_id": "ITM-00094",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 25,
+    "unit_cost_cents": 37067
+  },
+  {
+    "item_id": "ITM-00095",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 25,
+    "unit_cost_cents": 37425
+  },
+  {
+    "item_id": "ITM-00096",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 13550
+  },
+  {
+    "item_id": "ITM-00097",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 29121
+  },
+  {
+    "item_id": "ITM-00098",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 60,
+    "unit_cost_cents": 7090
+  },
+  {
+    "item_id": "ITM-00099",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 31252
+  },
+  {
+    "item_id": "ITM-00100",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 39395
+  },
+  {
+    "item_id": "ITM-00101",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 150,
+    "unit_cost_cents": 18148
+  },
+  {
+    "item_id": "ITM-00102",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 23100
+  },
+  {
+    "item_id": "ITM-00103",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 25,
+    "unit_cost_cents": 2657
+  },
+  {
+    "item_id": "ITM-00104",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 27431
+  },
+  {
+    "item_id": "ITM-00105",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 10293
+  },
+  {
+    "item_id": "ITM-00106",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 23426
+  },
+  {
+    "item_id": "ITM-00107",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 33732
+  },
+  {
+    "item_id": "ITM-00108",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 9931
+  },
+  {
+    "item_id": "ITM-00109",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 1581
+  },
+  {
+    "item_id": "ITM-00110",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 25,
+    "unit_cost_cents": 28552
+  },
+  {
+    "item_id": "ITM-00111",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 13775
+  },
+  {
+    "item_id": "ITM-00112",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 5000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 39060
+  },
+  {
+    "item_id": "ITM-00113",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 6957
+  },
+  {
+    "item_id": "ITM-00114",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 60,
+    "unit_cost_cents": 8004
+  },
+  {
+    "item_id": "ITM-00115",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 37959
+  },
+  {
+    "item_id": "ITM-00116",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 641
+  },
+  {
+    "item_id": "ITM-00117",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 4628
+  },
+  {
+    "item_id": "ITM-00118",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 60,
+    "unit_cost_cents": 27992
+  },
+  {
+    "item_id": "ITM-00119",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 11593
+  },
+  {
+    "item_id": "ITM-00120",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 25,
+    "unit_cost_cents": 35963
+  },
+  {
+    "item_id": "ITM-00121",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 150,
+    "unit_cost_cents": 20079
+  },
+  {
+    "item_id": "ITM-00122",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 1231
+  },
+  {
+    "item_id": "ITM-00123",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 10328
+  },
+  {
+    "item_id": "ITM-00124",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 21541
+  },
+  {
+    "item_id": "ITM-00125",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 5000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 11940
+  },
+  {
+    "item_id": "ITM-00126",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 12365
+  },
+  {
+    "item_id": "ITM-00127",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 23940
+  },
+  {
+    "item_id": "ITM-00128",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 5000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 22815
+  },
+  {
+    "item_id": "ITM-00129",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 25,
+    "unit_cost_cents": 31467
+  },
+  {
+    "item_id": "ITM-00130",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 4768
+  },
+  {
+    "item_id": "ITM-00131",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 1029
+  },
+  {
+    "item_id": "ITM-00132",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 150,
+    "unit_cost_cents": 38435
+  },
+  {
+    "item_id": "ITM-00133",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 14845
+  },
+  {
+    "item_id": "ITM-00134",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 150,
+    "unit_cost_cents": 39396
+  },
+  {
+    "item_id": "ITM-00135",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 60,
+    "unit_cost_cents": 34523
+  },
+  {
+    "item_id": "ITM-00136",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 781
+  },
+  {
+    "item_id": "ITM-00137",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 5000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 3675
+  },
+  {
+    "item_id": "ITM-00138",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 150,
+    "unit_cost_cents": 21313
+  },
+  {
+    "item_id": "ITM-00139",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 25,
+    "unit_cost_cents": 20961
+  },
+  {
+    "item_id": "ITM-00140",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 5000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 19410
+  },
+  {
+    "item_id": "ITM-00141",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 13754
+  },
+  {
+    "item_id": "ITM-00142",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 21080
+  },
+  {
+    "item_id": "ITM-00143",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 27385
+  },
+  {
+    "item_id": "ITM-00144",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 30514
+  },
+  {
+    "item_id": "ITM-00145",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 23040
+  },
+  {
+    "item_id": "ITM-00146",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 150,
+    "unit_cost_cents": 13422
+  },
+  {
+    "item_id": "ITM-00147",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 25,
+    "unit_cost_cents": 18663
+  },
+  {
+    "item_id": "ITM-00148",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 22922
+  },
+  {
+    "item_id": "ITM-00149",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 1578
+  },
+  {
+    "item_id": "ITM-00150",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 150,
+    "unit_cost_cents": 13679
+  },
+  {
+    "item_id": "ITM-00151",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 19701
+  },
+  {
+    "item_id": "ITM-00152",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 5000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 38112
+  },
+  {
+    "item_id": "ITM-00153",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 35310
+  },
+  {
+    "item_id": "ITM-00154",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 29963
+  },
+  {
+    "item_id": "ITM-00155",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 22943
+  },
+  {
+    "item_id": "ITM-00156",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 150,
+    "unit_cost_cents": 12011
+  },
+  {
+    "item_id": "ITM-00157",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 25392
+  },
+  {
+    "item_id": "ITM-00158",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 37643
+  },
+  {
+    "item_id": "ITM-00159",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 5000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 30203
+  },
+  {
+    "item_id": "ITM-00160",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 15682
+  },
+  {
+    "item_id": "ITM-00161",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 24715
+  },
+  {
+    "item_id": "ITM-00162",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 335
+  },
+  {
+    "item_id": "ITM-00163",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 14408
+  },
+  {
+    "item_id": "ITM-00164",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 25,
+    "unit_cost_cents": 4930
+  },
+  {
+    "item_id": "ITM-00165",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 29252
+  },
+  {
+    "item_id": "ITM-00166",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 522
+  },
+  {
+    "item_id": "ITM-00167",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 33241
+  },
+  {
+    "item_id": "ITM-00168",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 25,
+    "unit_cost_cents": 30531
+  },
+  {
+    "item_id": "ITM-00169",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 25,
+    "unit_cost_cents": 36740
+  },
+  {
+    "item_id": "ITM-00170",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 39754
+  },
+  {
+    "item_id": "ITM-00171",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 7692
+  },
+  {
+    "item_id": "ITM-00172",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 5000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 27704
+  },
+  {
+    "item_id": "ITM-00173",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 25,
+    "unit_cost_cents": 9027
+  },
+  {
+    "item_id": "ITM-00174",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 4609
+  },
+  {
+    "item_id": "ITM-00175",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 3107
+  },
+  {
+    "item_id": "ITM-00176",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 5000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 13356
+  },
+  {
+    "item_id": "ITM-00177",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 10395
+  },
+  {
+    "item_id": "ITM-00178",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 38751
+  },
+  {
+    "item_id": "ITM-00179",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 150,
+    "unit_cost_cents": 12633
+  },
+  {
+    "item_id": "ITM-00180",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 10000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 20997
+  },
+  {
+    "item_id": "ITM-00181",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 21391
+  },
+  {
+    "item_id": "ITM-00182",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 32094
+  },
+  {
+    "item_id": "ITM-00183",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 32706
+  },
+  {
+    "item_id": "ITM-00184",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 8288
+  },
+  {
+    "item_id": "ITM-00185",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 10000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 13652
+  },
+  {
+    "item_id": "ITM-00186",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 5000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 17735
+  },
+  {
+    "item_id": "ITM-00187",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 26187
+  },
+  {
+    "item_id": "ITM-00188",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 1204
+  },
+  {
+    "item_id": "ITM-00189",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 10365
+  },
+  {
+    "item_id": "ITM-00190",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 60,
+    "unit_cost_cents": 11889
+  },
+  {
+    "item_id": "ITM-00191",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 5000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 27900
+  },
+  {
+    "item_id": "ITM-00192",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 38711
+  },
+  {
+    "item_id": "ITM-00193",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 14802
+  },
+  {
+    "item_id": "ITM-00194",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 23159
+  },
+  {
+    "item_id": "ITM-00195",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 9681
+  },
+  {
+    "item_id": "ITM-00196",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 16123
+  },
+  {
+    "item_id": "ITM-00197",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 8460
+  },
+  {
+    "item_id": "ITM-00198",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 150,
+    "unit_cost_cents": 27629
+  },
+  {
+    "item_id": "ITM-00199",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 1327
+  },
+  {
+    "item_id": "ITM-00200",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 1310
+  },
+  {
+    "item_id": "ITM-00201",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 150,
+    "unit_cost_cents": 38175
+  },
+  {
+    "item_id": "ITM-00202",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 14271
+  },
+  {
+    "item_id": "ITM-00203",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 21430
+  },
+  {
+    "item_id": "ITM-00204",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 4420
+  },
+  {
+    "item_id": "ITM-00205",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 5457
+  },
+  {
+    "item_id": "ITM-00206",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 10000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 23442
+  },
+  {
+    "item_id": "ITM-00207",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 32250
+  },
+  {
+    "item_id": "ITM-00208",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 10000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 16156
+  },
+  {
+    "item_id": "ITM-00209",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 28401
+  },
+  {
+    "item_id": "ITM-00210",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 10000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 8238
+  },
+  {
+    "item_id": "ITM-00211",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 10000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 22926
+  },
+  {
+    "item_id": "ITM-00212",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 1105
+  },
+  {
+    "item_id": "ITM-00213",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 150,
+    "unit_cost_cents": 38593
+  },
+  {
+    "item_id": "ITM-00214",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 5065
+  },
+  {
+    "item_id": "ITM-00215",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 17018
+  },
+  {
+    "item_id": "ITM-00216",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 5000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 23792
+  },
+  {
+    "item_id": "ITM-00217",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 25,
+    "unit_cost_cents": 7729
+  },
+  {
+    "item_id": "ITM-00218",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 5000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 3477
+  },
+  {
+    "item_id": "ITM-00219",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 25,
+    "unit_cost_cents": 26287
+  },
+  {
+    "item_id": "ITM-00220",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 2500,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 33384
+  },
+  {
+    "item_id": "ITM-00221",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 34077
+  },
+  {
+    "item_id": "ITM-00222",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 37984
+  },
+  {
+    "item_id": "ITM-00223",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 19110
+  },
+  {
+    "item_id": "ITM-00224",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 9899
+  },
+  {
+    "item_id": "ITM-00225",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 24183
+  },
+  {
+    "item_id": "ITM-00226",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 38055
+  },
+  {
+    "item_id": "ITM-00227",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 7910
+  },
+  {
+    "item_id": "ITM-00228",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 22296
+  },
+  {
+    "item_id": "ITM-00229",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 5000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 22377
+  },
+  {
+    "item_id": "ITM-00230",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 13087
+  },
+  {
+    "item_id": "ITM-00231",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 7726
+  },
+  {
+    "item_id": "ITM-00232",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 6342
+  },
+  {
+    "item_id": "ITM-00233",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 526
+  },
+  {
+    "item_id": "ITM-00234",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 35229
+  },
+  {
+    "item_id": "ITM-00235",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 9661
+  },
+  {
+    "item_id": "ITM-00236",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 4620
+  },
+  {
+    "item_id": "ITM-00237",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 5429
+  },
+  {
+    "item_id": "ITM-00238",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 60,
+    "unit_cost_cents": 8956
+  },
+  {
+    "item_id": "ITM-00239",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 19343
+  },
+  {
+    "item_id": "ITM-00240",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 12909
+  },
+  {
+    "item_id": "ITM-00241",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 18111
+  },
+  {
+    "item_id": "ITM-00242",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 27145
+  },
+  {
+    "item_id": "ITM-00243",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 15256
+  },
+  {
+    "item_id": "ITM-00244",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 30871
+  },
+  {
+    "item_id": "ITM-00245",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 29273
+  },
+  {
+    "item_id": "ITM-00246",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 36651
+  },
+  {
+    "item_id": "ITM-00247",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 37565
+  },
+  {
+    "item_id": "ITM-00248",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 22015
+  },
+  {
+    "item_id": "ITM-00249",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 1237
+  },
+  {
+    "item_id": "ITM-00250",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 27791
+  },
+  {
+    "item_id": "ITM-00251",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 14322
+  },
+  {
+    "item_id": "ITM-00252",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 39295
+  },
+  {
+    "item_id": "ITM-00253",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 23818
+  },
+  {
+    "item_id": "ITM-00254",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 35070
+  },
+  {
+    "item_id": "ITM-00255",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 150,
+    "unit_cost_cents": 30968
+  },
+  {
+    "item_id": "ITM-00256",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 24380
+  },
+  {
+    "item_id": "ITM-00257",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 150,
+    "unit_cost_cents": 8375
+  },
+  {
+    "item_id": "ITM-00258",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 22265
+  },
+  {
+    "item_id": "ITM-00259",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 150,
+    "unit_cost_cents": 1193
+  },
+  {
+    "item_id": "ITM-00260",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 26200
+  },
+  {
+    "item_id": "ITM-00261",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 10615
+  },
+  {
+    "item_id": "ITM-00262",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 33415
+  },
+  {
+    "item_id": "ITM-00263",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 39671
+  },
+  {
+    "item_id": "ITM-00264",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 9770
+  },
+  {
+    "item_id": "ITM-00265",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 11541
+  },
+  {
+    "item_id": "ITM-00266",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 60,
+    "unit_cost_cents": 31935
+  },
+  {
+    "item_id": "ITM-00267",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 150,
+    "unit_cost_cents": 32542
+  },
+  {
+    "item_id": "ITM-00268",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 25,
+    "unit_cost_cents": 11027
+  },
+  {
+    "item_id": "ITM-00269",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 14157
+  },
+  {
+    "item_id": "ITM-00270",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 17683
+  },
+  {
+    "item_id": "ITM-00271",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 12424
+  },
+  {
+    "item_id": "ITM-00272",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 2858
+  },
+  {
+    "item_id": "ITM-00273",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 4414
+  },
+  {
+    "item_id": "ITM-00274",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 34699
+  },
+  {
+    "item_id": "ITM-00275",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 29214
+  },
+  {
+    "item_id": "ITM-00276",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 16900
+  },
+  {
+    "item_id": "ITM-00277",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 19217
+  },
+  {
+    "item_id": "ITM-00278",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 36939
+  },
+  {
+    "item_id": "ITM-00279",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 25,
+    "unit_cost_cents": 19164
+  },
+  {
+    "item_id": "ITM-00280",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 33542
+  },
+  {
+    "item_id": "ITM-00281",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 34915
+  },
+  {
+    "item_id": "ITM-00282",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 31236
+  },
+  {
+    "item_id": "ITM-00283",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 22722
+  },
+  {
+    "item_id": "ITM-00284",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 25893
+  },
+  {
+    "item_id": "ITM-00285",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 60,
+    "unit_cost_cents": 22509
+  },
+  {
+    "item_id": "ITM-00286",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 33859
+  },
+  {
+    "item_id": "ITM-00287",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 3273
+  },
+  {
+    "item_id": "ITM-00288",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 15048
+  },
+  {
+    "item_id": "ITM-00289",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 31215
+  },
+  {
+    "item_id": "ITM-00290",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 35714
+  },
+  {
+    "item_id": "ITM-00291",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 27112
+  },
+  {
+    "item_id": "ITM-00292",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 32933
+  },
+  {
+    "item_id": "ITM-00293",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 34290
+  },
+  {
+    "item_id": "ITM-00294",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 17993
+  },
+  {
+    "item_id": "ITM-00295",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 4607
+  },
+  {
+    "item_id": "ITM-00296",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 23966
+  },
+  {
+    "item_id": "ITM-00297",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 33052
+  },
+  {
+    "item_id": "ITM-00298",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 4470
+  },
+  {
+    "item_id": "ITM-00299",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 31205
+  },
+  {
+    "item_id": "ITM-00300",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 24926
+  },
+  {
+    "item_id": "ITM-00301",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 22377
+  },
+  {
+    "item_id": "ITM-00302",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 20422
+  },
+  {
+    "item_id": "ITM-00303",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 12436
+  },
+  {
+    "item_id": "ITM-00304",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 37556
+  },
+  {
+    "item_id": "ITM-00305",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 30926
+  },
+  {
+    "item_id": "ITM-00306",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 10874
+  },
+  {
+    "item_id": "ITM-00307",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 1226
+  },
+  {
+    "item_id": "ITM-00308",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 5499
+  },
+  {
+    "item_id": "ITM-00309",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 34574
+  },
+  {
+    "item_id": "ITM-00310",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 20164
+  },
+  {
+    "item_id": "ITM-00311",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 19239
+  },
+  {
+    "item_id": "ITM-00312",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 25,
+    "unit_cost_cents": 39241
+  },
+  {
+    "item_id": "ITM-00313",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 60,
+    "unit_cost_cents": 23907
+  },
+  {
+    "item_id": "ITM-00314",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 15109
+  },
+  {
+    "item_id": "ITM-00315",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 9650
+  },
+  {
+    "item_id": "ITM-00316",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 35527
+  },
+  {
+    "item_id": "ITM-00317",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 37199
+  },
+  {
+    "item_id": "ITM-00318",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 3490
+  },
+  {
+    "item_id": "ITM-00319",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 5455
+  },
+  {
+    "item_id": "ITM-00320",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 20986
+  },
+  {
+    "item_id": "ITM-00321",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 4004
+  },
+  {
+    "item_id": "ITM-00322",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 15132
+  },
+  {
+    "item_id": "ITM-00323",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 150,
+    "unit_cost_cents": 37707
+  },
+  {
+    "item_id": "ITM-00324",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 14125
+  },
+  {
+    "item_id": "ITM-00325",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 6309
+  },
+  {
+    "item_id": "ITM-00326",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 23189
+  },
+  {
+    "item_id": "ITM-00327",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 10028
+  },
+  {
+    "item_id": "ITM-00328",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 25,
+    "unit_cost_cents": 39838
+  },
+  {
+    "item_id": "ITM-00329",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 37220
+  },
+  {
+    "item_id": "ITM-00330",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 4281
+  },
+  {
+    "item_id": "ITM-00331",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 9366
+  },
+  {
+    "item_id": "ITM-00332",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 60,
+    "unit_cost_cents": 28230
+  },
+  {
+    "item_id": "ITM-00333",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 1638
+  },
+  {
+    "item_id": "ITM-00334",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 7410
+  },
+  {
+    "item_id": "ITM-00335",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 11268
+  },
+  {
+    "item_id": "ITM-00336",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 36300
+  },
+  {
+    "item_id": "ITM-00337",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 14652
+  },
+  {
+    "item_id": "ITM-00338",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 2637
+  },
+  {
+    "item_id": "ITM-00339",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 13333
+  },
+  {
+    "item_id": "ITM-00340",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 25,
+    "unit_cost_cents": 26593
+  },
+  {
+    "item_id": "ITM-00341",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 24898
+  },
+  {
+    "item_id": "ITM-00342",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 6289
+  },
+  {
+    "item_id": "ITM-00343",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 60,
+    "unit_cost_cents": 1695
+  },
+  {
+    "item_id": "ITM-00344",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 19222
+  },
+  {
+    "item_id": "ITM-00345",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 30413
+  },
+  {
+    "item_id": "ITM-00346",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 5431
+  },
+  {
+    "item_id": "ITM-00347",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 3300
+  },
+  {
+    "item_id": "ITM-00348",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 20612
+  },
+  {
+    "item_id": "ITM-00349",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 8942
+  },
+  {
+    "item_id": "ITM-00350",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 39258
+  },
+  {
+    "item_id": "ITM-00351",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 60,
+    "unit_cost_cents": 25089
+  },
+  {
+    "item_id": "ITM-00352",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 150,
+    "unit_cost_cents": 4712
+  },
+  {
+    "item_id": "ITM-00353",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 6378
+  },
+  {
+    "item_id": "ITM-00354",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 15199
+  },
+  {
+    "item_id": "ITM-00355",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 17531
+  },
+  {
+    "item_id": "ITM-00356",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 39754
+  },
+  {
+    "item_id": "ITM-00357",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 15890
+  },
+  {
+    "item_id": "ITM-00358",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 3917
+  },
+  {
+    "item_id": "ITM-00359",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 6932
+  },
+  {
+    "item_id": "ITM-00360",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 27438
+  },
+  {
+    "item_id": "ITM-00361",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 32673
+  },
+  {
+    "item_id": "ITM-00362",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 8026
+  },
+  {
+    "item_id": "ITM-00363",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 38939
+  },
+  {
+    "item_id": "ITM-00364",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 7166
+  },
+  {
+    "item_id": "ITM-00365",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 5956
+  },
+  {
+    "item_id": "ITM-00366",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 24018
+  },
+  {
+    "item_id": "ITM-00367",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 4456
+  },
+  {
+    "item_id": "ITM-00368",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 9406
+  },
+  {
+    "item_id": "ITM-00369",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 6492
+  },
+  {
+    "item_id": "ITM-00370",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 9067
+  },
+  {
+    "item_id": "ITM-00371",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 25,
+    "unit_cost_cents": 3119
+  },
+  {
+    "item_id": "ITM-00372",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 6558
+  },
+  {
+    "item_id": "ITM-00373",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 35271
+  },
+  {
+    "item_id": "ITM-00374",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 15257
+  },
+  {
+    "item_id": "ITM-00375",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 23757
+  },
+  {
+    "item_id": "ITM-00376",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 33193
+  },
+  {
+    "item_id": "ITM-00377",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 35318
+  },
+  {
+    "item_id": "ITM-00378",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 5686
+  },
+  {
+    "item_id": "ITM-00379",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 25,
+    "unit_cost_cents": 8014
+  },
+  {
+    "item_id": "ITM-00380",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 3503
+  },
+  {
+    "item_id": "ITM-00381",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 8757
+  },
+  {
+    "item_id": "ITM-00382",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 2644
+  },
+  {
+    "item_id": "ITM-00383",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 3274
+  },
+  {
+    "item_id": "ITM-00384",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 16019
+  },
+  {
+    "item_id": "ITM-00385",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 5732
+  },
+  {
+    "item_id": "ITM-00386",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 35867
+  },
+  {
+    "item_id": "ITM-00387",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 20599
+  },
+  {
+    "item_id": "ITM-00388",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 60,
+    "unit_cost_cents": 22265
+  },
+  {
+    "item_id": "ITM-00389",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 16783
+  },
+  {
+    "item_id": "ITM-00390",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 13298
+  },
+  {
+    "item_id": "ITM-00391",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 12877
+  },
+  {
+    "item_id": "ITM-00392",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 34326
+  },
+  {
+    "item_id": "ITM-00393",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 26708
+  },
+  {
+    "item_id": "ITM-00394",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 21776
+  },
+  {
+    "item_id": "ITM-00395",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 1898
+  },
+  {
+    "item_id": "ITM-00396",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 31202
+  },
+  {
+    "item_id": "ITM-00397",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 25,
+    "unit_cost_cents": 5772
+  },
+  {
+    "item_id": "ITM-00398",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 18475
+  },
+  {
+    "item_id": "ITM-00399",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 30072
+  },
+  {
+    "item_id": "ITM-00400",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 31464
+  },
+  {
+    "item_id": "ITM-00401",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 35886
+  },
+  {
+    "item_id": "ITM-00402",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 3139
+  },
+  {
+    "item_id": "ITM-00403",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 36550
+  },
+  {
+    "item_id": "ITM-00404",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 9690
+  },
+  {
+    "item_id": "ITM-00405",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 12563
+  },
+  {
+    "item_id": "ITM-00406",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 19522
+  },
+  {
+    "item_id": "ITM-00407",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 38671
+  },
+  {
+    "item_id": "ITM-00408",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 150,
+    "unit_cost_cents": 32567
+  },
+  {
+    "item_id": "ITM-00409",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 11761
+  },
+  {
+    "item_id": "ITM-00410",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 24529
+  },
+  {
+    "item_id": "ITM-00411",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 34648
+  },
+  {
+    "item_id": "ITM-00412",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 25,
+    "unit_cost_cents": 18267
+  },
+  {
+    "item_id": "ITM-00413",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 26184
+  },
+  {
+    "item_id": "ITM-00414",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 29087
+  },
+  {
+    "item_id": "ITM-00415",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 25,
+    "unit_cost_cents": 4024
+  },
+  {
+    "item_id": "ITM-00416",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 26095
+  },
+  {
+    "item_id": "ITM-00417",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 7033
+  },
+  {
+    "item_id": "ITM-00418",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 16303
+  },
+  {
+    "item_id": "ITM-00419",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 24448
+  },
+  {
+    "item_id": "ITM-00420",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 15179
+  },
+  {
+    "item_id": "ITM-00421",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 28882
+  },
+  {
+    "item_id": "ITM-00422",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 38686
+  },
+  {
+    "item_id": "ITM-00423",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 25735
+  },
+  {
+    "item_id": "ITM-00424",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 9112
+  },
+  {
+    "item_id": "ITM-00425",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 6905
+  },
+  {
+    "item_id": "ITM-00426",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 5066
+  },
+  {
+    "item_id": "ITM-00427",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 16319
+  },
+  {
+    "item_id": "ITM-00428",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 22035
+  },
+  {
+    "item_id": "ITM-00429",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 25,
+    "unit_cost_cents": 31121
+  },
+  {
+    "item_id": "ITM-00430",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 7068
+  },
+  {
+    "item_id": "ITM-00431",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 8191
+  },
+  {
+    "item_id": "ITM-00432",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 17405
+  },
+  {
+    "item_id": "ITM-00433",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 20456
+  },
+  {
+    "item_id": "ITM-00434",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 18974
+  },
+  {
+    "item_id": "ITM-00435",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 16163
+  },
+  {
+    "item_id": "ITM-00436",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 25,
+    "unit_cost_cents": 35554
+  },
+  {
+    "item_id": "ITM-00437",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 18134
+  },
+  {
+    "item_id": "ITM-00438",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 12493
+  },
+  {
+    "item_id": "ITM-00439",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 60,
+    "unit_cost_cents": 35257
+  },
+  {
+    "item_id": "ITM-00440",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 22562
+  },
+  {
+    "item_id": "ITM-00441",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 20143
+  },
+  {
+    "item_id": "ITM-00442",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 4637
+  },
+  {
+    "item_id": "ITM-00443",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 26639
+  },
+  {
+    "item_id": "ITM-00444",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 652
+  },
+  {
+    "item_id": "ITM-00445",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 30279
+  },
+  {
+    "item_id": "ITM-00446",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 11429
+  },
+  {
+    "item_id": "ITM-00447",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 26610
+  },
+  {
+    "item_id": "ITM-00448",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 23319
+  },
+  {
+    "item_id": "ITM-00449",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 13010
+  },
+  {
+    "item_id": "ITM-00450",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 31287
+  },
+  {
+    "item_id": "ITM-00451",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 21195
+  },
+  {
+    "item_id": "ITM-00452",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 39605
+  },
+  {
+    "item_id": "ITM-00453",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 17990
+  },
+  {
+    "item_id": "ITM-00454",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 22858
+  },
+  {
+    "item_id": "ITM-00455",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 150,
+    "unit_cost_cents": 32231
+  },
+  {
+    "item_id": "ITM-00456",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 6630
+  },
+  {
+    "item_id": "ITM-00457",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 19105
+  },
+  {
+    "item_id": "ITM-00458",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 6002
+  },
+  {
+    "item_id": "ITM-00459",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 31446
+  },
+  {
+    "item_id": "ITM-00460",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 30068
+  },
+  {
+    "item_id": "ITM-00461",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 17886
+  },
+  {
+    "item_id": "ITM-00462",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 150,
+    "unit_cost_cents": 23087
+  },
+  {
+    "item_id": "ITM-00463",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 22036
+  },
+  {
+    "item_id": "ITM-00464",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 150,
+    "unit_cost_cents": 34252
+  },
+  {
+    "item_id": "ITM-00465",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 1484
+  },
+  {
+    "item_id": "ITM-00466",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 25,
+    "unit_cost_cents": 32661
+  },
+  {
+    "item_id": "ITM-00467",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 25128
+  },
+  {
+    "item_id": "ITM-00468",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 7877
+  },
+  {
+    "item_id": "ITM-00469",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 3993
+  },
+  {
+    "item_id": "ITM-00470",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 25,
+    "unit_cost_cents": 31420
+  },
+  {
+    "item_id": "ITM-00471",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 9277
+  },
+  {
+    "item_id": "ITM-00472",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 20749
+  },
+  {
+    "item_id": "ITM-00473",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 10465
+  },
+  {
+    "item_id": "ITM-00474",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 27289
+  },
+  {
+    "item_id": "ITM-00475",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 38087
+  },
+  {
+    "item_id": "ITM-00476",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 4053
+  },
+  {
+    "item_id": "ITM-00477",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 9705
+  },
+  {
+    "item_id": "ITM-00478",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 2682
+  },
+  {
+    "item_id": "ITM-00479",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 25015
+  },
+  {
+    "item_id": "ITM-00480",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 23713
+  },
+  {
+    "item_id": "ITM-00481",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 32113
+  },
+  {
+    "item_id": "ITM-00482",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 8156
+  },
+  {
+    "item_id": "ITM-00483",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 25,
+    "unit_cost_cents": 417
+  },
+  {
+    "item_id": "ITM-00484",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 39971
+  },
+  {
+    "item_id": "ITM-00485",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 15663
+  },
+  {
+    "item_id": "ITM-00486",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 26731
+  },
+  {
+    "item_id": "ITM-00487",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 25,
+    "unit_cost_cents": 17427
+  },
+  {
+    "item_id": "ITM-00488",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 37036
+  },
+  {
+    "item_id": "ITM-00489",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 60,
+    "unit_cost_cents": 20406
+  },
+  {
+    "item_id": "ITM-00490",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 60,
+    "unit_cost_cents": 7530
+  },
+  {
+    "item_id": "ITM-00491",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 26601
+  },
+  {
+    "item_id": "ITM-00492",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 6338
+  },
+  {
+    "item_id": "ITM-00493",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 1873
+  },
+  {
+    "item_id": "ITM-00494",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 9722
+  },
+  {
+    "item_id": "ITM-00495",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 150,
+    "unit_cost_cents": 3940
+  },
+  {
+    "item_id": "ITM-00496",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 20203
+  },
+  {
+    "item_id": "ITM-00497",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 27531
+  },
+  {
+    "item_id": "ITM-00498",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 33323
+  },
+  {
+    "item_id": "ITM-00499",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 825
+  },
+  {
+    "item_id": "ITM-00500",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 10999
+  },
+  {
+    "item_id": "ITM-00501",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 9716
+  },
+  {
+    "item_id": "ITM-00502",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 150,
+    "unit_cost_cents": 21751
+  },
+  {
+    "item_id": "ITM-00503",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 36093
+  },
+  {
+    "item_id": "ITM-00504",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 30901
+  },
+  {
+    "item_id": "ITM-00505",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 6523
+  },
+  {
+    "item_id": "ITM-00506",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 60,
+    "unit_cost_cents": 24486
+  },
+  {
+    "item_id": "ITM-00507",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 2014
+  },
+  {
+    "item_id": "ITM-00508",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 3690
+  },
+  {
+    "item_id": "ITM-00509",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 13732
+  },
+  {
+    "item_id": "ITM-00510",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 17033
+  },
+  {
+    "item_id": "ITM-00511",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 10131
+  },
+  {
+    "item_id": "ITM-00512",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 5735
+  },
+  {
+    "item_id": "ITM-00513",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 18218
+  },
+  {
+    "item_id": "ITM-00514",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 13144
+  },
+  {
+    "item_id": "ITM-00515",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 15114
+  },
+  {
+    "item_id": "ITM-00516",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 32538
+  },
+  {
+    "item_id": "ITM-00517",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 25924
+  },
+  {
+    "item_id": "ITM-00518",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 36636
+  },
+  {
+    "item_id": "ITM-00519",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 7111
+  },
+  {
+    "item_id": "ITM-00520",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 25,
+    "unit_cost_cents": 25190
+  },
+  {
+    "item_id": "ITM-00521",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 7708
+  },
+  {
+    "item_id": "ITM-00522",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 150,
+    "unit_cost_cents": 29443
+  },
+  {
+    "item_id": "ITM-00523",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 16792
+  },
+  {
+    "item_id": "ITM-00524",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 13663
+  },
+  {
+    "item_id": "ITM-00525",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 30485
+  },
+  {
+    "item_id": "ITM-00526",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 23397
+  },
+  {
+    "item_id": "ITM-00527",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 29670
+  },
+  {
+    "item_id": "ITM-00528",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 35074
+  },
+  {
+    "item_id": "ITM-00529",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 18965
+  },
+  {
+    "item_id": "ITM-00530",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 37776
+  },
+  {
+    "item_id": "ITM-00531",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 28821
+  },
+  {
+    "item_id": "ITM-00532",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 13199
+  },
+  {
+    "item_id": "ITM-00533",
+    "lead_time_days": 5,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 19077
+  },
+  {
+    "item_id": "ITM-00534",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 20262
+  },
+  {
+    "item_id": "ITM-00535",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 36065
+  },
+  {
+    "item_id": "ITM-00536",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 26886
+  },
+  {
+    "item_id": "ITM-00537",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 36034
+  },
+  {
+    "item_id": "ITM-00538",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 29485
+  },
+  {
+    "item_id": "ITM-00539",
+    "lead_time_days": 1,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 60,
+    "unit_cost_cents": 31550
+  },
+  {
+    "item_id": "ITM-00540",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 27428
+  },
+  {
+    "item_id": "ITM-00541",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 12853
+  },
+  {
+    "item_id": "ITM-00542",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 15663
+  },
+  {
+    "item_id": "ITM-00543",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 30961
+  },
+  {
+    "item_id": "ITM-00544",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 9557
+  },
+  {
+    "item_id": "ITM-00545",
+    "lead_time_days": 14,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 25,
+    "unit_cost_cents": 12719
+  },
+  {
+    "item_id": "ITM-00546",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 37317
+  },
+  {
+    "item_id": "ITM-00547",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 20840
+  },
+  {
+    "item_id": "ITM-00548",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 60,
+    "unit_cost_cents": 33613
+  },
+  {
+    "item_id": "ITM-00549",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 34815
+  },
+  {
+    "item_id": "ITM-00550",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 14683
+  },
+  {
+    "item_id": "ITM-00551",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 0,
+    "unit_cost_cents": 17276
+  },
+  {
+    "item_id": "ITM-00552",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 12106
+  },
+  {
+    "item_id": "ITM-00553",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 150,
+    "unit_cost_cents": 1669
+  },
+  {
+    "item_id": "ITM-00554",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 22502
+  },
+  {
+    "item_id": "ITM-00555",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 8008
+  },
+  {
+    "item_id": "ITM-00556",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 33650
+  },
+  {
+    "item_id": "ITM-00557",
+    "lead_time_days": 2,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 10,
+    "safety_stock": 0,
+    "unit_cost_cents": 4540
+  },
+  {
+    "item_id": "ITM-00558",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 29752
+  },
+  {
+    "item_id": "ITM-00559",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 34142
+  },
+  {
+    "item_id": "ITM-00560",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 33702
+  },
+  {
+    "item_id": "ITM-00561",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 33144
+  },
+  {
+    "item_id": "ITM-00562",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 7225
+  },
+  {
+    "item_id": "ITM-00563",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 60,
+    "unit_cost_cents": 39820
+  },
+  {
+    "item_id": "ITM-00564",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 60,
+    "unit_cost_cents": 39723
+  },
+  {
+    "item_id": "ITM-00565",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 26385
+  },
+  {
+    "item_id": "ITM-00566",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 21459
+  },
+  {
+    "item_id": "ITM-00567",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 8478
+  },
+  {
+    "item_id": "ITM-00568",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 16082
+  },
+  {
+    "item_id": "ITM-00569",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 2765
+  },
+  {
+    "item_id": "ITM-00570",
+    "lead_time_days": 8,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 20,
+    "safety_stock": 60,
+    "unit_cost_cents": 1588
+  },
+  {
+    "item_id": "ITM-00571",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 29915
+  },
+  {
+    "item_id": "ITM-00572",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 0,
+    "unit_cost_cents": 38441
+  },
+  {
+    "item_id": "ITM-00573",
+    "lead_time_days": 10,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 36599
+  },
+  {
+    "item_id": "ITM-00574",
+    "lead_time_days": 8,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 37353
+  },
+  {
+    "item_id": "ITM-00575",
+    "lead_time_days": 10,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 25,
+    "unit_cost_cents": 15686
+  },
+  {
+    "item_id": "ITM-00576",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 3785
+  },
+  {
+    "item_id": "ITM-00577",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 26791
+  },
+  {
+    "item_id": "ITM-00578",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 13636
+  },
+  {
+    "item_id": "ITM-00579",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 8804
+  },
+  {
+    "item_id": "ITM-00580",
+    "lead_time_days": 5,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 10552
+  },
+  {
+    "item_id": "ITM-00581",
+    "lead_time_days": 5,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 6713
+  },
+  {
+    "item_id": "ITM-00582",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 100000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 1159
+  },
+  {
+    "item_id": "ITM-00583",
+    "lead_time_days": 14,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 8803
+  },
+  {
+    "item_id": "ITM-00584",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 34166
+  },
+  {
+    "item_id": "ITM-00585",
+    "lead_time_days": 8,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 25948
+  },
+  {
+    "item_id": "ITM-00586",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 5567
+  },
+  {
+    "item_id": "ITM-00587",
+    "lead_time_days": 10,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 23131
+  },
+  {
+    "item_id": "ITM-00588",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 37850
+  },
+  {
+    "item_id": "ITM-00589",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 936
+  },
+  {
+    "item_id": "ITM-00590",
+    "lead_time_days": 3,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 50000,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 19092
+  },
+  {
+    "item_id": "ITM-00591",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 18164
+  },
+  {
+    "item_id": "ITM-00592",
+    "lead_time_days": 1,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 25000,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 10293
+  },
+  {
+    "item_id": "ITM-00593",
+    "lead_time_days": 3,
+    "lot_policy": "period_of_supply",
+    "lot_size": 0,
+    "period_days": 5,
+    "safety_stock": 60,
+    "unit_cost_cents": 25527
+  },
+  {
+    "item_id": "ITM-00594",
+    "lead_time_days": 3,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 38152
+  },
+  {
+    "item_id": "ITM-00595",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 10655
+  },
+  {
+    "item_id": "ITM-00596",
+    "lead_time_days": 1,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 12045
+  },
+  {
+    "item_id": "ITM-00597",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 25,
+    "unit_cost_cents": 27004
+  },
+  {
+    "item_id": "ITM-00598",
+    "lead_time_days": 2,
+    "lot_policy": "fixed_quantity",
+    "lot_size": 250000,
+    "period_days": 0,
+    "safety_stock": 150,
+    "unit_cost_cents": 2427
+  },
+  {
+    "item_id": "ITM-00599",
+    "lead_time_days": 14,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 0,
+    "unit_cost_cents": 2125
+  },
+  {
+    "item_id": "ITM-00600",
+    "lead_time_days": 2,
+    "lot_policy": "lot_for_lot",
+    "lot_size": 0,
+    "period_days": 0,
+    "safety_stock": 60,
+    "unit_cost_cents": 16648
+  }
+]

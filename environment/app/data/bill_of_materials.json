@@ -1,0 +1,6217 @@
+[
+  {
+    "component_item": "ITM-00055",
+    "parent_item": "ITM-00001",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00067",
+    "parent_item": "ITM-00001",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00092",
+    "parent_item": "ITM-00001",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00214",
+    "parent_item": "ITM-00001",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00043",
+    "parent_item": "ITM-00002",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00064",
+    "parent_item": "ITM-00002",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00214",
+    "parent_item": "ITM-00002",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00221",
+    "parent_item": "ITM-00002",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00076",
+    "parent_item": "ITM-00003",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00082",
+    "parent_item": "ITM-00003",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00250",
+    "parent_item": "ITM-00003",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00355",
+    "parent_item": "ITM-00003",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00058",
+    "parent_item": "ITM-00004",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00074",
+    "parent_item": "ITM-00004",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00079",
+    "parent_item": "ITM-00004",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00080",
+    "parent_item": "ITM-00005",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00096",
+    "parent_item": "ITM-00005",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00312",
+    "parent_item": "ITM-00005",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00383",
+    "parent_item": "ITM-00005",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00144",
+    "parent_item": "ITM-00006",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00152",
+    "parent_item": "ITM-00006",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00157",
+    "parent_item": "ITM-00006",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00071",
+    "parent_item": "ITM-00007",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00224",
+    "parent_item": "ITM-00007",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00071",
+    "parent_item": "ITM-00008",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00093",
+    "parent_item": "ITM-00008",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00344",
+    "parent_item": "ITM-00008",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00048",
+    "parent_item": "ITM-00009",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00071",
+    "parent_item": "ITM-00009",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00045",
+    "parent_item": "ITM-00010",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00057",
+    "parent_item": "ITM-00010",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00227",
+    "parent_item": "ITM-00010",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00406",
+    "parent_item": "ITM-00010",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00072",
+    "parent_item": "ITM-00011",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00100",
+    "parent_item": "ITM-00011",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00154",
+    "parent_item": "ITM-00011",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00367",
+    "parent_item": "ITM-00011",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00075",
+    "parent_item": "ITM-00012",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00096",
+    "parent_item": "ITM-00012",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00223",
+    "parent_item": "ITM-00012",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00340",
+    "parent_item": "ITM-00012",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00056",
+    "parent_item": "ITM-00013",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00070",
+    "parent_item": "ITM-00013",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00213",
+    "parent_item": "ITM-00013",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00047",
+    "parent_item": "ITM-00014",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00048",
+    "parent_item": "ITM-00014",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00245",
+    "parent_item": "ITM-00014",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00382",
+    "parent_item": "ITM-00014",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00044",
+    "parent_item": "ITM-00015",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00249",
+    "parent_item": "ITM-00015",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00040",
+    "parent_item": "ITM-00016",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00152",
+    "parent_item": "ITM-00016",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00078",
+    "parent_item": "ITM-00017",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00121",
+    "parent_item": "ITM-00017",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00280",
+    "parent_item": "ITM-00017",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00059",
+    "parent_item": "ITM-00018",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00066",
+    "parent_item": "ITM-00018",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00054",
+    "parent_item": "ITM-00019",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00072",
+    "parent_item": "ITM-00019",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00218",
+    "parent_item": "ITM-00019",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00033",
+    "parent_item": "ITM-00020",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00122",
+    "parent_item": "ITM-00020",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00301",
+    "parent_item": "ITM-00020",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00336",
+    "parent_item": "ITM-00020",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00072",
+    "parent_item": "ITM-00021",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00084",
+    "parent_item": "ITM-00021",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00342",
+    "parent_item": "ITM-00021",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00031",
+    "parent_item": "ITM-00022",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00082",
+    "parent_item": "ITM-00022",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00154",
+    "parent_item": "ITM-00022",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00306",
+    "parent_item": "ITM-00022",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00045",
+    "parent_item": "ITM-00023",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00098",
+    "parent_item": "ITM-00023",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00047",
+    "parent_item": "ITM-00024",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00275",
+    "parent_item": "ITM-00024",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00312",
+    "parent_item": "ITM-00024",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00385",
+    "parent_item": "ITM-00024",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00034",
+    "parent_item": "ITM-00025",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00085",
+    "parent_item": "ITM-00025",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00253",
+    "parent_item": "ITM-00025",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00117",
+    "parent_item": "ITM-00026",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00163",
+    "parent_item": "ITM-00026",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00036",
+    "parent_item": "ITM-00027",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00377",
+    "parent_item": "ITM-00027",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00050",
+    "parent_item": "ITM-00028",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00297",
+    "parent_item": "ITM-00028",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00094",
+    "parent_item": "ITM-00029",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00150",
+    "parent_item": "ITM-00029",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00203",
+    "parent_item": "ITM-00029",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00092",
+    "parent_item": "ITM-00030",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00156",
+    "parent_item": "ITM-00030",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00286",
+    "parent_item": "ITM-00030",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00182",
+    "parent_item": "ITM-00031",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00208",
+    "parent_item": "ITM-00031",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00210",
+    "parent_item": "ITM-00031",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00219",
+    "parent_item": "ITM-00031",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00144",
+    "parent_item": "ITM-00032",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00175",
+    "parent_item": "ITM-00032",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00231",
+    "parent_item": "ITM-00032",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00157",
+    "parent_item": "ITM-00033",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00514",
+    "parent_item": "ITM-00033",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00537",
+    "parent_item": "ITM-00033",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00102",
+    "parent_item": "ITM-00034",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00143",
+    "parent_item": "ITM-00034",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00231",
+    "parent_item": "ITM-00034",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00600",
+    "parent_item": "ITM-00034",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00286",
+    "parent_item": "ITM-00035",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00449",
+    "parent_item": "ITM-00035",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00161",
+    "parent_item": "ITM-00036",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00178",
+    "parent_item": "ITM-00036",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00142",
+    "parent_item": "ITM-00037",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00153",
+    "parent_item": "ITM-00037",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00213",
+    "parent_item": "ITM-00037",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00126",
+    "parent_item": "ITM-00038",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00197",
+    "parent_item": "ITM-00038",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00208",
+    "parent_item": "ITM-00038",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00381",
+    "parent_item": "ITM-00038",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00246",
+    "parent_item": "ITM-00039",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00378",
+    "parent_item": "ITM-00039",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00159",
+    "parent_item": "ITM-00040",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00260",
+    "parent_item": "ITM-00040",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00373",
+    "parent_item": "ITM-00040",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00384",
+    "parent_item": "ITM-00040",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00145",
+    "parent_item": "ITM-00041",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00178",
+    "parent_item": "ITM-00041",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00252",
+    "parent_item": "ITM-00041",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00186",
+    "parent_item": "ITM-00042",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00380",
+    "parent_item": "ITM-00042",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00445",
+    "parent_item": "ITM-00042",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00593",
+    "parent_item": "ITM-00042",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00134",
+    "parent_item": "ITM-00043",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00159",
+    "parent_item": "ITM-00043",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00210",
+    "parent_item": "ITM-00043",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00361",
+    "parent_item": "ITM-00043",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00102",
+    "parent_item": "ITM-00044",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00146",
+    "parent_item": "ITM-00044",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00168",
+    "parent_item": "ITM-00044",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00155",
+    "parent_item": "ITM-00045",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00256",
+    "parent_item": "ITM-00045",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00348",
+    "parent_item": "ITM-00045",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00562",
+    "parent_item": "ITM-00045",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00112",
+    "parent_item": "ITM-00046",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00228",
+    "parent_item": "ITM-00046",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00173",
+    "parent_item": "ITM-00047",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00518",
+    "parent_item": "ITM-00047",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00116",
+    "parent_item": "ITM-00048",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00229",
+    "parent_item": "ITM-00048",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00332",
+    "parent_item": "ITM-00048",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00109",
+    "parent_item": "ITM-00049",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00215",
+    "parent_item": "ITM-00049",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00454",
+    "parent_item": "ITM-00049",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00127",
+    "parent_item": "ITM-00050",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00151",
+    "parent_item": "ITM-00050",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00177",
+    "parent_item": "ITM-00050",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00386",
+    "parent_item": "ITM-00050",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00168",
+    "parent_item": "ITM-00051",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00225",
+    "parent_item": "ITM-00051",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00521",
+    "parent_item": "ITM-00051",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00554",
+    "parent_item": "ITM-00051",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00168",
+    "parent_item": "ITM-00052",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00174",
+    "parent_item": "ITM-00052",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00329",
+    "parent_item": "ITM-00052",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00196",
+    "parent_item": "ITM-00053",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00238",
+    "parent_item": "ITM-00053",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00307",
+    "parent_item": "ITM-00053",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00430",
+    "parent_item": "ITM-00053",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00353",
+    "parent_item": "ITM-00054",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00491",
+    "parent_item": "ITM-00054",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00165",
+    "parent_item": "ITM-00055",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00589",
+    "parent_item": "ITM-00055",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00139",
+    "parent_item": "ITM-00056",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00170",
+    "parent_item": "ITM-00056",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00214",
+    "parent_item": "ITM-00056",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00467",
+    "parent_item": "ITM-00056",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00417",
+    "parent_item": "ITM-00057",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00503",
+    "parent_item": "ITM-00057",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00142",
+    "parent_item": "ITM-00058",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00149",
+    "parent_item": "ITM-00058",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00275",
+    "parent_item": "ITM-00058",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00495",
+    "parent_item": "ITM-00058",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00190",
+    "parent_item": "ITM-00059",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00211",
+    "parent_item": "ITM-00059",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00297",
+    "parent_item": "ITM-00059",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00171",
+    "parent_item": "ITM-00060",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00208",
+    "parent_item": "ITM-00060",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00449",
+    "parent_item": "ITM-00060",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00541",
+    "parent_item": "ITM-00060",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00147",
+    "parent_item": "ITM-00061",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00168",
+    "parent_item": "ITM-00061",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00149",
+    "parent_item": "ITM-00062",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00158",
+    "parent_item": "ITM-00062",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00193",
+    "parent_item": "ITM-00062",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00251",
+    "parent_item": "ITM-00062",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00145",
+    "parent_item": "ITM-00063",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00379",
+    "parent_item": "ITM-00063",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00141",
+    "parent_item": "ITM-00064",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00198",
+    "parent_item": "ITM-00064",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00425",
+    "parent_item": "ITM-00064",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00130",
+    "parent_item": "ITM-00065",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00144",
+    "parent_item": "ITM-00065",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00324",
+    "parent_item": "ITM-00065",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00105",
+    "parent_item": "ITM-00066",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00116",
+    "parent_item": "ITM-00066",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00219",
+    "parent_item": "ITM-00066",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00140",
+    "parent_item": "ITM-00067",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00201",
+    "parent_item": "ITM-00067",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00225",
+    "parent_item": "ITM-00067",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00567",
+    "parent_item": "ITM-00067",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00531",
+    "parent_item": "ITM-00068",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00592",
+    "parent_item": "ITM-00068",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00203",
+    "parent_item": "ITM-00069",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00319",
+    "parent_item": "ITM-00069",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00518",
+    "parent_item": "ITM-00069",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00587",
+    "parent_item": "ITM-00069",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00153",
+    "parent_item": "ITM-00070",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00218",
+    "parent_item": "ITM-00070",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00104",
+    "parent_item": "ITM-00071",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00209",
+    "parent_item": "ITM-00071",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00234",
+    "parent_item": "ITM-00071",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00435",
+    "parent_item": "ITM-00071",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00123",
+    "parent_item": "ITM-00072",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00334",
+    "parent_item": "ITM-00072",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00121",
+    "parent_item": "ITM-00073",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00402",
+    "parent_item": "ITM-00073",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00499",
+    "parent_item": "ITM-00073",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00140",
+    "parent_item": "ITM-00074",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00195",
+    "parent_item": "ITM-00074",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00142",
+    "parent_item": "ITM-00075",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00211",
+    "parent_item": "ITM-00075",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00218",
+    "parent_item": "ITM-00075",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00443",
+    "parent_item": "ITM-00075",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00161",
+    "parent_item": "ITM-00076",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00213",
+    "parent_item": "ITM-00076",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00221",
+    "parent_item": "ITM-00076",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00306",
+    "parent_item": "ITM-00076",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00160",
+    "parent_item": "ITM-00077",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00161",
+    "parent_item": "ITM-00077",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00227",
+    "parent_item": "ITM-00077",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00156",
+    "parent_item": "ITM-00078",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00173",
+    "parent_item": "ITM-00078",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00220",
+    "parent_item": "ITM-00078",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00366",
+    "parent_item": "ITM-00078",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00106",
+    "parent_item": "ITM-00079",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00182",
+    "parent_item": "ITM-00079",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00210",
+    "parent_item": "ITM-00079",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00451",
+    "parent_item": "ITM-00079",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00145",
+    "parent_item": "ITM-00080",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00167",
+    "parent_item": "ITM-00080",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00164",
+    "parent_item": "ITM-00081",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00166",
+    "parent_item": "ITM-00081",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00199",
+    "parent_item": "ITM-00081",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00254",
+    "parent_item": "ITM-00081",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00130",
+    "parent_item": "ITM-00082",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00447",
+    "parent_item": "ITM-00082",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00192",
+    "parent_item": "ITM-00083",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00205",
+    "parent_item": "ITM-00083",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00492",
+    "parent_item": "ITM-00083",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00177",
+    "parent_item": "ITM-00084",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00466",
+    "parent_item": "ITM-00084",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00133",
+    "parent_item": "ITM-00085",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00192",
+    "parent_item": "ITM-00085",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00502",
+    "parent_item": "ITM-00085",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00210",
+    "parent_item": "ITM-00086",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00211",
+    "parent_item": "ITM-00086",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00193",
+    "parent_item": "ITM-00087",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00490",
+    "parent_item": "ITM-00087",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00155",
+    "parent_item": "ITM-00088",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00217",
+    "parent_item": "ITM-00088",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00245",
+    "parent_item": "ITM-00088",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00272",
+    "parent_item": "ITM-00088",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00193",
+    "parent_item": "ITM-00089",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00208",
+    "parent_item": "ITM-00089",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00227",
+    "parent_item": "ITM-00089",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00310",
+    "parent_item": "ITM-00089",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00222",
+    "parent_item": "ITM-00090",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00229",
+    "parent_item": "ITM-00090",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00312",
+    "parent_item": "ITM-00090",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00582",
+    "parent_item": "ITM-00090",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00156",
+    "parent_item": "ITM-00091",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00167",
+    "parent_item": "ITM-00091",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00102",
+    "parent_item": "ITM-00092",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00115",
+    "parent_item": "ITM-00092",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00144",
+    "parent_item": "ITM-00092",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00198",
+    "parent_item": "ITM-00093",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00571",
+    "parent_item": "ITM-00093",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00117",
+    "parent_item": "ITM-00094",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00123",
+    "parent_item": "ITM-00094",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00131",
+    "parent_item": "ITM-00094",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00132",
+    "parent_item": "ITM-00095",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00142",
+    "parent_item": "ITM-00095",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00211",
+    "parent_item": "ITM-00095",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00369",
+    "parent_item": "ITM-00095",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00105",
+    "parent_item": "ITM-00096",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00463",
+    "parent_item": "ITM-00096",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00144",
+    "parent_item": "ITM-00097",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00328",
+    "parent_item": "ITM-00097",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00531",
+    "parent_item": "ITM-00097",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00215",
+    "parent_item": "ITM-00098",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00369",
+    "parent_item": "ITM-00098",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00421",
+    "parent_item": "ITM-00098",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00158",
+    "parent_item": "ITM-00099",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00372",
+    "parent_item": "ITM-00099",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00479",
+    "parent_item": "ITM-00099",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00130",
+    "parent_item": "ITM-00100",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00201",
+    "parent_item": "ITM-00100",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00269",
+    "parent_item": "ITM-00101",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00324",
+    "parent_item": "ITM-00101",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00480",
+    "parent_item": "ITM-00101",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00498",
+    "parent_item": "ITM-00102",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00559",
+    "parent_item": "ITM-00102",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00563",
+    "parent_item": "ITM-00102",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00333",
+    "parent_item": "ITM-00103",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00344",
+    "parent_item": "ITM-00103",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00369",
+    "parent_item": "ITM-00104",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00406",
+    "parent_item": "ITM-00104",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00428",
+    "parent_item": "ITM-00104",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00281",
+    "parent_item": "ITM-00105",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00396",
+    "parent_item": "ITM-00105",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00493",
+    "parent_item": "ITM-00105",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00277",
+    "parent_item": "ITM-00106",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00365",
+    "parent_item": "ITM-00106",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00444",
+    "parent_item": "ITM-00106",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00248",
+    "parent_item": "ITM-00107",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00326",
+    "parent_item": "ITM-00107",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00381",
+    "parent_item": "ITM-00107",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00263",
+    "parent_item": "ITM-00108",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00270",
+    "parent_item": "ITM-00108",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00356",
+    "parent_item": "ITM-00108",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00361",
+    "parent_item": "ITM-00108",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00303",
+    "parent_item": "ITM-00109",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00368",
+    "parent_item": "ITM-00109",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00426",
+    "parent_item": "ITM-00109",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00559",
+    "parent_item": "ITM-00109",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00388",
+    "parent_item": "ITM-00110",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00519",
+    "parent_item": "ITM-00110",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00271",
+    "parent_item": "ITM-00111",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00290",
+    "parent_item": "ITM-00111",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00550",
+    "parent_item": "ITM-00111",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00568",
+    "parent_item": "ITM-00111",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00258",
+    "parent_item": "ITM-00112",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00283",
+    "parent_item": "ITM-00112",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00566",
+    "parent_item": "ITM-00112",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00231",
+    "parent_item": "ITM-00113",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00277",
+    "parent_item": "ITM-00113",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00455",
+    "parent_item": "ITM-00113",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00526",
+    "parent_item": "ITM-00114",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00536",
+    "parent_item": "ITM-00114",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00387",
+    "parent_item": "ITM-00115",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00404",
+    "parent_item": "ITM-00115",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00426",
+    "parent_item": "ITM-00115",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00554",
+    "parent_item": "ITM-00115",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00259",
+    "parent_item": "ITM-00116",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00310",
+    "parent_item": "ITM-00116",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00404",
+    "parent_item": "ITM-00116",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00460",
+    "parent_item": "ITM-00116",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00238",
+    "parent_item": "ITM-00117",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00242",
+    "parent_item": "ITM-00117",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00426",
+    "parent_item": "ITM-00117",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00259",
+    "parent_item": "ITM-00118",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00332",
+    "parent_item": "ITM-00118",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00469",
+    "parent_item": "ITM-00118",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00344",
+    "parent_item": "ITM-00119",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00430",
+    "parent_item": "ITM-00119",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00452",
+    "parent_item": "ITM-00119",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00568",
+    "parent_item": "ITM-00119",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00397",
+    "parent_item": "ITM-00120",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00425",
+    "parent_item": "ITM-00120",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00475",
+    "parent_item": "ITM-00120",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00569",
+    "parent_item": "ITM-00120",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00271",
+    "parent_item": "ITM-00121",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00291",
+    "parent_item": "ITM-00121",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00470",
+    "parent_item": "ITM-00121",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00306",
+    "parent_item": "ITM-00122",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00383",
+    "parent_item": "ITM-00122",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00468",
+    "parent_item": "ITM-00122",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00534",
+    "parent_item": "ITM-00122",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00234",
+    "parent_item": "ITM-00123",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00383",
+    "parent_item": "ITM-00123",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00438",
+    "parent_item": "ITM-00123",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00280",
+    "parent_item": "ITM-00124",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00485",
+    "parent_item": "ITM-00124",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00328",
+    "parent_item": "ITM-00125",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00330",
+    "parent_item": "ITM-00125",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00550",
+    "parent_item": "ITM-00125",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00571",
+    "parent_item": "ITM-00125",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00244",
+    "parent_item": "ITM-00126",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00318",
+    "parent_item": "ITM-00126",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00243",
+    "parent_item": "ITM-00127",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00266",
+    "parent_item": "ITM-00127",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00367",
+    "parent_item": "ITM-00127",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00565",
+    "parent_item": "ITM-00127",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00307",
+    "parent_item": "ITM-00128",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00424",
+    "parent_item": "ITM-00128",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00546",
+    "parent_item": "ITM-00128",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00330",
+    "parent_item": "ITM-00129",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00423",
+    "parent_item": "ITM-00129",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00483",
+    "parent_item": "ITM-00129",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00564",
+    "parent_item": "ITM-00129",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00274",
+    "parent_item": "ITM-00130",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00347",
+    "parent_item": "ITM-00130",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00396",
+    "parent_item": "ITM-00130",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00271",
+    "parent_item": "ITM-00131",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00401",
+    "parent_item": "ITM-00131",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00567",
+    "parent_item": "ITM-00131",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00236",
+    "parent_item": "ITM-00132",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00390",
+    "parent_item": "ITM-00132",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00400",
+    "parent_item": "ITM-00132",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00584",
+    "parent_item": "ITM-00132",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00509",
+    "parent_item": "ITM-00133",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00529",
+    "parent_item": "ITM-00133",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00236",
+    "parent_item": "ITM-00134",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00305",
+    "parent_item": "ITM-00134",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00490",
+    "parent_item": "ITM-00134",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00570",
+    "parent_item": "ITM-00134",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00412",
+    "parent_item": "ITM-00135",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00419",
+    "parent_item": "ITM-00135",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00394",
+    "parent_item": "ITM-00136",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00557",
+    "parent_item": "ITM-00136",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00563",
+    "parent_item": "ITM-00137",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00588",
+    "parent_item": "ITM-00137",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00297",
+    "parent_item": "ITM-00138",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00402",
+    "parent_item": "ITM-00138",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00502",
+    "parent_item": "ITM-00138",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00248",
+    "parent_item": "ITM-00139",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00298",
+    "parent_item": "ITM-00139",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00286",
+    "parent_item": "ITM-00140",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00468",
+    "parent_item": "ITM-00140",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00232",
+    "parent_item": "ITM-00141",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00350",
+    "parent_item": "ITM-00141",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00435",
+    "parent_item": "ITM-00141",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00303",
+    "parent_item": "ITM-00142",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00351",
+    "parent_item": "ITM-00142",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00259",
+    "parent_item": "ITM-00143",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00316",
+    "parent_item": "ITM-00143",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00376",
+    "parent_item": "ITM-00143",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00582",
+    "parent_item": "ITM-00143",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00265",
+    "parent_item": "ITM-00144",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00269",
+    "parent_item": "ITM-00144",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00308",
+    "parent_item": "ITM-00145",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00322",
+    "parent_item": "ITM-00145",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00458",
+    "parent_item": "ITM-00146",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00586",
+    "parent_item": "ITM-00146",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00237",
+    "parent_item": "ITM-00147",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00310",
+    "parent_item": "ITM-00147",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00246",
+    "parent_item": "ITM-00148",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00459",
+    "parent_item": "ITM-00148",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00589",
+    "parent_item": "ITM-00148",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00269",
+    "parent_item": "ITM-00149",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00284",
+    "parent_item": "ITM-00149",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00318",
+    "parent_item": "ITM-00149",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00260",
+    "parent_item": "ITM-00150",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00387",
+    "parent_item": "ITM-00150",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00461",
+    "parent_item": "ITM-00150",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00275",
+    "parent_item": "ITM-00151",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00279",
+    "parent_item": "ITM-00151",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00338",
+    "parent_item": "ITM-00151",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00232",
+    "parent_item": "ITM-00152",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00283",
+    "parent_item": "ITM-00152",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00455",
+    "parent_item": "ITM-00152",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00576",
+    "parent_item": "ITM-00152",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00245",
+    "parent_item": "ITM-00153",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00309",
+    "parent_item": "ITM-00153",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00320",
+    "parent_item": "ITM-00153",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00265",
+    "parent_item": "ITM-00154",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00466",
+    "parent_item": "ITM-00154",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00254",
+    "parent_item": "ITM-00155",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00377",
+    "parent_item": "ITM-00155",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00463",
+    "parent_item": "ITM-00155",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00261",
+    "parent_item": "ITM-00156",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00305",
+    "parent_item": "ITM-00156",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00380",
+    "parent_item": "ITM-00156",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00470",
+    "parent_item": "ITM-00156",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00332",
+    "parent_item": "ITM-00157",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00466",
+    "parent_item": "ITM-00157",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00570",
+    "parent_item": "ITM-00157",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00325",
+    "parent_item": "ITM-00158",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00386",
+    "parent_item": "ITM-00158",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00547",
+    "parent_item": "ITM-00158",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00597",
+    "parent_item": "ITM-00158",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00282",
+    "parent_item": "ITM-00159",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00455",
+    "parent_item": "ITM-00159",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00270",
+    "parent_item": "ITM-00160",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00318",
+    "parent_item": "ITM-00160",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00341",
+    "parent_item": "ITM-00160",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00412",
+    "parent_item": "ITM-00160",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00304",
+    "parent_item": "ITM-00161",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00359",
+    "parent_item": "ITM-00161",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00501",
+    "parent_item": "ITM-00161",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00597",
+    "parent_item": "ITM-00161",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00390",
+    "parent_item": "ITM-00162",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00497",
+    "parent_item": "ITM-00162",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00595",
+    "parent_item": "ITM-00162",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00234",
+    "parent_item": "ITM-00163",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00580",
+    "parent_item": "ITM-00163",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00290",
+    "parent_item": "ITM-00164",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00479",
+    "parent_item": "ITM-00164",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00236",
+    "parent_item": "ITM-00165",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00532",
+    "parent_item": "ITM-00165",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00313",
+    "parent_item": "ITM-00166",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00339",
+    "parent_item": "ITM-00166",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00369",
+    "parent_item": "ITM-00166",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00373",
+    "parent_item": "ITM-00166",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00360",
+    "parent_item": "ITM-00167",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00459",
+    "parent_item": "ITM-00167",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00474",
+    "parent_item": "ITM-00167",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00600",
+    "parent_item": "ITM-00167",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00270",
+    "parent_item": "ITM-00168",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00286",
+    "parent_item": "ITM-00168",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00346",
+    "parent_item": "ITM-00168",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00491",
+    "parent_item": "ITM-00168",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00273",
+    "parent_item": "ITM-00169",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00306",
+    "parent_item": "ITM-00169",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00311",
+    "parent_item": "ITM-00169",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00463",
+    "parent_item": "ITM-00169",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00235",
+    "parent_item": "ITM-00170",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00321",
+    "parent_item": "ITM-00170",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00435",
+    "parent_item": "ITM-00170",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00550",
+    "parent_item": "ITM-00170",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00269",
+    "parent_item": "ITM-00171",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00599",
+    "parent_item": "ITM-00171",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00279",
+    "parent_item": "ITM-00172",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00564",
+    "parent_item": "ITM-00172",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00340",
+    "parent_item": "ITM-00173",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00539",
+    "parent_item": "ITM-00173",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00257",
+    "parent_item": "ITM-00174",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00427",
+    "parent_item": "ITM-00174",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00563",
+    "parent_item": "ITM-00174",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00443",
+    "parent_item": "ITM-00175",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00451",
+    "parent_item": "ITM-00175",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00356",
+    "parent_item": "ITM-00176",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00426",
+    "parent_item": "ITM-00176",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00521",
+    "parent_item": "ITM-00176",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00436",
+    "parent_item": "ITM-00177",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00507",
+    "parent_item": "ITM-00177",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00309",
+    "parent_item": "ITM-00178",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00522",
+    "parent_item": "ITM-00178",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00567",
+    "parent_item": "ITM-00178",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00586",
+    "parent_item": "ITM-00178",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00242",
+    "parent_item": "ITM-00179",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00336",
+    "parent_item": "ITM-00179",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00408",
+    "parent_item": "ITM-00179",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00557",
+    "parent_item": "ITM-00179",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00300",
+    "parent_item": "ITM-00180",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00367",
+    "parent_item": "ITM-00180",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00498",
+    "parent_item": "ITM-00180",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00255",
+    "parent_item": "ITM-00181",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00326",
+    "parent_item": "ITM-00181",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00338",
+    "parent_item": "ITM-00181",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00376",
+    "parent_item": "ITM-00181",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00301",
+    "parent_item": "ITM-00182",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00332",
+    "parent_item": "ITM-00182",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00502",
+    "parent_item": "ITM-00182",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00516",
+    "parent_item": "ITM-00182",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00257",
+    "parent_item": "ITM-00183",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00394",
+    "parent_item": "ITM-00183",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00483",
+    "parent_item": "ITM-00183",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00249",
+    "parent_item": "ITM-00184",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00342",
+    "parent_item": "ITM-00184",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00363",
+    "parent_item": "ITM-00184",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00317",
+    "parent_item": "ITM-00185",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00341",
+    "parent_item": "ITM-00185",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00593",
+    "parent_item": "ITM-00185",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00246",
+    "parent_item": "ITM-00186",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00291",
+    "parent_item": "ITM-00186",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00296",
+    "parent_item": "ITM-00186",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00299",
+    "parent_item": "ITM-00186",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00381",
+    "parent_item": "ITM-00187",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00527",
+    "parent_item": "ITM-00187",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00250",
+    "parent_item": "ITM-00188",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00398",
+    "parent_item": "ITM-00188",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00413",
+    "parent_item": "ITM-00188",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00539",
+    "parent_item": "ITM-00188",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00274",
+    "parent_item": "ITM-00189",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00344",
+    "parent_item": "ITM-00189",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00597",
+    "parent_item": "ITM-00189",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00282",
+    "parent_item": "ITM-00190",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00298",
+    "parent_item": "ITM-00190",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00352",
+    "parent_item": "ITM-00190",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00449",
+    "parent_item": "ITM-00190",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00243",
+    "parent_item": "ITM-00191",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00315",
+    "parent_item": "ITM-00191",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00379",
+    "parent_item": "ITM-00191",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00595",
+    "parent_item": "ITM-00191",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00326",
+    "parent_item": "ITM-00192",
+    "qty_per": 4
+  },
+  {
+    "component_item": "ITM-00453",
+    "parent_item": "ITM-00192",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00263",
+    "parent_item": "ITM-00193",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00318",
+    "parent_item": "ITM-00193",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00324",
+    "parent_item": "ITM-00193",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00581",
+    "parent_item": "ITM-00193",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00272",
+    "parent_item": "ITM-00194",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00275",
+    "parent_item": "ITM-00194",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00328",
+    "parent_item": "ITM-00194",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00343",
+    "parent_item": "ITM-00194",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00247",
+    "parent_item": "ITM-00195",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00307",
+    "parent_item": "ITM-00195",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00516",
+    "parent_item": "ITM-00195",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00521",
+    "parent_item": "ITM-00195",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00319",
+    "parent_item": "ITM-00196",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00432",
+    "parent_item": "ITM-00196",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00542",
+    "parent_item": "ITM-00196",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00351",
+    "parent_item": "ITM-00197",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00360",
+    "parent_item": "ITM-00197",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00422",
+    "parent_item": "ITM-00197",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00343",
+    "parent_item": "ITM-00198",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00385",
+    "parent_item": "ITM-00198",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00456",
+    "parent_item": "ITM-00198",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00494",
+    "parent_item": "ITM-00198",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00307",
+    "parent_item": "ITM-00199",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00521",
+    "parent_item": "ITM-00199",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00323",
+    "parent_item": "ITM-00200",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00504",
+    "parent_item": "ITM-00200",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00330",
+    "parent_item": "ITM-00201",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00364",
+    "parent_item": "ITM-00201",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00593",
+    "parent_item": "ITM-00201",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00279",
+    "parent_item": "ITM-00202",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00406",
+    "parent_item": "ITM-00202",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00430",
+    "parent_item": "ITM-00202",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00362",
+    "parent_item": "ITM-00203",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00506",
+    "parent_item": "ITM-00203",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00539",
+    "parent_item": "ITM-00203",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00389",
+    "parent_item": "ITM-00204",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00560",
+    "parent_item": "ITM-00204",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00372",
+    "parent_item": "ITM-00205",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00495",
+    "parent_item": "ITM-00205",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00571",
+    "parent_item": "ITM-00205",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00260",
+    "parent_item": "ITM-00206",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00302",
+    "parent_item": "ITM-00206",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00354",
+    "parent_item": "ITM-00206",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00459",
+    "parent_item": "ITM-00206",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00290",
+    "parent_item": "ITM-00207",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00380",
+    "parent_item": "ITM-00207",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00269",
+    "parent_item": "ITM-00208",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00381",
+    "parent_item": "ITM-00208",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00320",
+    "parent_item": "ITM-00209",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00429",
+    "parent_item": "ITM-00209",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00269",
+    "parent_item": "ITM-00210",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00279",
+    "parent_item": "ITM-00210",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00309",
+    "parent_item": "ITM-00210",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00458",
+    "parent_item": "ITM-00210",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00246",
+    "parent_item": "ITM-00211",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00378",
+    "parent_item": "ITM-00211",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00382",
+    "parent_item": "ITM-00211",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00492",
+    "parent_item": "ITM-00211",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00342",
+    "parent_item": "ITM-00212",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00578",
+    "parent_item": "ITM-00212",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00593",
+    "parent_item": "ITM-00212",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00241",
+    "parent_item": "ITM-00213",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00484",
+    "parent_item": "ITM-00213",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00580",
+    "parent_item": "ITM-00213",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00314",
+    "parent_item": "ITM-00214",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00317",
+    "parent_item": "ITM-00214",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00300",
+    "parent_item": "ITM-00215",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00351",
+    "parent_item": "ITM-00215",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00523",
+    "parent_item": "ITM-00215",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00403",
+    "parent_item": "ITM-00216",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00507",
+    "parent_item": "ITM-00216",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00577",
+    "parent_item": "ITM-00216",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00328",
+    "parent_item": "ITM-00217",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00408",
+    "parent_item": "ITM-00217",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00421",
+    "parent_item": "ITM-00218",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00482",
+    "parent_item": "ITM-00218",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00528",
+    "parent_item": "ITM-00218",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00288",
+    "parent_item": "ITM-00219",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00298",
+    "parent_item": "ITM-00219",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00340",
+    "parent_item": "ITM-00219",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00262",
+    "parent_item": "ITM-00220",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00367",
+    "parent_item": "ITM-00220",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00403",
+    "parent_item": "ITM-00220",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00542",
+    "parent_item": "ITM-00220",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00275",
+    "parent_item": "ITM-00221",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00354",
+    "parent_item": "ITM-00221",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00433",
+    "parent_item": "ITM-00221",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00403",
+    "parent_item": "ITM-00222",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00577",
+    "parent_item": "ITM-00222",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00308",
+    "parent_item": "ITM-00223",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00389",
+    "parent_item": "ITM-00223",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00489",
+    "parent_item": "ITM-00223",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00382",
+    "parent_item": "ITM-00224",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00398",
+    "parent_item": "ITM-00224",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00465",
+    "parent_item": "ITM-00224",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00316",
+    "parent_item": "ITM-00225",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00340",
+    "parent_item": "ITM-00225",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00317",
+    "parent_item": "ITM-00226",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00392",
+    "parent_item": "ITM-00226",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00573",
+    "parent_item": "ITM-00226",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00584",
+    "parent_item": "ITM-00226",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00242",
+    "parent_item": "ITM-00227",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00261",
+    "parent_item": "ITM-00227",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00312",
+    "parent_item": "ITM-00227",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00533",
+    "parent_item": "ITM-00227",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00394",
+    "parent_item": "ITM-00228",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00405",
+    "parent_item": "ITM-00228",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00304",
+    "parent_item": "ITM-00229",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00431",
+    "parent_item": "ITM-00229",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00549",
+    "parent_item": "ITM-00229",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00248",
+    "parent_item": "ITM-00230",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00381",
+    "parent_item": "ITM-00230",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00510",
+    "parent_item": "ITM-00230",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00428",
+    "parent_item": "ITM-00231",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00437",
+    "parent_item": "ITM-00231",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00466",
+    "parent_item": "ITM-00231",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00574",
+    "parent_item": "ITM-00231",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00543",
+    "parent_item": "ITM-00232",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00557",
+    "parent_item": "ITM-00232",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00513",
+    "parent_item": "ITM-00233",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00548",
+    "parent_item": "ITM-00233",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00462",
+    "parent_item": "ITM-00234",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00513",
+    "parent_item": "ITM-00234",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00515",
+    "parent_item": "ITM-00234",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00592",
+    "parent_item": "ITM-00234",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00441",
+    "parent_item": "ITM-00235",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00446",
+    "parent_item": "ITM-00235",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00515",
+    "parent_item": "ITM-00235",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00540",
+    "parent_item": "ITM-00235",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00511",
+    "parent_item": "ITM-00236",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00525",
+    "parent_item": "ITM-00236",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00565",
+    "parent_item": "ITM-00236",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00572",
+    "parent_item": "ITM-00236",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00515",
+    "parent_item": "ITM-00237",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00568",
+    "parent_item": "ITM-00237",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00581",
+    "parent_item": "ITM-00237",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00421",
+    "parent_item": "ITM-00238",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00503",
+    "parent_item": "ITM-00238",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00530",
+    "parent_item": "ITM-00238",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00599",
+    "parent_item": "ITM-00238",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00452",
+    "parent_item": "ITM-00239",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00455",
+    "parent_item": "ITM-00239",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00477",
+    "parent_item": "ITM-00239",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00523",
+    "parent_item": "ITM-00239",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00491",
+    "parent_item": "ITM-00240",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00505",
+    "parent_item": "ITM-00240",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00416",
+    "parent_item": "ITM-00241",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00547",
+    "parent_item": "ITM-00241",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00591",
+    "parent_item": "ITM-00241",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00423",
+    "parent_item": "ITM-00242",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00486",
+    "parent_item": "ITM-00242",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00520",
+    "parent_item": "ITM-00242",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00524",
+    "parent_item": "ITM-00242",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00448",
+    "parent_item": "ITM-00243",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00509",
+    "parent_item": "ITM-00243",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00511",
+    "parent_item": "ITM-00244",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00534",
+    "parent_item": "ITM-00244",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00413",
+    "parent_item": "ITM-00245",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00502",
+    "parent_item": "ITM-00245",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00543",
+    "parent_item": "ITM-00245",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00442",
+    "parent_item": "ITM-00246",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00566",
+    "parent_item": "ITM-00246",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00572",
+    "parent_item": "ITM-00246",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00592",
+    "parent_item": "ITM-00246",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00465",
+    "parent_item": "ITM-00247",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00476",
+    "parent_item": "ITM-00247",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00551",
+    "parent_item": "ITM-00247",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00597",
+    "parent_item": "ITM-00247",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00440",
+    "parent_item": "ITM-00248",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00519",
+    "parent_item": "ITM-00248",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00431",
+    "parent_item": "ITM-00249",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00452",
+    "parent_item": "ITM-00249",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00453",
+    "parent_item": "ITM-00249",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00541",
+    "parent_item": "ITM-00249",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00421",
+    "parent_item": "ITM-00250",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00479",
+    "parent_item": "ITM-00250",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00444",
+    "parent_item": "ITM-00251",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00451",
+    "parent_item": "ITM-00251",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00589",
+    "parent_item": "ITM-00251",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00452",
+    "parent_item": "ITM-00252",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00558",
+    "parent_item": "ITM-00252",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00587",
+    "parent_item": "ITM-00252",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00597",
+    "parent_item": "ITM-00252",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00444",
+    "parent_item": "ITM-00253",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00510",
+    "parent_item": "ITM-00253",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00534",
+    "parent_item": "ITM-00253",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00414",
+    "parent_item": "ITM-00254",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00552",
+    "parent_item": "ITM-00254",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00600",
+    "parent_item": "ITM-00254",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00414",
+    "parent_item": "ITM-00255",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00436",
+    "parent_item": "ITM-00255",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00523",
+    "parent_item": "ITM-00255",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00547",
+    "parent_item": "ITM-00255",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00453",
+    "parent_item": "ITM-00256",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00581",
+    "parent_item": "ITM-00256",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00524",
+    "parent_item": "ITM-00257",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00590",
+    "parent_item": "ITM-00257",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00416",
+    "parent_item": "ITM-00258",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00535",
+    "parent_item": "ITM-00258",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00470",
+    "parent_item": "ITM-00259",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00502",
+    "parent_item": "ITM-00259",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00444",
+    "parent_item": "ITM-00260",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00484",
+    "parent_item": "ITM-00260",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00573",
+    "parent_item": "ITM-00260",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00577",
+    "parent_item": "ITM-00260",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00419",
+    "parent_item": "ITM-00261",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00479",
+    "parent_item": "ITM-00261",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00465",
+    "parent_item": "ITM-00262",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00506",
+    "parent_item": "ITM-00262",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00523",
+    "parent_item": "ITM-00262",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00525",
+    "parent_item": "ITM-00262",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00462",
+    "parent_item": "ITM-00263",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00509",
+    "parent_item": "ITM-00263",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00535",
+    "parent_item": "ITM-00263",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00597",
+    "parent_item": "ITM-00263",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00425",
+    "parent_item": "ITM-00264",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00519",
+    "parent_item": "ITM-00264",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00424",
+    "parent_item": "ITM-00265",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00582",
+    "parent_item": "ITM-00265",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00438",
+    "parent_item": "ITM-00266",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00442",
+    "parent_item": "ITM-00266",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00551",
+    "parent_item": "ITM-00266",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00585",
+    "parent_item": "ITM-00266",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00438",
+    "parent_item": "ITM-00267",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00510",
+    "parent_item": "ITM-00267",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00516",
+    "parent_item": "ITM-00267",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00417",
+    "parent_item": "ITM-00268",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00426",
+    "parent_item": "ITM-00268",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00444",
+    "parent_item": "ITM-00268",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00473",
+    "parent_item": "ITM-00269",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00492",
+    "parent_item": "ITM-00269",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00512",
+    "parent_item": "ITM-00269",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00464",
+    "parent_item": "ITM-00270",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00467",
+    "parent_item": "ITM-00270",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00473",
+    "parent_item": "ITM-00270",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00545",
+    "parent_item": "ITM-00271",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00460",
+    "parent_item": "ITM-00272",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00501",
+    "parent_item": "ITM-00272",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00413",
+    "parent_item": "ITM-00273",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00519",
+    "parent_item": "ITM-00273",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00530",
+    "parent_item": "ITM-00273",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00592",
+    "parent_item": "ITM-00273",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00430",
+    "parent_item": "ITM-00274",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00473",
+    "parent_item": "ITM-00274",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00591",
+    "parent_item": "ITM-00274",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00424",
+    "parent_item": "ITM-00275",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00470",
+    "parent_item": "ITM-00275",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00568",
+    "parent_item": "ITM-00275",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00467",
+    "parent_item": "ITM-00276",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00499",
+    "parent_item": "ITM-00276",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00504",
+    "parent_item": "ITM-00276",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00484",
+    "parent_item": "ITM-00277",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00562",
+    "parent_item": "ITM-00277",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00438",
+    "parent_item": "ITM-00278",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00521",
+    "parent_item": "ITM-00278",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00563",
+    "parent_item": "ITM-00278",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00421",
+    "parent_item": "ITM-00279",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00428",
+    "parent_item": "ITM-00279",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00497",
+    "parent_item": "ITM-00279",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00542",
+    "parent_item": "ITM-00279",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00466",
+    "parent_item": "ITM-00280",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00532",
+    "parent_item": "ITM-00280",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00507",
+    "parent_item": "ITM-00281",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00511",
+    "parent_item": "ITM-00281",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00533",
+    "parent_item": "ITM-00281",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00538",
+    "parent_item": "ITM-00281",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00492",
+    "parent_item": "ITM-00282",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00588",
+    "parent_item": "ITM-00282",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00420",
+    "parent_item": "ITM-00283",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00487",
+    "parent_item": "ITM-00283",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00504",
+    "parent_item": "ITM-00283",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00512",
+    "parent_item": "ITM-00284",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00537",
+    "parent_item": "ITM-00284",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00412",
+    "parent_item": "ITM-00285",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00469",
+    "parent_item": "ITM-00285",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00550",
+    "parent_item": "ITM-00285",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00562",
+    "parent_item": "ITM-00285",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00488",
+    "parent_item": "ITM-00286",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00529",
+    "parent_item": "ITM-00286",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00594",
+    "parent_item": "ITM-00286",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00419",
+    "parent_item": "ITM-00287",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00450",
+    "parent_item": "ITM-00287",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00484",
+    "parent_item": "ITM-00287",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00544",
+    "parent_item": "ITM-00287",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00429",
+    "parent_item": "ITM-00288",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00528",
+    "parent_item": "ITM-00288",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00535",
+    "parent_item": "ITM-00288",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00552",
+    "parent_item": "ITM-00288",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00451",
+    "parent_item": "ITM-00289",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00549",
+    "parent_item": "ITM-00289",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00468",
+    "parent_item": "ITM-00290",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00564",
+    "parent_item": "ITM-00290",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00598",
+    "parent_item": "ITM-00290",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00415",
+    "parent_item": "ITM-00291",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00487",
+    "parent_item": "ITM-00291",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00494",
+    "parent_item": "ITM-00291",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00569",
+    "parent_item": "ITM-00291",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00422",
+    "parent_item": "ITM-00292",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00463",
+    "parent_item": "ITM-00292",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00544",
+    "parent_item": "ITM-00292",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00548",
+    "parent_item": "ITM-00292",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00418",
+    "parent_item": "ITM-00293",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00442",
+    "parent_item": "ITM-00293",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00555",
+    "parent_item": "ITM-00293",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00581",
+    "parent_item": "ITM-00293",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00444",
+    "parent_item": "ITM-00294",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00512",
+    "parent_item": "ITM-00294",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00541",
+    "parent_item": "ITM-00294",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00572",
+    "parent_item": "ITM-00294",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00414",
+    "parent_item": "ITM-00295",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00416",
+    "parent_item": "ITM-00295",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00489",
+    "parent_item": "ITM-00296",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00514",
+    "parent_item": "ITM-00296",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00549",
+    "parent_item": "ITM-00296",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00592",
+    "parent_item": "ITM-00296",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00426",
+    "parent_item": "ITM-00297",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00453",
+    "parent_item": "ITM-00297",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00481",
+    "parent_item": "ITM-00297",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00517",
+    "parent_item": "ITM-00298",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00526",
+    "parent_item": "ITM-00298",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00544",
+    "parent_item": "ITM-00298",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00589",
+    "parent_item": "ITM-00298",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00418",
+    "parent_item": "ITM-00299",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00424",
+    "parent_item": "ITM-00299",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00463",
+    "parent_item": "ITM-00300",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00540",
+    "parent_item": "ITM-00300",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00551",
+    "parent_item": "ITM-00300",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00510",
+    "parent_item": "ITM-00301",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00593",
+    "parent_item": "ITM-00301",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00445",
+    "parent_item": "ITM-00302",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00508",
+    "parent_item": "ITM-00302",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00523",
+    "parent_item": "ITM-00302",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00575",
+    "parent_item": "ITM-00302",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00432",
+    "parent_item": "ITM-00303",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00476",
+    "parent_item": "ITM-00303",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00487",
+    "parent_item": "ITM-00303",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00598",
+    "parent_item": "ITM-00303",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00494",
+    "parent_item": "ITM-00304",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00516",
+    "parent_item": "ITM-00304",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00452",
+    "parent_item": "ITM-00305",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00566",
+    "parent_item": "ITM-00305",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00553",
+    "parent_item": "ITM-00306",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00593",
+    "parent_item": "ITM-00306",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00424",
+    "parent_item": "ITM-00307",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00583",
+    "parent_item": "ITM-00307",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00594",
+    "parent_item": "ITM-00307",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00599",
+    "parent_item": "ITM-00307",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00507",
+    "parent_item": "ITM-00308",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00514",
+    "parent_item": "ITM-00308",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00535",
+    "parent_item": "ITM-00308",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00584",
+    "parent_item": "ITM-00308",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00502",
+    "parent_item": "ITM-00309",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00559",
+    "parent_item": "ITM-00309",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00433",
+    "parent_item": "ITM-00310",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00569",
+    "parent_item": "ITM-00310",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00589",
+    "parent_item": "ITM-00310",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00430",
+    "parent_item": "ITM-00311",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00474",
+    "parent_item": "ITM-00311",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00488",
+    "parent_item": "ITM-00311",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00411",
+    "parent_item": "ITM-00312",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00552",
+    "parent_item": "ITM-00312",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00571",
+    "parent_item": "ITM-00313",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00578",
+    "parent_item": "ITM-00313",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00464",
+    "parent_item": "ITM-00314",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00584",
+    "parent_item": "ITM-00314",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00592",
+    "parent_item": "ITM-00314",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00538",
+    "parent_item": "ITM-00315",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00580",
+    "parent_item": "ITM-00315",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00478",
+    "parent_item": "ITM-00316",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00513",
+    "parent_item": "ITM-00316",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00566",
+    "parent_item": "ITM-00316",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00458",
+    "parent_item": "ITM-00317",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00465",
+    "parent_item": "ITM-00317",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00543",
+    "parent_item": "ITM-00317",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00546",
+    "parent_item": "ITM-00317",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00453",
+    "parent_item": "ITM-00318",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00504",
+    "parent_item": "ITM-00318",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00528",
+    "parent_item": "ITM-00318",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00599",
+    "parent_item": "ITM-00318",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00450",
+    "parent_item": "ITM-00319",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00509",
+    "parent_item": "ITM-00319",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00523",
+    "parent_item": "ITM-00319",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00580",
+    "parent_item": "ITM-00319",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00559",
+    "parent_item": "ITM-00320",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00600",
+    "parent_item": "ITM-00320",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00467",
+    "parent_item": "ITM-00321",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00591",
+    "parent_item": "ITM-00321",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00443",
+    "parent_item": "ITM-00322",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00448",
+    "parent_item": "ITM-00322",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00463",
+    "parent_item": "ITM-00322",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00573",
+    "parent_item": "ITM-00322",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00419",
+    "parent_item": "ITM-00323",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00521",
+    "parent_item": "ITM-00323",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00444",
+    "parent_item": "ITM-00324",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00452",
+    "parent_item": "ITM-00324",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00439",
+    "parent_item": "ITM-00325",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00544",
+    "parent_item": "ITM-00325",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00562",
+    "parent_item": "ITM-00325",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00443",
+    "parent_item": "ITM-00326",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00539",
+    "parent_item": "ITM-00326",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00569",
+    "parent_item": "ITM-00326",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00525",
+    "parent_item": "ITM-00327",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00541",
+    "parent_item": "ITM-00327",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00586",
+    "parent_item": "ITM-00327",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00442",
+    "parent_item": "ITM-00328",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00531",
+    "parent_item": "ITM-00328",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00525",
+    "parent_item": "ITM-00329",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00529",
+    "parent_item": "ITM-00329",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00560",
+    "parent_item": "ITM-00329",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00433",
+    "parent_item": "ITM-00330",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00563",
+    "parent_item": "ITM-00330",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00519",
+    "parent_item": "ITM-00331",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00568",
+    "parent_item": "ITM-00331",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00439",
+    "parent_item": "ITM-00332",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00536",
+    "parent_item": "ITM-00332",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00571",
+    "parent_item": "ITM-00332",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00439",
+    "parent_item": "ITM-00333",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00461",
+    "parent_item": "ITM-00333",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00531",
+    "parent_item": "ITM-00334",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00555",
+    "parent_item": "ITM-00334",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00448",
+    "parent_item": "ITM-00335",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00577",
+    "parent_item": "ITM-00335",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00588",
+    "parent_item": "ITM-00335",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00593",
+    "parent_item": "ITM-00335",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00416",
+    "parent_item": "ITM-00336",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00435",
+    "parent_item": "ITM-00336",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00445",
+    "parent_item": "ITM-00336",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00502",
+    "parent_item": "ITM-00336",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00464",
+    "parent_item": "ITM-00337",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00537",
+    "parent_item": "ITM-00337",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00538",
+    "parent_item": "ITM-00337",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00581",
+    "parent_item": "ITM-00337",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00569",
+    "parent_item": "ITM-00338",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00584",
+    "parent_item": "ITM-00338",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00597",
+    "parent_item": "ITM-00338",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00445",
+    "parent_item": "ITM-00339",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00504",
+    "parent_item": "ITM-00339",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00522",
+    "parent_item": "ITM-00339",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00556",
+    "parent_item": "ITM-00339",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00415",
+    "parent_item": "ITM-00340",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00495",
+    "parent_item": "ITM-00340",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00554",
+    "parent_item": "ITM-00340",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00440",
+    "parent_item": "ITM-00341",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00451",
+    "parent_item": "ITM-00341",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00525",
+    "parent_item": "ITM-00341",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00530",
+    "parent_item": "ITM-00341",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00438",
+    "parent_item": "ITM-00342",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00493",
+    "parent_item": "ITM-00342",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00433",
+    "parent_item": "ITM-00343",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00442",
+    "parent_item": "ITM-00343",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00587",
+    "parent_item": "ITM-00343",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00433",
+    "parent_item": "ITM-00344",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00436",
+    "parent_item": "ITM-00344",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00558",
+    "parent_item": "ITM-00344",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00412",
+    "parent_item": "ITM-00345",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00553",
+    "parent_item": "ITM-00345",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00411",
+    "parent_item": "ITM-00346",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00581",
+    "parent_item": "ITM-00346",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00500",
+    "parent_item": "ITM-00347",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00584",
+    "parent_item": "ITM-00347",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00438",
+    "parent_item": "ITM-00348",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00441",
+    "parent_item": "ITM-00348",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00487",
+    "parent_item": "ITM-00348",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00511",
+    "parent_item": "ITM-00348",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00437",
+    "parent_item": "ITM-00349",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00448",
+    "parent_item": "ITM-00349",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00501",
+    "parent_item": "ITM-00349",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00451",
+    "parent_item": "ITM-00350",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00483",
+    "parent_item": "ITM-00350",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00499",
+    "parent_item": "ITM-00350",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00513",
+    "parent_item": "ITM-00350",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00470",
+    "parent_item": "ITM-00351",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00550",
+    "parent_item": "ITM-00351",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00552",
+    "parent_item": "ITM-00351",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00469",
+    "parent_item": "ITM-00352",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00579",
+    "parent_item": "ITM-00352",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00434",
+    "parent_item": "ITM-00353",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00440",
+    "parent_item": "ITM-00353",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00449",
+    "parent_item": "ITM-00353",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00500",
+    "parent_item": "ITM-00353",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00553",
+    "parent_item": "ITM-00354",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00562",
+    "parent_item": "ITM-00354",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00584",
+    "parent_item": "ITM-00354",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00502",
+    "parent_item": "ITM-00355",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00524",
+    "parent_item": "ITM-00355",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00411",
+    "parent_item": "ITM-00356",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00453",
+    "parent_item": "ITM-00356",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00491",
+    "parent_item": "ITM-00357",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00531",
+    "parent_item": "ITM-00357",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00545",
+    "parent_item": "ITM-00357",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00552",
+    "parent_item": "ITM-00357",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00445",
+    "parent_item": "ITM-00358",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00457",
+    "parent_item": "ITM-00358",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00464",
+    "parent_item": "ITM-00358",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00511",
+    "parent_item": "ITM-00358",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00538",
+    "parent_item": "ITM-00359",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00568",
+    "parent_item": "ITM-00359",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00586",
+    "parent_item": "ITM-00359",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00490",
+    "parent_item": "ITM-00360",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00541",
+    "parent_item": "ITM-00360",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00569",
+    "parent_item": "ITM-00360",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00428",
+    "parent_item": "ITM-00361",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00479",
+    "parent_item": "ITM-00361",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00541",
+    "parent_item": "ITM-00361",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00577",
+    "parent_item": "ITM-00361",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00488",
+    "parent_item": "ITM-00362",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00596",
+    "parent_item": "ITM-00362",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00520",
+    "parent_item": "ITM-00363",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00558",
+    "parent_item": "ITM-00363",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00587",
+    "parent_item": "ITM-00363",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00533",
+    "parent_item": "ITM-00364",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00596",
+    "parent_item": "ITM-00364",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00416",
+    "parent_item": "ITM-00365",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00500",
+    "parent_item": "ITM-00365",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00524",
+    "parent_item": "ITM-00365",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00569",
+    "parent_item": "ITM-00365",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00413",
+    "parent_item": "ITM-00366",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00430",
+    "parent_item": "ITM-00366",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00525",
+    "parent_item": "ITM-00366",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00431",
+    "parent_item": "ITM-00367",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00481",
+    "parent_item": "ITM-00367",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00525",
+    "parent_item": "ITM-00367",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00486",
+    "parent_item": "ITM-00368",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00489",
+    "parent_item": "ITM-00368",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00534",
+    "parent_item": "ITM-00368",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00445",
+    "parent_item": "ITM-00369",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00469",
+    "parent_item": "ITM-00369",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00533",
+    "parent_item": "ITM-00369",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00581",
+    "parent_item": "ITM-00369",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00482",
+    "parent_item": "ITM-00370",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00551",
+    "parent_item": "ITM-00370",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00599",
+    "parent_item": "ITM-00370",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00437",
+    "parent_item": "ITM-00371",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00452",
+    "parent_item": "ITM-00371",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00457",
+    "parent_item": "ITM-00371",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00416",
+    "parent_item": "ITM-00372",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00425",
+    "parent_item": "ITM-00372",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00504",
+    "parent_item": "ITM-00372",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00441",
+    "parent_item": "ITM-00373",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00484",
+    "parent_item": "ITM-00373",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00519",
+    "parent_item": "ITM-00373",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00539",
+    "parent_item": "ITM-00373",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00512",
+    "parent_item": "ITM-00374",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00532",
+    "parent_item": "ITM-00374",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00428",
+    "parent_item": "ITM-00375",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00435",
+    "parent_item": "ITM-00375",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00530",
+    "parent_item": "ITM-00375",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00532",
+    "parent_item": "ITM-00375",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00423",
+    "parent_item": "ITM-00376",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00439",
+    "parent_item": "ITM-00376",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00419",
+    "parent_item": "ITM-00377",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00554",
+    "parent_item": "ITM-00377",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00490",
+    "parent_item": "ITM-00378",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00494",
+    "parent_item": "ITM-00378",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00504",
+    "parent_item": "ITM-00378",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00596",
+    "parent_item": "ITM-00378",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00464",
+    "parent_item": "ITM-00379",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00495",
+    "parent_item": "ITM-00379",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00594",
+    "parent_item": "ITM-00379",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00449",
+    "parent_item": "ITM-00380",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00460",
+    "parent_item": "ITM-00380",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00460",
+    "parent_item": "ITM-00381",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00477",
+    "parent_item": "ITM-00381",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00499",
+    "parent_item": "ITM-00381",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00526",
+    "parent_item": "ITM-00381",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00518",
+    "parent_item": "ITM-00382",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00594",
+    "parent_item": "ITM-00382",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00505",
+    "parent_item": "ITM-00383",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00519",
+    "parent_item": "ITM-00383",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00529",
+    "parent_item": "ITM-00383",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00550",
+    "parent_item": "ITM-00383",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00455",
+    "parent_item": "ITM-00384",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00463",
+    "parent_item": "ITM-00384",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00505",
+    "parent_item": "ITM-00384",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00455",
+    "parent_item": "ITM-00385",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00460",
+    "parent_item": "ITM-00385",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00488",
+    "parent_item": "ITM-00385",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00519",
+    "parent_item": "ITM-00385",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00463",
+    "parent_item": "ITM-00386",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00464",
+    "parent_item": "ITM-00386",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00584",
+    "parent_item": "ITM-00386",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00514",
+    "parent_item": "ITM-00387",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00554",
+    "parent_item": "ITM-00387",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00555",
+    "parent_item": "ITM-00387",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00572",
+    "parent_item": "ITM-00387",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00501",
+    "parent_item": "ITM-00388",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00542",
+    "parent_item": "ITM-00388",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00578",
+    "parent_item": "ITM-00388",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00438",
+    "parent_item": "ITM-00389",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00544",
+    "parent_item": "ITM-00389",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00574",
+    "parent_item": "ITM-00389",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00580",
+    "parent_item": "ITM-00389",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00421",
+    "parent_item": "ITM-00390",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00465",
+    "parent_item": "ITM-00390",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00504",
+    "parent_item": "ITM-00390",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00546",
+    "parent_item": "ITM-00390",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00436",
+    "parent_item": "ITM-00391",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00437",
+    "parent_item": "ITM-00391",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00510",
+    "parent_item": "ITM-00391",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00564",
+    "parent_item": "ITM-00391",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00418",
+    "parent_item": "ITM-00392",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00493",
+    "parent_item": "ITM-00392",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00516",
+    "parent_item": "ITM-00392",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00588",
+    "parent_item": "ITM-00392",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00492",
+    "parent_item": "ITM-00393",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00533",
+    "parent_item": "ITM-00393",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00575",
+    "parent_item": "ITM-00393",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00599",
+    "parent_item": "ITM-00393",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00506",
+    "parent_item": "ITM-00394",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00517",
+    "parent_item": "ITM-00394",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00539",
+    "parent_item": "ITM-00394",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00418",
+    "parent_item": "ITM-00395",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00571",
+    "parent_item": "ITM-00395",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00413",
+    "parent_item": "ITM-00396",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00415",
+    "parent_item": "ITM-00396",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00469",
+    "parent_item": "ITM-00396",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00562",
+    "parent_item": "ITM-00396",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00571",
+    "parent_item": "ITM-00397",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00574",
+    "parent_item": "ITM-00397",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00433",
+    "parent_item": "ITM-00398",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00494",
+    "parent_item": "ITM-00398",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00509",
+    "parent_item": "ITM-00398",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00493",
+    "parent_item": "ITM-00399",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00507",
+    "parent_item": "ITM-00399",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00568",
+    "parent_item": "ITM-00399",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00468",
+    "parent_item": "ITM-00400",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00500",
+    "parent_item": "ITM-00400",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00571",
+    "parent_item": "ITM-00400",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00582",
+    "parent_item": "ITM-00400",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00416",
+    "parent_item": "ITM-00401",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00440",
+    "parent_item": "ITM-00401",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00594",
+    "parent_item": "ITM-00401",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00435",
+    "parent_item": "ITM-00402",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00514",
+    "parent_item": "ITM-00402",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00424",
+    "parent_item": "ITM-00403",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00503",
+    "parent_item": "ITM-00403",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00411",
+    "parent_item": "ITM-00404",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00441",
+    "parent_item": "ITM-00404",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00449",
+    "parent_item": "ITM-00404",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00499",
+    "parent_item": "ITM-00404",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00569",
+    "parent_item": "ITM-00405",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00581",
+    "parent_item": "ITM-00405",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00477",
+    "parent_item": "ITM-00406",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00500",
+    "parent_item": "ITM-00406",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00547",
+    "parent_item": "ITM-00406",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00439",
+    "parent_item": "ITM-00407",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00485",
+    "parent_item": "ITM-00407",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00513",
+    "parent_item": "ITM-00407",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00517",
+    "parent_item": "ITM-00407",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00438",
+    "parent_item": "ITM-00408",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00503",
+    "parent_item": "ITM-00408",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00521",
+    "parent_item": "ITM-00408",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00549",
+    "parent_item": "ITM-00408",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00581",
+    "parent_item": "ITM-00409",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00583",
+    "parent_item": "ITM-00409",
+    "qty_per": 2
+  },
+  {
+    "component_item": "ITM-00450",
+    "parent_item": "ITM-00410",
+    "qty_per": 3
+  },
+  {
+    "component_item": "ITM-00509",
+    "parent_item": "ITM-00410",
+    "qty_per": 1
+  },
+  {
+    "component_item": "ITM-00510",
+    "parent_item": "ITM-00410",
+    "qty_per": 3
+  }
+]

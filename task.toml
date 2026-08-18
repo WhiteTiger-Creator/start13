@@ -1,0 +1,105 @@
+artifacts = ["/app"]
+name = "mrp-requirements-planner"
+
+[metadata]
+author_name = "Jonathan"
+author_email = "jtolbert0175@gmail.com"
+difficulty_explanation = '''
+Restoring this planner is the work of a materials-planning or ERP engineer picking up after a
+botched rollout, and it is a dependent chain rather than a single repair. All of the data is
+synthetic: the item ids, the bill of materials, the movement journal and the minute book were
+generated for this task and describe no real plant, system or person. The rollout left
+/app/data/inventory_positions.json holding a truncated prefix of the item set, so the first step is
+to rebuild it by replaying the movement journal onto the pre-rollout snapshot under the board's
+final recovery decision -- an adjustment overwriting on-hand in place, a receipt added or the first
+matching one cancelled, and a retraction withdrawing an item for good so that later movements
+naming it are ignored rather than resurrecting it. Every downstream figure is wrong if that replay
+is wrong, because the planner nets against exactly those positions. Only then can the planner
+itself be reconstructed, and the minute book is written the way a planning board actually writes:
+it records where the board departed from ordinary MRP practice and never restates what a low-level
+code, a gross requirement or a lead-time offset means. Someone without the domain has nothing to
+work from; someone with it has exactly one derivable answer. Four February drafts were reversed in
+the May review and one March interim was revised, so every rule must be traced to its FINAL dated
+decision: the low-level code is the DEEPEST level an item appears at rather than the first level
+the explosion reaches it, the lead-time offset steps back over WORKING days rather than raw
+calendar days, a shortfall is measured from the safety stock rather than from zero so the buffer is
+covered rather than consumed, and a parent's dependent demand lands on its components on the day
+the parent's order is RELEASED rather than received. Each of those four reversals moves the whole
+plan, and they interact: the working-day offset changes the release day, which changes where
+dependent demand lands, which changes the components' shortfalls, which changes their own releases
+one level further down. Holding the recovery semantics, the four reversed rules and the three lot
+policies in mind at once is what separates a correct reconstruction from a plausible-looking run.
+'''
+solution_explanation = '''
+solution/solve.sh drives the two dependent steps inside the environment container. Step one runs
+solution/recover_positions.go, which implements the board's final recovery decision (#MRP-4170 and
+#MRP-4174): it starts from /app/data/inventory_snapshot_pre_rollout.json, replays
+/app/data/inventory_movement_journal.json in ascending seq, applies an adjustment in place, adds a
+scheduled receipt, cancels the first receipt matching a receipt id, treats a retraction as
+permanent, ignores any movement naming an item the snapshot never carried, and writes the survivors
+over the truncated /app/data/inventory_positions.json ascending by item id with only the three
+declared fields and receipts ordered by receipt id. Step two copies
+solution/plan_requirements_fixed.go over /app/workflow/plan_requirements.go and runs it. The planner
+settles every item's low-level code over the whole structure by relaxation before any netting
+(#MRP-4190), plans in ascending code then item id (#MRP-4192), carries each item's projected balance
+day by day as opening balance plus scheduled and planned receipts less gross requirement, raises an
+order on the first day the balance falls below the safety stock and sizes the shortfall from that
+safety stock (#MRP-4200), applies lot-for-lot, fixed-quantity rounding up to whole multiples, or
+period-of-supply coverage capped by policy (#MRP-4205), steps the release day back over working days
+only (#MRP-4210), places dependent demand on components at the parent's release day (#MRP-4214),
+queues an order as past due or backlog exceeded only when its quantity reaches the policy minimum
+(#MRP-4220), and emits summary.json, item_plan.json and exception_queue.jsonl in the contracted
+orders (#MRP-4230).
+'''
+verification_explanation = '''
+The separate verifier (tests/Dockerfile builds an isolated image the agent cannot see) collects the
+agent's whole /app as the declared artifact and runs tests/test_outputs.py against it. Step one is
+graded directly: the rebuilt positions file must match the sealed digest, carry only the three
+declared fields with no journal bookkeeping surviving, and leave the snapshot and journal
+byte-identical. The verifier re-derives the misreadings of the recovery rule from those same sources
+-- a plain concatenation, a first-seen replay, and one where a retraction is not permanent -- and
+requires each to differ from the governed result. Step two recompiles the agent's submitted
+/app/workflow/plan_requirements.go from source with go build rather than trusting any delivered
+binary, runs it under an unprivileged uid (65534 via setpriv, a scrubbed environment, inputs staged
+into a candidate-writable work area) on both the recovered positions and a held-out alternate
+positions file, and compares summary.json in full plus SHA-256 digests of item_plan.json and
+exception_queue.jsonl against sealed fixtures generated from the reference. Crafted micro-instances
+pin each of the four reversed rules independently: one proves the low-level code is the deepest
+level rather than the first, one proves the release day counts working days, one proves the
+shortfall is measured from the safety stock, and one proves dependent demand lands on the release
+day. The three lot policies are each exercised on an instance where they give different answers.
+The run is timed against the 90-second budget the contract publishes, and a static scan rejects any
+third-party import. The frozen snapshot /app/workflow/.plan_requirements.original.go is asserted
+present by hash and wrong by output. Confirmed locally in the real two-container flow: after
+solve.sh the verifier gives reward 1, a fresh environment with no solve.sh gives 0, and so does an
+environment where the planner is repaired but the positions are never rebuilt.
+'''
+relevant_experience = '''
+Working knowledge of materials requirements planning as a discipline -- low-level coding, gross-to-
+net logic, time-phased projected balances, lot-sizing policies, lead-time offsetting and dependent
+demand taken as read rather than looked up -- plus experience rebuilding an inventory position set
+by replaying a movement journal onto a snapshot, and reconstructing a planning dialect from an
+authoritative but noisy minute book that records only the board's departures from standard
+practice, tracing incrementally-revised rules to their final form and matching a strict output
+contract in Go.
+'''
+category = "Operations"
+subcategory = "Supply chain"
+tags = ["mrp", "requirements-planning", "bill-of-materials", "lot-sizing", "incident-recovery"]
+expert_time_estimate_hours = 4
+difficulty = "advanced"
+languages = ["go"]
+
+[environment]
+build_timeout_sec = 900
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 5400
+
+[verifier]
+timeout_sec = 1800
+environment_mode = "separate"

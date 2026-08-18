@@ -1,0 +1,9 @@
+{
+  "default": {
+    "exception_min_qty": 40,
+    "max_release_backlog_days": 14,
+    "past_due_grace_days": 2,
+    "period_of_supply_cap_days": 20
+  },
+  "note": "baseline values only; approved amendments live in the governance log"
+}

@@ -1,0 +1,1721 @@
+[
+  {
+    "due_day": 29,
+    "item_id": "ITM-00254",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 525,
+    "receipt_id": "PO-00254-J1",
+    "seq": 1
+  },
+  {
+    "item_id": "ITM-00032",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00032-0",
+    "seq": 2
+  },
+  {
+    "item_id": "ITM-00127",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00127-none",
+    "seq": 3
+  },
+  {
+    "item_id": "ITM-00229",
+    "kind": "adjust",
+    "on_hand": 102,
+    "posted_by": "erp-batch",
+    "seq": 4
+  },
+  {
+    "due_day": 24,
+    "item_id": "ITM-00591",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 135,
+    "receipt_id": "PO-00591-J5",
+    "seq": 5
+  },
+  {
+    "item_id": "ITM-00590",
+    "kind": "adjust",
+    "on_hand": 448,
+    "posted_by": "erp-batch",
+    "seq": 6
+  },
+  {
+    "due_day": 17,
+    "item_id": "ITM-00456",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 377,
+    "receipt_id": "PO-00456-J7",
+    "seq": 7
+  },
+  {
+    "item_id": "ITM-00120",
+    "kind": "adjust",
+    "on_hand": 427,
+    "posted_by": "erp-batch",
+    "seq": 8
+  },
+  {
+    "item_id": "ITM-00396",
+    "kind": "adjust",
+    "on_hand": 351,
+    "posted_by": "erp-batch",
+    "seq": 9
+  },
+  {
+    "item_id": "ITM-00368",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00368-0",
+    "seq": 10
+  },
+  {
+    "due_day": 55,
+    "item_id": "ITM-00404",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 351,
+    "receipt_id": "PO-00404-J11",
+    "seq": 11
+  },
+  {
+    "item_id": "ITM-00494",
+    "kind": "adjust",
+    "on_hand": 69,
+    "posted_by": "erp-batch",
+    "seq": 12
+  },
+  {
+    "item_id": "ITM-00298",
+    "kind": "adjust",
+    "on_hand": 100,
+    "posted_by": "erp-batch",
+    "seq": 13
+  },
+  {
+    "item_id": "ITM-00312",
+    "kind": "retract",
+    "posted_by": "erp-batch",
+    "seq": 14
+  },
+  {
+    "item_id": "ITM-00582",
+    "kind": "adjust",
+    "on_hand": 404,
+    "posted_by": "erp-batch",
+    "seq": 15
+  },
+  {
+    "item_id": "ITM-00467",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00467-0",
+    "seq": 16
+  },
+  {
+    "item_id": "ITM-00179",
+    "kind": "adjust",
+    "on_hand": 352,
+    "posted_by": "erp-batch",
+    "seq": 17
+  },
+  {
+    "due_day": 21,
+    "item_id": "ITM-00421",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 58,
+    "receipt_id": "PO-00421-J18",
+    "seq": 18
+  },
+  {
+    "due_day": 38,
+    "item_id": "ITM-00062",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 318,
+    "receipt_id": "PO-00062-J19",
+    "seq": 19
+  },
+  {
+    "due_day": 6,
+    "item_id": "ITM-00332",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 363,
+    "receipt_id": "PO-00332-J20",
+    "seq": 20
+  },
+  {
+    "item_id": "ITM-00255",
+    "kind": "adjust",
+    "on_hand": 792,
+    "posted_by": "erp-batch",
+    "seq": 21
+  },
+  {
+    "item_id": "ITM-00004",
+    "kind": "adjust",
+    "on_hand": 302,
+    "posted_by": "erp-batch",
+    "seq": 22
+  },
+  {
+    "item_id": "ITM-00280",
+    "kind": "retract",
+    "posted_by": "erp-batch",
+    "seq": 23
+  },
+  {
+    "item_id": "ITM-00214",
+    "kind": "adjust",
+    "on_hand": 761,
+    "posted_by": "erp-batch",
+    "seq": 24
+  },
+  {
+    "item_id": "ITM-00030",
+    "kind": "adjust",
+    "on_hand": 206,
+    "posted_by": "erp-batch",
+    "seq": 25
+  },
+  {
+    "item_id": "ITM-00014",
+    "kind": "adjust",
+    "on_hand": 288,
+    "posted_by": "erp-batch",
+    "seq": 26
+  },
+  {
+    "due_day": 18,
+    "item_id": "ITM-00391",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 366,
+    "receipt_id": "PO-00391-J27",
+    "seq": 27
+  },
+  {
+    "item_id": "ITM-00117",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00117-0",
+    "seq": 28
+  },
+  {
+    "item_id": "ITM-00115",
+    "kind": "retract",
+    "posted_by": "erp-batch",
+    "seq": 29
+  },
+  {
+    "due_day": 52,
+    "item_id": "ITM-00287",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 342,
+    "receipt_id": "PO-00287-J30",
+    "seq": 30
+  },
+  {
+    "item_id": "ITM-00444",
+    "kind": "retract",
+    "posted_by": "erp-batch",
+    "seq": 31
+  },
+  {
+    "item_id": "ITM-00441",
+    "kind": "adjust",
+    "on_hand": 685,
+    "posted_by": "erp-batch",
+    "seq": 32
+  },
+  {
+    "item_id": "ITM-00499",
+    "kind": "adjust",
+    "on_hand": 319,
+    "posted_by": "erp-batch",
+    "seq": 33
+  },
+  {
+    "item_id": "ITM-00397",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00397-0",
+    "seq": 34
+  },
+  {
+    "due_day": 18,
+    "item_id": "ITM-00278",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 272,
+    "receipt_id": "PO-00278-J35",
+    "seq": 35
+  },
+  {
+    "item_id": "ITM-00447",
+    "kind": "adjust",
+    "on_hand": 603,
+    "posted_by": "erp-batch",
+    "seq": 36
+  },
+  {
+    "item_id": "ITM-00297",
+    "kind": "adjust",
+    "on_hand": 824,
+    "posted_by": "erp-batch",
+    "seq": 37
+  },
+  {
+    "item_id": "ITM-00436",
+    "kind": "adjust",
+    "on_hand": 102,
+    "posted_by": "erp-batch",
+    "seq": 38
+  },
+  {
+    "due_day": 34,
+    "item_id": "ITM-00342",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 446,
+    "receipt_id": "PO-00342-J39",
+    "seq": 39
+  },
+  {
+    "item_id": "ITM-00324",
+    "kind": "adjust",
+    "on_hand": 298,
+    "posted_by": "erp-batch",
+    "seq": 40
+  },
+  {
+    "item_id": "ITM-00445",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00445-0",
+    "seq": 41
+  },
+  {
+    "due_day": 31,
+    "item_id": "ITM-00446",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 598,
+    "receipt_id": "PO-00446-J42",
+    "seq": 42
+  },
+  {
+    "item_id": "ITM-00134",
+    "kind": "adjust",
+    "on_hand": 722,
+    "posted_by": "erp-batch",
+    "seq": 43
+  },
+  {
+    "item_id": "ITM-00420",
+    "kind": "adjust",
+    "on_hand": 490,
+    "posted_by": "erp-batch",
+    "seq": 44
+  },
+  {
+    "item_id": "ITM-00551",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00551-none",
+    "seq": 45
+  },
+  {
+    "item_id": "ITM-00564",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00564-0",
+    "seq": 46
+  },
+  {
+    "item_id": "ITM-00369",
+    "kind": "adjust",
+    "on_hand": 96,
+    "posted_by": "erp-batch",
+    "seq": 47
+  },
+  {
+    "item_id": "ITM-00124",
+    "kind": "adjust",
+    "on_hand": 92,
+    "posted_by": "erp-batch",
+    "seq": 48
+  },
+  {
+    "due_day": 20,
+    "item_id": "ITM-00311",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 323,
+    "receipt_id": "PO-00311-J49",
+    "seq": 49
+  },
+  {
+    "item_id": "ITM-00482",
+    "kind": "adjust",
+    "on_hand": 234,
+    "posted_by": "erp-batch",
+    "seq": 50
+  },
+  {
+    "due_day": 15,
+    "item_id": "ITM-00260",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 511,
+    "receipt_id": "PO-00260-J51",
+    "seq": 51
+  },
+  {
+    "item_id": "ITM-00477",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00477-none",
+    "seq": 52
+  },
+  {
+    "item_id": "ITM-00543",
+    "kind": "adjust",
+    "on_hand": 667,
+    "posted_by": "erp-batch",
+    "seq": 53
+  },
+  {
+    "item_id": "ITM-00005",
+    "kind": "adjust",
+    "on_hand": 691,
+    "posted_by": "erp-batch",
+    "seq": 54
+  },
+  {
+    "item_id": "ITM-00544",
+    "kind": "adjust",
+    "on_hand": 113,
+    "posted_by": "erp-batch",
+    "seq": 55
+  },
+  {
+    "item_id": "ITM-00572",
+    "kind": "adjust",
+    "on_hand": 836,
+    "posted_by": "erp-batch",
+    "seq": 56
+  },
+  {
+    "item_id": "ITM-00181",
+    "kind": "adjust",
+    "on_hand": 156,
+    "posted_by": "erp-batch",
+    "seq": 57
+  },
+  {
+    "due_day": 26,
+    "item_id": "ITM-00142",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 450,
+    "receipt_id": "PO-00142-J58",
+    "seq": 58
+  },
+  {
+    "item_id": "ITM-00325",
+    "kind": "adjust",
+    "on_hand": 207,
+    "posted_by": "erp-batch",
+    "seq": 59
+  },
+  {
+    "item_id": "ITM-00069",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00069-none",
+    "seq": 60
+  },
+  {
+    "due_day": 11,
+    "item_id": "ITM-00265",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 384,
+    "receipt_id": "PO-00265-J61",
+    "seq": 61
+  },
+  {
+    "item_id": "ITM-00281",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00281-none",
+    "seq": 62
+  },
+  {
+    "item_id": "ITM-00289",
+    "kind": "retract",
+    "posted_by": "erp-batch",
+    "seq": 63
+  },
+  {
+    "item_id": "ITM-00238",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00238-0",
+    "seq": 64
+  },
+  {
+    "due_day": 21,
+    "item_id": "ITM-00162",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 72,
+    "receipt_id": "PO-00162-J65",
+    "seq": 65
+  },
+  {
+    "due_day": 38,
+    "item_id": "ITM-00567",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 171,
+    "receipt_id": "PO-00567-J66",
+    "seq": 66
+  },
+  {
+    "item_id": "ITM-00565",
+    "kind": "adjust",
+    "on_hand": 698,
+    "posted_by": "erp-batch",
+    "seq": 67
+  },
+  {
+    "item_id": "ITM-00452",
+    "kind": "adjust",
+    "on_hand": 45,
+    "posted_by": "erp-batch",
+    "seq": 68
+  },
+  {
+    "item_id": "ITM-00556",
+    "kind": "adjust",
+    "on_hand": 840,
+    "posted_by": "erp-batch",
+    "seq": 69
+  },
+  {
+    "item_id": "ITM-00236",
+    "kind": "adjust",
+    "on_hand": 582,
+    "posted_by": "erp-batch",
+    "seq": 70
+  },
+  {
+    "due_day": 9,
+    "item_id": "ITM-00322",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 137,
+    "receipt_id": "PO-00322-J71",
+    "seq": 71
+  },
+  {
+    "item_id": "ITM-00245",
+    "kind": "retract",
+    "posted_by": "erp-batch",
+    "seq": 72
+  },
+  {
+    "due_day": 43,
+    "item_id": "ITM-00007",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 197,
+    "receipt_id": "PO-00007-J73",
+    "seq": 73
+  },
+  {
+    "due_day": 20,
+    "item_id": "ITM-00394",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 381,
+    "receipt_id": "PO-00394-J74",
+    "seq": 74
+  },
+  {
+    "item_id": "ITM-00484",
+    "kind": "adjust",
+    "on_hand": 51,
+    "posted_by": "erp-batch",
+    "seq": 75
+  },
+  {
+    "item_id": "ITM-00043",
+    "kind": "adjust",
+    "on_hand": 264,
+    "posted_by": "erp-batch",
+    "seq": 76
+  },
+  {
+    "due_day": 27,
+    "item_id": "ITM-00357",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 313,
+    "receipt_id": "PO-00357-J77",
+    "seq": 77
+  },
+  {
+    "item_id": "ITM-00418",
+    "kind": "adjust",
+    "on_hand": 519,
+    "posted_by": "erp-batch",
+    "seq": 78
+  },
+  {
+    "due_day": 46,
+    "item_id": "ITM-00506",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 188,
+    "receipt_id": "PO-00506-J79",
+    "seq": 79
+  },
+  {
+    "item_id": "ITM-00536",
+    "kind": "adjust",
+    "on_hand": 247,
+    "posted_by": "erp-batch",
+    "seq": 80
+  },
+  {
+    "item_id": "ITM-00140",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00140-none",
+    "seq": 81
+  },
+  {
+    "item_id": "ITM-00135",
+    "kind": "adjust",
+    "on_hand": 706,
+    "posted_by": "erp-batch",
+    "seq": 82
+  },
+  {
+    "due_day": 42,
+    "item_id": "ITM-00073",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 204,
+    "receipt_id": "PO-00073-J83",
+    "seq": 83
+  },
+  {
+    "due_day": 14,
+    "item_id": "ITM-00091",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 64,
+    "receipt_id": "PO-00091-J84",
+    "seq": 84
+  },
+  {
+    "due_day": 31,
+    "item_id": "ITM-00525",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 51,
+    "receipt_id": "PO-00525-J85",
+    "seq": 85
+  },
+  {
+    "item_id": "ITM-00154",
+    "kind": "adjust",
+    "on_hand": 2,
+    "posted_by": "erp-batch",
+    "seq": 86
+  },
+  {
+    "item_id": "ITM-00149",
+    "kind": "adjust",
+    "on_hand": 559,
+    "posted_by": "erp-batch",
+    "seq": 87
+  },
+  {
+    "item_id": "ITM-00438",
+    "kind": "retract",
+    "posted_by": "erp-batch",
+    "seq": 88
+  },
+  {
+    "item_id": "ITM-00129",
+    "kind": "adjust",
+    "on_hand": 541,
+    "posted_by": "erp-batch",
+    "seq": 89
+  },
+  {
+    "due_day": 58,
+    "item_id": "ITM-00246",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 109,
+    "receipt_id": "PO-00246-J90",
+    "seq": 90
+  },
+  {
+    "item_id": "ITM-00299",
+    "kind": "adjust",
+    "on_hand": 665,
+    "posted_by": "erp-batch",
+    "seq": 91
+  },
+  {
+    "item_id": "ITM-00437",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00437-0",
+    "seq": 92
+  },
+  {
+    "due_day": 56,
+    "item_id": "ITM-00095",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 150,
+    "receipt_id": "PO-00095-J93",
+    "seq": 93
+  },
+  {
+    "item_id": "ITM-00459",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00459-0",
+    "seq": 94
+  },
+  {
+    "item_id": "ITM-00224",
+    "kind": "adjust",
+    "on_hand": 150,
+    "posted_by": "erp-batch",
+    "seq": 95
+  },
+  {
+    "item_id": "ITM-00353",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00353-none",
+    "seq": 96
+  },
+  {
+    "item_id": "ITM-00362",
+    "kind": "adjust",
+    "on_hand": 509,
+    "posted_by": "erp-batch",
+    "seq": 97
+  },
+  {
+    "item_id": "ITM-00395",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00395-none",
+    "seq": 98
+  },
+  {
+    "item_id": "ITM-00166",
+    "kind": "adjust",
+    "on_hand": 86,
+    "posted_by": "erp-batch",
+    "seq": 99
+  },
+  {
+    "item_id": "ITM-00269",
+    "kind": "retract",
+    "posted_by": "erp-batch",
+    "seq": 100
+  },
+  {
+    "due_day": 42,
+    "item_id": "ITM-00493",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 291,
+    "receipt_id": "PO-00493-J101",
+    "seq": 101
+  },
+  {
+    "item_id": "ITM-00573",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00573-0",
+    "seq": 102
+  },
+  {
+    "item_id": "ITM-00169",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00169-none",
+    "seq": 103
+  },
+  {
+    "item_id": "ITM-00399",
+    "kind": "adjust",
+    "on_hand": 296,
+    "posted_by": "erp-batch",
+    "seq": 104
+  },
+  {
+    "item_id": "ITM-00048",
+    "kind": "adjust",
+    "on_hand": 135,
+    "posted_by": "erp-batch",
+    "seq": 105
+  },
+  {
+    "item_id": "ITM-00213",
+    "kind": "retract",
+    "posted_by": "erp-batch",
+    "seq": 106
+  },
+  {
+    "item_id": "ITM-00574",
+    "kind": "adjust",
+    "on_hand": 807,
+    "posted_by": "erp-batch",
+    "seq": 107
+  },
+  {
+    "item_id": "ITM-00471",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00471-0",
+    "seq": 108
+  },
+  {
+    "due_day": 22,
+    "item_id": "ITM-00233",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 120,
+    "receipt_id": "PO-00233-J109",
+    "seq": 109
+  },
+  {
+    "item_id": "ITM-00253",
+    "kind": "adjust",
+    "on_hand": 582,
+    "posted_by": "erp-batch",
+    "seq": 110
+  },
+  {
+    "item_id": "ITM-00350",
+    "kind": "adjust",
+    "on_hand": 667,
+    "posted_by": "erp-batch",
+    "seq": 111
+  },
+  {
+    "item_id": "ITM-00559",
+    "kind": "adjust",
+    "on_hand": 165,
+    "posted_by": "erp-batch",
+    "seq": 112
+  },
+  {
+    "due_day": 50,
+    "item_id": "ITM-00384",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 36,
+    "receipt_id": "PO-00384-J113",
+    "seq": 113
+  },
+  {
+    "item_id": "ITM-00305",
+    "kind": "adjust",
+    "on_hand": 833,
+    "posted_by": "erp-batch",
+    "seq": 114
+  },
+  {
+    "item_id": "ITM-00359",
+    "kind": "adjust",
+    "on_hand": 554,
+    "posted_by": "erp-batch",
+    "seq": 115
+  },
+  {
+    "due_day": 40,
+    "item_id": "ITM-00390",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 242,
+    "receipt_id": "PO-00390-J116",
+    "seq": 116
+  },
+  {
+    "due_day": 37,
+    "item_id": "ITM-00347",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 243,
+    "receipt_id": "PO-00347-J117",
+    "seq": 117
+  },
+  {
+    "due_day": 15,
+    "item_id": "ITM-00111",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 371,
+    "receipt_id": "PO-00111-J118",
+    "seq": 118
+  },
+  {
+    "item_id": "ITM-00306",
+    "kind": "adjust",
+    "on_hand": 376,
+    "posted_by": "erp-batch",
+    "seq": 119
+  },
+  {
+    "item_id": "ITM-00547",
+    "kind": "adjust",
+    "on_hand": 357,
+    "posted_by": "erp-batch",
+    "seq": 120
+  },
+  {
+    "due_day": 38,
+    "item_id": "ITM-00540",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 414,
+    "receipt_id": "PO-00540-J121",
+    "seq": 121
+  },
+  {
+    "item_id": "ITM-00583",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00583-0",
+    "seq": 122
+  },
+  {
+    "item_id": "ITM-00118",
+    "kind": "adjust",
+    "on_hand": 3,
+    "posted_by": "erp-batch",
+    "seq": 123
+  },
+  {
+    "item_id": "ITM-00468",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00468-none",
+    "seq": 124
+  },
+  {
+    "item_id": "ITM-00427",
+    "kind": "adjust",
+    "on_hand": 317,
+    "posted_by": "erp-batch",
+    "seq": 125
+  },
+  {
+    "item_id": "ITM-00505",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00505-0",
+    "seq": 126
+  },
+  {
+    "item_id": "ITM-00524",
+    "kind": "adjust",
+    "on_hand": 374,
+    "posted_by": "erp-batch",
+    "seq": 127
+  },
+  {
+    "due_day": 40,
+    "item_id": "ITM-00205",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 442,
+    "receipt_id": "PO-00205-J128",
+    "seq": 128
+  },
+  {
+    "item_id": "ITM-00188",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00188-0",
+    "seq": 129
+  },
+  {
+    "due_day": 11,
+    "item_id": "ITM-00106",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 176,
+    "receipt_id": "PO-00106-J130",
+    "seq": 130
+  },
+  {
+    "item_id": "ITM-00208",
+    "kind": "retract",
+    "posted_by": "erp-batch",
+    "seq": 131
+  },
+  {
+    "item_id": "ITM-00429",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00429-0",
+    "seq": 132
+  },
+  {
+    "item_id": "ITM-00443",
+    "kind": "adjust",
+    "on_hand": 65,
+    "posted_by": "erp-batch",
+    "seq": 133
+  },
+  {
+    "item_id": "ITM-00586",
+    "kind": "adjust",
+    "on_hand": 470,
+    "posted_by": "erp-batch",
+    "seq": 134
+  },
+  {
+    "item_id": "ITM-00598",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00598-0",
+    "seq": 135
+  },
+  {
+    "item_id": "ITM-00402",
+    "kind": "adjust",
+    "on_hand": 224,
+    "posted_by": "erp-batch",
+    "seq": 136
+  },
+  {
+    "item_id": "ITM-00203",
+    "kind": "adjust",
+    "on_hand": 764,
+    "posted_by": "erp-batch",
+    "seq": 137
+  },
+  {
+    "item_id": "ITM-00225",
+    "kind": "adjust",
+    "on_hand": 519,
+    "posted_by": "erp-batch",
+    "seq": 138
+  },
+  {
+    "item_id": "ITM-00313",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00313-0",
+    "seq": 139
+  },
+  {
+    "due_day": 13,
+    "item_id": "ITM-00240",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 315,
+    "receipt_id": "PO-00240-J140",
+    "seq": 140
+  },
+  {
+    "due_day": 40,
+    "item_id": "ITM-00562",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 213,
+    "receipt_id": "PO-00562-J141",
+    "seq": 141
+  },
+  {
+    "due_day": 53,
+    "item_id": "ITM-00168",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 279,
+    "receipt_id": "PO-00168-J142",
+    "seq": 142
+  },
+  {
+    "due_day": 32,
+    "item_id": "ITM-00548",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 149,
+    "receipt_id": "PO-00548-J143",
+    "seq": 143
+  },
+  {
+    "item_id": "ITM-00288",
+    "kind": "adjust",
+    "on_hand": 702,
+    "posted_by": "erp-batch",
+    "seq": 144
+  },
+  {
+    "item_id": "ITM-00198",
+    "kind": "adjust",
+    "on_hand": 614,
+    "posted_by": "erp-batch",
+    "seq": 145
+  },
+  {
+    "item_id": "ITM-00178",
+    "kind": "adjust",
+    "on_hand": 87,
+    "posted_by": "erp-batch",
+    "seq": 146
+  },
+  {
+    "item_id": "ITM-00104",
+    "kind": "adjust",
+    "on_hand": 643,
+    "posted_by": "erp-batch",
+    "seq": 147
+  },
+  {
+    "item_id": "ITM-00600",
+    "kind": "adjust",
+    "on_hand": 729,
+    "posted_by": "erp-batch",
+    "seq": 148
+  },
+  {
+    "item_id": "ITM-00403",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00403-0",
+    "seq": 149
+  },
+  {
+    "due_day": 24,
+    "item_id": "ITM-00339",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 275,
+    "receipt_id": "PO-00339-J150",
+    "seq": 150
+  },
+  {
+    "item_id": "ITM-00102",
+    "kind": "adjust",
+    "on_hand": 213,
+    "posted_by": "erp-batch",
+    "seq": 151
+  },
+  {
+    "item_id": "ITM-00199",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00199-0",
+    "seq": 152
+  },
+  {
+    "due_day": 21,
+    "item_id": "ITM-00490",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 91,
+    "receipt_id": "PO-00490-J153",
+    "seq": 153
+  },
+  {
+    "item_id": "ITM-00566",
+    "kind": "adjust",
+    "on_hand": 35,
+    "posted_by": "erp-batch",
+    "seq": 154
+  },
+  {
+    "item_id": "ITM-00530",
+    "kind": "adjust",
+    "on_hand": 283,
+    "posted_by": "erp-batch",
+    "seq": 155
+  },
+  {
+    "item_id": "ITM-00488",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00488-0",
+    "seq": 156
+  },
+  {
+    "item_id": "ITM-00366",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00366-none",
+    "seq": 157
+  },
+  {
+    "item_id": "ITM-00597",
+    "kind": "adjust",
+    "on_hand": 856,
+    "posted_by": "erp-batch",
+    "seq": 158
+  },
+  {
+    "item_id": "ITM-00512",
+    "kind": "adjust",
+    "on_hand": 879,
+    "posted_by": "erp-batch",
+    "seq": 159
+  },
+  {
+    "due_day": 44,
+    "item_id": "ITM-00038",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 178,
+    "receipt_id": "PO-00038-J160",
+    "seq": 160
+  },
+  {
+    "item_id": "ITM-00336",
+    "kind": "adjust",
+    "on_hand": 481,
+    "posted_by": "erp-batch",
+    "seq": 161
+  },
+  {
+    "item_id": "ITM-00209",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00209-0",
+    "seq": 162
+  },
+  {
+    "item_id": "ITM-00202",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00202-none",
+    "seq": 163
+  },
+  {
+    "item_id": "ITM-00386",
+    "kind": "adjust",
+    "on_hand": 773,
+    "posted_by": "erp-batch",
+    "seq": 164
+  },
+  {
+    "due_day": 6,
+    "item_id": "ITM-00049",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 490,
+    "receipt_id": "PO-00049-J165",
+    "seq": 165
+  },
+  {
+    "item_id": "ITM-00126",
+    "kind": "adjust",
+    "on_hand": 524,
+    "posted_by": "erp-batch",
+    "seq": 166
+  },
+  {
+    "due_day": 26,
+    "item_id": "ITM-00003",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 95,
+    "receipt_id": "PO-00003-J167",
+    "seq": 167
+  },
+  {
+    "item_id": "ITM-00076",
+    "kind": "adjust",
+    "on_hand": 572,
+    "posted_by": "erp-batch",
+    "seq": 168
+  },
+  {
+    "due_day": 31,
+    "item_id": "ITM-00122",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 182,
+    "receipt_id": "PO-00122-J169",
+    "seq": 169
+  },
+  {
+    "due_day": 50,
+    "item_id": "ITM-00341",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 328,
+    "receipt_id": "PO-00341-J170",
+    "seq": 170
+  },
+  {
+    "item_id": "ITM-00576",
+    "kind": "adjust",
+    "on_hand": 194,
+    "posted_by": "erp-batch",
+    "seq": 171
+  },
+  {
+    "item_id": "ITM-00042",
+    "kind": "adjust",
+    "on_hand": 534,
+    "posted_by": "erp-batch",
+    "seq": 172
+  },
+  {
+    "due_day": 43,
+    "item_id": "ITM-00375",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 240,
+    "receipt_id": "PO-00375-J173",
+    "seq": 173
+  },
+  {
+    "item_id": "ITM-00021",
+    "kind": "adjust",
+    "on_hand": 817,
+    "posted_by": "erp-batch",
+    "seq": 174
+  },
+  {
+    "due_day": 36,
+    "item_id": "ITM-00063",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 469,
+    "receipt_id": "PO-00063-J175",
+    "seq": 175
+  },
+  {
+    "item_id": "ITM-00206",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00206-0",
+    "seq": 176
+  },
+  {
+    "item_id": "ITM-00086",
+    "kind": "adjust",
+    "on_hand": 152,
+    "posted_by": "erp-batch",
+    "seq": 177
+  },
+  {
+    "due_day": 56,
+    "item_id": "ITM-00141",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 273,
+    "receipt_id": "PO-00141-J178",
+    "seq": 178
+  },
+  {
+    "item_id": "ITM-00173",
+    "kind": "adjust",
+    "on_hand": 174,
+    "posted_by": "erp-batch",
+    "seq": 179
+  },
+  {
+    "item_id": "ITM-00439",
+    "kind": "adjust",
+    "on_hand": 557,
+    "posted_by": "erp-batch",
+    "seq": 180
+  },
+  {
+    "due_day": 40,
+    "item_id": "ITM-00037",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 511,
+    "receipt_id": "PO-00037-J181",
+    "seq": 181
+  },
+  {
+    "item_id": "ITM-00553",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00553-none",
+    "seq": 182
+  },
+  {
+    "item_id": "ITM-00244",
+    "kind": "adjust",
+    "on_hand": 334,
+    "posted_by": "erp-batch",
+    "seq": 183
+  },
+  {
+    "item_id": "ITM-00522",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00522-0",
+    "seq": 184
+  },
+  {
+    "item_id": "ITM-00132",
+    "kind": "retract",
+    "posted_by": "erp-batch",
+    "seq": 185
+  },
+  {
+    "due_day": 49,
+    "item_id": "ITM-00552",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 277,
+    "receipt_id": "PO-00552-J186",
+    "seq": 186
+  },
+  {
+    "due_day": 36,
+    "item_id": "ITM-00183",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 266,
+    "receipt_id": "PO-00183-J187",
+    "seq": 187
+  },
+  {
+    "item_id": "ITM-00432",
+    "kind": "adjust",
+    "on_hand": 756,
+    "posted_by": "erp-batch",
+    "seq": 188
+  },
+  {
+    "item_id": "ITM-00139",
+    "kind": "adjust",
+    "on_hand": 449,
+    "posted_by": "erp-batch",
+    "seq": 189
+  },
+  {
+    "item_id": "ITM-00121",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00121-none",
+    "seq": 190
+  },
+  {
+    "due_day": 29,
+    "item_id": "ITM-00478",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 211,
+    "receipt_id": "PO-00478-J191",
+    "seq": 191
+  },
+  {
+    "item_id": "ITM-00319",
+    "kind": "adjust",
+    "on_hand": 160,
+    "posted_by": "erp-batch",
+    "seq": 192
+  },
+  {
+    "item_id": "ITM-00274",
+    "kind": "adjust",
+    "on_hand": 670,
+    "posted_by": "erp-batch",
+    "seq": 193
+  },
+  {
+    "item_id": "ITM-00259",
+    "kind": "adjust",
+    "on_hand": 293,
+    "posted_by": "erp-batch",
+    "seq": 194
+  },
+  {
+    "due_day": 15,
+    "item_id": "ITM-00294",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 527,
+    "receipt_id": "PO-00294-J195",
+    "seq": 195
+  },
+  {
+    "item_id": "ITM-00424",
+    "kind": "adjust",
+    "on_hand": 170,
+    "posted_by": "erp-batch",
+    "seq": 196
+  },
+  {
+    "item_id": "ITM-00415",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00415-0",
+    "seq": 197
+  },
+  {
+    "due_day": 34,
+    "item_id": "ITM-00364",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 402,
+    "receipt_id": "PO-00364-J198",
+    "seq": 198
+  },
+  {
+    "item_id": "ITM-00248",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00248-none",
+    "seq": 199
+  },
+  {
+    "item_id": "ITM-00500",
+    "kind": "adjust",
+    "on_hand": 399,
+    "posted_by": "erp-batch",
+    "seq": 200
+  },
+  {
+    "item_id": "ITM-00177",
+    "kind": "adjust",
+    "on_hand": 736,
+    "posted_by": "erp-batch",
+    "seq": 201
+  },
+  {
+    "due_day": 59,
+    "item_id": "ITM-00383",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 566,
+    "receipt_id": "PO-00383-J202",
+    "seq": 202
+  },
+  {
+    "item_id": "ITM-00036",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00036-none",
+    "seq": 203
+  },
+  {
+    "item_id": "ITM-00406",
+    "kind": "adjust",
+    "on_hand": 100,
+    "posted_by": "erp-batch",
+    "seq": 204
+  },
+  {
+    "item_id": "ITM-00323",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00323-0",
+    "seq": 205
+  },
+  {
+    "item_id": "ITM-00157",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00157-none",
+    "seq": 206
+  },
+  {
+    "item_id": "ITM-00360",
+    "kind": "adjust",
+    "on_hand": 898,
+    "posted_by": "erp-batch",
+    "seq": 207
+  },
+  {
+    "item_id": "ITM-00534",
+    "kind": "adjust",
+    "on_hand": 372,
+    "posted_by": "erp-batch",
+    "seq": 208
+  },
+  {
+    "due_day": 29,
+    "item_id": "ITM-00273",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 433,
+    "receipt_id": "PO-00273-J209",
+    "seq": 209
+  },
+  {
+    "due_day": 21,
+    "item_id": "ITM-00479",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 468,
+    "receipt_id": "PO-00479-J210",
+    "seq": 210
+  },
+  {
+    "due_day": 6,
+    "item_id": "ITM-00332",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 363,
+    "receipt_id": "PO-00332-J20",
+    "seq": 211
+  },
+  {
+    "item_id": "ITM-00229",
+    "kind": "adjust",
+    "on_hand": 307,
+    "posted_by": "erp-batch",
+    "seq": 212
+  },
+  {
+    "item_id": "ITM-00565",
+    "kind": "adjust",
+    "on_hand": 557,
+    "posted_by": "erp-batch",
+    "seq": 213
+  },
+  {
+    "item_id": "ITM-00280",
+    "kind": "retract",
+    "posted_by": "erp-batch",
+    "seq": 214
+  },
+  {
+    "item_id": "ITM-00281",
+    "kind": "receipt_cancel",
+    "posted_by": "erp-batch",
+    "receipt_id": "PO-00281-none",
+    "seq": 215
+  },
+  {
+    "due_day": 52,
+    "item_id": "ITM-00287",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 342,
+    "receipt_id": "PO-00287-J30",
+    "seq": 216
+  },
+  {
+    "due_day": 27,
+    "item_id": "ITM-00357",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 313,
+    "receipt_id": "PO-00357-J77",
+    "seq": 217
+  },
+  {
+    "due_day": 56,
+    "item_id": "ITM-00095",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 150,
+    "receipt_id": "PO-00095-J93",
+    "seq": 218
+  },
+  {
+    "item_id": "ITM-00297",
+    "kind": "adjust",
+    "on_hand": 49,
+    "posted_by": "erp-batch",
+    "seq": 219
+  },
+  {
+    "item_id": "ITM-00482",
+    "kind": "adjust",
+    "on_hand": 315,
+    "posted_by": "erp-batch",
+    "seq": 220
+  },
+  {
+    "due_day": 58,
+    "item_id": "ITM-00246",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 109,
+    "receipt_id": "PO-00246-J90",
+    "seq": 221
+  },
+  {
+    "due_day": 20,
+    "item_id": "ITM-00311",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 323,
+    "receipt_id": "PO-00311-J49",
+    "seq": 222
+  },
+  {
+    "item_id": "ITM-00120",
+    "kind": "adjust",
+    "on_hand": 697,
+    "posted_by": "erp-batch",
+    "seq": 223
+  },
+  {
+    "item_id": "ITM-00245",
+    "kind": "retract",
+    "posted_by": "erp-batch",
+    "seq": 224
+  },
+  {
+    "due_day": 11,
+    "item_id": "ITM-00265",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 384,
+    "receipt_id": "PO-00265-J61",
+    "seq": 225
+  },
+  {
+    "item_id": "ITM-00536",
+    "kind": "adjust",
+    "on_hand": 671,
+    "posted_by": "erp-batch",
+    "seq": 226
+  },
+  {
+    "item_id": "ITM-00572",
+    "kind": "adjust",
+    "on_hand": 286,
+    "posted_by": "erp-batch",
+    "seq": 227
+  },
+  {
+    "due_day": 55,
+    "item_id": "ITM-00404",
+    "kind": "receipt_add",
+    "posted_by": "erp-batch",
+    "qty": 351,
+    "receipt_id": "PO-00404-J11",
+    "seq": 228
+  }
+]
