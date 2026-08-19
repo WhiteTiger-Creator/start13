@@ -1,158 +1,11 @@
-"""Verifier tests for the MRP requirements planner task."""
+"""Verifier tests for the MRP requirements-planning task.
 
-from __future__ import annotations
+Every test below corresponds to something instruction.md states is graded.
+Shared machinery lives in harness.py.
+"""
 
-import hashlib
-import json
-import os
-import re
-import shutil
-import subprocess
-import sys
-import tempfile
-import time
-from pathlib import Path
-
-import pytest
-
-APP = Path("/app")
-DATA = APP / "data"
-WORKFLOW_PATH = APP / "workflow" / "plan_requirements.go"
-ORIGINAL_WORKFLOW_PATH = APP / "workflow" / ".plan_requirements.original.go"
-SNAPSHOT_PATH = DATA / "inventory_snapshot_pre_rollout.json"
-JOURNAL_PATH = DATA / "inventory_movement_journal.json"
-POSITIONS_PATH = DATA / "inventory_positions.json"
-SPEC_PATH = APP / "docs" / "report_spec.json"
-LOG_PATH = APP / "incident" / "planning_governance_log.md"
-EXPECTED_FIXTURE = Path("/tests/fixtures/expected_report.json")
-ALT_INPUT = Path("/tests/fixtures/alt_positions.json")
-
-FIXTURE = json.loads(EXPECTED_FIXTURE.read_text())
-SPEC = json.loads(SPEC_PATH.read_text())
-
-POSITION_KEYS = set(SPEC["reconciled_inputs"]["inventory_positions"]["record_fields"])
-SUMMARY_KEYS = set(SPEC["outputs"]["summary"]["required_fields"])
-PLAN_KEYS = set(SPEC["outputs"]["item_plan"]["element_fields"])
-ORDER_KEYS = set(SPEC["outputs"]["item_plan"]["planned_order_fields"])
-EXCEPTION_KEYS = set(SPEC["outputs"]["exception_queue"]["element_fields"])
-EXCEPTION_KINDS = set(SPEC["outputs"]["exception_queue"]["kinds"])
-
-# Budget published by the contract and stated in instruction.md. Held as a literal
-# so it cannot be relaxed by editing the environment, and cross-checked below.
-RUNTIME_BUDGET_SEC = 90.0
-HARD_TIMEOUT_SEC = 240
-_ELAPSED: dict[str, float] = {}
-
-CANDIDATE_UID = 65534
-_CWORK = Path("/candidate-work")
-_SETPRIV = ["setpriv", f"--reuid={CANDIDATE_UID}", f"--regid={CANDIDATE_UID}",
-            "--clear-groups", "--no-new-privs"]
-CHILD_ENV = {"PATH": "/usr/local/bin:/usr/bin:/bin", "HOME": "/candidate-work",
-             "LANG": "C.UTF-8", "GOCACHE": "/candidate-work/gocache",
-             "GO111MODULE": "off", "GOPATH": "/candidate-work/gopath"}
-_BIN_CACHE: dict[str, str] = {}
-_run_ctr = iter(range(1, 10_000))
-
-
-def _digest(value) -> str:
-    """Content digest of a decoded artifact, insensitive to free whitespace."""
-    return hashlib.sha256(
-        json.dumps(value, sort_keys=True, separators=(",", ":")).encode("utf-8")
-    ).hexdigest()
-
-
-def _load_json(path):
-    return json.loads(Path(path).read_text(encoding="utf-8"))
-
-
-def _load_jsonl(path):
-    return [json.loads(x) for x in Path(path).read_text(encoding="utf-8").splitlines() if x.strip()]
-
-
-def _write_json(path, value):
-    Path(path).write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-
-
-def _build(script_path: Path) -> str:
-    """Compile the submitted single-file planner, cached per source path.
-
-    Compilation runs as root: it is the trusted verifier's own action. The source
-    is copied to a temp dir as main.go first so the frozen snapshot and any
-    sibling files in /app/workflow never join the build.
-    """
-    key = str(script_path)
-    if key in _BIN_CACHE:
-        return _BIN_CACHE[key]
-    build_dir = tempfile.mkdtemp(prefix="gobuild_")
-    os.chmod(build_dir, 0o755)
-    src = Path(build_dir) / "main.go"
-    shutil.copyfile(script_path, src)
-    binary = Path(build_dir) / "planner"
-    result = subprocess.run(
-        ["go", "build", "-o", str(binary), str(src)],
-        capture_output=True, text=True,
-        env={**os.environ, "GOCACHE": "/tmp/gocache", "GO111MODULE": "off", "GOPATH": "/tmp/gopath"},
-    )
-    assert result.returncode == 0, f"go build failed:\n{result.stderr}"
-    os.chmod(binary, 0o755)
-    _BIN_CACHE[key] = str(binary)
-    return str(binary)
-
-
-def _candidate_dir() -> Path:
-    d = _CWORK / f"run-{next(_run_ctr)}"
-    d.mkdir(parents=True, exist_ok=True)
-    os.chmod(d, 0o777)
-    return d
-
-
-def _publish_inputs() -> None:
-    """Open read access on the agent-produced inputs before privileges drop.
-
-    Never follows a link out of the agent-owned tree: os.chmod resolves symlinks,
-    so a link planted at /app/... -> /tests would otherwise open the sealed
-    fixtures to the unprivileged candidate.
-    """
-    app_root = APP.resolve()
-    for path in sorted(APP.rglob("*")):
-        if path.is_symlink():
-            continue
-        try:
-            if not path.resolve().is_relative_to(app_root):
-                continue
-        except OSError:
-            continue
-        try:
-            os.chmod(path, 0o755 if path.is_dir() else 0o644)
-        except OSError:
-            pass
-
-
-def _run_agent(argv, cwd: Path):
-    return subprocess.run(_SETPRIV + argv, cwd=str(cwd), capture_output=True, text=True,
-                          env=dict(CHILD_ENV), timeout=HARD_TIMEOUT_SEC)
-
-
-def _run_pipeline(script_path: Path = WORKFLOW_PATH, input_path: Path = POSITIONS_PATH):
-    """Build and run the submitted planner as an unprivileged subprocess."""
-    binary = _build(script_path)
-    _publish_inputs()
-    work = _candidate_dir()
-    out_dir = work / "output"
-    out_dir.mkdir(parents=True, exist_ok=True)
-    os.chmod(out_dir, 0o777)
-    staged = work / "positions.json"
-    shutil.copyfile(str(input_path), str(staged))
-    os.chmod(staged, 0o644)
-    started = time.monotonic()
-    result = _run_agent([binary, "--input", str(staged), "--output-dir", str(out_dir)], cwd=work)
-    _ELAPSED[str(input_path)] = time.monotonic() - started
-    assert result.returncode == 0, f"planner failed:\n{result.stdout}\n{result.stderr}"
-    return (out_dir,
-            _load_json(out_dir / "summary.json"),
-            _load_json(out_dir / "item_plan.json"),
-            _load_jsonl(out_dir / "exception_queue.jsonl"))
-
+# harness.py sets __all__ explicitly, so the underscored helpers come across too.
+from harness import *  # noqa: F401,F403
 
 @pytest.fixture(scope="session")
 def primary_outputs():
@@ -167,6 +20,95 @@ def alternate_outputs():
 # --------------------------------------------------------------------------
 # Step one: the truncated positions must be rebuilt before anything is planned
 # --------------------------------------------------------------------------
+
+_GO_IDENT = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_")
+
+
+def _go_imports(source: str) -> list[str]:
+    """Import paths declared by a Go file, read from its import declarations.
+
+    The scan tracks string, raw-string, rune and comment state, so a filename
+    literal in the body -- "summary.json" handed to filepath.Join -- is never
+    mistaken for an import path. Only `import` declarations are consulted.
+    """
+    out: list[str] = []
+    i, n = 0, len(source)
+
+    def skip_gap(j: int) -> int:
+        while j < n:
+            if source[j] in " \t\r\n":
+                j += 1
+            elif source.startswith("//", j):
+                k = source.find("\n", j)
+                j = n if k < 0 else k + 1
+            elif source.startswith("/*", j):
+                k = source.find("*/", j + 2)
+                j = n if k < 0 else k + 2
+            else:
+                break
+        return j
+
+    def read_string(j: int) -> tuple[str, int]:
+        j += 1
+        buf = []
+        while j < n and source[j] != '"':
+            if source[j] == "\\":
+                j += 2
+                continue
+            buf.append(source[j])
+            j += 1
+        return "".join(buf), j + 1
+
+    while i < n:
+        if source.startswith("//", i):
+            k = source.find("\n", i)
+            i = n if k < 0 else k + 1
+            continue
+        if source.startswith("/*", i):
+            k = source.find("*/", i + 2)
+            i = n if k < 0 else k + 2
+            continue
+        c = source[i]
+        if c == '"':
+            _, i = read_string(i)
+            continue
+        if c == "`":
+            k = source.find("`", i + 1)
+            i = n if k < 0 else k + 1
+            continue
+        if c == "'":
+            j = i + 1
+            while j < n and source[j] != "'":
+                j += 2 if source[j] == "\\" else 1
+            i = j + 1
+            continue
+        if source.startswith("import", i) and (i == 0 or source[i - 1] not in _GO_IDENT) \
+                and (i + 6 >= n or source[i + 6] not in _GO_IDENT):
+            j = skip_gap(i + 6)
+            if j < n and source[j] == "(":
+                j += 1
+                while True:
+                    j = skip_gap(j)
+                    if j >= n or source[j] == ")":
+                        j += 1
+                        break
+                    if source[j] == '"':
+                        value, j = read_string(j)
+                        out.append(value)
+                    else:
+                        j += 1          # an alias, a dot import or an underscore
+                i = j
+                continue
+            while j < n and source[j] not in '"\n':
+                j += 1                  # an alias ahead of a single-clause path
+            if j < n and source[j] == '"':
+                value, j = read_string(j)
+                out.append(value)
+            i = j
+            continue
+        i += 1
+    return out
+
 def test_recovery_sources_are_intact():
     """The snapshot, journal and every other rule source are read, not rewritten."""
     live = {
@@ -182,27 +124,15 @@ def test_recovery_sources_are_intact():
 
 
 def test_positions_were_recovered():
-    """The rebuilt positions match the governed replay exactly."""
+    """The rebuilt positions match the governed replay: same count and digest,
+    only the declared record fields, ascending by item id."""
     recovered = _load_json(POSITIONS_PATH)
     assert len(recovered) == FIXTURE["recovered_position_count"]
     assert _digest(recovered) == FIXTURE["recovered_positions_digest"]
-
-
-def test_recovered_records_carry_only_the_declared_fields():
-    """Journal bookkeeping never survives the replay."""
-    for row in _load_json(POSITIONS_PATH):
+    for row in recovered:
         assert set(row) == POSITION_KEYS
-        for receipt in row["scheduled_receipts"]:
-            assert set(receipt) == {"receipt_id", "qty", "due_day"}
-
-
-def test_recovered_file_is_sorted():
-    """Positions ascend by item_id and receipts by receipt_id within a record."""
-    rows = _load_json(POSITIONS_PATH)
-    assert [r["item_id"] for r in rows] == sorted(r["item_id"] for r in rows)
-    for row in rows:
-        ids = [r["receipt_id"] for r in row["scheduled_receipts"]]
-        assert ids == sorted(ids)
+    ids = [r["item_id"] for r in recovered]
+    assert ids == sorted(ids)
 
 
 def test_shipped_and_naive_recoveries_differ_from_the_governed_one():
@@ -244,15 +174,10 @@ def test_shipped_and_naive_recoveries_differ_from_the_governed_one():
 # --------------------------------------------------------------------------
 # Step two: the plan itself
 # --------------------------------------------------------------------------
-def test_primary_summary_matches_fixture(primary_outputs):
-    """Every summary field matches the sealed reference run."""
-    _, summary, _, _ = primary_outputs
+def test_primary_run_matches_the_sealed_reference(primary_outputs):
+    """Summary, item plan and exception queue all match the sealed reference run."""
+    _, summary, plan, exceptions = primary_outputs
     assert summary == FIXTURE["primary"]["summary"]
-
-
-def test_primary_plan_and_exceptions_match_fixture(primary_outputs):
-    """The item plan and exception queue match the sealed digests byte for byte."""
-    _, _, plan, exceptions = primary_outputs
     assert _digest(plan) == FIXTURE["primary"]["item_plan_digest"]
     assert _digest(exceptions) == FIXTURE["primary"]["exception_digest"]
 
@@ -789,6 +714,84 @@ def test_policy_path_actually_influences_the_output():
         _restore(saved)
 
 
+def test_item_master_actually_influences_the_output():
+    """The item master is resolved from its fixed path, not inlined."""
+    path = DATA / "item_master.json"
+    saved = path.read_text(encoding="utf-8")
+    try:
+        items = _load_json(path)
+        for it in items:
+            it["lead_time_days"] = 0
+        _write_json(path, items)
+        _, summary, plan, _ = _run_pipeline()
+        assert summary != FIXTURE["primary"]["summary"]
+        # with no lead time an order releases on the day it is needed, unless the
+        # item's firm fence pushes it out
+        orders = [o for row in plan for o in row["planned_orders"]]
+        assert orders
+        for order in orders:
+            assert order["release_day"] == order["receipt_day"] or order["pushed"]
+    finally:
+        path.write_text(saved, encoding="utf-8")
+
+
+def test_bill_of_materials_actually_influences_the_output():
+    """The bill of materials is resolved from its fixed path; without it nothing explodes."""
+    path = DATA / "bill_of_materials.json"
+    saved = path.read_text(encoding="utf-8")
+    try:
+        _write_json(path, [])
+        _, summary, plan, _ = _run_pipeline()
+        assert summary["max_low_level_code"] == 0
+        assert all(row["low_level_code"] == 0 for row in plan)
+        assert summary != FIXTURE["primary"]["summary"]
+    finally:
+        path.write_text(saved, encoding="utf-8")
+
+
+def test_independent_demand_actually_influences_the_output():
+    """Independent demand is resolved from its fixed path; with none, nothing is planned."""
+    path = DATA / "independent_demand.json"
+    saved = path.read_text(encoding="utf-8")
+    try:
+        _write_json(path, [])
+        _, summary, plan, _ = _run_pipeline()
+        # what survives with no independent demand is driven by safety stock alone
+        assert summary["planned_order_count"] < (
+            FIXTURE["primary"]["summary"]["planned_order_count"] // 4)
+        # every surviving order traces to a buffered item or to something below one
+        buffered = {i["item_id"] for i in _load_json(DATA / "item_master.json")
+                    if i["safety_stock"] > 0}
+        children: dict[str, list[str]] = {}
+        for line in _load_json(DATA / "bill_of_materials.json"):
+            children.setdefault(line["parent_item"], []).append(line["component_item"])
+        reachable, stack = set(buffered), list(buffered)
+        while stack:
+            for child in children.get(stack.pop(), ()):
+                if child not in reachable:
+                    reachable.add(child)
+                    stack.append(child)
+        for row in plan:
+            for order in row["planned_orders"]:
+                assert order["item_id"] in reachable, order
+    finally:
+        path.write_text(saved, encoding="utf-8")
+
+
+def test_planning_calendar_actually_influences_the_output():
+    """The calendar is resolved from its fixed path and drives the working-day offset."""
+    path = DATA / "planning_calendar.json"
+    saved = path.read_text(encoding="utf-8")
+    try:
+        cal = _load_json(path)
+        cal["non_working_days"] = []
+        _write_json(path, cal)
+        _, summary, _, _ = _run_pipeline()
+        assert summary != FIXTURE["primary"]["summary"]
+    finally:
+        path.write_text(saved, encoding="utf-8")
+
+
 def test_run_is_idempotent(primary_outputs):
     """Re-running over the same inputs reproduces the same artifacts."""
     _, summary, plan, exceptions = primary_outputs
@@ -823,13 +826,50 @@ def test_runtime_budget_is_stated_in_the_contract():
     assert int(SPEC["runtime_budget_seconds"]) == int(RUNTIME_BUDGET_SEC)
 
 
-def test_planner_uses_only_the_standard_library():
-    """The planner is standard-library Go; no planning or solver package is imported."""
-    source = WORKFLOW_PATH.read_text(encoding="utf-8")
-    imports = set(re.findall(r'"([a-z0-9_./-]+)"', source))
-    for name in imports:
-        if "." in name.split("/")[0]:
-            pytest.fail(f"third-party import: {name}")
+def test_planner_imports_only_the_standard_library():
+    """Every package the planner imports is a standard-library package.
+
+    Only import declarations are consulted. A dotted filename literal in the body,
+    such as "summary.json" passed to filepath.Join, is not an import and is not a
+    breach of the standard-library requirement.
+    """
+    paths = _go_imports(WORKFLOW_PATH.read_text(encoding="utf-8"))
+    assert paths, "the planner must declare at least one import"
+    third_party = sorted({p for p in paths if "." in p.split("/")[0]})
+    assert not third_party, f"third-party import(s): {third_party}"
+
+
+def test_the_import_check_reads_declarations_not_string_literals():
+    """The check fires on a real third-party import and stays silent on a correct
+    planner that happens to build its output paths with filepath.Join."""
+    offending = (
+        'package main\n\n'
+        'import (\n'
+        '\t"fmt"\n'
+        '\tsolver "github.com/example/mrp-solver"\n'
+        ')\n\n'
+        'func main() { fmt.Println(solver.Run()) }\n'
+    )
+    assert _go_imports(offending) == ["fmt", "github.com/example/mrp-solver"]
+    assert [p for p in _go_imports(offending) if "." in p.split("/")[0]]
+
+    innocent = (
+        'package main\n\n'
+        'import (\n'
+        '\t"encoding/json"\n'
+        '\t"path/filepath"\n'
+        ')\n\n'
+        '// not an import: github.com/example/not-really\n'
+        'const note = `github.com/example/also-not`\n'
+        'func out(dir string) string { return filepath.Join(dir, "summary.json") }\n'
+        'var q = filepath.Join("out", "exception_queue.jsonl")\n'
+        'var p = filepath.Join("out", "item_plan.json")\n'
+    )
+    assert _go_imports(innocent) == ["encoding/json", "path/filepath"]
+    assert not [p for p in _go_imports(innocent) if "." in p.split("/")[0]]
+
+    assert _go_imports('package main\n\nimport "os"\n') == ["os"]
+    assert _go_imports('package main\n\nimport alias "os"\n') == ["os"]
 
 
 def test_submitted_program_runs_unprivileged_and_cannot_write_reward(tmp_path):

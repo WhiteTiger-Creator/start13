@@ -24,6 +24,7 @@ RUN mkdir -p /candidate-work \
 
 WORKDIR /tests
 COPY test_outputs.py /tests/test_outputs.py
+COPY harness.py /tests/harness.py
 COPY test.sh /tests/test.sh
 COPY fixtures/ /tests/fixtures/
 
