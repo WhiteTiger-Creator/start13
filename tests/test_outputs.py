@@ -321,12 +321,57 @@ def test_summary_counts_track_the_artifacts(primary_outputs):
 
 
 def test_exceptions_only_carry_material_orders(primary_outputs):
-    """Only orders reaching the policy minimum are queued, per the final decision."""
+    """A past-due order is queued only when material; a pushed one always is."""
     _, summary, _, exceptions = primary_outputs
     floor = summary["effective_exception_min_qty"]
-    for row in exceptions:
+    past_due = [r for r in exceptions if r["kind"] != "inside_fence"]
+    assert past_due
+    for row in past_due:
         assert row["qty"] >= floor
         assert row["release_day"] < -summary["effective_grace_days"]
+    fenced = [r for r in exceptions if r["kind"] == "inside_fence"]
+    assert fenced, "the graded run exercises no firm fence"
+    assert any(r["qty"] < floor for r in fenced), "the fence rule is only met by material orders"
+    for row in fenced:
+        assert row["release_day"] >= 0
+
+
+def test_all_three_exception_kinds_occur(primary_outputs):
+    """The graded run exercises every documented exception kind."""
+    _, _, _, exceptions = primary_outputs
+    assert {r["kind"] for r in exceptions} == set(SPEC["outputs"]["exception_queue"]["kinds"])
+
+
+def test_phantoms_and_pushed_orders_are_load_bearing(primary_outputs):
+    """The graded run carries real phantoms and real fence pushes."""
+    _, summary, plan, exceptions = primary_outputs
+    items = {i["item_id"]: i for i in _load_json(DATA / "item_master.json")}
+    phantoms = [r for r in plan if items[r["item_id"]]["lot_policy"] == "phantom"]
+    assert len(phantoms) == summary["phantom_item_count"] > 0
+    for row in phantoms:
+        assert row["planned_orders"] == [], row["item_id"]
+    assert any(row["gross_requirement_total"] > 0 for row in phantoms)
+    pushed = [o for r in plan for o in r["planned_orders"] if o["pushed"]]
+    assert len(pushed) == summary["pushed_order_count"] > 0
+    assert {r["item_id"] for r in exceptions if r["kind"] == "inside_fence"} == \
+        {o["item_id"] for o in pushed}
+
+
+def test_yield_over_releases_across_the_graded_run(primary_outputs):
+    """Released and arriving quantities diverge exactly where the yield is short."""
+    _, summary, plan, _ = primary_outputs
+    items = {i["item_id"]: i for i in _load_json(DATA / "item_master.json")}
+    orders = [o for r in plan for o in r["planned_orders"]]
+    inflated = 0
+    for o in orders:
+        y = items[o["item_id"]]["yield_pct"]
+        expected = o["receipt_qty"] if y >= 100 else -(-o["receipt_qty"] * 100 // y)
+        assert o["qty"] == expected, o
+        if o["qty"] != o["receipt_qty"]:
+            inflated += 1
+    assert inflated > 0, "no order in the graded run is inflated for yield"
+    assert summary["total_receipt_qty"] == sum(o["receipt_qty"] for o in orders)
+    assert summary["total_planned_qty"] > summary["total_receipt_qty"]
 
 
 # --------------------------------------------------------------------------
@@ -351,13 +396,34 @@ def _restore(saved):
 
 def _item(iid, **kw):
     base = {"item_id": iid, "lead_time_days": 0, "lot_policy": "lot_for_lot", "lot_size": 0,
-            "period_days": 0, "safety_stock": 0, "unit_cost_cents": 100}
+            "period_days": 0, "safety_stock": 0, "unit_cost_cents": 100,
+            "yield_pct": 100, "firm_fence_days": 0}
     base.update(kw)
     return base
 
 
+def _bom(parent, component, qty_per=1, *, scrap_pct=0, effective_from=0, effective_to=9999):
+    return {"parent_item": parent, "component_item": component, "qty_per": qty_per,
+            "scrap_pct": scrap_pct, "effective_from": effective_from,
+            "effective_to": effective_to}
+
+
 BASE_POLICY = {"default": {"past_due_grace_days": 2, "exception_min_qty": 40,
                            "max_release_backlog_days": 14, "period_of_supply_cap_days": 20}}
+
+
+def _probe_full(world_extra):
+    """As _probe, but hands back the summary and the exception queue as well."""
+    world = {"planning_policy.json": BASE_POLICY,
+             "planning_calendar.json": {"horizon_days": 30, "non_working_days": []},
+             "bill_of_materials.json": [], "inventory_positions.json": []}
+    world.update(world_extra)
+    saved = _with_world(world)
+    try:
+        _, summary, plan, exceptions = _run_pipeline(input_path=DATA / "inventory_positions.json")
+    finally:
+        _restore(saved)
+    return summary, {r["item_id"]: r for r in plan}, exceptions
 
 
 def _probe(world_extra, item_id=None):
@@ -385,10 +451,7 @@ def test_low_level_code_is_the_deepest_level_not_the_first():
     row = _probe({
         "item_master.json": [_item("ITM-A"), _item("ITM-B"), _item("ITM-C")],
         "bill_of_materials.json": [
-            {"parent_item": "ITM-A", "component_item": "ITM-B", "qty_per": 1},
-            {"parent_item": "ITM-A", "component_item": "ITM-C", "qty_per": 1},
-            {"parent_item": "ITM-C", "component_item": "ITM-B", "qty_per": 1},
-        ],
+            _bom("ITM-A", "ITM-B"), _bom("ITM-A", "ITM-C"), _bom("ITM-C", "ITM-B")],
         "independent_demand.json": [
             {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 5}],
     }, "ITM-B")
@@ -436,8 +499,7 @@ def test_dependent_demand_lands_on_the_release_day():
     """
     row = _probe({
         "item_master.json": [_item("ITM-A", lead_time_days=2), _item("ITM-B")],
-        "bill_of_materials.json": [
-            {"parent_item": "ITM-A", "component_item": "ITM-B", "qty_per": 2}],
+        "bill_of_materials.json": [_bom("ITM-A", "ITM-B", 2)],
         "independent_demand.json": [
             {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 5}],
     }, "ITM-B")
@@ -464,6 +526,247 @@ def test_each_lot_policy_sizes_its_own_way():
     assert [o["qty"] for o in by_id["ITM-B"]["planned_orders"]] == [250]
     # period of supply covers day 2 plus the demand inside the following nine days
     assert [o["qty"] for o in by_id["ITM-C"]["planned_orders"]] == [130]
+
+
+
+def test_yield_over_releases_and_credits_only_the_arrival():
+    """A yield of 80 releases 125 to land the 100 the requirement needs.
+
+    The draft that treats yield as a shop-floor matter would release 100. The
+    projected balance is credited with the arriving 100, so no second order
+    follows.
+    """
+    row = _probe({
+        "item_master.json": [_item("ITM-A", yield_pct=80)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 100, "due_day": 2}],
+    }, "ITM-A")
+    assert [(o["qty"], o["receipt_qty"]) for o in row["planned_orders"]] == [(125, 100)]
+
+
+def test_yield_is_applied_after_the_lot_policy_not_before():
+    """The lot sizes the arrival, then yield inflates it.
+
+    A shortfall of 90 sizes up to one 250 lot, and a yield of 80 releases 313 to
+    land it. Inflating the shortfall first would give 113, still one lot, and
+    release 250.
+    """
+    row = _probe({
+        "item_master.json": [
+            _item("ITM-B", lot_policy="fixed_quantity", lot_size=250, yield_pct=80)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-B", "qty": 90, "due_day": 2}],
+    }, "ITM-B")
+    assert [(o["qty"], o["receipt_qty"]) for o in row["planned_orders"]] == [(313, 250)]
+
+
+def test_scrap_inflates_what_the_line_must_issue():
+    """Two per parent at 20 per cent scrap issues 25 for a released 10, not 20."""
+    row = _probe({
+        "item_master.json": [_item("ITM-A"), _item("ITM-B")],
+        "bill_of_materials.json": [_bom("ITM-A", "ITM-B", 2, scrap_pct=20)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 3}],
+    }, "ITM-B")
+    assert [(o["receipt_day"], o["qty"]) for o in row["planned_orders"]] == [(3, 25)]
+
+
+def test_the_explosion_is_driven_by_the_released_quantity():
+    """ITM-B yields 50, so it releases 20 to land 10 -- and ITM-C is issued 20.
+
+    Components are issued for everything an order starts, so the parent's
+    released quantity drives the explosion rather than the quantity arriving.
+    """
+    row = _probe({
+        "item_master.json": [_item("ITM-A"), _item("ITM-B", yield_pct=50), _item("ITM-C")],
+        "bill_of_materials.json": [_bom("ITM-A", "ITM-B"), _bom("ITM-B", "ITM-C")],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 3}],
+    }, "ITM-C")
+    assert [(o["receipt_day"], o["qty"], o["receipt_qty"]) for o in row["planned_orders"]] == [
+        (3, 20, 20)]
+
+
+def test_yield_and_scrap_compound_down_the_structure():
+    """Each allowance is applied once at its own level, so they multiply.
+
+    ITM-A releases 10. The A-to-B line scraps 50 per cent, so B must land 20; B
+    yields 50 per cent, so B releases 40; the B-to-C line scraps 50 per cent, so
+    C must land 80.
+    """
+    plan = _probe({
+        "item_master.json": [_item("ITM-A"), _item("ITM-B", yield_pct=50), _item("ITM-C")],
+        "bill_of_materials.json": [
+            _bom("ITM-A", "ITM-B", 1, scrap_pct=50), _bom("ITM-B", "ITM-C", 1, scrap_pct=50)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 3}],
+    })
+    by_id = {r["item_id"]: r for r in plan}
+    assert [(o["qty"], o["receipt_qty"]) for o in by_id["ITM-B"]["planned_orders"]] == [(40, 20)]
+    assert [(o["qty"], o["receipt_qty"]) for o in by_id["ITM-C"]["planned_orders"]] == [(80, 80)]
+
+
+def test_a_phantom_raises_no_order_and_passes_through_on_the_same_day():
+    """The phantom's own seven-day lead time is ignored entirely.
+
+    ITM-A releases on day 3, so the phantom's requirement arises on day 3 and
+    reaches ITM-B on day 3. A draft planning the phantom normally would offset
+    its lead time to day -4, off the horizon, and ITM-B would be ordered nothing.
+    """
+    plan = _probe({
+        "item_master.json": [
+            _item("ITM-A", lead_time_days=2),
+            _item("ITM-P", lot_policy="phantom", lead_time_days=7, lot_size=500),
+            _item("ITM-B")],
+        "bill_of_materials.json": [_bom("ITM-A", "ITM-P"), _bom("ITM-P", "ITM-B")],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 5}],
+    })
+    by_id = {r["item_id"]: r for r in plan}
+    assert by_id["ITM-P"]["planned_orders"] == []
+    assert by_id["ITM-P"]["gross_requirement_total"] == 10
+    assert [(o["receipt_day"], o["qty"]) for o in by_id["ITM-B"]["planned_orders"]] == [(3, 10)]
+
+
+def test_a_phantom_is_netted_against_its_own_stock_before_passing_through():
+    """Stock held on the phantom is consumed first and only the remainder passes."""
+    plan = _probe({
+        "item_master.json": [
+            _item("ITM-A"), _item("ITM-P", lot_policy="phantom"), _item("ITM-B")],
+        "bill_of_materials.json": [_bom("ITM-A", "ITM-P"), _bom("ITM-P", "ITM-B")],
+        "inventory_positions.json": [
+            {"item_id": "ITM-P", "on_hand": 30, "scheduled_receipts": []}],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 100, "due_day": 4}],
+    })
+    by_id = {r["item_id"]: r for r in plan}
+    assert by_id["ITM-P"]["planned_orders"] == []
+    assert [(o["receipt_day"], o["qty"]) for o in by_id["ITM-B"]["planned_orders"]] == [(4, 70)]
+
+
+def test_a_phantom_still_inflates_the_pass_through_for_its_own_yield():
+    """A phantom yielding 50 passes 20 down for a requirement of 10."""
+    row = _probe({
+        "item_master.json": [
+            _item("ITM-A"), _item("ITM-P", lot_policy="phantom", yield_pct=50), _item("ITM-B")],
+        "bill_of_materials.json": [_bom("ITM-A", "ITM-P"), _bom("ITM-P", "ITM-B")],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 3}],
+    }, "ITM-B")
+    assert [(o["receipt_day"], o["qty"]) for o in row["planned_orders"]] == [(3, 20)]
+
+
+def test_component_effectivity_is_judged_on_the_release_day():
+    """The parent releases on day 7, so the line effective through day 8 applies.
+
+    The interim keyed on the receipt day would reach day 10 and pick ITM-C
+    instead.
+    """
+    plan = _probe({
+        "item_master.json": [
+            _item("ITM-A", lead_time_days=3), _item("ITM-B"), _item("ITM-C")],
+        "bill_of_materials.json": [
+            _bom("ITM-A", "ITM-B", 1, effective_from=0, effective_to=8),
+            _bom("ITM-A", "ITM-C", 1, effective_from=9, effective_to=9999)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 10}],
+    })
+    by_id = {r["item_id"]: r for r in plan}
+    assert [(o["receipt_day"], o["qty"]) for o in by_id["ITM-B"]["planned_orders"]] == [(7, 10)]
+    assert by_id["ITM-C"]["planned_orders"] == []
+
+
+def test_a_component_with_no_effective_line_takes_no_demand():
+    """A line dormant across the whole release window contributes nothing."""
+    row = _probe({
+        "item_master.json": [_item("ITM-A"), _item("ITM-B")],
+        "bill_of_materials.json": [
+            _bom("ITM-A", "ITM-B", 1, effective_from=50, effective_to=60)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 3}],
+    }, "ITM-B")
+    assert row["planned_orders"] == []
+    assert row["gross_requirement_total"] == 0
+
+
+def test_a_release_inside_the_firm_fence_is_pushed_out_to_it():
+    """A ten-day lead on a day-2 requirement releases at -8; the fence holds it to day 5.
+
+    The receipt day does not move, so the order stands knowingly late. The draft
+    that treats the fence as advisory would leave the release at -8.
+    """
+    summary, by_id, exceptions = _probe_full({
+        "item_master.json": [_item("ITM-A", lead_time_days=10, firm_fence_days=5)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 2}],
+    })
+    orders = by_id["ITM-A"]["planned_orders"]
+    assert [(o["receipt_day"], o["release_day"], o["pushed"]) for o in orders] == [(2, 5, True)]
+    assert summary["pushed_order_count"] == 1
+    assert [(r["kind"], r["release_day"]) for r in exceptions] == [("inside_fence", 5)]
+
+
+def test_the_fence_day_counts_working_days_too():
+    """With days 1 and 2 closed, a two-day fence sits on day 4, not day 2."""
+    _, by_id, _ = _probe_full({
+        "item_master.json": [_item("ITM-A", lead_time_days=10, firm_fence_days=2)],
+        "planning_calendar.json": {"horizon_days": 30, "non_working_days": [1, 2]},
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 8}],
+    })
+    assert [o["release_day"] for o in by_id["ITM-A"]["planned_orders"]] == [4]
+
+
+def test_a_pushed_order_is_not_also_reported_past_due():
+    """The fence supersedes the past-due report for the same order.
+
+    At a quantity of 100 the draft would report this release of -8 as
+    past_due_release; the governed rule reports it once, as inside_fence.
+    """
+    _, _, exceptions = _probe_full({
+        "item_master.json": [_item("ITM-A", lead_time_days=10, firm_fence_days=5)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 100, "due_day": 2}],
+    })
+    assert [r["kind"] for r in exceptions] == ["inside_fence"]
+
+
+def test_an_item_without_a_fence_still_releases_past_due():
+    """A firm_fence_days of zero means no fence, so the release stays where it falls."""
+    summary, by_id, exceptions = _probe_full({
+        "item_master.json": [_item("ITM-A", lead_time_days=10, firm_fence_days=0)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 100, "due_day": 2}],
+    })
+    assert [(o["release_day"], o["pushed"]) for o in by_id["ITM-A"]["planned_orders"]] == [
+        (-8, False)]
+    assert summary["pushed_order_count"] == 0
+    assert [r["kind"] for r in exceptions] == ["past_due_release"]
+
+
+def test_the_fence_moves_which_component_line_is_effective():
+    """Pushing the release across a cutover changes the part that is issued.
+
+    The unfenced release lands on day -8 and no line reaches it, so nothing is
+    issued. The fence pushes it to day 5, where the ITM-B line is effective.
+    """
+    plan_no_fence = _probe({
+        "item_master.json": [
+            _item("ITM-A", lead_time_days=10, firm_fence_days=0), _item("ITM-B")],
+        "bill_of_materials.json": [_bom("ITM-A", "ITM-B", 1, effective_from=4, effective_to=20)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 2}],
+    })
+    plan_fenced = _probe({
+        "item_master.json": [
+            _item("ITM-A", lead_time_days=10, firm_fence_days=5), _item("ITM-B")],
+        "bill_of_materials.json": [_bom("ITM-A", "ITM-B", 1, effective_from=4, effective_to=20)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 2}],
+    })
+    assert {r["item_id"]: r for r in plan_no_fence}["ITM-B"]["planned_orders"] == []
+    assert [(o["receipt_day"], o["qty"]) for o in
+            {r["item_id"]: r for r in plan_fenced}["ITM-B"]["planned_orders"]] == [(5, 10)]
 
 
 # --------------------------------------------------------------------------

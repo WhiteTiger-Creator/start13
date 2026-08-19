@@ -21,12 +21,17 @@ type item struct {
 	PeriodDays   int    `json:"period_days"`
 	SafetyStock  int64  `json:"safety_stock"`
 	UnitCostC    int64  `json:"unit_cost_cents"`
+	YieldPct     int64  `json:"yield_pct"`
+	FirmFence    int    `json:"firm_fence_days"`
 }
 
 type bomRow struct {
-	Parent    string `json:"parent_item"`
-	Component string `json:"component_item"`
-	QtyPer    int64  `json:"qty_per"`
+	Parent        string `json:"parent_item"`
+	Component     string `json:"component_item"`
+	QtyPer        int64  `json:"qty_per"`
+	ScrapPct      int64  `json:"scrap_pct"`
+	EffectiveFrom int    `json:"effective_from"`
+	EffectiveTo   int    `json:"effective_to"`
 }
 
 type demandRow struct {
@@ -62,7 +67,9 @@ type plannedOrder struct {
 	ReceiptDay int    `json:"receipt_day"`
 	ReleaseDay int    `json:"release_day"`
 	Qty        int64  `json:"qty"`
+	ReceiptQty int64  `json:"receipt_qty"`
 	LotPolicy  string `json:"lot_policy"`
+	Pushed     bool   `json:"pushed"`
 }
 
 type itemPlan struct {
@@ -122,6 +129,33 @@ func offsetWorkingDays(day, lead int, nonWorking map[int]bool) int {
 		}
 	}
 	return d
+}
+
+// #MRP-4250: the firm fence sits the item's firm_fence_days WORKING days after
+// day zero, day zero itself not counted. A fence of zero means the item has no
+// fence at all.
+func fenceDay(fence int, nonWorking map[int]bool) int {
+	d := 0
+	remaining := fence
+	for remaining > 0 {
+		d++
+		if !nonWorking[d] {
+			remaining--
+		}
+		if d > 10000 {
+			break
+		}
+	}
+	return d
+}
+
+// ceilDiv divides rounding away from zero for the non-negative quantities the
+// allowances are applied to.
+func ceilDiv(numerator, denominator int64) int64 {
+	if denominator <= 0 {
+		return numerator
+	}
+	return (numerator + denominator - 1) / denominator
 }
 
 func main() {
@@ -228,8 +262,8 @@ func main() {
 
 	plans := make([]itemPlan, 0, len(items))
 	exceptions := make([]exceptionRow, 0)
-	var totalPlannedQty, totalNet int64
-	plannedOrderCount := 0
+	var totalPlannedQty, totalReceiptQty, totalNet int64
+	plannedOrderCount, phantomCount, pushedCount := 0, 0, 0
 
 	for _, id := range planOrder {
 		it := byID[id]
@@ -250,6 +284,15 @@ func main() {
 			grossTotal += v
 		}
 
+		phantom := it.LotPolicy == "phantom"
+		if phantom {
+			phantomCount++
+		}
+		fence := 0
+		if it.FirmFence > 0 {
+			fence = fenceDay(it.FirmFence, nonWorking)
+		}
+
 		available := onHand
 		orders := make([]plannedOrder, 0)
 		for day := 0; day <= horizon; day++ {
@@ -260,12 +303,13 @@ func main() {
 			// #MRP-4200: the shortfall is measured against the safety stock, so
 			// safety stock is covered by the order rather than eaten into.
 			shortfall := it.SafetyStock - available
-			qty := shortfall
+			// #MRP-4204: the lot policy sizes the quantity that must ARRIVE good.
+			receiptQty := shortfall
 			switch it.LotPolicy {
 			case "fixed_quantity":
 				if it.LotSize > 0 {
 					lots := (shortfall + it.LotSize - 1) / it.LotSize
-					qty = lots * it.LotSize
+					receiptQty = lots * it.LotSize
 				}
 			case "period_of_supply":
 				span := it.PeriodDays
@@ -274,46 +318,88 @@ func main() {
 				}
 				for k := day + 1; k < day+span && k <= horizon; k++ {
 					if extra := g[k] - sched[k]; extra > 0 {
-						qty += extra
+						receiptQty += extra
 					}
 				}
+			}
+			// #MRP-4234: the RELEASED quantity is the arriving quantity inflated for
+			// the item's own yield, rounded up, and the lot policy has already sized
+			// the arrival -- the inflation is never re-sized to a lot multiple.
+			released := receiptQty
+			if it.YieldPct > 0 && it.YieldPct < 100 {
+				released = ceilDiv(receiptQty*100, it.YieldPct)
 			}
 			netTotal += shortfall
 			totalNet += shortfall
-			release := offsetWorkingDays(day, it.LeadTimeDays, nonWorking)
-			orders = append(orders, plannedOrder{
-				ItemID: id, ReceiptDay: day, ReleaseDay: release,
-				Qty: qty, LotPolicy: it.LotPolicy,
-			})
-			available += qty
 
-			// #MRP-4220: an order whose release falls before day zero by more than
-			// the grace is past due; one that also exceeds the backlog window is
-			// reported separately, and both only when the lot is material.
-			if qty >= exceptionMinQty {
-				if release < -graceDays {
-					kind := "past_due_release"
-					if -release > maxBacklog {
-						kind = "backlog_exceeded"
-					}
-					exceptions = append(exceptions, exceptionRow{
-						ItemID: id, Kind: kind, ReceiptDay: day,
-						ReleaseDay: release, Qty: qty,
-					})
+			// #MRP-4242: a phantom is netted like any other item but raises no order,
+			// and what it passes on moves on the day it arrived -- its own lead time
+			// is never offset.
+			release := day
+			pushed := false
+			if !phantom {
+				release = offsetWorkingDays(day, it.LeadTimeDays, nonWorking)
+				// #MRP-4250: a release inside the firm fence is pushed OUT to the
+				// fence day; the receipt day does not move, so the order is knowingly
+				// late rather than the requirement being moved.
+				if it.FirmFence > 0 && release < fence {
+					release = fence
+					pushed = true
+					pushedCount++
 				}
+				orders = append(orders, plannedOrder{
+					ItemID: id, ReceiptDay: day, ReleaseDay: release,
+					Qty: released, ReceiptQty: receiptQty,
+					LotPolicy: it.LotPolicy, Pushed: pushed,
+				})
+			}
+			// the projected balance is credited with what ARRIVES, not what was
+			// released
+			available += receiptQty
+
+			if pushed {
+				// #MRP-4250: a pushed order is always reported, whatever its size.
+				exceptions = append(exceptions, exceptionRow{
+					ItemID: id, Kind: "inside_fence", ReceiptDay: day,
+					ReleaseDay: release, Qty: released,
+				})
+			} else if !phantom && released >= exceptionMinQty && release < -graceDays {
+				// #MRP-4220: an order whose release falls before day zero by more than
+				// the grace is past due; one that also exceeds the backlog window is
+				// reported separately, and both only when the lot is material.
+				kind := "past_due_release"
+				if -release > maxBacklog {
+					kind = "backlog_exceeded"
+				}
+				exceptions = append(exceptions, exceptionRow{
+					ItemID: id, Kind: kind, ReceiptDay: day,
+					ReleaseDay: release, Qty: released,
+				})
 			}
 
-			// dependent demand lands on the component at the parent's RELEASE day
-			for _, r := range children[id] {
-				if release >= 0 && release <= horizon {
+			// dependent demand lands on the component at the parent's RELEASE day,
+			// driven by the RELEASED quantity because the components must be issued
+			// for everything the order starts, scrap included.
+			if release >= 0 && release <= horizon {
+				for _, r := range children[id] {
+					// #MRP-4246: only a line effective on that release day applies.
+					if release < r.EffectiveFrom || release > r.EffectiveTo {
+						continue
+					}
+					// #MRP-4238: the line's scrap allowance inflates what must be issued.
+					need := released * r.QtyPer
+					if r.ScrapPct > 0 && r.ScrapPct < 100 {
+						need = ceilDiv(need*100, 100-r.ScrapPct)
+					}
 					cg := ensure(r.Component)
-					cg[release] += qty * r.QtyPer
+					cg[release] += need
 				}
 			}
 		}
 
 		for _, o := range orders {
 			totalPlannedQty += o.Qty
+			totalReceiptQty += o.ReceiptQty
 		}
 		plannedOrderCount += len(orders)
 		plans = append(plans, itemPlan{
@@ -358,6 +444,9 @@ func main() {
 		"position_count":              len(positions),
 		"planned_order_count":         plannedOrderCount,
 		"total_planned_qty":           totalPlannedQty,
+		"total_receipt_qty":           totalReceiptQty,
+		"phantom_item_count":          phantomCount,
+		"pushed_order_count":          pushedCount,
 		"total_net_requirement":       totalNet,
 		"exception_count":             len(exceptions),
 		"past_due_count":              pastDue,
