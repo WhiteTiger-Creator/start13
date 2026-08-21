@@ -1,0 +1,122 @@
+{
+  "cli": {
+    "fixed_paths": [
+      "/app/data/item_master.json",
+      "/app/data/bill_of_materials.json",
+      "/app/data/independent_demand.json",
+      "/app/data/planning_calendar.json",
+      "/app/data/planning_policy.json"
+    ],
+    "input": "--input selects the inventory positions file only; default /app/data/inventory_positions.json",
+    "output_dir": "--output-dir selects the output directory; default /app/output"
+  },
+  "contract_version": "mrp-plan-v1",
+  "description": "Output contract for the requirements planner. Shapes, paths, field lists and sort orders only; no derivation rule lives here.",
+  "outputs": {
+    "exception_queue": {
+      "container": "jsonl",
+      "element_fields": [
+        "item_id",
+        "kind",
+        "receipt_day",
+        "release_day",
+        "qty"
+      ],
+      "kinds": [
+        "backlog_exceeded",
+        "inside_fence",
+        "past_due_release"
+      ],
+      "path": "/app/output/exception_queue.jsonl",
+      "serialisation": "one compact JSON object per line, trailing newline",
+      "sort": "ascending by release_day, then item_id, then receipt_day"
+    },
+    "item_plan": {
+      "container": "array",
+      "element_fields": [
+        "item_id",
+        "low_level_code",
+        "gross_requirement_total",
+        "net_requirement_total",
+        "planned_orders",
+        "ending_on_hand"
+      ],
+      "path": "/app/output/item_plan.json",
+      "planned_order_fields": [
+        "item_id",
+        "receipt_day",
+        "release_day",
+        "qty",
+        "receipt_qty",
+        "lot_policy",
+        "pushed"
+      ],
+      "serialisation": "JSON array, two-space indent, trailing newline",
+      "sort": "ascending by item_id; planned_orders ascending by receipt_day"
+    },
+    "summary": {
+      "container": "object",
+      "field_types": {
+        "effective_exception_min_qty": "integer",
+        "effective_grace_days": "integer",
+        "effective_max_backlog_days": "integer",
+        "effective_pos_cap_days": "integer",
+        "exception_count": "integer",
+        "item_count": "integer",
+        "max_low_level_code": "integer",
+        "past_due_count": "integer",
+        "phantom_item_count": "integer",
+        "planned_order_count": "integer",
+        "position_count": "integer",
+        "pushed_order_count": "integer",
+        "schema_version": "string",
+        "total_net_requirement": "integer",
+        "total_planned_qty": "integer",
+        "total_receipt_qty": "integer"
+      },
+      "path": "/app/output/summary.json",
+      "required_fields": [
+        "schema_version",
+        "item_count",
+        "position_count",
+        "planned_order_count",
+        "total_planned_qty",
+        "total_net_requirement",
+        "exception_count",
+        "past_due_count",
+        "max_low_level_code",
+        "effective_grace_days",
+        "effective_exception_min_qty",
+        "effective_max_backlog_days",
+        "effective_pos_cap_days",
+        "total_receipt_qty",
+        "phantom_item_count",
+        "pushed_order_count"
+      ],
+      "serialisation": "JSON object, two-space indent, trailing newline"
+    }
+  },
+  "reconciled_inputs": {
+    "inventory_positions": {
+      "container": "array",
+      "path": "/app/data/inventory_positions.json",
+      "receipt_fields": [
+        "receipt_id",
+        "qty",
+        "due_day"
+      ],
+      "record_fields": [
+        "item_id",
+        "on_hand",
+        "scheduled_receipts"
+      ],
+      "serialisation": "JSON array, two-space indent, trailing newline",
+      "sort": "ascending by item_id; scheduled_receipts ascending by receipt_id"
+    }
+  },
+  "runtime_budget_seconds": 90,
+  "units": {
+    "days": "integer day offsets from the plan start; negative days lie before the horizon",
+    "qty": "whole units; a planned order's qty is what is RELEASED and receipt_qty is what ARRIVES good"
+  }
+}

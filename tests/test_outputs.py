@@ -24,6 +24,44 @@ def alternate_outputs():
 _GO_IDENT = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_")
 
 
+
+def _go_strings(source: str) -> list[str]:
+    """Interpreted string literals in a Go file, skipping comments and raw strings.
+
+    A raw substring scan over the whole source would reject a correct planner
+    that merely names one of these in a comment.
+    """
+    out: list[str] = []
+    i, n = 0, len(source)
+    while i < n:
+        if source.startswith("//", i):
+            k = source.find("\n", i)
+            i = n if k < 0 else k + 1
+            continue
+        if source.startswith("/*", i):
+            k = source.find("*/", i + 2)
+            i = n if k < 0 else k + 2
+            continue
+        c = source[i]
+        if c == "`":
+            k = source.find("`", i + 1)
+            i = n if k < 0 else k + 1
+            continue
+        if c == '"':
+            i += 1
+            buf = []
+            while i < n and source[i] != '"':
+                if source[i] == "\\":
+                    i += 2
+                    continue
+                buf.append(source[i])
+                i += 1
+            out.append("".join(buf))
+            i += 1
+            continue
+        i += 1
+    return out
+
 def _go_imports(source: str) -> list[str]:
     """Import paths declared by a Go file, read from its import declarations.
 
@@ -801,18 +839,26 @@ def test_run_is_idempotent(primary_outputs):
     assert _digest(again_exceptions) == _digest(exceptions)
 
 
-def test_cli_defaults_match_an_explicit_run(primary_outputs):
-    """Omitting --input uses the documented default positions file."""
+def test_no_argument_run_writes_to_the_documented_defaults(primary_outputs):
+    """With no flags at all the planner reads and writes its documented defaults.
+
+    The previous form still passed --output-dir, so it only exercised the --input
+    default; a changed default output directory went unnoticed.
+    """
     binary = _build(WORKFLOW_PATH)
     _publish_inputs()
-    work = _candidate_dir()
-    out_dir = work / "output"
-    out_dir.mkdir(parents=True, exist_ok=True)
-    os.chmod(out_dir, 0o777)
-    result = _run_agent([binary, "--output-dir", str(out_dir)], cwd=work)
+    default_out = Path("/app/output")
+    shutil.rmtree(default_out, ignore_errors=True)
+    default_out.mkdir(parents=True, exist_ok=True)
+    os.chmod(default_out, 0o777)
+    result = _run_agent([binary], cwd=_candidate_dir())
     assert result.returncode == 0, result.stderr
-    _, summary, _, _ = primary_outputs
-    assert _load_json(out_dir / "summary.json") == summary
+    assert sorted(q.name for q in default_out.iterdir()) == [
+        "exception_queue.jsonl", "item_plan.json", "summary.json"]
+    _, summary, plan, exceptions = primary_outputs
+    assert _load_json(default_out / "summary.json") == summary
+    assert _digest(_load_json(default_out / "item_plan.json")) == _digest(plan)
+    assert _digest(_load_jsonl(default_out / "exception_queue.jsonl")) == _digest(exceptions)
 
 
 def test_graded_run_meets_documented_runtime_budget(primary_outputs):
@@ -911,6 +957,40 @@ def test_governance_log_present():
 
 def test_planner_does_not_reference_test_artifacts():
     """The planner derives its answer rather than reading anything verifier-side."""
-    source = WORKFLOW_PATH.read_text(encoding="utf-8")
+    literals = _go_strings(WORKFLOW_PATH.read_text(encoding="utf-8"))
     for token in ("/tests", "expected_report.json", "alt_positions.json"):
-        assert token not in source
+        assert not any(token in literal for literal in literals), token
+
+
+def test_shipped_contract_matches_the_golden_copy():
+    """The output contract in the environment is unmodified.
+
+    Field lists, container shapes and sort orders are golden metadata and are read
+    from the verifier's own image; this proves the agent's copy still agrees with
+    it, so the contract cannot be trimmed to weaken a schema check.
+    """
+    shipped = json.loads(SPEC_PATH.read_text(encoding="utf-8"))
+    assert shipped == json.loads(GOLDEN_CONTRACT_PATH.read_text(encoding="utf-8"))
+
+
+def test_missing_policy_fields_fall_back_to_the_governed_baseline():
+    """#MRP-4240: a field the policy omits keeps its baseline, not zero.
+
+    An empty policy object must still resolve past_due_grace_days 2,
+    exception_min_qty 40, max_release_backlog_days 14 and
+    period_of_supply_cap_days 20. Reading a missing key as zero would admit every
+    order to the exception queue and treat every release as past due.
+    """
+    path = DATA / "planning_policy.json"
+    saved = path.read_text(encoding="utf-8")
+    try:
+        _write_json(path, {"default": {}})
+        _, summary, _, exceptions = _run_pipeline()
+        assert summary["effective_grace_days"] == 2
+        assert summary["effective_exception_min_qty"] == 40
+        assert summary["effective_max_backlog_days"] == 14
+        assert summary["effective_pos_cap_days"] == 20
+        # a zero minimum would have queued every short order
+        assert all(row["qty"] >= 40 for row in exceptions if row["kind"] != "inside_fence")
+    finally:
+        path.write_text(saved, encoding="utf-8")

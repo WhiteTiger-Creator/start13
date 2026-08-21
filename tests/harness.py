@@ -27,12 +27,15 @@ SNAPSHOT_PATH = DATA / "inventory_snapshot_pre_rollout.json"
 JOURNAL_PATH = DATA / "inventory_movement_journal.json"
 POSITIONS_PATH = DATA / "inventory_positions.json"
 SPEC_PATH = APP / "docs" / "report_spec.json"
+# The contract is golden metadata: the verifier reads it from its own image,
+# never from the agent-writable copy under /app.
+GOLDEN_CONTRACT_PATH = Path("/tests/fixtures/contract_golden.json")
 LOG_PATH = APP / "incident" / "planning_governance_log.md"
 EXPECTED_FIXTURE = Path("/tests/fixtures/expected_report.json")
 ALT_INPUT = Path("/tests/fixtures/alt_positions.json")
 
 FIXTURE = json.loads(EXPECTED_FIXTURE.read_text())
-SPEC = json.loads(SPEC_PATH.read_text())
+SPEC = json.loads(GOLDEN_CONTRACT_PATH.read_text())
 
 POSITION_KEYS = set(SPEC["reconciled_inputs"]["inventory_positions"]["record_fields"])
 SUMMARY_KEYS = set(SPEC["outputs"]["summary"]["required_fields"])
@@ -159,6 +162,7 @@ def _run_pipeline(script_path: Path = WORKFLOW_PATH, input_path: Path = POSITION
 
 
 __all__ = [
+    "GOLDEN_CONTRACT_PATH",
     "annotations",
     "hashlib",
     "json",

@@ -158,6 +158,16 @@ func ceilDiv(numerator, denominator int64) int64 {
 	return (numerator + denominator - 1) / denominator
 }
 
+// #MRP-4240: the policy is read from its fixed absolute path, and any field the
+// file omits keeps its governed baseline. A missing Go map key is zero, not the
+// baseline, so the fallback has to be explicit.
+func policyValue(pol policy, field string, baseline int64) int64 {
+	if value, ok := pol.Default[field]; ok {
+		return value
+	}
+	return baseline
+}
+
 func main() {
 	input := flag.String("input", "/app/data/inventory_positions.json", "inventory positions")
 	outputDir := flag.String("output-dir", "/app/output", "output directory")
@@ -184,10 +194,10 @@ func main() {
 	for _, d := range cal.NonWorkingDays {
 		nonWorking[d] = true
 	}
-	graceDays := int(pol.Default["past_due_grace_days"])
-	exceptionMinQty := pol.Default["exception_min_qty"]
-	maxBacklog := int(pol.Default["max_release_backlog_days"])
-	posCap := int(pol.Default["period_of_supply_cap_days"])
+	graceDays := int(policyValue(pol, "past_due_grace_days", 2))
+	exceptionMinQty := policyValue(pol, "exception_min_qty", 40)
+	maxBacklog := int(policyValue(pol, "max_release_backlog_days", 14))
+	posCap := int(policyValue(pol, "period_of_supply_cap_days", 20))
 
 	byID := make(map[string]item, len(items))
 	for _, it := range items {
