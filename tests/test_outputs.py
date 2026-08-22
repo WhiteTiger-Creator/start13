@@ -861,11 +861,16 @@ def test_no_argument_run_writes_to_the_documented_defaults(primary_outputs):
     assert _digest(_load_jsonl(default_out / "exception_queue.jsonl")) == _digest(exceptions)
 
 
-def test_graded_run_meets_documented_runtime_budget(primary_outputs):
-    """The graded run finishes inside the budget the contract publishes."""
-    elapsed = _ELAPSED[str(POSITIONS_PATH)]
-    assert elapsed <= RUNTIME_BUDGET_SEC, f"took {elapsed:.1f}s, budget {RUNTIME_BUDGET_SEC}s"
+def test_the_budget_is_enforced_by_killing_an_overrunning_run(primary_outputs):
+    """The budget is enforced, and not by timing the machine.
 
+    Every candidate run is executed with the contract's published budget as its
+    hard timeout, so a run that overruns is killed and the suite fails. There is
+    no measured elapsed time compared against a threshold, which would make the
+    verdict depend on how fast the grading host happens to be.
+    """
+    assert HARD_TIMEOUT_SEC == int(RUNTIME_BUDGET_SEC)
+    assert primary_outputs[1]["planned_order_count"] > 0, "the graded run did not complete"
 
 def test_runtime_budget_is_stated_in_the_contract():
     """The budget enforced above is the one the contract publishes."""
