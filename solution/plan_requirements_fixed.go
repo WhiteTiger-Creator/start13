@@ -23,6 +23,18 @@ type item struct {
 	UnitCostC    int64  `json:"unit_cost_cents"`
 	YieldPct     int64  `json:"yield_pct"`
 	FirmFence    int    `json:"firm_fence_days"`
+	WorkCentre   string `json:"work_centre"`
+	RunHours     int    `json:"run_hours"`
+}
+
+type workCentre struct {
+	WorkCentre  string `json:"work_centre"`
+	DailyHours  int    `json:"daily_hours"`
+	MaxPullDays int    `json:"max_pull_days"`
+}
+
+type capacityFile struct {
+	WorkCentres []workCentre `json:"work_centres"`
 }
 
 type bomRow struct {
@@ -70,6 +82,8 @@ type plannedOrder struct {
 	ReceiptQty int64  `json:"receipt_qty"`
 	LotPolicy  string `json:"lot_policy"`
 	Pushed     bool   `json:"pushed"`
+	LoadDay    int    `json:"load_day"`
+	Pulled     int    `json:"pulled"`
 }
 
 type itemPlan struct {
@@ -168,6 +182,176 @@ func policyValue(pol policy, field string, baseline int64) int64 {
 	return baseline
 }
 
+
+// #MRP-4256: finite capacity. Every planned order occupies its item's run hours
+// at its work centre on the day it loads; a centre starts at most its daily
+// hours on a working day and nothing at all on a non-working one. An order that
+// does not fit is pulled EARLIER -- the draft that pushed it to the next working
+// day was reversed -- and days are settled from the last working day backwards so
+// that what a day sheds joins the candidates of the day before it.
+type candidate struct {
+	order      *plannedOrder
+	hours      int
+	releaseDay int
+}
+
+// reachable reports the largest total of the given hours that does not exceed
+// the room left. Subset sums, because the set that stays is the one that fills
+// the day best rather than the one a greedy pass happens to take first.
+func reachable(hours []int, room int) int {
+	seen := make([]bool, room+1)
+	seen[0] = true
+	best := 0
+	for _, h := range hours {
+		if h > room {
+			continue
+		}
+		for total := room - h; total >= 0; total-- {
+			if seen[total] && !seen[total+h] {
+				seen[total+h] = true
+				if total+h > best {
+					best = total + h
+				}
+			}
+		}
+	}
+	return best
+}
+
+// staying picks the set that totals the most hours without going over, and
+// among the sets that tie, the one that keeps the order earlier in the plan
+// order -- read in turn down the candidates, which arrive already in that order.
+func staying(cands []candidate, room int) map[int]bool {
+	hours := make([]int, len(cands))
+	for i, c := range cands {
+		hours[i] = c.hours
+	}
+	target := reachable(hours, room)
+	keep := make(map[int]bool, len(cands))
+	for i := range cands {
+		if hours[i] > room {
+			continue
+		}
+		if reachable(hours[i+1:], room-hours[i]) == target-hours[i] {
+			keep[i] = true
+			room -= hours[i]
+			target -= hours[i]
+		}
+	}
+	return keep
+}
+
+func workingDaysBetween(from, to int, nonWorking map[int]bool) int {
+	count := 0
+	for d := from + 1; d <= to; d++ {
+		if !nonWorking[d] {
+			count++
+		}
+	}
+	return count
+}
+
+func loadCapacity(plans []itemPlan, byID map[string]item, centres map[string]workCentre,
+	nonWorking map[int]bool) (pulled, exceeded, loadedDays int, raised []exceptionRow) {
+	perCentre := map[string]map[int][]candidate{}
+	for i := range plans {
+		for j := range plans[i].PlannedOrders {
+			order := &plans[i].PlannedOrders[j]
+			it := byID[order.ItemID]
+			day := order.ReleaseDay
+			order.LoadDay = day
+			order.Pulled = 0
+			if perCentre[it.WorkCentre] == nil {
+				perCentre[it.WorkCentre] = map[int][]candidate{}
+			}
+			perCentre[it.WorkCentre][day] = append(perCentre[it.WorkCentre][day],
+				candidate{order: order, hours: it.RunHours, releaseDay: day})
+		}
+	}
+
+	names := make([]string, 0, len(perCentre))
+	for name := range perCentre {
+		names = append(names, name)
+	}
+	sort.Strings(names)
+
+	for _, name := range names {
+		released := perCentre[name]
+		centre := centres[name]
+		low, high := 0, 0
+		first := true
+		for day := range released {
+			if first || day < low {
+				low = day
+			}
+			if first || day > high {
+				high = day
+			}
+			first = false
+		}
+		// nothing may be pulled further back than the centre allows
+		for step := 0; step < centre.MaxPullDays; {
+			low--
+			if !nonWorking[low] {
+				step++
+			}
+		}
+		carried := []candidate{}
+		for day := high; day >= low; day-- {
+			cands := append(append([]candidate{}, released[day]...), carried...)
+			carried = nil
+			if len(cands) == 0 {
+				continue
+			}
+			sort.Slice(cands, func(i, j int) bool {
+				if cands[i].order.ItemID != cands[j].order.ItemID {
+					return cands[i].order.ItemID < cands[j].order.ItemID
+				}
+				return cands[i].order.ReceiptDay < cands[j].order.ReceiptDay
+			})
+			room := centre.DailyHours
+			if nonWorking[day] {
+				room = 0 // a non-working day starts nothing
+			}
+			keep := staying(cands, room)
+			if len(keep) > 0 {
+				loadedDays++
+			}
+			for i, c := range cands {
+				if keep[i] {
+					c.order.LoadDay = day
+					c.order.Pulled = workingDaysBetween(day, c.releaseDay, nonWorking)
+					if c.order.Pulled > 0 {
+						pulled++
+					}
+					continue
+				}
+				previous := day - 1
+				for previous >= low && nonWorking[previous] {
+					previous--
+				}
+				moved := -1
+				if previous >= low {
+					moved = workingDaysBetween(previous, c.releaseDay, nonWorking)
+				}
+				if moved < 0 || moved > centre.MaxPullDays {
+					c.order.LoadDay = c.releaseDay
+					c.order.Pulled = 0
+					exceeded++
+					raised = append(raised, exceptionRow{
+						ItemID: c.order.ItemID, Kind: "capacity_exceeded",
+						ReceiptDay: c.order.ReceiptDay, ReleaseDay: c.order.ReleaseDay,
+						Qty: c.order.Qty,
+					})
+					continue
+				}
+				carried = append(carried, c)
+			}
+		}
+	}
+	return pulled, exceeded, loadedDays, raised
+}
+
 func main() {
 	input := flag.String("input", "/app/data/inventory_positions.json", "inventory positions")
 	outputDir := flag.String("output-dir", "/app/output", "output directory")
@@ -179,6 +363,7 @@ func main() {
 	var positions []position
 	var cal calendar
 	var pol policy
+	var capacity capacityFile
 
 	// #MRP-4150: the master data, bill of materials, demand, calendar and policy
 	// are always read from their fixed absolute paths; --input selects the
@@ -188,6 +373,7 @@ func main() {
 	readJSON("/app/data/independent_demand.json", &demand)
 	readJSON("/app/data/planning_calendar.json", &cal)
 	readJSON("/app/data/planning_policy.json", &pol)
+	readJSON("/app/data/work_centre_capacity.json", &capacity)
 	readJSON(*input, &positions)
 
 	nonWorking := make(map[int]bool, len(cal.NonWorkingDays))
@@ -421,6 +607,17 @@ func main() {
 	// #MRP-4230: the plan is emitted ascending by item id; the exception queue is
 	// worst backlog first, then by item and receipt day.
 	sort.Slice(plans, func(i, j int) bool { return plans[i].ItemID < plans[j].ItemID })
+
+	// #MRP-4256: the finished orders are loaded against the work centres before
+	// the queue is ordered, so the capacity exceptions take their place in it.
+	centres := make(map[string]workCentre, len(capacity.WorkCentres))
+	for _, wc := range capacity.WorkCentres {
+		centres[wc.WorkCentre] = wc
+	}
+	pulledCount, capacityExceeded, loadedCentreDays, capacityExceptions :=
+		loadCapacity(plans, byID, centres, nonWorking)
+	exceptions = append(exceptions, capacityExceptions...)
+
 	sort.Slice(exceptions, func(i, j int) bool {
 		if exceptions[i].ReleaseDay != exceptions[j].ReleaseDay {
 			return exceptions[i].ReleaseDay < exceptions[j].ReleaseDay
@@ -457,6 +654,9 @@ func main() {
 		"total_receipt_qty":           totalReceiptQty,
 		"phantom_item_count":          phantomCount,
 		"pushed_order_count":          pushedCount,
+		"pulled_order_count":           pulledCount,
+		"capacity_exceeded_count":      capacityExceeded,
+		"loaded_work_centre_day_count": loadedCentreDays,
 		"total_net_requirement":       totalNet,
 		"exception_count":             len(exceptions),
 		"past_due_count":              pastDue,

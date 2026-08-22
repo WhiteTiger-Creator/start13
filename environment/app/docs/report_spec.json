@@ -1,11 +1,12 @@
 {
   "cli": {
     "fixed_paths": [
-      "/app/data/item_master.json",
       "/app/data/bill_of_materials.json",
       "/app/data/independent_demand.json",
+      "/app/data/item_master.json",
       "/app/data/planning_calendar.json",
-      "/app/data/planning_policy.json"
+      "/app/data/planning_policy.json",
+      "/app/data/work_centre_capacity.json"
     ],
     "input": "--input selects the inventory positions file only; default /app/data/inventory_positions.json",
     "output_dir": "--output-dir selects the output directory; default /app/output"
@@ -24,6 +25,7 @@
       ],
       "kinds": [
         "backlog_exceeded",
+        "capacity_exceeded",
         "inside_fence",
         "past_due_release"
       ],
@@ -49,7 +51,9 @@
         "qty",
         "receipt_qty",
         "lot_policy",
-        "pushed"
+        "pushed",
+        "load_day",
+        "pulled"
       ],
       "serialisation": "JSON array, two-space indent, trailing newline",
       "sort": "ascending by item_id; planned_orders ascending by receipt_day"
@@ -57,17 +61,20 @@
     "summary": {
       "container": "object",
       "field_types": {
+        "capacity_exceeded_count": "integer",
         "effective_exception_min_qty": "integer",
         "effective_grace_days": "integer",
         "effective_max_backlog_days": "integer",
         "effective_pos_cap_days": "integer",
         "exception_count": "integer",
         "item_count": "integer",
+        "loaded_work_centre_day_count": "integer",
         "max_low_level_code": "integer",
         "past_due_count": "integer",
         "phantom_item_count": "integer",
         "planned_order_count": "integer",
         "position_count": "integer",
+        "pulled_order_count": "integer",
         "pushed_order_count": "integer",
         "schema_version": "string",
         "total_net_requirement": "integer",
@@ -91,7 +98,10 @@
         "effective_pos_cap_days",
         "total_receipt_qty",
         "phantom_item_count",
-        "pushed_order_count"
+        "pushed_order_count",
+        "pulled_order_count",
+        "capacity_exceeded_count",
+        "loaded_work_centre_day_count"
       ],
       "serialisation": "JSON object, two-space indent, trailing newline"
     }
@@ -117,6 +127,7 @@
   "runtime_budget_seconds": 90,
   "units": {
     "days": "integer day offsets from the plan start; negative days lie before the horizon",
+    "hours": "run_hours is what one planned order occupies at its item's work centre on the day it loads; a centre's daily_hours is what it can start in a working day",
     "qty": "whole units; a planned order's qty is what is RELEASED and receipt_qty is what ARRIVES good"
   }
 }

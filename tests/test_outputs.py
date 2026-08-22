@@ -156,6 +156,8 @@ def test_recovery_sources_are_intact():
         "bom": hashlib.sha256((DATA / "bill_of_materials.json").read_bytes()).hexdigest(),
         "demand": hashlib.sha256((DATA / "independent_demand.json").read_bytes()).hexdigest(),
         "calendar": hashlib.sha256((DATA / "planning_calendar.json").read_bytes()).hexdigest(),
+        "capacity": hashlib.sha256(
+            (DATA / "work_centre_capacity.json").read_bytes()).hexdigest(),
         "log": hashlib.sha256(LOG_PATH.read_bytes()).hexdigest(),
     }
     assert _digest(live) == FIXTURE["rule_sources_digest"]
@@ -391,6 +393,33 @@ def test_the_replay_sorts_its_result_and_drops_the_journals_bookkeeping():
     assert [r["receipt_id"] for r in recovered[0]["scheduled_receipts"]] == ["PO-A-1", "PO-A-9"]
 
 
+def test_the_replay_defaults_to_the_operational_paths():
+    """With no options at all it reads the shipped sources and writes the positions.
+
+    Every other run here points the program at a world of the verifier's making,
+    which exercises the three options but never their defaults. This one grades
+    the documented default run against the governed answer for the real snapshot
+    and journal, and puts the positions file back afterwards.
+    """
+    binary = _build(RECOVERY_PATH)
+    _publish_inputs()
+    saved = POSITIONS_PATH.read_text(encoding="utf-8")
+    data_mode = DATA.stat().st_mode & 0o7777
+    # the default output path sits inside /app/data, so the candidate uid needs
+    # to be able to replace it there
+    os.chmod(DATA, 0o1777)
+    os.chmod(POSITIONS_PATH, 0o666)
+    try:
+        result = _run_agent([binary], cwd=_candidate_dir())
+        assert result.returncode == 0, f"the default run failed:\n{result.stdout}\n{result.stderr}"
+        recovered = _load_json(POSITIONS_PATH)
+        assert len(recovered) == FIXTURE["recovered_position_count"]
+        assert _digest(recovered) == FIXTURE["recovered_positions_digest"]
+    finally:
+        os.chmod(DATA, data_mode)
+        POSITIONS_PATH.write_text(saved, encoding="utf-8")
+
+
 # --------------------------------------------------------------------------
 # Step two: the plan itself
 # --------------------------------------------------------------------------
@@ -463,13 +492,23 @@ def test_summary_counts_track_the_artifacts(primary_outputs):
     assert summary["exception_count"] == len(exceptions)
     assert summary["max_low_level_code"] == max(r["low_level_code"] for r in plan)
     assert summary["position_count"] == len(_load_json(POSITIONS_PATH))
+    assert summary["pulled_order_count"] == sum(1 for o in orders if o["pulled"] > 0)
+    assert summary["capacity_exceeded_count"] == sum(
+        1 for r in exceptions if r["kind"] == "capacity_exceeded")
+    items = {i["item_id"]: i for i in _load_json(DATA / "item_master.json")}
+    unplaced = {(r["item_id"], r["receipt_day"]) for r in exceptions
+                if r["kind"] == "capacity_exceeded"}
+    loaded = {(items[o["item_id"]]["work_centre"], o["load_day"]) for o in orders
+              if (o["item_id"], o["receipt_day"]) not in unplaced}
+    assert summary["loaded_work_centre_day_count"] == len(loaded)
 
 
 def test_exceptions_only_carry_material_orders(primary_outputs):
     """A past-due order is queued only when material; a pushed one always is."""
     _, summary, _, exceptions = primary_outputs
     floor = summary["effective_exception_min_qty"]
-    past_due = [r for r in exceptions if r["kind"] != "inside_fence"]
+    past_due = [r for r in exceptions
+                if r["kind"] not in ("inside_fence", "capacity_exceeded")]
     assert past_due
     for row in past_due:
         assert row["qty"] >= floor
@@ -481,7 +520,7 @@ def test_exceptions_only_carry_material_orders(primary_outputs):
         assert row["release_day"] >= 0
 
 
-def test_all_three_exception_kinds_occur(primary_outputs):
+def test_every_exception_kind_occurs(primary_outputs):
     """The graded run exercises every documented exception kind."""
     _, _, _, exceptions = primary_outputs
     assert {r["kind"] for r in exceptions} == set(SPEC["outputs"]["exception_queue"]["kinds"])
@@ -523,7 +562,8 @@ def test_yield_over_releases_across_the_graded_run(primary_outputs):
 # Each reversed rule, pinned on an instance where the drafts disagree
 # --------------------------------------------------------------------------
 FIXED_INPUTS = ("item_master.json", "bill_of_materials.json", "independent_demand.json",
-                "planning_calendar.json", "planning_policy.json", "inventory_positions.json")
+                "planning_calendar.json", "planning_policy.json", "work_centre_capacity.json",
+                "inventory_positions.json")
 
 
 def _with_world(world: dict):
@@ -542,7 +582,7 @@ def _restore(saved):
 def _item(iid, **kw):
     base = {"item_id": iid, "lead_time_days": 0, "lot_policy": "lot_for_lot", "lot_size": 0,
             "period_days": 0, "safety_stock": 0, "unit_cost_cents": 100,
-            "yield_pct": 100, "firm_fence_days": 0}
+            "yield_pct": 100, "firm_fence_days": 0, "work_centre": "WC-1", "run_hours": 1}
     base.update(kw)
     return base
 
@@ -556,11 +596,17 @@ def _bom(parent, component, qty_per=1, *, scrap_pct=0, effective_from=0, effecti
 BASE_POLICY = {"default": {"past_due_grace_days": 2, "exception_min_qty": 40,
                            "max_release_backlog_days": 14, "period_of_supply_cap_days": 20}}
 
+# The crafted worlds below are about the other rules, so their centre has room
+# for anything; the capacity probes pass a tighter file of their own.
+OPEN_CAPACITY = {"work_centres": [{"work_centre": "WC-1", "daily_hours": 10_000,
+                                   "max_pull_days": 5}]}
+
 
 def _probe_full(world_extra):
     """As _probe, but hands back the summary and the exception queue as well."""
     world = {"planning_policy.json": BASE_POLICY,
              "planning_calendar.json": {"horizon_days": 30, "non_working_days": []},
+             "work_centre_capacity.json": OPEN_CAPACITY,
              "bill_of_materials.json": [], "inventory_positions.json": []}
     world.update(world_extra)
     saved = _with_world(world)
@@ -575,6 +621,7 @@ def _probe(world_extra, item_id=None):
     """Run the submitted planner over a crafted world and return its plan rows."""
     world = {"planning_policy.json": BASE_POLICY,
              "planning_calendar.json": {"horizon_days": 30, "non_working_days": []},
+             "work_centre_capacity.json": OPEN_CAPACITY,
              "bill_of_materials.json": [], "inventory_positions.json": []}
     world.update(world_extra)
     saved = _with_world(world)
@@ -917,6 +964,328 @@ def test_the_fence_moves_which_component_line_is_effective():
 # --------------------------------------------------------------------------
 # Contract, budget, determinism and isolation
 # --------------------------------------------------------------------------
+# --------------------------------------------------------------------------
+# #MRP-4256: the work centres are loaded to capacity, exactly
+# --------------------------------------------------------------------------
+CAPACITY_PATH = DATA / "work_centre_capacity.json"
+
+
+def _capacity(**rows):
+    """A capacity file naming one row per centre."""
+    return {"work_centres": [
+        {"work_centre": name, "daily_hours": hours, "max_pull_days": pull}
+        for name, (hours, pull) in sorted(rows.items())]}
+
+
+def _best_fitting(hours: list, room: int) -> int:
+    """The largest total of these hours that does not go over the room left."""
+    reach = {0}
+    for value in hours:
+        reach |= {total + value for total in reach if total + value <= room}
+    return max(reach)
+
+
+def _governed_loading(orders: list, items: dict, centres: dict, non_working: set) -> dict:
+    """#MRP-4256, worked out here independently of the submission.
+
+    Returns {(item_id, receipt_day): (load_day, pulled, placed)}. Days are settled
+    from the last working day backwards, a day sheds whatever does not fit into
+    the candidates of the day before it, and the set that stays is the one that
+    fills the day best, ties going to the order earlier in the plan order.
+    """
+    def working_between(low, high):
+        return sum(1 for day in range(low + 1, high + 1) if day not in non_working)
+
+    placed = {}
+    by_centre = {}
+    for order in orders:
+        centre = items[order["item_id"]]["work_centre"]
+        by_centre.setdefault(centre, []).append(order)
+
+    for centre, group in sorted(by_centre.items()):
+        room_per_day = centres[centre]["daily_hours"]
+        max_pull = centres[centre]["max_pull_days"]
+        released = {}
+        for order in group:
+            released.setdefault(order["release_day"], []).append(order)
+        low, high = min(released), max(released)
+        stepped = 0
+        while stepped < max_pull:
+            low -= 1
+            if low not in non_working:
+                stepped += 1
+        carried = []
+        for day in range(high, low - 1, -1):
+            cands = sorted(released.get(day, []) + carried,
+                           key=lambda o: (o["item_id"], o["receipt_day"]))
+            carried = []
+            if not cands:
+                continue
+            room = 0 if day in non_working else room_per_day
+            hours = [items[o["item_id"]]["run_hours"] for o in cands]
+            target = _best_fitting(hours, room)
+            keep, left, need = set(), room, target
+            for index in range(len(cands)):
+                if hours[index] <= left and _best_fitting(
+                        hours[index + 1:], left - hours[index]) == need - hours[index]:
+                    keep.add(index)
+                    left -= hours[index]
+                    need -= hours[index]
+            for index, order in enumerate(cands):
+                key = (order["item_id"], order["receipt_day"])
+                if index in keep:
+                    placed[key] = (day, working_between(day, order["release_day"]), True)
+                    continue
+                previous = day - 1
+                while previous >= low and previous in non_working:
+                    previous -= 1
+                moved = working_between(previous, order["release_day"]) if previous >= low else None
+                if moved is None or moved > max_pull:
+                    placed[key] = (order["release_day"], 0, False)
+                else:
+                    carried.append(order)
+    return placed
+
+
+def _graded_world():
+    """The item master and capacity file the graded run was planned against."""
+    items = {i["item_id"]: i for i in _load_json(DATA / "item_master.json")}
+    centres = {c["work_centre"]: c
+               for c in _load_json(CAPACITY_PATH)["work_centres"]}
+    non_working = set(_load_json(DATA / "planning_calendar.json")["non_working_days"])
+    return items, centres, non_working
+
+
+def test_the_loading_matches_the_governed_one_recomputed_here(primary_outputs):
+    """Every order's load day is the one the rule gives, worked out independently.
+
+    The sealed digests say what the answer is; this says why. The whole cascade is
+    recomputed in the verifier from the item master, the capacity file and the
+    calendar, and every order's load day, pull count and placement must agree.
+    """
+    _, summary, plan, exceptions = primary_outputs
+    items, centres, non_working = _graded_world()
+    orders = [o for row in plan for o in row["planned_orders"]]
+    expected = _governed_loading(orders, items, centres, non_working)
+    unplaced = {(r["item_id"], r["receipt_day"]) for r in exceptions
+                if r["kind"] == "capacity_exceeded"}
+    assert len(expected) == len(orders), "an order was lost in the loading"
+    for order in orders:
+        key = (order["item_id"], order["receipt_day"])
+        load_day, pulled, placed = expected[key]
+        assert order["load_day"] == load_day, key
+        assert order["pulled"] == pulled, key
+        assert (key in unplaced) == (not placed), key
+    assert summary["capacity_exceeded_count"] == len(unplaced) > 0
+    assert summary["pulled_order_count"] == sum(
+        1 for value in expected.values() if value[1] > 0) > 0
+
+
+def test_a_work_centre_never_starts_more_than_its_day(primary_outputs):
+    """No centre is loaded over its hours, and a non-working day starts nothing."""
+    _, _, plan, exceptions = primary_outputs
+    items, centres, non_working = _graded_world()
+    unplaced = {(r["item_id"], r["receipt_day"]) for r in exceptions
+                if r["kind"] == "capacity_exceeded"}
+    loaded = {}
+    for order in (o for row in plan for o in row["planned_orders"]):
+        if (order["item_id"], order["receipt_day"]) in unplaced:
+            continue
+        item = items[order["item_id"]]
+        assert order["load_day"] not in non_working, order
+        loaded[(item["work_centre"], order["load_day"])] = loaded.get(
+            (item["work_centre"], order["load_day"]), 0) + item["run_hours"]
+    assert loaded
+    for (centre, day), hours in loaded.items():
+        assert hours <= centres[centre]["daily_hours"], (centre, day, hours)
+    # and the constraint is a real one on this batch, not slack everywhere
+    assert any(hours > centres[centre]["daily_hours"] - 4
+               for (centre, _), hours in loaded.items())
+
+
+def test_an_order_is_pulled_earlier_and_never_pushed_later(primary_outputs):
+    """The reversed draft #MRP-4030 sent the overflow to the NEXT working day."""
+    _, _, plan, exceptions = primary_outputs
+    items, centres, non_working = _graded_world()
+    unplaced = {(r["item_id"], r["receipt_day"]) for r in exceptions
+                if r["kind"] == "capacity_exceeded"}
+    moved = 0
+    for order in (o for row in plan for o in row["planned_orders"]):
+        assert order["load_day"] <= order["release_day"], order
+        if (order["item_id"], order["receipt_day"]) in unplaced:
+            assert order["load_day"] == order["release_day"] and order["pulled"] == 0
+            continue
+        limit = centres[items[order["item_id"]]["work_centre"]]["max_pull_days"]
+        assert 0 <= order["pulled"] <= limit, order
+        assert order["pulled"] == sum(
+            1 for day in range(order["load_day"] + 1, order["release_day"] + 1)
+            if day not in non_working), order
+        moved += 1 if order["pulled"] else 0
+    assert moved > 0, "the graded run pulls nothing, so the rule is untested"
+
+
+def test_the_set_that_stays_fills_the_day_better_than_a_greedy_pass(primary_outputs):
+    """A greedy loading of the graded run's own days loads strictly fewer hours.
+
+    Taking the biggest orders first is the natural implementation and is what the
+    previous data system does. On this batch it leaves hours on the table, so the
+    exact fit is not a distinction without a difference.
+    """
+    _, _, plan, _ = primary_outputs
+    items, centres, non_working = _graded_world()
+    orders = [o for row in plan for o in row["planned_orders"]]
+    days = {}
+    for order in orders:
+        item = items[order["item_id"]]
+        days.setdefault((item["work_centre"], order["release_day"]), []).append(
+            (item["run_hours"], order["item_id"], order["receipt_day"]))
+    short = differing = contested = 0
+    for (centre, day), rows in days.items():
+        room = centres[centre]["daily_hours"]
+        hours = [row[0] for row in sorted(rows, key=lambda r: (r[1], r[2]))]
+        if sum(hours) <= room:
+            continue
+        contested += 1
+        best = _best_fitting(hours, room)
+        used = 0
+        for value in sorted(hours, reverse=True):
+            if used + value <= room:
+                used += value
+        if used < best:
+            short += 1
+        if used != best:
+            differing += 1
+    assert contested > 20, "too few contested days to tell the two apart"
+    assert short > 0, "the greedy pass never loses hours, so the exact fit is untested"
+
+
+def test_a_phantom_occupies_no_work_centre():
+    """A phantom raises no order, so it loads nothing however tight the centre is."""
+    summary, by_id, exceptions = _probe_full({
+        "item_master.json": [
+            _item("ITM-A", lead_time_days=2, run_hours=5),
+            _item("ITM-P", lot_policy="phantom", run_hours=9), _item("ITM-B", run_hours=5)],
+        "bill_of_materials.json": [_bom("ITM-A", "ITM-P"), _bom("ITM-P", "ITM-B")],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 6}],
+        "work_centre_capacity.json": _capacity(**{"WC-1": (10, 2)}),
+    })
+    assert by_id["ITM-P"]["planned_orders"] == []
+    assert summary["capacity_exceeded_count"] == 0
+    assert [r["kind"] for r in exceptions if r["kind"] == "capacity_exceeded"] == []
+
+
+def test_the_day_keeps_the_set_that_fills_it_not_the_biggest_order():
+    """Three orders, ten hours of room: 6+4 fills it and 7 alone does not.
+
+    A pass that takes the biggest first keeps the seven-hour order and loads ten
+    hours' worth of work as seven; the governed rule keeps the pair.
+    """
+    summary, by_id, _ = _probe_full({
+        "item_master.json": [_item("ITM-A", run_hours=7), _item("ITM-B", run_hours=6),
+                             _item("ITM-C", run_hours=4)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 5},
+            {"demand_id": "D2", "item_id": "ITM-B", "qty": 10, "due_day": 5},
+            {"demand_id": "D3", "item_id": "ITM-C", "qty": 10, "due_day": 5}],
+        "work_centre_capacity.json": _capacity(**{"WC-1": (10, 2)}),
+    })
+    load = {iid: row["planned_orders"][0] for iid, row in by_id.items()}
+    assert (load["ITM-B"]["load_day"], load["ITM-C"]["load_day"]) == (5, 5)
+    assert load["ITM-A"]["load_day"] == 4 and load["ITM-A"]["pulled"] == 1
+    assert summary["pulled_order_count"] == 1
+
+
+def test_a_tie_on_hours_keeps_the_order_earlier_in_the_plan():
+    """Two ways to fill the day exactly; the one keeping ITM-A governs."""
+    _, by_id, _ = _probe_full({
+        "item_master.json": [_item("ITM-A", run_hours=5), _item("ITM-B", run_hours=5),
+                             _item("ITM-C", run_hours=5)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 5},
+            {"demand_id": "D2", "item_id": "ITM-B", "qty": 10, "due_day": 5},
+            {"demand_id": "D3", "item_id": "ITM-C", "qty": 10, "due_day": 5}],
+        "work_centre_capacity.json": _capacity(**{"WC-1": (10, 2)}),
+    })
+    assert by_id["ITM-A"]["planned_orders"][0]["load_day"] == 5
+    assert by_id["ITM-B"]["planned_orders"][0]["load_day"] == 5
+    assert by_id["ITM-C"]["planned_orders"][0]["load_day"] == 4
+
+
+def test_what_a_day_sheds_competes_on_the_day_before():
+    """The cascade is real: a shed order joins the previous day's candidates."""
+    _, by_id, _ = _probe_full({
+        "item_master.json": [_item("ITM-A", run_hours=6), _item("ITM-B", run_hours=6),
+                             _item("ITM-C", run_hours=6)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 5},
+            {"demand_id": "D2", "item_id": "ITM-B", "qty": 10, "due_day": 5},
+            {"demand_id": "D3", "item_id": "ITM-C", "qty": 10, "due_day": 4}],
+        "work_centre_capacity.json": _capacity(**{"WC-1": (6, 3)}),
+    })
+    # day 5 keeps ITM-A, sheds ITM-B onto day 4 where ITM-C already sits; the
+    # earlier key stays, so ITM-C is pushed on to day 3
+    assert by_id["ITM-A"]["planned_orders"][0]["load_day"] == 5
+    assert by_id["ITM-B"]["planned_orders"][0]["load_day"] == 4
+    assert by_id["ITM-C"]["planned_orders"][0]["load_day"] == 3
+
+
+def test_an_order_past_the_pull_limit_is_reported_capacity_exceeded():
+    """One day of room, two orders, no room to pull: the loser is reported."""
+    summary, by_id, exceptions = _probe_full({
+        "item_master.json": [_item("ITM-A", run_hours=6), _item("ITM-B", run_hours=6)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 5},
+            {"demand_id": "D2", "item_id": "ITM-B", "qty": 10, "due_day": 5}],
+        "work_centre_capacity.json": _capacity(**{"WC-1": (6, 0)}),
+    })
+    assert by_id["ITM-A"]["planned_orders"][0]["load_day"] == 5
+    stranded = by_id["ITM-B"]["planned_orders"][0]
+    assert (stranded["load_day"], stranded["pulled"]) == (5, 0)
+    assert [(r["item_id"], r["kind"]) for r in exceptions if r["kind"] == "capacity_exceeded"] == [
+        ("ITM-B", "capacity_exceeded")]
+    assert summary["capacity_exceeded_count"] == 1
+
+
+def test_a_non_working_day_starts_nothing():
+    """A centre cannot load on a closed day; the order pulls past it."""
+    _, by_id, _ = _probe_full({
+        "item_master.json": [_item("ITM-A", run_hours=6), _item("ITM-B", run_hours=6)],
+        "planning_calendar.json": {"horizon_days": 30, "non_working_days": [4]},
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 5},
+            {"demand_id": "D2", "item_id": "ITM-B", "qty": 10, "due_day": 5}],
+        "work_centre_capacity.json": _capacity(**{"WC-1": (6, 2)}),
+    })
+    assert by_id["ITM-A"]["planned_orders"][0]["load_day"] == 5
+    shed = by_id["ITM-B"]["planned_orders"][0]
+    assert shed["load_day"] == 3, "day 4 is closed, so the order lands on day 3"
+    assert shed["pulled"] == 1, "a closed day is not a working day pulled over"
+
+
+def test_capacity_file_actually_influences_the_output():
+    """The hours and the pull limit are resolved from the file, not inlined."""
+    tight, tight_by_id, tight_exceptions = _probe_full({
+        "item_master.json": [_item("ITM-A", run_hours=6), _item("ITM-B", run_hours=6)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 5},
+            {"demand_id": "D2", "item_id": "ITM-B", "qty": 10, "due_day": 5}],
+        "work_centre_capacity.json": _capacity(**{"WC-1": (6, 1)}),
+    })
+    wide, wide_by_id, wide_exceptions = _probe_full({
+        "item_master.json": [_item("ITM-A", run_hours=6), _item("ITM-B", run_hours=6)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 10, "due_day": 5},
+            {"demand_id": "D2", "item_id": "ITM-B", "qty": 10, "due_day": 5}],
+        "work_centre_capacity.json": _capacity(**{"WC-1": (12, 1)}),
+    })
+    assert tight_by_id["ITM-B"]["planned_orders"][0]["load_day"] == 4
+    assert tight["pulled_order_count"] == 1
+    assert wide_by_id["ITM-B"]["planned_orders"][0]["load_day"] == 5
+    assert wide["pulled_order_count"] == 0
+    assert tight_exceptions == wide_exceptions == []
+
+
 def test_policy_path_actually_influences_the_output():
     """The policy is resolved from its fixed path, not inlined as constants."""
     saved = {"planning_policy.json": (DATA / "planning_policy.json").read_text()}
@@ -1270,6 +1639,7 @@ def test_missing_policy_fields_fall_back_to_the_governed_baseline():
         assert summary["effective_max_backlog_days"] == 14
         assert summary["effective_pos_cap_days"] == 20
         # a zero minimum would have queued every short order
-        assert all(row["qty"] >= 40 for row in exceptions if row["kind"] != "inside_fence")
+        assert all(row["qty"] >= 40 for row in exceptions
+               if row["kind"] not in ("inside_fence", "capacity_exceeded"))
     finally:
         path.write_text(saved, encoding="utf-8")
