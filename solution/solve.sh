@@ -9,7 +9,8 @@ export GOCACHE=/tmp/gocache GO111MODULE=off GOPATH=/tmp/gopath
 # Replay the movement journal onto the pre-rollout snapshot and write the result
 # back to that path; nothing the planner emits is correct until this is done.
 
-go run "${SCRIPT_DIR}/recover_positions.go"
+cp "${SCRIPT_DIR}/recover_positions.go" /app/workflow/recover_positions.go
+go run /app/workflow/recover_positions.go
 
 # --- Step 2: restore the planner and produce the plan artifacts -------------
 

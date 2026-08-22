@@ -24,6 +24,8 @@ APP = Path("/app")
 DATA = APP / "data"
 WORKFLOW_PATH = APP / "workflow" / "plan_requirements.go"
 ORIGINAL_WORKFLOW_PATH = APP / "workflow" / ".plan_requirements.original.go"
+# The replay the instruction requires be left runnable beside the planner.
+RECOVERY_PATH = APP / "workflow" / "recover_positions.go"
 SNAPSHOT_PATH = DATA / "inventory_snapshot_pre_rollout.json"
 JOURNAL_PATH = DATA / "inventory_movement_journal.json"
 POSITIONS_PATH = DATA / "inventory_positions.json"
@@ -160,24 +162,34 @@ def _reap_group(pgid: int) -> None:
 
 
 def _run_agent(argv, cwd: Path):
-    """Run the submitted program unprivileged and in its own process group."""
-    proc = subprocess.Popen(
-        _SETPRIV + argv, cwd=str(cwd), env=dict(CHILD_ENV),
-        stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
-        start_new_session=True,
-    )
-    pgid = proc.pid          # session leader: pgid == pid, captured before the wait
-    try:
-        stdout, stderr = proc.communicate(timeout=HARD_TIMEOUT_SEC)
-    except subprocess.TimeoutExpired:
-        _reap_group(pgid)
-        proc.wait()
-        raise
-    finally:
-        # even on a clean exit, anything the program left running is stopped
-        # before its outputs are read
-        _reap_group(pgid)
-    return subprocess.CompletedProcess(argv, proc.returncode, stdout, stderr)
+    """Run the submitted program unprivileged and in its own process group.
+
+    Output is captured to temporary files rather than pipes: a grandchild the run
+    double-forks inherits the write end of a pipe and can hold it open long after
+    its parent exits, which would stall the read instead of ending the run at the
+    budget.
+    """
+    with tempfile.TemporaryFile("w+", encoding="utf-8", errors="replace") as out, \
+            tempfile.TemporaryFile("w+", encoding="utf-8", errors="replace") as err:
+        proc = subprocess.Popen(
+            _SETPRIV + argv, cwd=str(cwd), env=dict(CHILD_ENV),
+            stdout=out, stderr=err,
+            start_new_session=True,
+        )
+        pgid = proc.pid      # session leader: pgid == pid, captured before the wait
+        try:
+            proc.wait(timeout=HARD_TIMEOUT_SEC)
+        except subprocess.TimeoutExpired:
+            _reap_group(pgid)
+            proc.wait()
+            raise
+        finally:
+            # even on a clean exit, anything the program left running is stopped
+            # before its outputs are read
+            _reap_group(pgid)
+        out.seek(0)
+        err.seek(0)
+        return subprocess.CompletedProcess(argv, proc.returncode, out.read(), err.read())
 
 
 def _run_pipeline(script_path: Path = WORKFLOW_PATH, input_path: Path = POSITIONS_PATH):
@@ -218,6 +230,7 @@ __all__ = [
     "DATA",
     "WORKFLOW_PATH",
     "ORIGINAL_WORKFLOW_PATH",
+    "RECOVERY_PATH",
     "SNAPSHOT_PATH",
     "JOURNAL_PATH",
     "POSITIONS_PATH",

@@ -210,6 +210,188 @@ def test_shipped_and_naive_recoveries_differ_from_the_governed_one():
 
 
 # --------------------------------------------------------------------------
+# The replay itself, run over snapshots and journals the submission never saw
+# --------------------------------------------------------------------------
+def _governed_replay(snapshot: list, journal: list) -> list:
+    """#MRP-4170 and #MRP-4174, written here independently of the submission.
+
+    Used as the expected answer for worlds the sealed digests say nothing about,
+    so the replay is graded as behaviour rather than as one delivered file.
+    """
+    live = {}
+    for row in snapshot:
+        record = json.loads(json.dumps(row))
+        record["scheduled_receipts"] = sorted(
+            record.get("scheduled_receipts", []), key=lambda r: r["receipt_id"])
+        live[record["item_id"]] = record
+    gone = set()
+    for movement in sorted(journal, key=lambda m: m["seq"]):
+        item_id = movement["item_id"]
+        if item_id in gone or item_id not in live:
+            continue
+        kind = movement["kind"]
+        if kind == "adjust":
+            live[item_id]["on_hand"] = movement["on_hand"]
+        elif kind == "receipt_add":
+            live[item_id]["scheduled_receipts"] = sorted(
+                live[item_id]["scheduled_receipts"] + [{
+                    "receipt_id": movement["receipt_id"],
+                    "qty": movement["qty"],
+                    "due_day": movement["due_day"],
+                }],
+                key=lambda r: r["receipt_id"])
+        elif kind == "receipt_cancel":
+            kept, dropped = [], False
+            for entry in live[item_id]["scheduled_receipts"]:
+                if not dropped and entry["receipt_id"] == movement["receipt_id"]:
+                    dropped = True
+                    continue
+                kept.append(entry)
+            live[item_id]["scheduled_receipts"] = kept
+        elif kind == "retract":
+            gone.add(item_id)
+            live.pop(item_id, None)
+    return [
+        {"item_id": row["item_id"], "on_hand": row["on_hand"],
+         "scheduled_receipts": row["scheduled_receipts"]}
+        for row in sorted(live.values(), key=lambda r: r["item_id"])
+    ]
+
+
+def _run_recovery(snapshot: list, journal: list) -> list:
+    """Build the submitted replay and run it over a world of the verifier's making."""
+    binary = _build(RECOVERY_PATH)
+    work = _candidate_dir()
+    snapshot_path, journal_path = work / "snapshot.json", work / "journal.json"
+    out_path = work / "positions.json"
+    _write_json(snapshot_path, snapshot)
+    _write_json(journal_path, journal)
+    os.chmod(snapshot_path, 0o644)
+    os.chmod(journal_path, 0o644)
+    result = _run_agent(
+        [binary, "--snapshot", str(snapshot_path), "--journal", str(journal_path),
+         "--out", str(out_path)],
+        cwd=work)
+    assert result.returncode == 0, f"the replay failed:\n{result.stdout}\n{result.stderr}"
+    return _load_json(out_path)
+
+
+def _pos(item_id, on_hand, receipts=()):
+    return {"item_id": item_id, "on_hand": on_hand,
+            "scheduled_receipts": [dict(r) for r in receipts]}
+
+
+def _rct(receipt_id, qty=100, due_day=5):
+    return {"receipt_id": receipt_id, "qty": qty, "due_day": due_day}
+
+
+def test_the_replay_is_a_program_at_the_documented_path():
+    """The recovery is left runnable, not just its output."""
+    assert RECOVERY_PATH.is_file(), "no replay program at /app/workflow/recover_positions.go"
+    source = RECOVERY_PATH.read_text(encoding="utf-8")
+    assert re.search(r"^package main$", source, re.MULTILINE)
+
+
+def test_the_replay_runs_over_a_snapshot_and_journal_it_has_never_seen():
+    """The submitted replay is executed over a world the fixtures do not cover.
+
+    The graded positions file is one answer, and a delivered file can be right
+    about it for the wrong reasons. This derives a different world from the
+    operational sources -- a third of the items, half the movements, and a tail
+    that retracts, re-adjusts a retracted item, adds and cancels receipts and
+    names an item the snapshot never carried -- and requires the submission's own
+    program to reproduce the governed answer on it.
+    """
+    snapshot = [dict(row, on_hand=row["on_hand"] + 7) for row in _load_json(SNAPSHOT_PATH)[::3]]
+    journal = [m for m in _load_json(JOURNAL_PATH) if m["seq"] % 2 == 0]
+    top = max(m["seq"] for m in journal) + 1
+    targets = [row["item_id"] for row in snapshot[:4]]
+    journal += [
+        {"seq": top + 3, "item_id": targets[0], "kind": "adjust", "on_hand": 4242},
+        {"seq": top + 1, "item_id": targets[0], "kind": "adjust", "on_hand": 11},
+        {"seq": top + 2, "item_id": targets[1], "kind": "retract"},
+        {"seq": top + 5, "item_id": targets[1], "kind": "adjust", "on_hand": 999},
+        {"seq": top + 4, "item_id": targets[2], "kind": "receipt_add",
+         "receipt_id": "PO-ZZZ-1", "qty": 250, "due_day": 12},
+        {"seq": top + 6, "item_id": targets[3], "kind": "receipt_cancel",
+         "receipt_id": "PO-NOT-HERE"},
+        {"seq": top + 7, "item_id": "ITM-99999", "kind": "adjust", "on_hand": 5},
+    ]
+    expected = _governed_replay(snapshot, journal)
+    assert _run_recovery(snapshot, journal) == expected
+    # the world really is a different one, so passing here is not the graded run
+    assert _digest(expected) != FIXTURE["recovered_positions_digest"]
+
+
+def test_the_replay_follows_the_sequence_number_not_the_file_order():
+    """#MRP-4170: ascending seq governs, and the journal ships out of order here."""
+    snapshot = [_pos("ITM-A", 10)]
+    journal = [
+        {"seq": 3, "item_id": "ITM-A", "kind": "adjust", "on_hand": 300},
+        {"seq": 1, "item_id": "ITM-A", "kind": "adjust", "on_hand": 100},
+        {"seq": 2, "item_id": "ITM-A", "kind": "adjust", "on_hand": 200},
+    ]
+    assert _run_recovery(snapshot, journal) == [_pos("ITM-A", 300)]
+
+
+def test_a_retraction_is_permanent_and_a_later_movement_cannot_undo_it():
+    """The reversed draft #MRP-4022 would bring ITM-B back; the final rule does not."""
+    snapshot = [_pos("ITM-A", 5), _pos("ITM-B", 50, [_rct("PO-B-1")])]
+    journal = [
+        {"seq": 1, "item_id": "ITM-B", "kind": "retract"},
+        {"seq": 2, "item_id": "ITM-B", "kind": "adjust", "on_hand": 500},
+        {"seq": 3, "item_id": "ITM-B", "kind": "receipt_add",
+         "receipt_id": "PO-B-2", "qty": 9, "due_day": 1},
+        {"seq": 4, "item_id": "ITM-A", "kind": "adjust", "on_hand": 6},
+    ]
+    assert _run_recovery(snapshot, journal) == [_pos("ITM-A", 6)]
+
+
+def test_a_movement_naming_an_item_the_snapshot_never_carried_is_ignored():
+    """No position is conjured for an item that was never in the snapshot."""
+    snapshot = [_pos("ITM-A", 5)]
+    journal = [
+        {"seq": 1, "item_id": "ITM-GHOST", "kind": "adjust", "on_hand": 900},
+        {"seq": 2, "item_id": "ITM-GHOST", "kind": "receipt_add",
+         "receipt_id": "PO-G-1", "qty": 9, "due_day": 1},
+        {"seq": 3, "item_id": "ITM-A", "kind": "adjust", "on_hand": 6},
+    ]
+    assert _run_recovery(snapshot, journal) == [_pos("ITM-A", 6)]
+
+
+def test_a_cancel_drops_the_first_match_and_is_otherwise_a_no_op():
+    """One cancel removes one receipt, and a cancel with nothing to match changes nothing."""
+    snapshot = [
+        _pos("ITM-A", 0, [_rct("PO-A-1", 10, 1), _rct("PO-A-1", 20, 2), _rct("PO-A-2", 30, 3)]),
+        _pos("ITM-B", 0, [_rct("PO-B-1", 40, 4)]),
+    ]
+    journal = [
+        {"seq": 1, "item_id": "ITM-A", "kind": "receipt_cancel", "receipt_id": "PO-A-1"},
+        {"seq": 2, "item_id": "ITM-B", "kind": "receipt_cancel", "receipt_id": "PO-NOT-HERE"},
+    ]
+    assert _run_recovery(snapshot, journal) == [
+        _pos("ITM-A", 0, [_rct("PO-A-1", 20, 2), _rct("PO-A-2", 30, 3)]),
+        _pos("ITM-B", 0, [_rct("PO-B-1", 40, 4)]),
+    ]
+
+
+def test_the_replay_sorts_its_result_and_drops_the_journals_bookkeeping():
+    """#MRP-4174: ascending item_id, receipts ascending by receipt_id, three fields only."""
+    snapshot = [_pos("ITM-C", 3), _pos("ITM-A", 1, [_rct("PO-A-9", 1, 1)]), _pos("ITM-B", 2)]
+    journal = [
+        {"seq": 1, "item_id": "ITM-A", "kind": "receipt_add",
+         "receipt_id": "PO-A-1", "qty": 7, "due_day": 2, "posted_by": "erp-batch"},
+    ]
+    recovered = _run_recovery(snapshot, journal)
+    assert [row["item_id"] for row in recovered] == ["ITM-A", "ITM-B", "ITM-C"]
+    for row in recovered:
+        assert set(row) == POSITION_KEYS
+        for entry in row["scheduled_receipts"]:
+            assert set(entry) == {"receipt_id", "qty", "due_day"}
+    assert [r["receipt_id"] for r in recovered[0]["scheduled_receipts"]] == ["PO-A-1", "PO-A-9"]
+
+
+# --------------------------------------------------------------------------
 # Step two: the plan itself
 # --------------------------------------------------------------------------
 def test_primary_run_matches_the_sealed_reference(primary_outputs):
@@ -752,6 +934,96 @@ def test_policy_path_actually_influences_the_output():
         _restore(saved)
 
 
+def _policy(**overrides):
+    """The baseline policy with the named fields amended."""
+    values = dict(BASE_POLICY["default"])
+    values.update(overrides)
+    return {"default": values}
+
+
+# A single lot-for-lot order of 100 released on day -8: material, past due, and
+# not yet beyond the backlog limit. Each policy field below moves it somewhere
+# different, so a planner carrying the baselines as constants cannot follow.
+_PAST_DUE_WORLD = {
+    "item_master.json": [_item("ITM-A", lead_time_days=10)],
+    "independent_demand.json": [
+        {"demand_id": "D1", "item_id": "ITM-A", "qty": 100, "due_day": 2}],
+}
+
+
+def test_exception_min_qty_decides_whether_an_order_is_queued_at_all():
+    """#MRP-4220's floor is read from the policy, not carried as a constant.
+
+    The same order of 100 is reported under the baseline floor of 40 and is not
+    reported once the floor is raised past it, while the plan itself is unchanged:
+    the field governs reporting, and it governs it from the policy file.
+    """
+    quiet_summary, quiet_plan, quiet = _probe_full(
+        {**_PAST_DUE_WORLD, "planning_policy.json": _policy(exception_min_qty=150)})
+    loud_summary, loud_plan, loud = _probe_full(
+        {**_PAST_DUE_WORLD, "planning_policy.json": _policy(exception_min_qty=40)})
+    assert quiet_summary["effective_exception_min_qty"] == 150
+    assert loud_summary["effective_exception_min_qty"] == 40
+    assert quiet == []
+    assert [(r["kind"], r["qty"]) for r in loud] == [("past_due_release", 100)]
+    assert quiet_plan["ITM-A"]["planned_orders"] == loud_plan["ITM-A"]["planned_orders"]
+
+
+def test_past_due_grace_days_moves_the_boundary_the_report_is_measured_from():
+    """A release of -3 is past due under a grace of 2 and inside it under 5."""
+    world = {
+        "item_master.json": [_item("ITM-A", lead_time_days=5)],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 100, "due_day": 2}],
+    }
+    tight_summary, tight_plan, tight = _probe_full(
+        {**world, "planning_policy.json": _policy(past_due_grace_days=2)})
+    slack_summary, slack_plan, slack = _probe_full(
+        {**world, "planning_policy.json": _policy(past_due_grace_days=5)})
+    assert [o["release_day"] for o in tight_plan["ITM-A"]["planned_orders"]] == [-3]
+    assert tight_plan["ITM-A"]["planned_orders"] == slack_plan["ITM-A"]["planned_orders"]
+    assert tight_summary["effective_grace_days"] == 2
+    assert slack_summary["effective_grace_days"] == 5
+    assert [r["kind"] for r in tight] == ["past_due_release"]
+    assert slack == []
+
+
+def test_max_release_backlog_days_decides_which_kind_is_reported():
+    """The same release of -8 is past_due_release at 14 and backlog_exceeded at 5."""
+    inside_summary, _, inside = _probe_full(
+        {**_PAST_DUE_WORLD, "planning_policy.json": _policy(max_release_backlog_days=14)})
+    beyond_summary, _, beyond = _probe_full(
+        {**_PAST_DUE_WORLD, "planning_policy.json": _policy(max_release_backlog_days=5)})
+    assert inside_summary["effective_max_backlog_days"] == 14
+    assert beyond_summary["effective_max_backlog_days"] == 5
+    assert [(r["kind"], r["release_day"]) for r in inside] == [("past_due_release", -8)]
+    assert [(r["kind"], r["release_day"]) for r in beyond] == [("backlog_exceeded", -8)]
+
+
+def test_period_of_supply_cap_days_shortens_the_span_a_lot_covers():
+    """#MRP-4205's cap is read from the policy and really truncates the span.
+
+    ITM-C asks for ten days of supply. Under a cap of 20 the lot reaches the
+    day-6 demand and covers both in one order of 130; under a cap of 3 the span
+    stops at day 4, so the day-6 demand falls to a second order.
+    """
+    world = {
+        "item_master.json": [_item("ITM-C", lot_policy="period_of_supply", period_days=10)],
+        "independent_demand.json": [
+            {"demand_id": "D3", "item_id": "ITM-C", "qty": 90, "due_day": 2},
+            {"demand_id": "D4", "item_id": "ITM-C", "qty": 40, "due_day": 6}],
+    }
+    wide_summary, wide_plan, _ = _probe_full(
+        {**world, "planning_policy.json": _policy(period_of_supply_cap_days=20)})
+    capped_summary, capped_plan, _ = _probe_full(
+        {**world, "planning_policy.json": _policy(period_of_supply_cap_days=3)})
+    assert wide_summary["effective_pos_cap_days"] == 20
+    assert capped_summary["effective_pos_cap_days"] == 3
+    assert [(o["receipt_day"], o["qty"]) for o in wide_plan["ITM-C"]["planned_orders"]] == [(2, 130)]
+    assert [(o["receipt_day"], o["qty"]) for o in capped_plan["ITM-C"]["planned_orders"]] == [
+        (2, 90), (6, 40)]
+
+
 def test_item_master_actually_influences_the_output():
     """The item master is resolved from its fixed path, not inlined."""
     path = DATA / "item_master.json"
@@ -878,16 +1150,17 @@ def test_runtime_budget_is_stated_in_the_contract():
 
 
 def test_planner_imports_only_the_standard_library():
-    """Every package the planner imports is a standard-library package.
+    """Every package the planner and the replay import is standard library.
 
     Only import declarations are consulted. A dotted filename literal in the body,
     such as "summary.json" passed to filepath.Join, is not an import and is not a
     breach of the standard-library requirement.
     """
-    paths = _go_imports(WORKFLOW_PATH.read_text(encoding="utf-8"))
-    assert paths, "the planner must declare at least one import"
-    third_party = sorted({p for p in paths if "." in p.split("/")[0]})
-    assert not third_party, f"third-party import(s): {third_party}"
+    for source in (WORKFLOW_PATH, RECOVERY_PATH):
+        paths = _go_imports(source.read_text(encoding="utf-8"))
+        assert paths, f"{source.name} must declare at least one import"
+        third_party = sorted({p for p in paths if "." in p.split("/")[0]})
+        assert not third_party, f"third-party import(s) in {source.name}: {third_party}"
 
 
 def test_the_import_check_reads_declarations_not_string_literals():
@@ -961,10 +1234,11 @@ def test_governance_log_present():
 
 
 def test_planner_does_not_reference_test_artifacts():
-    """The planner derives its answer rather than reading anything verifier-side."""
-    literals = _go_strings(WORKFLOW_PATH.read_text(encoding="utf-8"))
-    for token in ("/tests", "expected_report.json", "alt_positions.json"):
-        assert not any(token in literal for literal in literals), token
+    """Both programs derive their answers rather than reading anything verifier-side."""
+    for source in (WORKFLOW_PATH, RECOVERY_PATH):
+        literals = _go_strings(source.read_text(encoding="utf-8"))
+        for token in ("/tests", "expected_report.json", "alt_positions.json"):
+            assert not any(token in literal for literal in literals), f"{source.name}: {token}"
 
 
 def test_shipped_contract_matches_the_golden_copy():

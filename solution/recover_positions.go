@@ -9,6 +9,7 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
 	"os"
 	"sort"
@@ -53,10 +54,20 @@ func sortReceipts(rs []receipt) {
 }
 
 func main() {
+	// The replay stays runnable over a different snapshot and journal, so the
+	// three paths are options defaulting to the operational ones.
+	snapshotPath := flag.String("snapshot", "/app/data/inventory_snapshot_pre_rollout.json",
+		"pre-rollout snapshot to replay onto")
+	journalPath := flag.String("journal", "/app/data/inventory_movement_journal.json",
+		"movement journal to replay")
+	outPath := flag.String("out", "/app/data/inventory_positions.json",
+		"where the rebuilt positions are written")
+	flag.Parse()
+
 	var snapshot []position
 	var journal []movement
-	readJSON("/app/data/inventory_snapshot_pre_rollout.json", &snapshot)
-	readJSON("/app/data/inventory_movement_journal.json", &journal)
+	readJSON(*snapshotPath, &snapshot)
+	readJSON(*journalPath, &journal)
 
 	live := make(map[string]*position, len(snapshot))
 	for i := range snapshot {
@@ -123,7 +134,7 @@ func main() {
 		os.Exit(1)
 	}
 	encoded = append(encoded, '\n')
-	if err := os.WriteFile("/app/data/inventory_positions.json", encoded, 0o644); err != nil {
+	if err := os.WriteFile(*outPath, encoded, 0o644); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}

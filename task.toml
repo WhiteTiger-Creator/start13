@@ -42,8 +42,10 @@ of the other eight rules is even reached.
 '''
 solution_explanation = '''
 solution/solve.sh drives the two dependent steps inside the environment container. Step one runs
-solution/recover_positions.go, which implements the board's final recovery decisions (#MRP-4170 and
-#MRP-4174): it starts from /app/data/inventory_snapshot_pre_rollout.json, replays
+solution/recover_positions.go, installed at /app/workflow/recover_positions.go where the
+instruction requires the replay be left runnable and taking --snapshot, --journal and --out
+with the operational paths as defaults. It implements the board's final recovery decisions
+(#MRP-4170 and #MRP-4174): it starts from /app/data/inventory_snapshot_pre_rollout.json, replays
 /app/data/inventory_movement_journal.json in ascending seq keyed on item id, overwrites the on-hand
 on an adjustment, adds and cancels scheduled receipts by receipt id, withdraws a retracted item
 permanently, and writes the survivors over the truncated /app/data/inventory_positions.json
@@ -71,7 +73,17 @@ three declared fields with no journal bookkeeping surviving, and leave the snaps
 master, bill of materials, demand, calendar and policy byte-identical. The verifier re-derives the
 misreadings of the replay from those same sources -- a plain concatenation, a replay in file order
 rather than by sequence, and one where a retraction is not permanent -- and requires each to differ
-from the governed result. Step two recompiles the agent's submitted
+from the governed result. Because a delivered file can be right about one world for the wrong
+reasons, the replay is also graded as behaviour: the verifier compiles the agent's own
+/app/workflow/recover_positions.go and runs it over snapshots and journals no fixture covers,
+comparing against a replay implemented independently in the verifier. One of those worlds is derived
+from the operational sources -- a third of the items, half the movements, and a tail that retracts an
+item, adjusts it again afterwards, adds and cancels receipts and names an item the snapshot never
+carried -- and the rest are small crafted instances pinning each governed rule on its own: sequence
+order over file order, a retraction that a later movement cannot undo, a movement for an unknown item
+ignored, a cancel that drops the first match and is otherwise a no-op, and the sorted three-field
+shape. A submission that ships one precomputed positions file and no working replay fails these
+outright. Step two recompiles the agent's submitted
 /app/workflow/plan_requirements.go from source with go build rather than trusting any delivered
 binary, runs it under an unprivileged uid (65534 via setpriv, a scrubbed environment, inputs staged
 into a candidate-writable work area) on both the recovered positions and a held-out alternate
@@ -90,8 +102,16 @@ no demand, and four prove the fence pushes a release out over working days, supe
 report, leaves an unfenced item past due, and thereby moves which effectivity window applies.
 Whole-run assertions further require that all three exception kinds occur, that phantoms and fence
 pushes are load-bearing rather than absent, and that released and arriving quantities diverge exactly
-where the item master's yield is short. The run is timed against the ninety-second budget the
-contract publishes, a static scan rejects any third-party import, and the frozen snapshot
+where the item master's yield is short. The policy file is graded on the behaviour it drives rather than on the
+values echoed back: the exception floor, the past-due grace, the backlog limit and the
+period-of-supply cap are each varied on their own and required to move the outcome -- the floor
+decides whether a material order is queued at all, the grace moves the boundary the report is
+measured from, the backlog limit switches which kind is reported for the same release day, and the
+cap truncates the span a period-of-supply lot covers, splitting one order into two -- so a planner
+holding the baselines as constants cannot pass by echoing them into summary.json. The run is timed
+against the ninety-second budget the
+contract publishes, a static scan rejects any third-party import over both submitted programs, and
+the frozen snapshot
 /app/workflow/.plan_requirements.original.go is asserted present by hash and wrong by output.
 Confirmed locally in the real two-container flow: after solve.sh the verifier gives reward 1, a fresh
 environment with no solve.sh gives 0, and an environment where the positions are rebuilt but the
