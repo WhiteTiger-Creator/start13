@@ -482,6 +482,29 @@ def test_exception_schema_and_sorting(primary_outputs):
         assert row["kind"] in EXCEPTION_KINDS
 
 
+def test_artifacts_use_the_serialisation_the_contract_states(primary_outputs):
+    """The three files are written the way the contract spells them out.
+
+    Every other comparison goes through a digest that is deliberately insensitive
+    to free whitespace, so a run emitting one long unindented line would satisfy
+    them all. This reads the bytes: two-space indent and a trailing newline for
+    the two JSON documents, one compact object per line for the queue.
+    """
+    out_dir, summary, plan, exceptions = primary_outputs
+    for name, value in (("summary.json", summary), ("item_plan.json", plan)):
+        raw = (out_dir / name).read_text(encoding="utf-8")
+        assert raw.endswith("\n") and not raw.endswith("\n\n"), name
+        assert raw == json.dumps(value, indent=2) + "\n", name
+
+    raw = (out_dir / "exception_queue.jsonl").read_text(encoding="utf-8")
+    assert raw.endswith("\n") and not raw.endswith("\n\n")
+    lines = raw.splitlines()
+    assert len(lines) == len(exceptions)
+    for line, row in zip(lines, exceptions):
+        assert line.strip(), "the queue carries no blank line"
+        assert line == json.dumps(row, separators=(",", ":")), line[:90]
+
+
 def test_summary_counts_track_the_artifacts(primary_outputs):
     """The summary's own totals agree with the artifacts it was emitted beside."""
     _, summary, plan, exceptions = primary_outputs
