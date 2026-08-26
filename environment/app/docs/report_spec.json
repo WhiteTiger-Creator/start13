@@ -31,7 +31,7 @@
       ],
       "path": "/app/output/exception_queue.jsonl",
       "serialisation": "one compact JSON object per line, trailing newline",
-      "sort": "ascending by release_day, then item_id, then receipt_day"
+      "sort": "ascending by release_day, then item_id, then receipt_day, then kind, then qty; the key covers every field a row carries, so no two rows can tie on it without being identical"
     },
     "item_plan": {
       "container": "array",
@@ -121,7 +121,7 @@
         "scheduled_receipts"
       ],
       "serialisation": "JSON array, two-space indent, trailing newline",
-      "sort": "ascending by item_id; scheduled_receipts ascending by receipt_id"
+      "sort": "ascending by item_id; scheduled_receipts ascending by receipt_id, and where an item holds more than one receipt under the same id they keep the order the record carried them in"
     }
   },
   "runtime_budget_seconds": 90,

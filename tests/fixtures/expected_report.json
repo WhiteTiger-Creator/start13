@@ -2,6 +2,7 @@
   "alternate": {
     "exception_digest": "ba5a382a252f1b373c6f3ee5395f56623f4da51aede1a10931cf5c7b1e846ab0",
     "item_plan_digest": "cfd7239eff6479ac07a1073af260877edb65a6f973a054027f0675bf76c13753",
+    "plan_digest": "cfd7239eff6479ac07a1073af260877edb65a6f973a054027f0675bf76c13753",
     "planned_order_count": 2583,
     "summary": {
       "capacity_exceeded_count": 64,
@@ -27,8 +28,9 @@
   },
   "broken_planner_sha256": "06b7fe1d830854eeeb7d7df392867daeeb8d756cb63aca1e3fc403689892eebf",
   "primary": {
-    "exception_digest": "3634a89edf48fc2015403b1953be37e827fb13c4378db3921c8efc18c8f2a570",
+    "exception_digest": "04bfde1bb2cbb1e47168f24f36c30c7c7e5da385d426360b3ef7edba70ed4713",
     "item_plan_digest": "89604ee04822c7bec37d7c5b795fcda6228c66f7a1e5d9466d0e395714a998b4",
+    "plan_digest": "89604ee04822c7bec37d7c5b795fcda6228c66f7a1e5d9466d0e395714a998b4",
     "planned_order_count": 3491,
     "summary": {
       "capacity_exceeded_count": 196,
@@ -54,6 +56,6 @@
   },
   "recovered_position_count": 589,
   "recovered_positions_digest": "ebf292b6591e05bb9e05a92a646c776ec5537320e6f6b99713f97b2711503b20",
-  "rule_sources_digest": "36d825d33ba07b541746f68d2c9f0996c7cbe954698ff3eccecd50214e56454b",
+  "rule_sources_digest": "4cf4d4f2645d7f465761d703d9896a4d6e58d164bc98ce8228f83857047750ec",
   "shipped_truncated_digest": "d623eb0f5379a3389a6fda2acbc6483025ee471712b9237a94cc0ba55e2464c9"
 }

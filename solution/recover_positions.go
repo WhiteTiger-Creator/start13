@@ -50,7 +50,7 @@ func readJSON(path string, into interface{}) {
 }
 
 func sortReceipts(rs []receipt) {
-	sort.Slice(rs, func(i, j int) bool { return rs[i].ReceiptID < rs[j].ReceiptID })
+	sort.SliceStable(rs, func(i, j int) bool { return rs[i].ReceiptID < rs[j].ReceiptID })
 }
 
 func main() {
@@ -72,7 +72,9 @@ func main() {
 	live := make(map[string]*position, len(snapshot))
 	for i := range snapshot {
 		p := snapshot[i]
-		sortReceipts(p.ScheduledReceipts)
+		// Receipts stay in CARRIED order through the replay. #MRP-4170 cancels "the
+		// one the record carries first", so re-sorting here would make the cancel
+		// drop whichever duplicate a sort happened to put first instead.
 		live[p.ItemID] = &p
 	}
 	// #MRP-4170: a retraction withdraws the position for good; a later movement
@@ -97,9 +99,9 @@ func main() {
 				p.OnHand = *m.OnHand
 			}
 		case "receipt_add":
+			// appended at the end: this is the order the record now carries
 			p.ScheduledReceipts = append(p.ScheduledReceipts,
 				receipt{ReceiptID: m.ReceiptID, Qty: m.Qty, DueDay: m.DueDay})
-			sortReceipts(p.ScheduledReceipts)
 		case "receipt_cancel":
 			kept := p.ScheduledReceipts[:0]
 			dropped := false
@@ -122,6 +124,10 @@ func main() {
 		if p.ScheduledReceipts == nil {
 			p.ScheduledReceipts = []receipt{}
 		}
+		// The contract's ascending receipt_id applies to what is written. It is a
+		// STABLE sort, so two receipts sharing an id keep the order the record
+		// carried them in rather than whichever an unstable sort produced.
+		sortReceipts(p.ScheduledReceipts)
 		out = append(out, *p)
 	}
 	// #MRP-4174: ascending item_id, and the record carries only the three

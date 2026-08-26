@@ -618,14 +618,25 @@ func main() {
 		loadCapacity(plans, byID, centres, nonWorking)
 	exceptions = append(exceptions, capacityExceptions...)
 
-	sort.Slice(exceptions, func(i, j int) bool {
+	// #MRP-4230: the key runs over every field a row carries, so the order is
+	// total. The previous form compared only the first three and used the UNSTABLE
+	// sort.Slice, which left rows tying on those three -- an order reported both
+	// inside_fence and capacity_exceeded on the same day -- in whatever order
+	// pdqsort happened to produce, and sealed that accident into the fixture.
+	sort.SliceStable(exceptions, func(i, j int) bool {
 		if exceptions[i].ReleaseDay != exceptions[j].ReleaseDay {
 			return exceptions[i].ReleaseDay < exceptions[j].ReleaseDay
 		}
 		if exceptions[i].ItemID != exceptions[j].ItemID {
 			return exceptions[i].ItemID < exceptions[j].ItemID
 		}
-		return exceptions[i].ReceiptDay < exceptions[j].ReceiptDay
+		if exceptions[i].ReceiptDay != exceptions[j].ReceiptDay {
+			return exceptions[i].ReceiptDay < exceptions[j].ReceiptDay
+		}
+		if exceptions[i].Kind != exceptions[j].Kind {
+			return exceptions[i].Kind < exceptions[j].Kind
+		}
+		return exceptions[i].Qty < exceptions[j].Qty
 	})
 
 	maxLLC := 0

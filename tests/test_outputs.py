@@ -158,6 +158,11 @@ def test_recovery_sources_are_intact():
         "calendar": hashlib.sha256((DATA / "planning_calendar.json").read_bytes()).hexdigest(),
         "capacity": hashlib.sha256(
             (DATA / "work_centre_capacity.json").read_bytes()).hexdigest(),
+        # instruction.md names the planning policy and the output contract among
+        # the files that come back byte-identical, and they were the two this
+        # digest left out.
+        "policy": hashlib.sha256((DATA / "planning_policy.json").read_bytes()).hexdigest(),
+        "contract": hashlib.sha256(SPEC_PATH.read_bytes()).hexdigest(),
         "log": hashlib.sha256(LOG_PATH.read_bytes()).hexdigest(),
     }
     assert _digest(live) == FIXTURE["rule_sources_digest"]
@@ -405,10 +410,16 @@ def test_the_replay_defaults_to_the_operational_paths():
     _publish_inputs()
     saved = POSITIONS_PATH.read_text(encoding="utf-8")
     data_mode = DATA.stat().st_mode & 0o7777
-    # the default output path sits inside /app/data, so the candidate uid needs
-    # to be able to replace it there
+    # The default output path sits inside /app/data, so the candidate uid has to be
+    # able to REPLACE it there -- not merely truncate it. /app/data keeps its sticky
+    # bit, under which a non-owner cannot rename over a root-owned file, so the
+    # positions file is handed to the candidate uid for the duration. Without that
+    # an in-place write passed and the equally correct temp-file-and-rename failed
+    # with EPERM, which graded a write strategy nothing in the instructions names.
+    positions_owner = (POSITIONS_PATH.stat().st_uid, POSITIONS_PATH.stat().st_gid)
     os.chmod(DATA, 0o1777)
     os.chmod(POSITIONS_PATH, 0o666)
+    os.chown(POSITIONS_PATH, 65534, 65534)
     try:
         result = _run_agent([binary], cwd=_candidate_dir())
         assert result.returncode == 0, f"the default run failed:\n{result.stdout}\n{result.stderr}"
@@ -418,6 +429,7 @@ def test_the_replay_defaults_to_the_operational_paths():
     finally:
         os.chmod(DATA, data_mode)
         POSITIONS_PATH.write_text(saved, encoding="utf-8")
+        os.chown(POSITIONS_PATH, *positions_owner)
 
 
 # --------------------------------------------------------------------------
@@ -475,11 +487,40 @@ def test_plan_schema_and_sorting(primary_outputs):
 def test_exception_schema_and_sorting(primary_outputs):
     """Exception rows carry the contracted fields and the contracted order."""
     _, _, _, exceptions = primary_outputs
-    keys = [(e["release_day"], e["item_id"], e["receipt_day"]) for e in exceptions]
+    # The contracted key covers every field a row carries, so the order is total
+    # and no pair is left to whatever a sort happened to do with equal elements.
+    # Checking only the first three would pass a queue whose tied rows came out in
+    # any order at all, which is exactly how an unstable sort in the reference once
+    # sealed an arbitrary permutation into this fixture.
+    keys = [(e["release_day"], e["item_id"], e["receipt_day"], e["kind"], e["qty"])
+            for e in exceptions]
     assert keys == sorted(keys)
+    assert len(set(keys)) == len(keys), (
+        "two exception rows are identical on every contracted field, so their "
+        "order is not determined by the contract")
     for row in exceptions:
         assert set(row) == EXCEPTION_KEYS
         assert row["kind"] in EXCEPTION_KINDS
+
+
+def test_rows_that_tie_on_the_first_three_keys_are_separated_by_the_rest(primary_outputs):
+    """The graded queue really does contain rows the old three-key sort left tied.
+
+    Seven pairs share release_day, item_id and receipt_day -- an order reported
+    both inside_fence and capacity_exceeded on the same day. Without this the
+    total-order requirement would be untested on data that never exercises it.
+    """
+    _, _, _, exceptions = primary_outputs
+    from collections import Counter
+    three = Counter(
+        (e["release_day"], e["item_id"], e["receipt_day"]) for e in exceptions)
+    tied = [k for k, n in three.items() if n > 1]
+    assert tied, "no row ties on the first three keys, so the tie-break is untested here"
+    for key in tied:
+        group = [e for e in exceptions
+                 if (e["release_day"], e["item_id"], e["receipt_day"]) == key]
+        kinds = [e["kind"] for e in group]
+        assert kinds == sorted(kinds), (key, kinds)
 
 
 def test_artifacts_use_the_serialisation_the_contract_states(primary_outputs):
@@ -1640,8 +1681,10 @@ def test_shipped_contract_matches_the_golden_copy():
     from the verifier's own image; this proves the agent's copy still agrees with
     it, so the contract cannot be trimmed to weaken a schema check.
     """
-    shipped = json.loads(SPEC_PATH.read_text(encoding="utf-8"))
-    assert shipped == json.loads(GOLDEN_CONTRACT_PATH.read_text(encoding="utf-8"))
+    assert json.loads(SPEC_PATH.read_text(encoding="utf-8")) == json.loads(
+        GOLDEN_CONTRACT_PATH.read_text(encoding="utf-8"))
+    # instruction.md promises byte-identical, not merely equal once parsed.
+    assert SPEC_PATH.read_bytes() == GOLDEN_CONTRACT_PATH.read_bytes()
 
 
 def test_missing_policy_fields_fall_back_to_the_governed_baseline():
