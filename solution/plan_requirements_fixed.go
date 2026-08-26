@@ -25,12 +25,14 @@ type item struct {
 	FirmFence    int    `json:"firm_fence_days"`
 	WorkCentre   string `json:"work_centre"`
 	RunHours     int    `json:"run_hours"`
+	Family       string `json:"family"`
 }
 
 type workCentre struct {
 	WorkCentre  string `json:"work_centre"`
 	DailyHours  int    `json:"daily_hours"`
 	MaxPullDays int    `json:"max_pull_days"`
+	SetupHours  int    `json:"setup_hours"`
 }
 
 type capacityFile struct {
@@ -172,6 +174,18 @@ func ceilDiv(numerator, denominator int64) int64 {
 	return (numerator + denominator - 1) / denominator
 }
 
+// ceilScale returns ceil(value*mul/div) for non-negative quantities without
+// ever forming value*mul, which overflows int64 well before the scaled result
+// itself would. The allowances are stated as integer arithmetic on quantities
+// the contract does not bound, so the intermediate must not be the limit.
+func ceilScale(value, mul, div int64) int64 {
+	if div <= 0 {
+		return value * mul
+	}
+	whole, remainder := value/div, value%div
+	return whole*mul + ceilDiv(remainder*mul, div)
+}
+
 // #MRP-4240: the policy is read from its fixed absolute path, and any field the
 // file omits keeps its governed baseline. A missing Go map key is zero, not the
 // baseline, so the fallback has to be explicit.
@@ -192,50 +206,69 @@ func policyValue(pol policy, field string, baseline int64) int64 {
 type candidate struct {
 	order      *plannedOrder
 	hours      int
+	family     int
 	releaseDay int
 }
 
-// reachable reports the largest total of the given hours that does not exceed
-// the room left. Subset sums, because the set that stays is the one that fills
-// the day best rather than the one a greedy pass happens to take first.
-func reachable(hours []int, room int) int {
-	seen := make([]bool, room+1)
-	seen[0] = true
-	best := 0
-	for _, h := range hours {
-		if h > room {
-			continue
-		}
-		for total := room - h; total >= 0; total-- {
-			if seen[total] && !seen[total+h] {
-				seen[total+h] = true
-				if total+h > best {
-					best = total + h
-				}
-			}
+// #MRP-4260: a day's hours are spent on run hours PLUS one changeover block per
+// distinct family it starts, so what an order costs depends on which of its
+// neighbours stay. bestRun reports the largest RUN total reachable from the
+// candidates at or after `from`, given the hours still free and the families
+// whose block the day has already paid for. Blocks are capacity spent, never
+// work done, so they are charged against the room and never counted into the
+// total that decides which set stays.
+type dayFill struct {
+	cands []candidate
+	setup int
+	memo  map[[3]int]int
+}
+
+func (f *dayFill) bestRun(from, room, paid int) int {
+	if from >= len(f.cands) || room <= 0 {
+		return 0
+	}
+	key := [3]int{from, room, paid}
+	if cached, ok := f.memo[key]; ok {
+		return cached
+	}
+	best := f.bestRun(from+1, room, paid)
+	bit := 1 << f.cands[from].family
+	cost := f.cands[from].hours
+	if paid&bit == 0 {
+		cost += f.setup
+	}
+	if cost <= room {
+		if taken := f.cands[from].hours + f.bestRun(from+1, room-cost, paid|bit); taken > best {
+			best = taken
 		}
 	}
+	f.memo[key] = best
 	return best
 }
 
-// staying picks the set that totals the most hours without going over, and
-// among the sets that tie, the one that keeps the order earlier in the plan
-// order -- read in turn down the candidates, which arrive already in that order.
-func staying(cands []candidate, room int) map[int]bool {
-	hours := make([]int, len(cands))
-	for i, c := range cands {
-		hours[i] = c.hours
-	}
-	target := reachable(hours, room)
+// staying picks the set whose run hours total the most without the day going
+// over, and among the sets that tie, the one that keeps the order earlier in
+// the plan order -- read in turn down the candidates, which arrive already in
+// that order (#MRP-4256, as amended by #MRP-4260).
+func staying(cands []candidate, room, setup int) map[int]bool {
+	fill := &dayFill{cands: cands, setup: setup, memo: map[[3]int]int{}}
+	target := fill.bestRun(0, room, 0)
 	keep := make(map[int]bool, len(cands))
+	paid := 0
 	for i := range cands {
-		if hours[i] > room {
+		bit := 1 << cands[i].family
+		cost := cands[i].hours
+		if paid&bit == 0 {
+			cost += setup
+		}
+		if cost > room {
 			continue
 		}
-		if reachable(hours[i+1:], room-hours[i]) == target-hours[i] {
+		if cands[i].hours+fill.bestRun(i+1, room-cost, paid|bit) == target {
 			keep[i] = true
-			room -= hours[i]
-			target -= hours[i]
+			room -= cost
+			target -= cands[i].hours
+			paid |= bit
 		}
 	}
 	return keep
@@ -253,6 +286,22 @@ func workingDaysBetween(from, to int, nonWorking map[int]bool) int {
 
 func loadCapacity(plans []itemPlan, byID map[string]item, centres map[string]workCentre,
 	nonWorking map[int]bool) (pulled, exceeded, loadedDays int, raised []exceptionRow) {
+	// #MRP-4260: a family is a changeover block, so each one needs a stable
+	// index to carry in the day's paid-for set.
+	familyNames := []string{}
+	seenFamily := map[string]bool{}
+	for _, it := range byID {
+		if !seenFamily[it.Family] {
+			seenFamily[it.Family] = true
+			familyNames = append(familyNames, it.Family)
+		}
+	}
+	sort.Strings(familyNames)
+	familyIndex := map[string]int{}
+	for i, name := range familyNames {
+		familyIndex[name] = i
+	}
+
 	perCentre := map[string]map[int][]candidate{}
 	for i := range plans {
 		for j := range plans[i].PlannedOrders {
@@ -265,7 +314,8 @@ func loadCapacity(plans []itemPlan, byID map[string]item, centres map[string]wor
 				perCentre[it.WorkCentre] = map[int][]candidate{}
 			}
 			perCentre[it.WorkCentre][day] = append(perCentre[it.WorkCentre][day],
-				candidate{order: order, hours: it.RunHours, releaseDay: day})
+				candidate{order: order, hours: it.RunHours,
+					family: familyIndex[it.Family], releaseDay: day})
 		}
 	}
 
@@ -313,7 +363,7 @@ func loadCapacity(plans []itemPlan, byID map[string]item, centres map[string]wor
 			if nonWorking[day] {
 				room = 0 // a non-working day starts nothing
 			}
-			keep := staying(cands, room)
+			keep := staying(cands, room, centre.SetupHours)
 			if len(keep) > 0 {
 				loadedDays++
 			}
@@ -523,7 +573,7 @@ func main() {
 			// the arrival -- the inflation is never re-sized to a lot multiple.
 			released := receiptQty
 			if it.YieldPct > 0 && it.YieldPct < 100 {
-				released = ceilDiv(receiptQty*100, it.YieldPct)
+				released = ceilScale(receiptQty, 100, it.YieldPct)
 			}
 			netTotal += shortfall
 			totalNet += shortfall
@@ -585,7 +635,7 @@ func main() {
 					// #MRP-4238: the line's scrap allowance inflates what must be issued.
 					need := released * r.QtyPer
 					if r.ScrapPct > 0 && r.ScrapPct < 100 {
-						need = ceilDiv(need*100, 100-r.ScrapPct)
+						need = ceilScale(need, 100, 100-r.ScrapPct)
 					}
 					cg := ensure(r.Component)
 					cg[release] += need

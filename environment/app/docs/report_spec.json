@@ -127,7 +127,7 @@
   "runtime_budget_seconds": 90,
   "units": {
     "days": "integer day offsets from the plan start; negative days lie before the horizon",
-    "hours": "run_hours is what one planned order occupies at its item's work centre on the day it loads; a centre's daily_hours is what it can start in a working day",
+    "hours": "run_hours is what one planned order occupies at its item's work centre on the day it loads; setup_hours is what one changeover block costs that centre; a centre's daily_hours is what it can start in a working day",
     "qty": "whole units; a planned order's qty is what is RELEASED and receipt_qty is what ARRIVES good"
   }
 }

@@ -45,11 +45,18 @@ hours at a work centre, a centre starts only so many hours in a working day, and
 no room for is pulled EARLIER rather than pushed later -- the draft that pushed it to the next day
 was reversed. Days settle from the last working day backwards, so what one day sheds competes for the
 day before it, and on a contested day the orders that stay are the set whose hours fill the day best
-rather than the set a pass taking the biggest first happens to keep. On the graded batch a hundred
-and seventy-five days are contested, and taking the biggest first loads strictly fewer hours on
-thirty-four of them and keeps a different set on ninety-six, so a greedy loading is not a
-different-looking answer but a worse one -- and it cascades, because one day's choice decides what
-competes on the day before it. The data is synthetic and every figure is an integer.
+rather than the set a pass taking the biggest first happens to keep. A later minute makes that
+settlement a set problem rather than a knapsack over independent items: each item belongs to a
+changeover family and a centre pays that family's setup block ONCE a day however many orders of it
+the centre starts, so what an order costs the day depends on which of its neighbours stay beside it,
+and the blocks are capacity spent rather than work done -- the set that stays is still the one whose
+RUN hours total the most, now among the sets whose runs and blocks together fit. Reading a block per
+order, or maximising the hours the day is charged instead of the hours it runs, each gives a
+different plan rather than a slightly different one. On the graded batch two hundred and eighty-five
+days are contested and taking the biggest first loads strictly fewer hours on forty-five of them, so
+a greedy loading is a worse answer and not merely another one -- and it cascades, because one day's
+choice decides what competes on the day before it. The data is synthetic and every figure is an
+integer.
 '''
 solution_explanation = '''
 solution/solve.sh drives the two dependent steps inside the environment container. Step one runs
@@ -74,12 +81,14 @@ out to the fence day and flags it (#MRP-4250), places dependent demand on the pa
 each line's issue for its scrap allowance off the parent's released quantity (#MRP-4238), blows
 phantom assemblies through without an order or a lead-time offset (#MRP-4242), and queues past-due,
 backlog-exceeded and inside-fence exceptions under the reporting and ordering decisions (#MRP-4220,
-#MRP-4230). It then loads the finished orders against the work centres (#MRP-4256): each order takes
-its item's run hours at the centre the master names, days are settled from the last working day
-backwards with what a day sheds joining the candidates of the day before, and a contested day keeps
-the subset whose run hours total the most without going over -- solved by subset-sum reachability
-rather than a greedy pass -- ties going to the order earlier in the plan order, applied in turn down
-the candidates. An order that would be pulled past its centre's limit is left on its own release day
+#MRP-4230). It then loads the finished orders against the work centres (#MRP-4256 as amended by
+#MRP-4260): each order takes its item's run hours at the centre the master names and each distinct
+changeover family the day starts costs that centre one setup block, days are settled from the last
+working day backwards with what a day sheds joining the candidates of the day before, and a contested
+day keeps the subset whose RUN hours total the most among those whose runs and blocks together stay
+inside the day -- solved by a memoised search over the room left and the families already paid for,
+rather than a greedy pass or a plain subset sum over run hours -- ties going to the order earlier in
+the plan order, applied in turn down the candidates. An order that would be pulled past its centre's limit is left on its own release day
 and queued capacity_exceeded.
 '''
 verification_explanation = '''
@@ -123,11 +132,13 @@ count and placement must agree with it; the loading is separately required to ke
 day's hours, to start nothing on a closed day, and never to move an order later than its release day
 or further back than its centre allows; and a greedy pass over the graded run's own contested days
 must load strictly fewer hours on at least one of them, so the exact fit is not a distinction without
-a difference. Seven crafted instances pin the rule on its own: a phantom occupies nothing, a day of
+a difference. Ten crafted instances pin the rule on its own: a phantom occupies nothing, a day of
 ten hours keeps the six and the four rather than the seven, a tie on hours keeps the order earlier in
 the plan, a shed order competes on the day before and displaces what it outranks, an order past its
-pull limit is reported capacity_exceeded at whatever quantity, a closed day starts nothing, and the
-hours and the pull limit are read from the capacity file rather than inlined.
+pull limit is reported capacity_exceeded at whatever quantity, a closed day starts nothing, the hours
+and the pull limit are read from the capacity file rather than inlined, three orders of one family
+cost their day a single block, the same three orders in three families no longer fit it, and a day
+keeps the pair that RUNS the most rather than the pair it is CHARGED the most for.
 Whole-run assertions further require that every exception kind occurs, that phantoms and fence
 pushes are load-bearing rather than absent, and that released and arriving quantities diverge exactly
 where the item master's yield is short. The policy file is graded on the behaviour it drives rather than on the

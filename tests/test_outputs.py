@@ -546,6 +546,20 @@ def test_artifacts_use_the_serialisation_the_contract_states(primary_outputs):
         assert line == json.dumps(row, separators=(",", ":")), line[:90]
 
 
+def test_the_rebuilt_positions_use_the_serialisation_the_contract_states():
+    """The recovered positions file is graded on its bytes too, not only its content.
+
+    reconciled_inputs.inventory_positions in the contract spells the file out as
+    a two-space-indented JSON array with a trailing newline, and every other
+    check on it goes through the whitespace-insensitive digest, which a single
+    unindented line would satisfy just as well.
+    """
+    raw = POSITIONS_PATH.read_text(encoding="utf-8")
+    assert raw.endswith("\n") and not raw.endswith("\n\n"), "no trailing newline"
+    assert raw == json.dumps(json.loads(raw), indent=2) + "\n", (
+        "the rebuilt positions file is not two-space-indented JSON")
+
+
 def test_summary_counts_track_the_artifacts(primary_outputs):
     """The summary's own totals agree with the artifacts it was emitted beside."""
     _, summary, plan, exceptions = primary_outputs
@@ -646,7 +660,8 @@ def _restore(saved):
 def _item(iid, **kw):
     base = {"item_id": iid, "lead_time_days": 0, "lot_policy": "lot_for_lot", "lot_size": 0,
             "period_days": 0, "safety_stock": 0, "unit_cost_cents": 100,
-            "yield_pct": 100, "firm_fence_days": 0, "work_centre": "WC-1", "run_hours": 1}
+            "yield_pct": 100, "firm_fence_days": 0, "work_centre": "WC-1", "run_hours": 1,
+            "family": "FAM-A"}
     base.update(kw)
     return base
 
@@ -663,7 +678,7 @@ BASE_POLICY = {"default": {"past_due_grace_days": 2, "exception_min_qty": 40,
 # The crafted worlds below are about the other rules, so their centre has room
 # for anything; the capacity probes pass a tighter file of their own.
 OPEN_CAPACITY = {"work_centres": [{"work_centre": "WC-1", "daily_hours": 10_000,
-                                   "max_pull_days": 5}]}
+                                   "max_pull_days": 5, "setup_hours": 0}]}
 
 
 def _probe_full(world_extra):
@@ -1035,10 +1050,43 @@ CAPACITY_PATH = DATA / "work_centre_capacity.json"
 
 
 def _capacity(**rows):
-    """A capacity file naming one row per centre."""
+    """A capacity file naming one row per centre.
+
+    A row is (daily_hours, max_pull_days) or (daily_hours, max_pull_days,
+    setup_hours); a centre given no changeover block pays none, which is the
+    #MRP-4256 day the other probes are written against.
+    """
     return {"work_centres": [
-        {"work_centre": name, "daily_hours": hours, "max_pull_days": pull}
-        for name, (hours, pull) in sorted(rows.items())]}
+        {"work_centre": name, "daily_hours": row[0], "max_pull_days": row[1],
+         "setup_hours": row[2] if len(row) > 2 else 0}
+        for name, row in sorted(rows.items())]}
+
+
+def _best_run(cands: list, setup: int, start: int, room: int, paid: frozenset) -> int:
+    """The largest RUN total reachable from cands[start:] inside the room left.
+
+    #MRP-4260: a family costs its centre one changeover block a day however many
+    of its orders start, so what an order costs depends on which of its
+    neighbours stay. Blocks are capacity spent, not work done, so they are
+    charged against the room and never counted into the total being maximised.
+    """
+    if start >= len(cands) or room <= 0:
+        return 0
+    key = (start, room, paid)
+    memo = _best_run.memo
+    if key in memo:
+        return memo[key]
+    best = _best_run(cands, setup, start + 1, room, paid)
+    hours, family = cands[start]
+    cost = hours + (0 if family in paid else setup)
+    if cost <= room:
+        taken = hours + _best_run(cands, setup, start + 1, room - cost, paid | {family})
+        best = max(best, taken)
+    memo[key] = best
+    return best
+
+
+_best_run.memo = {}
 
 
 def _best_fitting(hours: list, room: int) -> int:
@@ -1069,6 +1117,7 @@ def _governed_loading(orders: list, items: dict, centres: dict, non_working: set
     for centre, group in sorted(by_centre.items()):
         room_per_day = centres[centre]["daily_hours"]
         max_pull = centres[centre]["max_pull_days"]
+        setup = centres[centre]["setup_hours"]
         released = {}
         for order in group:
             released.setdefault(order["release_day"], []).append(order)
@@ -1086,15 +1135,21 @@ def _governed_loading(orders: list, items: dict, centres: dict, non_working: set
             if not cands:
                 continue
             room = 0 if day in non_working else room_per_day
-            hours = [items[o["item_id"]]["run_hours"] for o in cands]
-            target = _best_fitting(hours, room)
-            keep, left, need = set(), room, target
-            for index in range(len(cands)):
-                if hours[index] <= left and _best_fitting(
-                        hours[index + 1:], left - hours[index]) == need - hours[index]:
+            shape = [(items[o["item_id"]]["run_hours"], items[o["item_id"]]["family"])
+                     for o in cands]
+            _best_run.memo = {}
+            target = _best_run(shape, setup, 0, room, frozenset())
+            keep, left, need, paid = set(), room, target, frozenset()
+            for index, (hours, family) in enumerate(shape):
+                cost = hours + (0 if family in paid else setup)
+                if cost > left:
+                    continue
+                if hours + _best_run(shape, setup, index + 1, left - cost,
+                                     paid | {family}) == need:
                     keep.add(index)
-                    left -= hours[index]
-                    need -= hours[index]
+                    left -= cost
+                    need -= hours
+                    paid = paid | {family}
             for index, order in enumerate(cands):
                 key = (order["item_id"], order["receipt_day"])
                 if index in keep:
@@ -1151,20 +1206,26 @@ def test_a_work_centre_never_starts_more_than_its_day(primary_outputs):
     items, centres, non_working = _graded_world()
     unplaced = {(r["item_id"], r["receipt_day"]) for r in exceptions
                 if r["kind"] == "capacity_exceeded"}
-    loaded = {}
+    loaded: dict = {}
     for order in (o for row in plan for o in row["planned_orders"]):
         if (order["item_id"], order["receipt_day"]) in unplaced:
             continue
         item = items[order["item_id"]]
         assert order["load_day"] not in non_working, order
-        loaded[(item["work_centre"], order["load_day"])] = loaded.get(
-            (item["work_centre"], order["load_day"]), 0) + item["run_hours"]
+        run, families = loaded.get((item["work_centre"], order["load_day"]), (0, set()))
+        loaded[(item["work_centre"], order["load_day"])] = (
+            run + item["run_hours"], families | {item["family"]})
     assert loaded
-    for (centre, day), hours in loaded.items():
+    # #MRP-4260: what a day starts is its run hours plus one block per family
+    started = {key: run + len(families) * centres[key[0]]["setup_hours"]
+               for key, (run, families) in loaded.items()}
+    for (centre, day), hours in started.items():
         assert hours <= centres[centre]["daily_hours"], (centre, day, hours)
     # and the constraint is a real one on this batch, not slack everywhere
     assert any(hours > centres[centre]["daily_hours"] - 4
-               for (centre, _), hours in loaded.items())
+               for (centre, _), hours in started.items())
+    assert any(len(families) > 1 for _run, families in loaded.values()), \
+        "no day starts two families, so the block rule is not exercised here"
 
 
 def test_an_order_is_pulled_earlier_and_never_pushed_later(primary_outputs):
@@ -1202,25 +1263,94 @@ def test_the_set_that_stays_fills_the_day_better_than_a_greedy_pass(primary_outp
     for order in orders:
         item = items[order["item_id"]]
         days.setdefault((item["work_centre"], order["release_day"]), []).append(
-            (item["run_hours"], order["item_id"], order["receipt_day"]))
-    short = differing = contested = 0
+            (item["run_hours"], item["family"], order["item_id"], order["receipt_day"]))
+    short = contested = 0
     for (centre, day), rows in days.items():
         room = centres[centre]["daily_hours"]
-        hours = [row[0] for row in sorted(rows, key=lambda r: (r[1], r[2]))]
-        if sum(hours) <= room:
+        setup = centres[centre]["setup_hours"]
+        shape = [(row[0], row[1]) for row in sorted(rows, key=lambda r: (r[2], r[3]))]
+        if sum(hours for hours, _ in shape) + len({f for _, f in shape}) * setup <= room:
             continue
         contested += 1
-        best = _best_fitting(hours, room)
-        used = 0
-        for value in sorted(hours, reverse=True):
-            if used + value <= room:
-                used += value
+        _best_run.memo = {}
+        best = _best_run(shape, setup, 0, room, frozenset())
+        # the natural implementation: biggest order first, paying a block the
+        # first time each family is started
+        used, left, paid = 0, room, set()
+        for hours, family in sorted(shape, key=lambda r: (-r[0], r[1])):
+            cost = hours + (0 if family in paid else setup)
+            if cost <= left:
+                used += hours
+                left -= cost
+                paid.add(family)
         if used < best:
             short += 1
-        if used != best:
-            differing += 1
     assert contested > 20, "too few contested days to tell the two apart"
     assert short > 0, "the greedy pass never loses hours, so the exact fit is untested"
+
+
+def _changeover_world(room, setup, rows, *, pull=0):
+    """A one-centre day holding `rows` of (item_id, family, run_hours)."""
+    return {
+        "item_master.json": [_item(iid, family=family, run_hours=hours)
+                             for iid, family, hours in rows],
+        "independent_demand.json": [
+            {"demand_id": f"D-{index}", "item_id": iid, "qty": 100, "due_day": 5}
+            for index, (iid, _family, _hours) in enumerate(rows)],
+        "work_centre_capacity.json": _capacity(**{"WC-1": (room, pull, setup)}),
+    }
+
+
+def _loaded_on(exceptions, plan_rows):
+    """Split the crafted day's orders into the ones that started and the ones that did not."""
+    shed = {row["item_id"] for row in exceptions if row["kind"] == "capacity_exceeded"}
+    return {iid for iid in plan_rows if iid not in shed}, shed
+
+
+def test_one_family_costs_the_day_one_block_however_many_orders_it_starts():
+    """#MRP-4260: the block is per family per day, not per order.
+
+    Three five-hour orders of one family cost the centre 15 run hours and a
+    single four-hour block, which is exactly its day. Charging a block per order
+    would fit only two of them and report the third capacity_exceeded.
+    """
+    summary, by_id, exceptions = _probe_full(_changeover_world(
+        19, 4, [("ITM-A", "FAM-A", 5), ("ITM-B", "FAM-A", 5), ("ITM-C", "FAM-A", 5)]))
+    started, shed = _loaded_on(exceptions, by_id)
+    assert shed == set(), f"a family was charged more than one block: {sorted(shed)}"
+    assert started == {"ITM-A", "ITM-B", "ITM-C"}
+    assert summary["capacity_exceeded_count"] == 0
+
+
+def test_each_distinct_family_the_day_starts_costs_its_own_block():
+    """The same three orders in three families no longer fit the same day.
+
+    15 run hours and three four-hour blocks is 27 against a 19-hour day, so the
+    day keeps the two that fit -- 10 run hours and two blocks, exactly 18 -- and
+    the tie among equal-run pairs goes to the orders earlier in the plan order.
+    """
+    summary, by_id, exceptions = _probe_full(_changeover_world(
+        19, 4, [("ITM-A", "FAM-A", 5), ("ITM-B", "FAM-B", 5), ("ITM-C", "FAM-C", 5)]))
+    started, shed = _loaded_on(exceptions, by_id)
+    assert started == {"ITM-A", "ITM-B"}, sorted(started)
+    assert shed == {"ITM-C"}
+    assert summary["capacity_exceeded_count"] == 1
+
+
+def test_a_changeover_block_is_capacity_spent_and_never_counted_as_fill():
+    """The set that stays maximises RUN hours, not the hours the day is charged.
+
+    Both orders of FAM-A run nine hours and share one block: 18 run against 22
+    charged. Swapping one for the eight-hour FAM-B order charges the day more --
+    17 run plus two blocks is 25, the whole day -- while running less. A reader
+    that maximised what the day is charged would keep that pair instead.
+    """
+    summary, by_id, exceptions = _probe_full(_changeover_world(
+        25, 4, [("ITM-A", "FAM-A", 9), ("ITM-B", "FAM-A", 9), ("ITM-C", "FAM-B", 8)]))
+    started, shed = _loaded_on(exceptions, by_id)
+    assert started == {"ITM-A", "ITM-B"}, sorted(started)
+    assert shed == {"ITM-C"}
+    assert summary["capacity_exceeded_count"] == 1
 
 
 def test_a_phantom_occupies_no_work_centre():

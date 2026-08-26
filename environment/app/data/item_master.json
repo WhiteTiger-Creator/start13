@@ -1,5 +1,6 @@
 [
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00001",
     "lead_time_days": 3,
@@ -13,6 +14,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00002",
     "lead_time_days": 2,
@@ -26,6 +28,7 @@
     "yield_pct": 91
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00003",
     "lead_time_days": 8,
@@ -39,6 +42,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00004",
     "lead_time_days": 10,
@@ -52,6 +56,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00005",
     "lead_time_days": 14,
@@ -65,6 +70,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00006",
     "lead_time_days": 8,
@@ -78,6 +84,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00007",
     "lead_time_days": 3,
@@ -91,6 +98,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00008",
     "lead_time_days": 1,
@@ -104,6 +112,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00009",
     "lead_time_days": 5,
@@ -117,6 +126,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00010",
     "lead_time_days": 14,
@@ -130,6 +140,7 @@
     "yield_pct": 93
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00011",
     "lead_time_days": 14,
@@ -143,6 +154,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00012",
     "lead_time_days": 5,
@@ -156,6 +168,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00013",
     "lead_time_days": 8,
@@ -169,6 +182,7 @@
     "yield_pct": 87
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00014",
     "lead_time_days": 10,
@@ -182,6 +196,7 @@
     "yield_pct": 97
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00015",
     "lead_time_days": 10,
@@ -195,6 +210,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00016",
     "lead_time_days": 2,
@@ -208,6 +224,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00017",
     "lead_time_days": 14,
@@ -221,6 +238,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00018",
     "lead_time_days": 2,
@@ -234,6 +252,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00019",
     "lead_time_days": 8,
@@ -247,6 +266,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00020",
     "lead_time_days": 1,
@@ -260,6 +280,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00021",
     "lead_time_days": 10,
@@ -273,6 +294,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00022",
     "lead_time_days": 1,
@@ -286,6 +308,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00023",
     "lead_time_days": 14,
@@ -299,6 +322,7 @@
     "yield_pct": 93
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00024",
     "lead_time_days": 14,
@@ -312,6 +336,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00025",
     "lead_time_days": 1,
@@ -325,6 +350,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00026",
     "lead_time_days": 3,
@@ -338,6 +364,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 5,
     "item_id": "ITM-00027",
     "lead_time_days": 3,
@@ -351,6 +378,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 6,
     "item_id": "ITM-00028",
     "lead_time_days": 14,
@@ -364,6 +392,7 @@
     "yield_pct": 87
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00029",
     "lead_time_days": 10,
@@ -377,6 +406,7 @@
     "yield_pct": 88
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00030",
     "lead_time_days": 14,
@@ -390,6 +420,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00031",
     "lead_time_days": 3,
@@ -403,6 +434,7 @@
     "yield_pct": 82
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 8,
     "item_id": "ITM-00032",
     "lead_time_days": 10,
@@ -416,6 +448,7 @@
     "yield_pct": 98
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 1,
     "item_id": "ITM-00033",
     "lead_time_days": 10,
@@ -429,6 +462,7 @@
     "yield_pct": 95
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00034",
     "lead_time_days": 5,
@@ -442,6 +476,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00035",
     "lead_time_days": 8,
@@ -455,6 +490,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00036",
     "lead_time_days": 5,
@@ -468,6 +504,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 9,
     "item_id": "ITM-00037",
     "lead_time_days": 8,
@@ -481,6 +518,7 @@
     "yield_pct": 84
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 6,
     "item_id": "ITM-00038",
     "lead_time_days": 14,
@@ -494,6 +532,7 @@
     "yield_pct": 82
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00039",
     "lead_time_days": 5,
@@ -507,6 +546,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00040",
     "lead_time_days": 5,
@@ -520,6 +560,7 @@
     "yield_pct": 88
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00041",
     "lead_time_days": 2,
@@ -533,6 +574,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00042",
     "lead_time_days": 5,
@@ -546,6 +588,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 9,
     "item_id": "ITM-00043",
     "lead_time_days": 14,
@@ -559,6 +602,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00044",
     "lead_time_days": 14,
@@ -572,6 +616,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00045",
     "lead_time_days": 1,
@@ -585,6 +630,7 @@
     "yield_pct": 87
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00046",
     "lead_time_days": 10,
@@ -598,6 +644,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00047",
     "lead_time_days": 14,
@@ -611,6 +658,7 @@
     "yield_pct": 84
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00048",
     "lead_time_days": 1,
@@ -624,6 +672,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 10,
     "item_id": "ITM-00049",
     "lead_time_days": 8,
@@ -637,6 +686,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00050",
     "lead_time_days": 1,
@@ -650,6 +700,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00051",
     "lead_time_days": 10,
@@ -663,6 +714,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00052",
     "lead_time_days": 8,
@@ -676,6 +728,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00053",
     "lead_time_days": 2,
@@ -689,6 +742,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00054",
     "lead_time_days": 14,
@@ -702,6 +756,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00055",
     "lead_time_days": 10,
@@ -715,6 +770,7 @@
     "yield_pct": 97
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00056",
     "lead_time_days": 2,
@@ -728,6 +784,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00057",
     "lead_time_days": 2,
@@ -741,6 +798,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00058",
     "lead_time_days": 14,
@@ -754,6 +812,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00059",
     "lead_time_days": 14,
@@ -767,6 +826,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00060",
     "lead_time_days": 1,
@@ -780,6 +840,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00061",
     "lead_time_days": 8,
@@ -793,6 +854,7 @@
     "yield_pct": 87
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 4,
     "item_id": "ITM-00062",
     "lead_time_days": 5,
@@ -806,6 +868,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00063",
     "lead_time_days": 8,
@@ -819,6 +882,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00064",
     "lead_time_days": 5,
@@ -832,6 +896,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00065",
     "lead_time_days": 3,
@@ -845,6 +910,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00066",
     "lead_time_days": 1,
@@ -858,6 +924,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 6,
     "item_id": "ITM-00067",
     "lead_time_days": 10,
@@ -871,6 +938,7 @@
     "yield_pct": 86
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00068",
     "lead_time_days": 10,
@@ -884,6 +952,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 1,
     "item_id": "ITM-00069",
     "lead_time_days": 5,
@@ -897,6 +966,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 9,
     "item_id": "ITM-00070",
     "lead_time_days": 3,
@@ -910,6 +980,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00071",
     "lead_time_days": 8,
@@ -923,6 +994,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00072",
     "lead_time_days": 8,
@@ -936,6 +1008,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00073",
     "lead_time_days": 8,
@@ -949,6 +1022,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00074",
     "lead_time_days": 5,
@@ -962,6 +1036,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00075",
     "lead_time_days": 1,
@@ -975,6 +1050,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00076",
     "lead_time_days": 5,
@@ -988,6 +1064,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00077",
     "lead_time_days": 10,
@@ -1001,6 +1078,7 @@
     "yield_pct": 88
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 8,
     "item_id": "ITM-00078",
     "lead_time_days": 2,
@@ -1014,6 +1092,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00079",
     "lead_time_days": 10,
@@ -1027,6 +1106,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00080",
     "lead_time_days": 10,
@@ -1040,6 +1120,7 @@
     "yield_pct": 97
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00081",
     "lead_time_days": 8,
@@ -1053,6 +1134,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00082",
     "lead_time_days": 10,
@@ -1066,6 +1148,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00083",
     "lead_time_days": 10,
@@ -1079,6 +1162,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00084",
     "lead_time_days": 1,
@@ -1092,6 +1176,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00085",
     "lead_time_days": 5,
@@ -1105,6 +1190,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00086",
     "lead_time_days": 1,
@@ -1118,6 +1204,7 @@
     "yield_pct": 86
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00087",
     "lead_time_days": 5,
@@ -1131,6 +1218,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00088",
     "lead_time_days": 3,
@@ -1144,6 +1232,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 8,
     "item_id": "ITM-00089",
     "lead_time_days": 5,
@@ -1157,6 +1246,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 2,
     "item_id": "ITM-00090",
     "lead_time_days": 1,
@@ -1170,6 +1260,7 @@
     "yield_pct": 95
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00091",
     "lead_time_days": 14,
@@ -1183,6 +1274,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00092",
     "lead_time_days": 10,
@@ -1196,6 +1288,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00093",
     "lead_time_days": 5,
@@ -1209,6 +1302,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00094",
     "lead_time_days": 14,
@@ -1222,6 +1316,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00095",
     "lead_time_days": 8,
@@ -1235,6 +1330,7 @@
     "yield_pct": 82
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00096",
     "lead_time_days": 10,
@@ -1248,6 +1344,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00097",
     "lead_time_days": 3,
@@ -1261,6 +1358,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00098",
     "lead_time_days": 3,
@@ -1274,6 +1372,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00099",
     "lead_time_days": 5,
@@ -1287,6 +1386,7 @@
     "yield_pct": 89
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00100",
     "lead_time_days": 1,
@@ -1300,6 +1400,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00101",
     "lead_time_days": 8,
@@ -1313,6 +1414,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00102",
     "lead_time_days": 5,
@@ -1326,6 +1428,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00103",
     "lead_time_days": 2,
@@ -1339,6 +1442,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00104",
     "lead_time_days": 3,
@@ -1352,6 +1456,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00105",
     "lead_time_days": 5,
@@ -1365,6 +1470,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00106",
     "lead_time_days": 1,
@@ -1378,6 +1484,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00107",
     "lead_time_days": 8,
@@ -1391,6 +1498,7 @@
     "yield_pct": 88
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 10,
     "item_id": "ITM-00108",
     "lead_time_days": 14,
@@ -1404,6 +1512,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00109",
     "lead_time_days": 2,
@@ -1417,6 +1526,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00110",
     "lead_time_days": 10,
@@ -1430,6 +1540,7 @@
     "yield_pct": 95
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00111",
     "lead_time_days": 5,
@@ -1443,6 +1554,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00112",
     "lead_time_days": 5,
@@ -1456,6 +1568,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 10,
     "item_id": "ITM-00113",
     "lead_time_days": 2,
@@ -1469,6 +1582,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00114",
     "lead_time_days": 3,
@@ -1482,6 +1596,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 2,
     "item_id": "ITM-00115",
     "lead_time_days": 14,
@@ -1495,6 +1610,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00116",
     "lead_time_days": 1,
@@ -1508,6 +1624,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00117",
     "lead_time_days": 5,
@@ -1521,6 +1638,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00118",
     "lead_time_days": 3,
@@ -1534,6 +1652,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00119",
     "lead_time_days": 5,
@@ -1547,6 +1666,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 9,
     "item_id": "ITM-00120",
     "lead_time_days": 10,
@@ -1560,6 +1680,7 @@
     "yield_pct": 94
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00121",
     "lead_time_days": 14,
@@ -1573,6 +1694,7 @@
     "yield_pct": 87
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00122",
     "lead_time_days": 5,
@@ -1586,6 +1708,7 @@
     "yield_pct": 98
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00123",
     "lead_time_days": 5,
@@ -1599,6 +1722,7 @@
     "yield_pct": 98
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00124",
     "lead_time_days": 3,
@@ -1612,6 +1736,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00125",
     "lead_time_days": 8,
@@ -1625,6 +1750,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 7,
     "item_id": "ITM-00126",
     "lead_time_days": 14,
@@ -1638,6 +1764,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00127",
     "lead_time_days": 14,
@@ -1651,6 +1778,7 @@
     "yield_pct": 97
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00128",
     "lead_time_days": 5,
@@ -1664,6 +1792,7 @@
     "yield_pct": 97
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00129",
     "lead_time_days": 5,
@@ -1677,6 +1806,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00130",
     "lead_time_days": 10,
@@ -1690,6 +1820,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 5,
     "item_id": "ITM-00131",
     "lead_time_days": 2,
@@ -1703,6 +1834,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00132",
     "lead_time_days": 10,
@@ -1716,6 +1848,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 5,
     "item_id": "ITM-00133",
     "lead_time_days": 14,
@@ -1729,6 +1862,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00134",
     "lead_time_days": 5,
@@ -1742,6 +1876,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00135",
     "lead_time_days": 2,
@@ -1755,6 +1890,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00136",
     "lead_time_days": 1,
@@ -1768,6 +1904,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00137",
     "lead_time_days": 5,
@@ -1781,6 +1918,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 10,
     "item_id": "ITM-00138",
     "lead_time_days": 5,
@@ -1794,6 +1932,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00139",
     "lead_time_days": 8,
@@ -1807,6 +1946,7 @@
     "yield_pct": 98
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00140",
     "lead_time_days": 14,
@@ -1820,6 +1960,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00141",
     "lead_time_days": 14,
@@ -1833,6 +1974,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00142",
     "lead_time_days": 5,
@@ -1846,6 +1988,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00143",
     "lead_time_days": 10,
@@ -1859,6 +2002,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00144",
     "lead_time_days": 3,
@@ -1872,6 +2016,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00145",
     "lead_time_days": 10,
@@ -1885,6 +2030,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00146",
     "lead_time_days": 1,
@@ -1898,6 +2044,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 9,
     "item_id": "ITM-00147",
     "lead_time_days": 14,
@@ -1911,6 +2058,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 6,
     "item_id": "ITM-00148",
     "lead_time_days": 3,
@@ -1924,6 +2072,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00149",
     "lead_time_days": 10,
@@ -1937,6 +2086,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 3,
     "item_id": "ITM-00150",
     "lead_time_days": 2,
@@ -1950,6 +2100,7 @@
     "yield_pct": 98
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00151",
     "lead_time_days": 2,
@@ -1963,6 +2114,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00152",
     "lead_time_days": 14,
@@ -1976,6 +2128,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00153",
     "lead_time_days": 3,
@@ -1989,6 +2142,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00154",
     "lead_time_days": 1,
@@ -2002,6 +2156,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00155",
     "lead_time_days": 3,
@@ -2015,6 +2170,7 @@
     "yield_pct": 87
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 5,
     "item_id": "ITM-00156",
     "lead_time_days": 10,
@@ -2028,6 +2184,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00157",
     "lead_time_days": 1,
@@ -2041,6 +2198,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00158",
     "lead_time_days": 3,
@@ -2054,6 +2212,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00159",
     "lead_time_days": 3,
@@ -2067,6 +2226,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00160",
     "lead_time_days": 10,
@@ -2080,6 +2240,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00161",
     "lead_time_days": 10,
@@ -2093,6 +2254,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00162",
     "lead_time_days": 8,
@@ -2106,6 +2268,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00163",
     "lead_time_days": 5,
@@ -2119,6 +2282,7 @@
     "yield_pct": 87
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00164",
     "lead_time_days": 2,
@@ -2132,6 +2296,7 @@
     "yield_pct": 87
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 7,
     "item_id": "ITM-00165",
     "lead_time_days": 8,
@@ -2145,6 +2310,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00166",
     "lead_time_days": 1,
@@ -2158,6 +2324,7 @@
     "yield_pct": 93
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 4,
     "item_id": "ITM-00167",
     "lead_time_days": 1,
@@ -2171,6 +2338,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 6,
     "item_id": "ITM-00168",
     "lead_time_days": 3,
@@ -2184,6 +2352,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00169",
     "lead_time_days": 8,
@@ -2197,6 +2366,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00170",
     "lead_time_days": 3,
@@ -2210,6 +2380,7 @@
     "yield_pct": 94
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00171",
     "lead_time_days": 2,
@@ -2223,6 +2394,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 1,
     "item_id": "ITM-00172",
     "lead_time_days": 3,
@@ -2236,6 +2408,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 1,
     "item_id": "ITM-00173",
     "lead_time_days": 1,
@@ -2249,6 +2422,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00174",
     "lead_time_days": 14,
@@ -2262,6 +2436,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 6,
     "item_id": "ITM-00175",
     "lead_time_days": 3,
@@ -2275,6 +2450,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00176",
     "lead_time_days": 3,
@@ -2288,6 +2464,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 9,
     "item_id": "ITM-00177",
     "lead_time_days": 2,
@@ -2301,6 +2478,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00178",
     "lead_time_days": 2,
@@ -2314,6 +2492,7 @@
     "yield_pct": 84
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00179",
     "lead_time_days": 14,
@@ -2327,6 +2506,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00180",
     "lead_time_days": 3,
@@ -2340,6 +2520,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00181",
     "lead_time_days": 5,
@@ -2353,6 +2534,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00182",
     "lead_time_days": 1,
@@ -2366,6 +2548,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00183",
     "lead_time_days": 5,
@@ -2379,6 +2562,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00184",
     "lead_time_days": 10,
@@ -2392,6 +2576,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00185",
     "lead_time_days": 8,
@@ -2405,6 +2590,7 @@
     "yield_pct": 94
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 4,
     "item_id": "ITM-00186",
     "lead_time_days": 8,
@@ -2418,6 +2604,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 4,
     "item_id": "ITM-00187",
     "lead_time_days": 3,
@@ -2431,6 +2618,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00188",
     "lead_time_days": 14,
@@ -2444,6 +2632,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00189",
     "lead_time_days": 8,
@@ -2457,6 +2646,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00190",
     "lead_time_days": 14,
@@ -2470,6 +2660,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00191",
     "lead_time_days": 1,
@@ -2483,6 +2674,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00192",
     "lead_time_days": 2,
@@ -2496,6 +2688,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00193",
     "lead_time_days": 5,
@@ -2509,6 +2702,7 @@
     "yield_pct": 98
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00194",
     "lead_time_days": 2,
@@ -2522,6 +2716,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00195",
     "lead_time_days": 3,
@@ -2535,6 +2730,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00196",
     "lead_time_days": 8,
@@ -2548,6 +2744,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00197",
     "lead_time_days": 8,
@@ -2561,6 +2758,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00198",
     "lead_time_days": 5,
@@ -2574,6 +2772,7 @@
     "yield_pct": 86
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00199",
     "lead_time_days": 14,
@@ -2587,6 +2786,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 1,
     "item_id": "ITM-00200",
     "lead_time_days": 2,
@@ -2600,6 +2800,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00201",
     "lead_time_days": 1,
@@ -2613,6 +2814,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 3,
     "item_id": "ITM-00202",
     "lead_time_days": 1,
@@ -2626,6 +2828,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 10,
     "item_id": "ITM-00203",
     "lead_time_days": 8,
@@ -2639,6 +2842,7 @@
     "yield_pct": 95
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 7,
     "item_id": "ITM-00204",
     "lead_time_days": 8,
@@ -2652,6 +2856,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00205",
     "lead_time_days": 14,
@@ -2665,6 +2870,7 @@
     "yield_pct": 86
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00206",
     "lead_time_days": 10,
@@ -2678,6 +2884,7 @@
     "yield_pct": 91
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 9,
     "item_id": "ITM-00207",
     "lead_time_days": 1,
@@ -2691,6 +2898,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 10,
     "item_id": "ITM-00208",
     "lead_time_days": 5,
@@ -2704,6 +2912,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 3,
     "item_id": "ITM-00209",
     "lead_time_days": 1,
@@ -2717,6 +2926,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00210",
     "lead_time_days": 10,
@@ -2730,6 +2940,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00211",
     "lead_time_days": 14,
@@ -2743,6 +2954,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 7,
     "item_id": "ITM-00212",
     "lead_time_days": 8,
@@ -2756,6 +2968,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 2,
     "item_id": "ITM-00213",
     "lead_time_days": 3,
@@ -2769,6 +2982,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00214",
     "lead_time_days": 8,
@@ -2782,6 +2996,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00215",
     "lead_time_days": 14,
@@ -2795,6 +3010,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00216",
     "lead_time_days": 14,
@@ -2808,6 +3024,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00217",
     "lead_time_days": 5,
@@ -2821,6 +3038,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00218",
     "lead_time_days": 8,
@@ -2834,6 +3052,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 1,
     "item_id": "ITM-00219",
     "lead_time_days": 1,
@@ -2847,6 +3066,7 @@
     "yield_pct": 94
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00220",
     "lead_time_days": 14,
@@ -2860,6 +3080,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 5,
     "item_id": "ITM-00221",
     "lead_time_days": 1,
@@ -2873,6 +3094,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00222",
     "lead_time_days": 10,
@@ -2886,6 +3108,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00223",
     "lead_time_days": 1,
@@ -2899,6 +3122,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 2,
     "item_id": "ITM-00224",
     "lead_time_days": 8,
@@ -2912,6 +3136,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00225",
     "lead_time_days": 8,
@@ -2925,6 +3150,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 7,
     "item_id": "ITM-00226",
     "lead_time_days": 10,
@@ -2938,6 +3164,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00227",
     "lead_time_days": 14,
@@ -2951,6 +3178,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00228",
     "lead_time_days": 1,
@@ -2964,6 +3192,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00229",
     "lead_time_days": 2,
@@ -2977,6 +3206,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00230",
     "lead_time_days": 3,
@@ -2990,6 +3220,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00231",
     "lead_time_days": 2,
@@ -3003,6 +3234,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00232",
     "lead_time_days": 5,
@@ -3016,6 +3248,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 6,
     "item_id": "ITM-00233",
     "lead_time_days": 10,
@@ -3029,6 +3262,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 1,
     "item_id": "ITM-00234",
     "lead_time_days": 1,
@@ -3042,6 +3276,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 2,
     "item_id": "ITM-00235",
     "lead_time_days": 2,
@@ -3055,6 +3290,7 @@
     "yield_pct": 95
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00236",
     "lead_time_days": 2,
@@ -3068,6 +3304,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00237",
     "lead_time_days": 10,
@@ -3081,6 +3318,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00238",
     "lead_time_days": 10,
@@ -3094,6 +3332,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00239",
     "lead_time_days": 2,
@@ -3107,6 +3346,7 @@
     "yield_pct": 94
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00240",
     "lead_time_days": 8,
@@ -3120,6 +3360,7 @@
     "yield_pct": 95
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00241",
     "lead_time_days": 14,
@@ -3133,6 +3374,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00242",
     "lead_time_days": 3,
@@ -3146,6 +3388,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00243",
     "lead_time_days": 10,
@@ -3159,6 +3402,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00244",
     "lead_time_days": 14,
@@ -3172,6 +3416,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 1,
     "item_id": "ITM-00245",
     "lead_time_days": 8,
@@ -3185,6 +3430,7 @@
     "yield_pct": 95
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00246",
     "lead_time_days": 2,
@@ -3198,6 +3444,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00247",
     "lead_time_days": 1,
@@ -3211,6 +3458,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00248",
     "lead_time_days": 2,
@@ -3224,6 +3472,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00249",
     "lead_time_days": 10,
@@ -3237,6 +3486,7 @@
     "yield_pct": 95
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00250",
     "lead_time_days": 14,
@@ -3250,6 +3500,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00251",
     "lead_time_days": 3,
@@ -3263,6 +3514,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 4,
     "item_id": "ITM-00252",
     "lead_time_days": 14,
@@ -3276,6 +3528,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 3,
     "item_id": "ITM-00253",
     "lead_time_days": 1,
@@ -3289,6 +3542,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00254",
     "lead_time_days": 5,
@@ -3302,6 +3556,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00255",
     "lead_time_days": 1,
@@ -3315,6 +3570,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00256",
     "lead_time_days": 3,
@@ -3328,6 +3584,7 @@
     "yield_pct": 82
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00257",
     "lead_time_days": 10,
@@ -3341,6 +3598,7 @@
     "yield_pct": 89
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00258",
     "lead_time_days": 2,
@@ -3354,6 +3612,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 6,
     "item_id": "ITM-00259",
     "lead_time_days": 14,
@@ -3367,6 +3626,7 @@
     "yield_pct": 84
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00260",
     "lead_time_days": 5,
@@ -3380,6 +3640,7 @@
     "yield_pct": 93
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00261",
     "lead_time_days": 1,
@@ -3393,6 +3654,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00262",
     "lead_time_days": 14,
@@ -3406,6 +3668,7 @@
     "yield_pct": 89
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00263",
     "lead_time_days": 8,
@@ -3419,6 +3682,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00264",
     "lead_time_days": 5,
@@ -3432,6 +3696,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00265",
     "lead_time_days": 3,
@@ -3445,6 +3710,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00266",
     "lead_time_days": 8,
@@ -3458,6 +3724,7 @@
     "yield_pct": 88
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00267",
     "lead_time_days": 1,
@@ -3471,6 +3738,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00268",
     "lead_time_days": 14,
@@ -3484,6 +3752,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 7,
     "item_id": "ITM-00269",
     "lead_time_days": 3,
@@ -3497,6 +3766,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00270",
     "lead_time_days": 14,
@@ -3510,6 +3780,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00271",
     "lead_time_days": 10,
@@ -3523,6 +3794,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00272",
     "lead_time_days": 2,
@@ -3536,6 +3808,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 10,
     "item_id": "ITM-00273",
     "lead_time_days": 2,
@@ -3549,6 +3822,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00274",
     "lead_time_days": 10,
@@ -3562,6 +3836,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00275",
     "lead_time_days": 8,
@@ -3575,6 +3850,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 8,
     "item_id": "ITM-00276",
     "lead_time_days": 1,
@@ -3588,6 +3864,7 @@
     "yield_pct": 95
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00277",
     "lead_time_days": 3,
@@ -3601,6 +3878,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00278",
     "lead_time_days": 3,
@@ -3614,6 +3892,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00279",
     "lead_time_days": 1,
@@ -3627,6 +3906,7 @@
     "yield_pct": 86
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00280",
     "lead_time_days": 3,
@@ -3640,6 +3920,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00281",
     "lead_time_days": 14,
@@ -3653,6 +3934,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00282",
     "lead_time_days": 1,
@@ -3666,6 +3948,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 6,
     "item_id": "ITM-00283",
     "lead_time_days": 1,
@@ -3679,6 +3962,7 @@
     "yield_pct": 91
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00284",
     "lead_time_days": 10,
@@ -3692,6 +3976,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 1,
     "item_id": "ITM-00285",
     "lead_time_days": 10,
@@ -3705,6 +3990,7 @@
     "yield_pct": 91
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00286",
     "lead_time_days": 10,
@@ -3718,6 +4004,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00287",
     "lead_time_days": 2,
@@ -3731,6 +4018,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00288",
     "lead_time_days": 2,
@@ -3744,6 +4032,7 @@
     "yield_pct": 91
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00289",
     "lead_time_days": 3,
@@ -3757,6 +4046,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00290",
     "lead_time_days": 14,
@@ -3770,6 +4060,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 7,
     "item_id": "ITM-00291",
     "lead_time_days": 14,
@@ -3783,6 +4074,7 @@
     "yield_pct": 93
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00292",
     "lead_time_days": 5,
@@ -3796,6 +4088,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00293",
     "lead_time_days": 3,
@@ -3809,6 +4102,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 2,
     "item_id": "ITM-00294",
     "lead_time_days": 2,
@@ -3822,6 +4116,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00295",
     "lead_time_days": 3,
@@ -3835,6 +4130,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00296",
     "lead_time_days": 10,
@@ -3848,6 +4144,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00297",
     "lead_time_days": 10,
@@ -3861,6 +4158,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00298",
     "lead_time_days": 3,
@@ -3874,6 +4172,7 @@
     "yield_pct": 87
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 4,
     "item_id": "ITM-00299",
     "lead_time_days": 2,
@@ -3887,6 +4186,7 @@
     "yield_pct": 82
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00300",
     "lead_time_days": 3,
@@ -3900,6 +4200,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00301",
     "lead_time_days": 14,
@@ -3913,6 +4214,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00302",
     "lead_time_days": 3,
@@ -3926,6 +4228,7 @@
     "yield_pct": 93
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00303",
     "lead_time_days": 3,
@@ -3939,6 +4242,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00304",
     "lead_time_days": 1,
@@ -3952,6 +4256,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00305",
     "lead_time_days": 10,
@@ -3965,6 +4270,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00306",
     "lead_time_days": 8,
@@ -3978,6 +4284,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00307",
     "lead_time_days": 1,
@@ -3991,6 +4298,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00308",
     "lead_time_days": 2,
@@ -4004,6 +4312,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00309",
     "lead_time_days": 8,
@@ -4017,6 +4326,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00310",
     "lead_time_days": 3,
@@ -4030,6 +4340,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 9,
     "item_id": "ITM-00311",
     "lead_time_days": 10,
@@ -4043,6 +4354,7 @@
     "yield_pct": 91
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00312",
     "lead_time_days": 5,
@@ -4056,6 +4368,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 1,
     "item_id": "ITM-00313",
     "lead_time_days": 2,
@@ -4069,6 +4382,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00314",
     "lead_time_days": 8,
@@ -4082,6 +4396,7 @@
     "yield_pct": 93
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00315",
     "lead_time_days": 1,
@@ -4095,6 +4410,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 4,
     "item_id": "ITM-00316",
     "lead_time_days": 8,
@@ -4108,6 +4424,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 5,
     "item_id": "ITM-00317",
     "lead_time_days": 10,
@@ -4121,6 +4438,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00318",
     "lead_time_days": 3,
@@ -4134,6 +4452,7 @@
     "yield_pct": 87
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00319",
     "lead_time_days": 5,
@@ -4147,6 +4466,7 @@
     "yield_pct": 95
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00320",
     "lead_time_days": 14,
@@ -4160,6 +4480,7 @@
     "yield_pct": 82
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00321",
     "lead_time_days": 3,
@@ -4173,6 +4494,7 @@
     "yield_pct": 94
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00322",
     "lead_time_days": 3,
@@ -4186,6 +4508,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00323",
     "lead_time_days": 3,
@@ -4199,6 +4522,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 1,
     "item_id": "ITM-00324",
     "lead_time_days": 10,
@@ -4212,6 +4536,7 @@
     "yield_pct": 95
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00325",
     "lead_time_days": 2,
@@ -4225,6 +4550,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00326",
     "lead_time_days": 8,
@@ -4238,6 +4564,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 1,
     "item_id": "ITM-00327",
     "lead_time_days": 2,
@@ -4251,6 +4578,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00328",
     "lead_time_days": 14,
@@ -4264,6 +4592,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 4,
     "item_id": "ITM-00329",
     "lead_time_days": 10,
@@ -4277,6 +4606,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 9,
     "item_id": "ITM-00330",
     "lead_time_days": 8,
@@ -4290,6 +4620,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00331",
     "lead_time_days": 2,
@@ -4303,6 +4634,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00332",
     "lead_time_days": 2,
@@ -4316,6 +4648,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00333",
     "lead_time_days": 1,
@@ -4329,6 +4662,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00334",
     "lead_time_days": 3,
@@ -4342,6 +4676,7 @@
     "yield_pct": 88
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00335",
     "lead_time_days": 5,
@@ -4355,6 +4690,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 3,
     "item_id": "ITM-00336",
     "lead_time_days": 3,
@@ -4368,6 +4704,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00337",
     "lead_time_days": 5,
@@ -4381,6 +4718,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00338",
     "lead_time_days": 5,
@@ -4394,6 +4732,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 3,
     "item_id": "ITM-00339",
     "lead_time_days": 8,
@@ -4407,6 +4746,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00340",
     "lead_time_days": 14,
@@ -4420,6 +4760,7 @@
     "yield_pct": 98
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 8,
     "item_id": "ITM-00341",
     "lead_time_days": 14,
@@ -4433,6 +4774,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00342",
     "lead_time_days": 3,
@@ -4446,6 +4788,7 @@
     "yield_pct": 87
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00343",
     "lead_time_days": 5,
@@ -4459,6 +4802,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00344",
     "lead_time_days": 2,
@@ -4472,6 +4816,7 @@
     "yield_pct": 94
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 8,
     "item_id": "ITM-00345",
     "lead_time_days": 5,
@@ -4485,6 +4830,7 @@
     "yield_pct": 94
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00346",
     "lead_time_days": 10,
@@ -4498,6 +4844,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00347",
     "lead_time_days": 5,
@@ -4511,6 +4858,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00348",
     "lead_time_days": 10,
@@ -4524,6 +4872,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00349",
     "lead_time_days": 2,
@@ -4537,6 +4886,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00350",
     "lead_time_days": 1,
@@ -4550,6 +4900,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 3,
     "item_id": "ITM-00351",
     "lead_time_days": 10,
@@ -4563,6 +4914,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00352",
     "lead_time_days": 5,
@@ -4576,6 +4928,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 3,
     "item_id": "ITM-00353",
     "lead_time_days": 10,
@@ -4589,6 +4942,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 7,
     "item_id": "ITM-00354",
     "lead_time_days": 3,
@@ -4602,6 +4956,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00355",
     "lead_time_days": 8,
@@ -4615,6 +4970,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 1,
     "item_id": "ITM-00356",
     "lead_time_days": 2,
@@ -4628,6 +4984,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 4,
     "item_id": "ITM-00357",
     "lead_time_days": 14,
@@ -4641,6 +4998,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00358",
     "lead_time_days": 2,
@@ -4654,6 +5012,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00359",
     "lead_time_days": 8,
@@ -4667,6 +5026,7 @@
     "yield_pct": 94
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 4,
     "item_id": "ITM-00360",
     "lead_time_days": 10,
@@ -4680,6 +5040,7 @@
     "yield_pct": 89
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00361",
     "lead_time_days": 5,
@@ -4693,6 +5054,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00362",
     "lead_time_days": 2,
@@ -4706,6 +5068,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00363",
     "lead_time_days": 10,
@@ -4719,6 +5082,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00364",
     "lead_time_days": 14,
@@ -4732,6 +5096,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 1,
     "item_id": "ITM-00365",
     "lead_time_days": 5,
@@ -4745,6 +5110,7 @@
     "yield_pct": 93
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00366",
     "lead_time_days": 8,
@@ -4758,6 +5124,7 @@
     "yield_pct": 97
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00367",
     "lead_time_days": 10,
@@ -4771,6 +5138,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00368",
     "lead_time_days": 5,
@@ -4784,6 +5152,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00369",
     "lead_time_days": 8,
@@ -4797,6 +5166,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00370",
     "lead_time_days": 1,
@@ -4810,6 +5180,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 2,
     "item_id": "ITM-00371",
     "lead_time_days": 3,
@@ -4823,6 +5194,7 @@
     "yield_pct": 93
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00372",
     "lead_time_days": 14,
@@ -4836,6 +5208,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00373",
     "lead_time_days": 10,
@@ -4849,6 +5222,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 9,
     "item_id": "ITM-00374",
     "lead_time_days": 14,
@@ -4862,6 +5236,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00375",
     "lead_time_days": 3,
@@ -4875,6 +5250,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00376",
     "lead_time_days": 10,
@@ -4888,6 +5264,7 @@
     "yield_pct": 93
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00377",
     "lead_time_days": 1,
@@ -4901,6 +5278,7 @@
     "yield_pct": 84
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 10,
     "item_id": "ITM-00378",
     "lead_time_days": 8,
@@ -4914,6 +5292,7 @@
     "yield_pct": 88
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00379",
     "lead_time_days": 1,
@@ -4927,6 +5306,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00380",
     "lead_time_days": 1,
@@ -4940,6 +5320,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00381",
     "lead_time_days": 14,
@@ -4953,6 +5334,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00382",
     "lead_time_days": 1,
@@ -4966,6 +5348,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00383",
     "lead_time_days": 10,
@@ -4979,6 +5362,7 @@
     "yield_pct": 88
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 2,
     "item_id": "ITM-00384",
     "lead_time_days": 8,
@@ -4992,6 +5376,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00385",
     "lead_time_days": 3,
@@ -5005,6 +5390,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 8,
     "item_id": "ITM-00386",
     "lead_time_days": 10,
@@ -5018,6 +5404,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 2,
     "item_id": "ITM-00387",
     "lead_time_days": 10,
@@ -5031,6 +5418,7 @@
     "yield_pct": 84
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00388",
     "lead_time_days": 8,
@@ -5044,6 +5432,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 2,
     "item_id": "ITM-00389",
     "lead_time_days": 8,
@@ -5057,6 +5446,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 10,
     "item_id": "ITM-00390",
     "lead_time_days": 10,
@@ -5070,6 +5460,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 10,
     "item_id": "ITM-00391",
     "lead_time_days": 14,
@@ -5083,6 +5474,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00392",
     "lead_time_days": 5,
@@ -5096,6 +5488,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00393",
     "lead_time_days": 5,
@@ -5109,6 +5502,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00394",
     "lead_time_days": 14,
@@ -5122,6 +5516,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 6,
     "item_id": "ITM-00395",
     "lead_time_days": 14,
@@ -5135,6 +5530,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00396",
     "lead_time_days": 8,
@@ -5148,6 +5544,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00397",
     "lead_time_days": 8,
@@ -5161,6 +5558,7 @@
     "yield_pct": 98
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00398",
     "lead_time_days": 2,
@@ -5174,6 +5572,7 @@
     "yield_pct": 86
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00399",
     "lead_time_days": 8,
@@ -5187,6 +5586,7 @@
     "yield_pct": 86
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00400",
     "lead_time_days": 5,
@@ -5200,6 +5600,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 7,
     "item_id": "ITM-00401",
     "lead_time_days": 14,
@@ -5213,6 +5614,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00402",
     "lead_time_days": 10,
@@ -5226,6 +5628,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 5,
     "item_id": "ITM-00403",
     "lead_time_days": 2,
@@ -5239,6 +5642,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00404",
     "lead_time_days": 3,
@@ -5252,6 +5656,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00405",
     "lead_time_days": 3,
@@ -5265,6 +5670,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00406",
     "lead_time_days": 14,
@@ -5278,6 +5684,7 @@
     "yield_pct": 86
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00407",
     "lead_time_days": 3,
@@ -5291,6 +5698,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00408",
     "lead_time_days": 10,
@@ -5304,6 +5712,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 6,
     "item_id": "ITM-00409",
     "lead_time_days": 3,
@@ -5317,6 +5726,7 @@
     "yield_pct": 93
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 2,
     "item_id": "ITM-00410",
     "lead_time_days": 2,
@@ -5330,6 +5740,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00411",
     "lead_time_days": 1,
@@ -5343,6 +5754,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 9,
     "item_id": "ITM-00412",
     "lead_time_days": 14,
@@ -5356,6 +5768,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00413",
     "lead_time_days": 5,
@@ -5369,6 +5782,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 5,
     "item_id": "ITM-00414",
     "lead_time_days": 2,
@@ -5382,6 +5796,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 9,
     "item_id": "ITM-00415",
     "lead_time_days": 5,
@@ -5395,6 +5810,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00416",
     "lead_time_days": 8,
@@ -5408,6 +5824,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00417",
     "lead_time_days": 1,
@@ -5421,6 +5838,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00418",
     "lead_time_days": 14,
@@ -5434,6 +5852,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00419",
     "lead_time_days": 8,
@@ -5447,6 +5866,7 @@
     "yield_pct": 98
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00420",
     "lead_time_days": 8,
@@ -5460,6 +5880,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00421",
     "lead_time_days": 3,
@@ -5473,6 +5894,7 @@
     "yield_pct": 91
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 3,
     "item_id": "ITM-00422",
     "lead_time_days": 2,
@@ -5486,6 +5908,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00423",
     "lead_time_days": 8,
@@ -5499,6 +5922,7 @@
     "yield_pct": 91
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00424",
     "lead_time_days": 28,
@@ -5512,6 +5936,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00425",
     "lead_time_days": 14,
@@ -5525,6 +5950,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00426",
     "lead_time_days": 8,
@@ -5538,6 +5964,7 @@
     "yield_pct": 93
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00427",
     "lead_time_days": 8,
@@ -5551,6 +5978,7 @@
     "yield_pct": 93
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00428",
     "lead_time_days": 2,
@@ -5564,6 +5992,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00429",
     "lead_time_days": 26,
@@ -5577,6 +6006,7 @@
     "yield_pct": 98
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00430",
     "lead_time_days": 5,
@@ -5590,6 +6020,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00431",
     "lead_time_days": 3,
@@ -5603,6 +6034,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00432",
     "lead_time_days": 10,
@@ -5616,6 +6048,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 3,
     "item_id": "ITM-00433",
     "lead_time_days": 10,
@@ -5629,6 +6062,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00434",
     "lead_time_days": 3,
@@ -5642,6 +6076,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00435",
     "lead_time_days": 5,
@@ -5655,6 +6090,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00436",
     "lead_time_days": 2,
@@ -5668,6 +6104,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 7,
     "item_id": "ITM-00437",
     "lead_time_days": 2,
@@ -5681,6 +6118,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 7,
     "item_id": "ITM-00438",
     "lead_time_days": 14,
@@ -5694,6 +6132,7 @@
     "yield_pct": 94
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00439",
     "lead_time_days": 14,
@@ -5707,6 +6146,7 @@
     "yield_pct": 91
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 6,
     "item_id": "ITM-00440",
     "lead_time_days": 5,
@@ -5720,6 +6160,7 @@
     "yield_pct": 98
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00441",
     "lead_time_days": 8,
@@ -5733,6 +6174,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00442",
     "lead_time_days": 14,
@@ -5746,6 +6188,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00443",
     "lead_time_days": 5,
@@ -5759,6 +6202,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00444",
     "lead_time_days": 3,
@@ -5772,6 +6216,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00445",
     "lead_time_days": 5,
@@ -5785,6 +6230,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 3,
     "item_id": "ITM-00446",
     "lead_time_days": 1,
@@ -5798,6 +6244,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00447",
     "lead_time_days": 10,
@@ -5811,6 +6258,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00448",
     "lead_time_days": 2,
@@ -5824,6 +6272,7 @@
     "yield_pct": 82
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00449",
     "lead_time_days": 8,
@@ -5837,6 +6286,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 4,
     "item_id": "ITM-00450",
     "lead_time_days": 2,
@@ -5850,6 +6300,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00451",
     "lead_time_days": 35,
@@ -5863,6 +6314,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00452",
     "lead_time_days": 8,
@@ -5876,6 +6328,7 @@
     "yield_pct": 91
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00453",
     "lead_time_days": 32,
@@ -5889,6 +6342,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 1,
     "item_id": "ITM-00454",
     "lead_time_days": 5,
@@ -5902,6 +6356,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00455",
     "lead_time_days": 8,
@@ -5915,6 +6370,7 @@
     "yield_pct": 84
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 8,
     "item_id": "ITM-00456",
     "lead_time_days": 3,
@@ -5928,6 +6384,7 @@
     "yield_pct": 84
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 8,
     "item_id": "ITM-00457",
     "lead_time_days": 3,
@@ -5941,6 +6398,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00458",
     "lead_time_days": 10,
@@ -5954,6 +6412,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 6,
     "item_id": "ITM-00459",
     "lead_time_days": 10,
@@ -5967,6 +6426,7 @@
     "yield_pct": 94
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 7,
     "item_id": "ITM-00460",
     "lead_time_days": 3,
@@ -5980,6 +6440,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00461",
     "lead_time_days": 14,
@@ -5993,6 +6454,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00462",
     "lead_time_days": 1,
@@ -6006,6 +6468,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00463",
     "lead_time_days": 2,
@@ -6019,6 +6482,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00464",
     "lead_time_days": 5,
@@ -6032,6 +6496,7 @@
     "yield_pct": 91
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00465",
     "lead_time_days": 3,
@@ -6045,6 +6510,7 @@
     "yield_pct": 84
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00466",
     "lead_time_days": 8,
@@ -6058,6 +6524,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00467",
     "lead_time_days": 10,
@@ -6071,6 +6538,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00468",
     "lead_time_days": 14,
@@ -6084,6 +6552,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00469",
     "lead_time_days": 2,
@@ -6097,6 +6566,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00470",
     "lead_time_days": 8,
@@ -6110,6 +6580,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 4,
     "item_id": "ITM-00471",
     "lead_time_days": 2,
@@ -6123,6 +6594,7 @@
     "yield_pct": 86
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00472",
     "lead_time_days": 8,
@@ -6136,6 +6608,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 9,
     "item_id": "ITM-00473",
     "lead_time_days": 1,
@@ -6149,6 +6622,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00474",
     "lead_time_days": 14,
@@ -6162,6 +6636,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00475",
     "lead_time_days": 2,
@@ -6175,6 +6650,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00476",
     "lead_time_days": 2,
@@ -6188,6 +6664,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00477",
     "lead_time_days": 2,
@@ -6201,6 +6678,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 7,
     "item_id": "ITM-00478",
     "lead_time_days": 10,
@@ -6214,6 +6692,7 @@
     "yield_pct": 86
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00479",
     "lead_time_days": 3,
@@ -6227,6 +6706,7 @@
     "yield_pct": 82
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00480",
     "lead_time_days": 3,
@@ -6240,6 +6720,7 @@
     "yield_pct": 91
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00481",
     "lead_time_days": 14,
@@ -6253,6 +6734,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00482",
     "lead_time_days": 37,
@@ -6266,6 +6748,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00483",
     "lead_time_days": 1,
@@ -6279,6 +6762,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 4,
     "item_id": "ITM-00484",
     "lead_time_days": 10,
@@ -6292,6 +6776,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00485",
     "lead_time_days": 1,
@@ -6305,6 +6790,7 @@
     "yield_pct": 84
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00486",
     "lead_time_days": 5,
@@ -6318,6 +6804,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00487",
     "lead_time_days": 10,
@@ -6331,6 +6818,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00488",
     "lead_time_days": 1,
@@ -6344,6 +6832,7 @@
     "yield_pct": 84
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00489",
     "lead_time_days": 14,
@@ -6357,6 +6846,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00490",
     "lead_time_days": 8,
@@ -6370,6 +6860,7 @@
     "yield_pct": 97
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00491",
     "lead_time_days": 14,
@@ -6383,6 +6874,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00492",
     "lead_time_days": 14,
@@ -6396,6 +6888,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00493",
     "lead_time_days": 3,
@@ -6409,6 +6902,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00494",
     "lead_time_days": 24,
@@ -6422,6 +6916,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 3,
     "item_id": "ITM-00495",
     "lead_time_days": 1,
@@ -6435,6 +6930,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00496",
     "lead_time_days": 2,
@@ -6448,6 +6944,7 @@
     "yield_pct": 82
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 5,
     "item_id": "ITM-00497",
     "lead_time_days": 2,
@@ -6461,6 +6958,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00498",
     "lead_time_days": 8,
@@ -6474,6 +6972,7 @@
     "yield_pct": 94
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00499",
     "lead_time_days": 25,
@@ -6487,6 +6986,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00500",
     "lead_time_days": 8,
@@ -6500,6 +7000,7 @@
     "yield_pct": 97
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00501",
     "lead_time_days": 14,
@@ -6513,6 +7014,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00502",
     "lead_time_days": 2,
@@ -6526,6 +7028,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00503",
     "lead_time_days": 3,
@@ -6539,6 +7042,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00504",
     "lead_time_days": 3,
@@ -6552,6 +7056,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 8,
     "item_id": "ITM-00505",
     "lead_time_days": 14,
@@ -6565,6 +7070,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00506",
     "lead_time_days": 1,
@@ -6578,6 +7084,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00507",
     "lead_time_days": 5,
@@ -6591,6 +7098,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00508",
     "lead_time_days": 3,
@@ -6604,6 +7112,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00509",
     "lead_time_days": 8,
@@ -6617,6 +7126,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00510",
     "lead_time_days": 10,
@@ -6630,6 +7140,7 @@
     "yield_pct": 97
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 5,
     "item_id": "ITM-00511",
     "lead_time_days": 1,
@@ -6643,6 +7154,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00512",
     "lead_time_days": 30,
@@ -6656,6 +7168,7 @@
     "yield_pct": 88
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 10,
     "item_id": "ITM-00513",
     "lead_time_days": 10,
@@ -6669,6 +7182,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00514",
     "lead_time_days": 10,
@@ -6682,6 +7196,7 @@
     "yield_pct": 91
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 9,
     "item_id": "ITM-00515",
     "lead_time_days": 8,
@@ -6695,6 +7210,7 @@
     "yield_pct": 98
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00516",
     "lead_time_days": 5,
@@ -6708,6 +7224,7 @@
     "yield_pct": 91
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00517",
     "lead_time_days": 14,
@@ -6721,6 +7238,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00518",
     "lead_time_days": 8,
@@ -6734,6 +7252,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00519",
     "lead_time_days": 5,
@@ -6747,6 +7266,7 @@
     "yield_pct": 96
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00520",
     "lead_time_days": 8,
@@ -6760,6 +7280,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00521",
     "lead_time_days": 3,
@@ -6773,6 +7294,7 @@
     "yield_pct": 94
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 5,
     "item_id": "ITM-00522",
     "lead_time_days": 5,
@@ -6786,6 +7308,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00523",
     "lead_time_days": 3,
@@ -6799,6 +7322,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00524",
     "lead_time_days": 5,
@@ -6812,6 +7336,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00525",
     "lead_time_days": 1,
@@ -6825,6 +7350,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00526",
     "lead_time_days": 2,
@@ -6838,6 +7364,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00527",
     "lead_time_days": 8,
@@ -6851,6 +7378,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00528",
     "lead_time_days": 1,
@@ -6864,6 +7392,7 @@
     "yield_pct": 82
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00529",
     "lead_time_days": 1,
@@ -6877,6 +7406,7 @@
     "yield_pct": 84
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00530",
     "lead_time_days": 1,
@@ -6890,6 +7420,7 @@
     "yield_pct": 97
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 3,
     "item_id": "ITM-00531",
     "lead_time_days": 1,
@@ -6903,6 +7434,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 3,
     "item_id": "ITM-00532",
     "lead_time_days": 5,
@@ -6916,6 +7448,7 @@
     "yield_pct": 95
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00533",
     "lead_time_days": 5,
@@ -6929,6 +7462,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00534",
     "lead_time_days": 24,
@@ -6942,6 +7476,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00535",
     "lead_time_days": 10,
@@ -6955,6 +7490,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00536",
     "lead_time_days": 5,
@@ -6968,6 +7504,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00537",
     "lead_time_days": 2,
@@ -6981,6 +7518,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00538",
     "lead_time_days": 5,
@@ -6994,6 +7532,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00539",
     "lead_time_days": 1,
@@ -7007,6 +7546,7 @@
     "yield_pct": 93
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00540",
     "lead_time_days": 8,
@@ -7020,6 +7560,7 @@
     "yield_pct": 97
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 7,
     "item_id": "ITM-00541",
     "lead_time_days": 2,
@@ -7033,6 +7574,7 @@
     "yield_pct": 88
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 1,
     "item_id": "ITM-00542",
     "lead_time_days": 2,
@@ -7046,6 +7588,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 3,
     "item_id": "ITM-00543",
     "lead_time_days": 2,
@@ -7059,6 +7602,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00544",
     "lead_time_days": 14,
@@ -7072,6 +7616,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00545",
     "lead_time_days": 14,
@@ -7085,6 +7630,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 2,
     "item_id": "ITM-00546",
     "lead_time_days": 10,
@@ -7098,6 +7644,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00547",
     "lead_time_days": 10,
@@ -7111,6 +7658,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00548",
     "lead_time_days": 10,
@@ -7124,6 +7672,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00549",
     "lead_time_days": 5,
@@ -7137,6 +7686,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 1,
     "item_id": "ITM-00550",
     "lead_time_days": 5,
@@ -7150,6 +7700,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00551",
     "lead_time_days": 3,
@@ -7163,6 +7714,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00552",
     "lead_time_days": 5,
@@ -7176,6 +7728,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00553",
     "lead_time_days": 3,
@@ -7189,6 +7742,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00554",
     "lead_time_days": 27,
@@ -7202,6 +7756,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00555",
     "lead_time_days": 1,
@@ -7215,6 +7770,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 2,
     "item_id": "ITM-00556",
     "lead_time_days": 1,
@@ -7228,6 +7784,7 @@
     "yield_pct": 88
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00557",
     "lead_time_days": 2,
@@ -7241,6 +7798,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00558",
     "lead_time_days": 14,
@@ -7254,6 +7812,7 @@
     "yield_pct": 83
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 10,
     "item_id": "ITM-00559",
     "lead_time_days": 8,
@@ -7267,6 +7826,7 @@
     "yield_pct": 88
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00560",
     "lead_time_days": 32,
@@ -7280,6 +7840,7 @@
     "yield_pct": 86
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00561",
     "lead_time_days": 1,
@@ -7293,6 +7854,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00562",
     "lead_time_days": 2,
@@ -7306,6 +7868,7 @@
     "yield_pct": 82
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00563",
     "lead_time_days": 10,
@@ -7319,6 +7882,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00564",
     "lead_time_days": 10,
@@ -7332,6 +7896,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00565",
     "lead_time_days": 1,
@@ -7345,6 +7910,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00566",
     "lead_time_days": 3,
@@ -7358,6 +7924,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 7,
     "item_id": "ITM-00567",
     "lead_time_days": 14,
@@ -7371,6 +7938,7 @@
     "yield_pct": 89
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00568",
     "lead_time_days": 2,
@@ -7384,6 +7952,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00569",
     "lead_time_days": 40,
@@ -7397,6 +7966,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00570",
     "lead_time_days": 8,
@@ -7410,6 +7980,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00571",
     "lead_time_days": 10,
@@ -7423,6 +7994,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00572",
     "lead_time_days": 10,
@@ -7436,6 +8008,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00573",
     "lead_time_days": 10,
@@ -7449,6 +8022,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00574",
     "lead_time_days": 8,
@@ -7462,6 +8036,7 @@
     "yield_pct": 88
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00575",
     "lead_time_days": 10,
@@ -7475,6 +8050,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00576",
     "lead_time_days": 8,
@@ -7488,6 +8064,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00577",
     "lead_time_days": 2,
@@ -7501,6 +8078,7 @@
     "yield_pct": 95
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 3,
     "item_id": "ITM-00578",
     "lead_time_days": 1,
@@ -7514,6 +8092,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00579",
     "lead_time_days": 28,
@@ -7527,6 +8106,7 @@
     "yield_pct": 88
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 1,
     "item_id": "ITM-00580",
     "lead_time_days": 5,
@@ -7540,6 +8120,7 @@
     "yield_pct": 85
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00581",
     "lead_time_days": 25,
@@ -7553,6 +8134,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00582",
     "lead_time_days": 3,
@@ -7566,6 +8148,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00583",
     "lead_time_days": 14,
@@ -7579,6 +8162,7 @@
     "yield_pct": 98
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 1,
     "item_id": "ITM-00584",
     "lead_time_days": 1,
@@ -7592,6 +8176,7 @@
     "yield_pct": 90
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00585",
     "lead_time_days": 8,
@@ -7605,6 +8190,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00586",
     "lead_time_days": 2,
@@ -7618,6 +8204,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00587",
     "lead_time_days": 25,
@@ -7631,6 +8218,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 2,
     "item_id": "ITM-00588",
     "lead_time_days": 2,
@@ -7644,6 +8232,7 @@
     "yield_pct": 89
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00589",
     "lead_time_days": 28,
@@ -7657,6 +8246,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00590",
     "lead_time_days": 3,
@@ -7670,6 +8260,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00591",
     "lead_time_days": 14,
@@ -7683,6 +8274,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 0,
     "item_id": "ITM-00592",
     "lead_time_days": 1,
@@ -7696,6 +8288,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00593",
     "lead_time_days": 3,
@@ -7709,6 +8302,7 @@
     "yield_pct": 86
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00594",
     "lead_time_days": 3,
@@ -7722,6 +8316,7 @@
     "yield_pct": 92
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 7,
     "item_id": "ITM-00595",
     "lead_time_days": 1,
@@ -7735,6 +8330,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00596",
     "lead_time_days": 1,
@@ -7748,6 +8344,7 @@
     "yield_pct": 87
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00597",
     "lead_time_days": 2,
@@ -7761,6 +8358,7 @@
     "yield_pct": 99
   },
   {
+    "family": "FAM-B",
     "firm_fence_days": 7,
     "item_id": "ITM-00598",
     "lead_time_days": 2,
@@ -7774,6 +8372,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-C",
     "firm_fence_days": 0,
     "item_id": "ITM-00599",
     "lead_time_days": 14,
@@ -7787,6 +8386,7 @@
     "yield_pct": 100
   },
   {
+    "family": "FAM-A",
     "firm_fence_days": 0,
     "item_id": "ITM-00600",
     "lead_time_days": 2,
