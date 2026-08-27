@@ -52,11 +52,13 @@ the centre starts, so what an order costs the day depends on which of its neighb
 and the blocks are capacity spent rather than work done -- the set that stays is still the one whose
 RUN hours total the most, now among the sets whose runs and blocks together fit. Reading a block per
 order, or maximising the hours the day is charged instead of the hours it runs, each gives a
-different plan rather than a slightly different one. On the graded batch two hundred and eighty-five
-days are contested and taking the biggest first loads strictly fewer hours on forty-five of them, so
-a greedy loading is a worse answer and not merely another one -- and it cascades, because one day's
-choice decides what competes on the day before it. The data is synthetic and every figure is an
-integer.
+different plan rather than a slightly different one. On the graded batch three hundred and eighteen
+days are contested and taking the biggest first loads strictly fewer hours on a hundred and six of
+them, so a greedy loading is a worse answer and not merely another one -- and it cascades, because
+one day's choice decides what competes on the day before it. Nor can the day be settled by trying
+every subset: the busiest contested day offers thirty-seven candidates and a tenth of them offer
+twenty-nine or more, so enumeration is out and the settlement has to be a search over the room left
+and the families already paid for. The data is synthetic and every figure is an integer.
 '''
 solution_explanation = '''
 solution/solve.sh drives the two dependent steps inside the environment container. Step one runs

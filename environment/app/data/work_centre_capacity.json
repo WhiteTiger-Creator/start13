@@ -2,25 +2,25 @@
   "note": "hours a centre can start in one working day; amendments live in the governance log",
   "work_centres": [
     {
-      "daily_hours": 40,
+      "daily_hours": 120,
       "max_pull_days": 3,
       "setup_hours": 4,
       "work_centre": "WC-1"
     },
     {
-      "daily_hours": 72,
+      "daily_hours": 216,
       "max_pull_days": 3,
       "setup_hours": 6,
       "work_centre": "WC-2"
     },
     {
-      "daily_hours": 48,
+      "daily_hours": 144,
       "max_pull_days": 2,
       "setup_hours": 5,
       "work_centre": "WC-3"
     },
     {
-      "daily_hours": 36,
+      "daily_hours": 108,
       "max_pull_days": 2,
       "setup_hours": 3,
       "work_centre": "WC-4"
