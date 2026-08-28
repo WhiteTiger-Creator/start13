@@ -1,8 +1,4 @@
-"""Shared machinery for the MRP requirements-planning verifier.
-
-Paths, fixture loading, the unprivileged runner, the Go import reader and the
-crafted-world helpers live here so test_outputs.py carries assertions alone.
-"""
+"""Shared machinery for the MRP requirements-planning verifier."""
 
 from __future__ import annotations
 
@@ -78,7 +74,15 @@ def _load_json(path):
 
 
 def _load_jsonl(path):
-    return [json.loads(x) for x in Path(path).read_text(encoding="utf-8").splitlines() if x.strip()]
+    """Read a contracted JSONL artifact, taking every line as written."""
+    text = Path(path).read_text(encoding="utf-8")
+    if not text:
+        return []
+    assert text.endswith("\n"), f"{Path(path).name} has no trailing newline"
+    lines = text.split("\n")[:-1]
+    for number, line in enumerate(lines, start=1):
+        assert line.strip(), f"{Path(path).name} line {number} is blank"
+    return [json.loads(line) for line in lines]
 
 
 def _write_json(path, value):
@@ -86,12 +90,7 @@ def _write_json(path, value):
 
 
 def _build(script_path: Path) -> str:
-    """Compile the submitted single-file planner, cached per source path.
-
-    Compilation runs as root: it is the trusted verifier's own action. The source
-    is copied to a temp dir as main.go first so the frozen snapshot and any
-    sibling files in /app/workflow never join the build.
-    """
+    """Compile the submitted single-file planner, cached per source path."""
     key = str(script_path)
     if key in _BIN_CACHE:
         return _BIN_CACHE[key]
@@ -112,19 +111,15 @@ def _build(script_path: Path) -> str:
 
 
 def _candidate_dir() -> Path:
-    d = _CWORK / f"run-{next(_run_ctr)}"
-    d.mkdir(parents=True, exist_ok=True)
+    """A fresh work area for one run, created where nothing can pre-empt it."""
+    d = Path(tempfile.mkdtemp(prefix=f"run-{next(_run_ctr)}-", dir=str(_CWORK)))
+    assert not d.is_symlink(), d
     os.chmod(d, 0o777)
     return d
 
 
 def _publish_inputs() -> None:
-    """Open read access on the agent-produced inputs before privileges drop.
-
-    Never follows a link out of the agent-owned tree: os.chmod resolves symlinks,
-    so a link planted at /app/... -> /tests would otherwise open the sealed
-    fixtures to the unprivileged candidate.
-    """
+    """Open read access on the agent-produced inputs before privileges drop."""
     app_root = APP.resolve()
     for path in sorted(APP.rglob("*")):
         if path.is_symlink():
@@ -141,13 +136,7 @@ def _publish_inputs() -> None:
 
 
 def _reap_group(pgid: int) -> None:
-    """Kill and reap everything left in the candidate's process group.
-
-    start_new_session makes the candidate a session and group leader, so its pgid
-    equals its pid and every process it spawns shares that group. The id is
-    captured before the run: once the direct child has been waited on, its pgid
-    can no longer be looked up, and a leaked grandchild would survive.
-    """
+    """Kill and reap everything left in the candidate's process group."""
     try:
         os.killpg(pgid, signal.SIGKILL)
     except (ProcessLookupError, PermissionError, OSError):
@@ -162,13 +151,7 @@ def _reap_group(pgid: int) -> None:
 
 
 def _run_agent(argv, cwd: Path):
-    """Run the submitted program unprivileged and in its own process group.
-
-    Output is captured to temporary files rather than pipes: a grandchild the run
-    double-forks inherits the write end of a pipe and can hold it open long after
-    its parent exits, which would stall the read instead of ending the run at the
-    budget.
-    """
+    """Run the submitted program unprivileged and in its own process group."""
     with tempfile.TemporaryFile("w+", encoding="utf-8", errors="replace") as out, \
             tempfile.TemporaryFile("w+", encoding="utf-8", errors="replace") as err:
         proc = subprocess.Popen(

@@ -103,7 +103,8 @@
         "capacity_exceeded_count",
         "loaded_work_centre_day_count"
       ],
-      "serialisation": "JSON object, two-space indent, trailing newline"
+      "serialisation": "JSON object, two-space indent, trailing newline",
+      "schema_version_value": "mrp-plan-v1"
     }
   },
   "reconciled_inputs": {

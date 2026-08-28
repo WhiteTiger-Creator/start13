@@ -1,8 +1,4 @@
-"""Verifier tests for the MRP requirements-planning task.
-
-Every test below corresponds to something instruction.md states is graded.
-Shared machinery lives in harness.py.
-"""
+"""Verifier tests for the MRP requirements-planning task."""
 
 # harness.py sets __all__ explicitly, so the underscored helpers come across too.
 from harness import *  # noqa: F401,F403
@@ -26,11 +22,7 @@ _GO_IDENT = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_
 
 
 def _go_strings(source: str) -> list[str]:
-    """Interpreted string literals in a Go file, skipping comments and raw strings.
-
-    A raw substring scan over the whole source would reject a correct planner
-    that merely names one of these in a comment.
-    """
+    """Interpreted string literals in a Go file, skipping comments and raw strings."""
     out: list[str] = []
     i, n = 0, len(source)
     while i < n:
@@ -63,12 +55,7 @@ def _go_strings(source: str) -> list[str]:
     return out
 
 def _go_imports(source: str) -> list[str]:
-    """Import paths declared by a Go file, read from its import declarations.
-
-    The scan tracks string, raw-string, rune and comment state, so a filename
-    literal in the body -- "summary.json" handed to filepath.Join -- is never
-    mistaken for an import path. Only `import` declarations are consulted.
-    """
+    """Import paths declared by a Go file, read from its import declarations."""
     out: list[str] = []
     i, n = 0, len(source)
 
@@ -181,12 +168,7 @@ def test_positions_were_recovered():
 
 
 def test_shipped_and_naive_recoveries_differ_from_the_governed_one():
-    """The truncated file and three plausible misreadings all differ from the answer.
-
-    Concatenating the sources, replaying first-seen instead of by sequence, and
-    treating a retraction as reversible each produce a different position set, so
-    matching the sealed digest is evidence the governed rule was applied.
-    """
+    """The truncated file and three plausible misreadings all differ from the answer."""
     expected = FIXTURE["recovered_positions_digest"]
     assert FIXTURE["shipped_truncated_digest"] != expected
 
@@ -220,11 +202,7 @@ def test_shipped_and_naive_recoveries_differ_from_the_governed_one():
 # The replay itself, run over snapshots and journals the submission never saw
 # --------------------------------------------------------------------------
 def _governed_replay(snapshot: list, journal: list) -> list:
-    """#MRP-4170 and #MRP-4174, written here independently of the submission.
-
-    Used as the expected answer for worlds the sealed digests say nothing about,
-    so the replay is graded as behaviour rather than as one delivered file.
-    """
+    """#MRP-4170 and #MRP-4174, written here independently of the submission."""
     live = {}
     for row in snapshot:
         record = json.loads(json.dumps(row))
@@ -300,15 +278,7 @@ def test_the_replay_is_a_program_at_the_documented_path():
 
 
 def test_the_replay_runs_over_a_snapshot_and_journal_it_has_never_seen():
-    """The submitted replay is executed over a world the fixtures do not cover.
-
-    The graded positions file is one answer, and a delivered file can be right
-    about it for the wrong reasons. This derives a different world from the
-    operational sources -- a third of the items, half the movements, and a tail
-    that retracts, re-adjusts a retracted item, adds and cancels receipts and
-    names an item the snapshot never carried -- and requires the submission's own
-    program to reproduce the governed answer on it.
-    """
+    """The submitted replay is executed over a world the fixtures do not cover."""
     snapshot = [dict(row, on_hand=row["on_hand"] + 7) for row in _load_json(SNAPSHOT_PATH)[::3]]
     journal = [m for m in _load_json(JOURNAL_PATH) if m["seq"] % 2 == 0]
     top = max(m["seq"] for m in journal) + 1
@@ -399,13 +369,7 @@ def test_the_replay_sorts_its_result_and_drops_the_journals_bookkeeping():
 
 
 def test_the_replay_defaults_to_the_operational_paths():
-    """With no options at all it reads the shipped sources and writes the positions.
-
-    Every other run here points the program at a world of the verifier's making,
-    which exercises the three options but never their defaults. This one grades
-    the documented default run against the governed answer for the real snapshot
-    and journal, and puts the positions file back afterwards.
-    """
+    """With no options at all it reads the shipped sources and writes the positions."""
     binary = _build(RECOVERY_PATH)
     _publish_inputs()
     saved = POSITIONS_PATH.read_text(encoding="utf-8")
@@ -504,12 +468,7 @@ def test_exception_schema_and_sorting(primary_outputs):
 
 
 def test_rows_that_tie_on_the_first_three_keys_are_separated_by_the_rest(primary_outputs):
-    """The graded queue really does contain rows the old three-key sort left tied.
-
-    Seven pairs share release_day, item_id and receipt_day -- an order reported
-    both inside_fence and capacity_exceeded on the same day. Without this the
-    total-order requirement would be untested on data that never exercises it.
-    """
+    """The graded queue really does contain rows the old three-key sort left tied."""
     _, _, _, exceptions = primary_outputs
     from collections import Counter
     three = Counter(
@@ -524,13 +483,7 @@ def test_rows_that_tie_on_the_first_three_keys_are_separated_by_the_rest(primary
 
 
 def test_artifacts_use_the_serialisation_the_contract_states(primary_outputs):
-    """The three files are written the way the contract spells them out.
-
-    Every other comparison goes through a digest that is deliberately insensitive
-    to free whitespace, so a run emitting one long unindented line would satisfy
-    them all. This reads the bytes: two-space indent and a trailing newline for
-    the two JSON documents, one compact object per line for the queue.
-    """
+    """The three files are written the way the contract spells them out."""
     out_dir, summary, plan, exceptions = primary_outputs
     for name, value in (("summary.json", summary), ("item_plan.json", plan)):
         raw = (out_dir / name).read_text(encoding="utf-8")
@@ -547,13 +500,7 @@ def test_artifacts_use_the_serialisation_the_contract_states(primary_outputs):
 
 
 def test_the_rebuilt_positions_use_the_serialisation_the_contract_states():
-    """The recovered positions file is graded on its bytes too, not only its content.
-
-    reconciled_inputs.inventory_positions in the contract spells the file out as
-    a two-space-indented JSON array with a trailing newline, and every other
-    check on it goes through the whitespace-insensitive digest, which a single
-    unindented line would satisfy just as well.
-    """
+    """The recovered positions file is graded on its bytes too, not only its content."""
     raw = POSITIONS_PATH.read_text(encoding="utf-8")
     assert raw.endswith("\n") and not raw.endswith("\n\n"), "no trailing newline"
     assert raw == json.dumps(json.loads(raw), indent=2) + "\n", (
@@ -714,11 +661,7 @@ def _probe(world_extra, item_id=None):
 
 
 def test_low_level_code_is_the_deepest_level_not_the_first():
-    """ITM-B is reached at level 1 through ITM-A and again at level 2 through ITM-C.
-
-    The governed code is the deeper of the two; the reversed draft would stop at
-    the first level the explosion reaches it on.
-    """
+    """ITM-B is reached at level 1 through ITM-A and again at level 2 through ITM-C."""
     row = _probe({
         "item_master.json": [_item("ITM-A"), _item("ITM-B"), _item("ITM-C")],
         "bill_of_materials.json": [
@@ -730,11 +673,7 @@ def test_low_level_code_is_the_deepest_level_not_the_first():
 
 
 def test_release_day_counts_working_days_only():
-    """Lead time steps back over working days, skipping the calendar's closures.
-
-    With days 7 and 8 closed, three working days back from day 10 lands on day 5;
-    a raw calendar offset would land on day 7.
-    """
+    """Lead time steps back over working days, skipping the calendar's closures."""
     row = _probe({
         "item_master.json": [_item("ITM-A", lead_time_days=3)],
         "planning_calendar.json": {"horizon_days": 30, "non_working_days": [7, 8]},
@@ -745,13 +684,7 @@ def test_release_day_counts_working_days_only():
 
 
 def test_shortfall_is_measured_from_the_safety_stock():
-    """The order covers the buffer rather than eating into it.
-
-    Opening stock sits exactly on the safety stock of 100, so day 0 raises
-    nothing. Demand of 150 on day 1 drives the balance to -50, and the shortfall
-    is the distance back up to the buffer -- 150, not the 50 a draft measuring
-    from zero would order.
-    """
+    """The order covers the buffer rather than eating into it."""
     row = _probe({
         "item_master.json": [_item("ITM-A", safety_stock=100)],
         "inventory_positions.json": [
@@ -763,11 +696,7 @@ def test_shortfall_is_measured_from_the_safety_stock():
 
 
 def test_dependent_demand_lands_on_the_release_day():
-    """A parent's requirement reaches its component when the parent order is released.
-
-    The parent's two-day lead time puts its release on day 3, so the component is
-    required on day 3 and not on the parent's receipt day 5.
-    """
+    """A parent's requirement reaches its component when the parent order is released."""
     row = _probe({
         "item_master.json": [_item("ITM-A", lead_time_days=2), _item("ITM-B")],
         "bill_of_materials.json": [_bom("ITM-A", "ITM-B", 2)],
@@ -801,12 +730,7 @@ def test_each_lot_policy_sizes_its_own_way():
 
 
 def test_yield_over_releases_and_credits_only_the_arrival():
-    """A yield of 80 releases 125 to land the 100 the requirement needs.
-
-    The draft that treats yield as a shop-floor matter would release 100. The
-    projected balance is credited with the arriving 100, so no second order
-    follows.
-    """
+    """A yield of 80 releases 125 to land the 100 the requirement needs."""
     row = _probe({
         "item_master.json": [_item("ITM-A", yield_pct=80)],
         "independent_demand.json": [
@@ -816,12 +740,7 @@ def test_yield_over_releases_and_credits_only_the_arrival():
 
 
 def test_yield_is_applied_after_the_lot_policy_not_before():
-    """The lot sizes the arrival, then yield inflates it.
-
-    A shortfall of 90 sizes up to one 250 lot, and a yield of 80 releases 313 to
-    land it. Inflating the shortfall first would give 113, still one lot, and
-    release 250.
-    """
+    """The lot sizes the arrival, then yield inflates it."""
     row = _probe({
         "item_master.json": [
             _item("ITM-B", lot_policy="fixed_quantity", lot_size=250, yield_pct=80)],
@@ -843,11 +762,7 @@ def test_scrap_inflates_what_the_line_must_issue():
 
 
 def test_the_explosion_is_driven_by_the_released_quantity():
-    """ITM-B yields 50, so it releases 20 to land 10 -- and ITM-C is issued 20.
-
-    Components are issued for everything an order starts, so the parent's
-    released quantity drives the explosion rather than the quantity arriving.
-    """
+    """ITM-B yields 50, so it releases 20 to land 10 -- and ITM-C is issued 20."""
     row = _probe({
         "item_master.json": [_item("ITM-A"), _item("ITM-B", yield_pct=50), _item("ITM-C")],
         "bill_of_materials.json": [_bom("ITM-A", "ITM-B"), _bom("ITM-B", "ITM-C")],
@@ -859,12 +774,7 @@ def test_the_explosion_is_driven_by_the_released_quantity():
 
 
 def test_yield_and_scrap_compound_down_the_structure():
-    """Each allowance is applied once at its own level, so they multiply.
-
-    ITM-A releases 10. The A-to-B line scraps 50 per cent, so B must land 20; B
-    yields 50 per cent, so B releases 40; the B-to-C line scraps 50 per cent, so
-    C must land 80.
-    """
+    """Each allowance is applied once at its own level, so they multiply."""
     plan = _probe({
         "item_master.json": [_item("ITM-A"), _item("ITM-B", yield_pct=50), _item("ITM-C")],
         "bill_of_materials.json": [
@@ -878,12 +788,7 @@ def test_yield_and_scrap_compound_down_the_structure():
 
 
 def test_a_phantom_raises_no_order_and_passes_through_on_the_same_day():
-    """The phantom's own seven-day lead time is ignored entirely.
-
-    ITM-A releases on day 3, so the phantom's requirement arises on day 3 and
-    reaches ITM-B on day 3. A draft planning the phantom normally would offset
-    its lead time to day -4, off the horizon, and ITM-B would be ordered nothing.
-    """
+    """The phantom's own seven-day lead time is ignored entirely."""
     plan = _probe({
         "item_master.json": [
             _item("ITM-A", lead_time_days=2),
@@ -928,11 +833,7 @@ def test_a_phantom_still_inflates_the_pass_through_for_its_own_yield():
 
 
 def test_component_effectivity_is_judged_on_the_release_day():
-    """The parent releases on day 7, so the line effective through day 8 applies.
-
-    The interim keyed on the receipt day would reach day 10 and pick ITM-C
-    instead.
-    """
+    """The parent releases on day 7, so the line effective through day 8 applies."""
     plan = _probe({
         "item_master.json": [
             _item("ITM-A", lead_time_days=3), _item("ITM-B"), _item("ITM-C")],
@@ -961,11 +862,7 @@ def test_a_component_with_no_effective_line_takes_no_demand():
 
 
 def test_a_release_inside_the_firm_fence_is_pushed_out_to_it():
-    """A ten-day lead on a day-2 requirement releases at -8; the fence holds it to day 5.
-
-    The receipt day does not move, so the order stands knowingly late. The draft
-    that treats the fence as advisory would leave the release at -8.
-    """
+    """A ten-day lead on a day-2 requirement releases at -8; the fence holds it to day 5."""
     summary, by_id, exceptions = _probe_full({
         "item_master.json": [_item("ITM-A", lead_time_days=10, firm_fence_days=5)],
         "independent_demand.json": [
@@ -989,11 +886,7 @@ def test_the_fence_day_counts_working_days_too():
 
 
 def test_a_pushed_order_is_not_also_reported_past_due():
-    """The fence supersedes the past-due report for the same order.
-
-    At a quantity of 100 the draft would report this release of -8 as
-    past_due_release; the governed rule reports it once, as inside_fence.
-    """
+    """The fence supersedes the past-due report for the same order."""
     _, _, exceptions = _probe_full({
         "item_master.json": [_item("ITM-A", lead_time_days=10, firm_fence_days=5)],
         "independent_demand.json": [
@@ -1016,11 +909,7 @@ def test_an_item_without_a_fence_still_releases_past_due():
 
 
 def test_the_fence_moves_which_component_line_is_effective():
-    """Pushing the release across a cutover changes the part that is issued.
-
-    The unfenced release lands on day -8 and no line reaches it, so nothing is
-    issued. The fence pushes it to day 5, where the ITM-B line is effective.
-    """
+    """Pushing the release across a cutover changes the part that is issued."""
     plan_no_fence = _probe({
         "item_master.json": [
             _item("ITM-A", lead_time_days=10, firm_fence_days=0), _item("ITM-B")],
@@ -1050,12 +939,7 @@ CAPACITY_PATH = DATA / "work_centre_capacity.json"
 
 
 def _capacity(**rows):
-    """A capacity file naming one row per centre.
-
-    A row is (daily_hours, max_pull_days) or (daily_hours, max_pull_days,
-    setup_hours); a centre given no changeover block pays none, which is the
-    #MRP-4256 day the other probes are written against.
-    """
+    """A capacity file naming one row per centre."""
     return {"work_centres": [
         {"work_centre": name, "daily_hours": row[0], "max_pull_days": row[1],
          "setup_hours": row[2] if len(row) > 2 else 0}
@@ -1063,13 +947,7 @@ def _capacity(**rows):
 
 
 def _best_run(cands: list, setup: int, start: int, room: int, paid: frozenset) -> int:
-    """The largest RUN total reachable from cands[start:] inside the room left.
-
-    #MRP-4260: a family costs its centre one changeover block a day however many
-    of its orders start, so what an order costs depends on which of its
-    neighbours stay. Blocks are capacity spent, not work done, so they are
-    charged against the room and never counted into the total being maximised.
-    """
+    """The largest RUN total reachable from cands[start:] inside the room left."""
     if start >= len(cands) or room <= 0:
         return 0
     key = (start, room, paid)
@@ -1098,13 +976,7 @@ def _best_fitting(hours: list, room: int) -> int:
 
 
 def _governed_loading(orders: list, items: dict, centres: dict, non_working: set) -> dict:
-    """#MRP-4256, worked out here independently of the submission.
-
-    Returns {(item_id, receipt_day): (load_day, pulled, placed)}. Days are settled
-    from the last working day backwards, a day sheds whatever does not fit into
-    the candidates of the day before it, and the set that stays is the one that
-    fills the day best, ties going to the order earlier in the plan order.
-    """
+    """#MRP-4256, worked out here independently of the submission."""
     def working_between(low, high):
         return sum(1 for day in range(low + 1, high + 1) if day not in non_working)
 
@@ -1176,12 +1048,7 @@ def _graded_world():
 
 
 def test_the_loading_matches_the_governed_one_recomputed_here(primary_outputs):
-    """Every order's load day is the one the rule gives, worked out independently.
-
-    The sealed digests say what the answer is; this says why. The whole cascade is
-    recomputed in the verifier from the item master, the capacity file and the
-    calendar, and every order's load day, pull count and placement must agree.
-    """
+    """Every order's load day is the one the rule gives, worked out independently."""
     _, summary, plan, exceptions = primary_outputs
     items, centres, non_working = _graded_world()
     orders = [o for row in plan for o in row["planned_orders"]]
@@ -1250,12 +1117,7 @@ def test_an_order_is_pulled_earlier_and_never_pushed_later(primary_outputs):
 
 
 def test_the_set_that_stays_fills_the_day_better_than_a_greedy_pass(primary_outputs):
-    """A greedy loading of the graded run's own days loads strictly fewer hours.
-
-    Taking the biggest orders first is the natural implementation and is what the
-    previous data system does. On this batch it leaves hours on the table, so the
-    exact fit is not a distinction without a difference.
-    """
+    """A greedy loading of the graded run's own days loads strictly fewer hours."""
     _, _, plan, _ = primary_outputs
     items, centres, non_working = _graded_world()
     orders = [o for row in plan for o in row["planned_orders"]]
@@ -1308,12 +1170,7 @@ def _loaded_on(exceptions, plan_rows):
 
 
 def test_one_family_costs_the_day_one_block_however_many_orders_it_starts():
-    """#MRP-4260: the block is per family per day, not per order.
-
-    Three five-hour orders of one family cost the centre 15 run hours and a
-    single four-hour block, which is exactly its day. Charging a block per order
-    would fit only two of them and report the third capacity_exceeded.
-    """
+    """#MRP-4260: the block is per family per day, not per order."""
     summary, by_id, exceptions = _probe_full(_changeover_world(
         19, 4, [("ITM-A", "FAM-A", 5), ("ITM-B", "FAM-A", 5), ("ITM-C", "FAM-A", 5)]))
     started, shed = _loaded_on(exceptions, by_id)
@@ -1323,12 +1180,7 @@ def test_one_family_costs_the_day_one_block_however_many_orders_it_starts():
 
 
 def test_each_distinct_family_the_day_starts_costs_its_own_block():
-    """The same three orders in three families no longer fit the same day.
-
-    15 run hours and three four-hour blocks is 27 against a 19-hour day, so the
-    day keeps the two that fit -- 10 run hours and two blocks, exactly 18 -- and
-    the tie among equal-run pairs goes to the orders earlier in the plan order.
-    """
+    """The same three orders in three families no longer fit the same day."""
     summary, by_id, exceptions = _probe_full(_changeover_world(
         19, 4, [("ITM-A", "FAM-A", 5), ("ITM-B", "FAM-B", 5), ("ITM-C", "FAM-C", 5)]))
     started, shed = _loaded_on(exceptions, by_id)
@@ -1338,13 +1190,7 @@ def test_each_distinct_family_the_day_starts_costs_its_own_block():
 
 
 def test_a_changeover_block_is_capacity_spent_and_never_counted_as_fill():
-    """The set that stays maximises RUN hours, not the hours the day is charged.
-
-    Both orders of FAM-A run nine hours and share one block: 18 run against 22
-    charged. Swapping one for the eight-hour FAM-B order charges the day more --
-    17 run plus two blocks is 25, the whole day -- while running less. A reader
-    that maximised what the day is charged would keep that pair instead.
-    """
+    """The set that stays maximises RUN hours, not the hours the day is charged."""
     summary, by_id, exceptions = _probe_full(_changeover_world(
         25, 4, [("ITM-A", "FAM-A", 9), ("ITM-B", "FAM-A", 9), ("ITM-C", "FAM-B", 8)]))
     started, shed = _loaded_on(exceptions, by_id)
@@ -1370,11 +1216,7 @@ def test_a_phantom_occupies_no_work_centre():
 
 
 def test_the_day_keeps_the_set_that_fills_it_not_the_biggest_order():
-    """Three orders, ten hours of room: 6+4 fills it and 7 alone does not.
-
-    A pass that takes the biggest first keeps the seven-hour order and loads ten
-    hours' worth of work as seven; the governed rule keeps the pair.
-    """
+    """Three orders, ten hours of room: 6+4 fills it and 7 alone does not."""
     summary, by_id, _ = _probe_full({
         "item_master.json": [_item("ITM-A", run_hours=7), _item("ITM-B", run_hours=6),
                              _item("ITM-C", run_hours=4)],
@@ -1515,12 +1357,7 @@ _PAST_DUE_WORLD = {
 
 
 def test_exception_min_qty_decides_whether_an_order_is_queued_at_all():
-    """#MRP-4220's floor is read from the policy, not carried as a constant.
-
-    The same order of 100 is reported under the baseline floor of 40 and is not
-    reported once the floor is raised past it, while the plan itself is unchanged:
-    the field governs reporting, and it governs it from the policy file.
-    """
+    """#MRP-4220's floor is read from the policy, not carried as a constant."""
     quiet_summary, quiet_plan, quiet = _probe_full(
         {**_PAST_DUE_WORLD, "planning_policy.json": _policy(exception_min_qty=150)})
     loud_summary, loud_plan, loud = _probe_full(
@@ -1564,12 +1401,7 @@ def test_max_release_backlog_days_decides_which_kind_is_reported():
 
 
 def test_period_of_supply_cap_days_shortens_the_span_a_lot_covers():
-    """#MRP-4205's cap is read from the policy and really truncates the span.
-
-    ITM-C asks for ten days of supply. Under a cap of 20 the lot reaches the
-    day-6 demand and covers both in one order of 130; under a cap of 3 the span
-    stops at day 4, so the day-6 demand falls to a second order.
-    """
+    """#MRP-4205's cap is read from the policy and really truncates the span."""
     world = {
         "item_master.json": [_item("ITM-C", lot_policy="period_of_supply", period_days=10)],
         "independent_demand.json": [
@@ -1675,11 +1507,7 @@ def test_run_is_idempotent(primary_outputs):
 
 
 def test_no_argument_run_writes_to_the_documented_defaults(primary_outputs):
-    """With no flags at all the planner reads and writes its documented defaults.
-
-    The previous form still passed --output-dir, so it only exercised the --input
-    default; a changed default output directory went unnoticed.
-    """
+    """With no flags at all the planner reads and writes its documented defaults."""
     binary = _build(WORKFLOW_PATH)
     _publish_inputs()
     default_out = Path("/app/output")
@@ -1697,13 +1525,7 @@ def test_no_argument_run_writes_to_the_documented_defaults(primary_outputs):
 
 
 def test_the_budget_is_enforced_by_killing_an_overrunning_run(primary_outputs):
-    """The budget is enforced, and not by timing the machine.
-
-    Every candidate run is executed with the contract's published budget as its
-    hard timeout, so a run that overruns is killed and the suite fails. There is
-    no measured elapsed time compared against a threshold, which would make the
-    verdict depend on how fast the grading host happens to be.
-    """
+    """The budget is enforced, and not by timing the machine."""
     assert HARD_TIMEOUT_SEC == int(RUNTIME_BUDGET_SEC)
     assert primary_outputs[1]["planned_order_count"] > 0, "the graded run did not complete"
 
@@ -1713,12 +1535,7 @@ def test_runtime_budget_is_stated_in_the_contract():
 
 
 def test_planner_imports_only_the_standard_library():
-    """Every package the planner and the replay import is standard library.
-
-    Only import declarations are consulted. A dotted filename literal in the body,
-    such as "summary.json" passed to filepath.Join, is not an import and is not a
-    breach of the standard-library requirement.
-    """
+    """Every package the planner and the replay import is standard library."""
     for source in (WORKFLOW_PATH, RECOVERY_PATH):
         paths = _go_imports(source.read_text(encoding="utf-8"))
         assert paths, f"{source.name} must declare at least one import"
@@ -1805,12 +1622,7 @@ def test_planner_does_not_reference_test_artifacts():
 
 
 def test_shipped_contract_matches_the_golden_copy():
-    """The output contract in the environment is unmodified.
-
-    Field lists, container shapes and sort orders are golden metadata and are read
-    from the verifier's own image; this proves the agent's copy still agrees with
-    it, so the contract cannot be trimmed to weaken a schema check.
-    """
+    """The output contract in the environment is unmodified."""
     assert json.loads(SPEC_PATH.read_text(encoding="utf-8")) == json.loads(
         GOLDEN_CONTRACT_PATH.read_text(encoding="utf-8"))
     # instruction.md promises byte-identical, not merely equal once parsed.
@@ -1818,13 +1630,7 @@ def test_shipped_contract_matches_the_golden_copy():
 
 
 def test_missing_policy_fields_fall_back_to_the_governed_baseline():
-    """#MRP-4240: a field the policy omits keeps its baseline, not zero.
-
-    An empty policy object must still resolve past_due_grace_days 2,
-    exception_min_qty 40, max_release_backlog_days 14 and
-    period_of_supply_cap_days 20. Reading a missing key as zero would admit every
-    order to the exception queue and treat every release as past due.
-    """
+    """#MRP-4240: a field the policy omits keeps its baseline, not zero."""
     path = DATA / "planning_policy.json"
     saved = path.read_text(encoding="utf-8")
     try:

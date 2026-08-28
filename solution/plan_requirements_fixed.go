@@ -554,7 +554,17 @@ func main() {
 			switch it.LotPolicy {
 			case "fixed_quantity":
 				if it.LotSize > 0 {
-					lots := (shortfall + it.LotSize - 1) / it.LotSize
+					// #MRP-4205: the smallest whole number of lots that covers
+					// the shortfall. Forming shortfall+lot_size-1 first can
+					// overflow int64 for a large but representable shortfall --
+					// and it overflows exactly where the rounding was not needed,
+					// since a shortfall already on a lot boundary takes no
+					// rounding at all. Dividing first keeps every intermediate
+					// no larger than the answer.
+					lots := shortfall / it.LotSize
+					if shortfall%it.LotSize != 0 {
+						lots++
+					}
 					receiptQty = lots * it.LotSize
 				}
 			case "period_of_supply":
