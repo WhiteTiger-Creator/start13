@@ -1,6 +1,7 @@
 """Verifier tests for the MRP requirements-planning task."""
 
 # harness.py sets __all__ explicitly, so the underscored helpers come across too.
+import harness
 from harness import *  # noqa: F401,F403
 
 @pytest.fixture(scope="session")
@@ -201,48 +202,6 @@ def test_shipped_and_naive_recoveries_differ_from_the_governed_one():
 # --------------------------------------------------------------------------
 # The replay itself, run over snapshots and journals the submission never saw
 # --------------------------------------------------------------------------
-def _governed_replay(snapshot: list, journal: list) -> list:
-    """#MRP-4170 and #MRP-4174, written here independently of the submission."""
-    live = {}
-    for row in snapshot:
-        record = json.loads(json.dumps(row))
-        record["scheduled_receipts"] = sorted(
-            record.get("scheduled_receipts", []), key=lambda r: r["receipt_id"])
-        live[record["item_id"]] = record
-    gone = set()
-    for movement in sorted(journal, key=lambda m: m["seq"]):
-        item_id = movement["item_id"]
-        if item_id in gone or item_id not in live:
-            continue
-        kind = movement["kind"]
-        if kind == "adjust":
-            live[item_id]["on_hand"] = movement["on_hand"]
-        elif kind == "receipt_add":
-            live[item_id]["scheduled_receipts"] = sorted(
-                live[item_id]["scheduled_receipts"] + [{
-                    "receipt_id": movement["receipt_id"],
-                    "qty": movement["qty"],
-                    "due_day": movement["due_day"],
-                }],
-                key=lambda r: r["receipt_id"])
-        elif kind == "receipt_cancel":
-            kept, dropped = [], False
-            for entry in live[item_id]["scheduled_receipts"]:
-                if not dropped and entry["receipt_id"] == movement["receipt_id"]:
-                    dropped = True
-                    continue
-                kept.append(entry)
-            live[item_id]["scheduled_receipts"] = kept
-        elif kind == "retract":
-            gone.add(item_id)
-            live.pop(item_id, None)
-    return [
-        {"item_id": row["item_id"], "on_hand": row["on_hand"],
-         "scheduled_receipts": row["scheduled_receipts"]}
-        for row in sorted(live.values(), key=lambda r: r["item_id"])
-    ]
-
-
 def _run_recovery(snapshot: list, journal: list) -> list:
     """Build the submitted replay and run it over a world of the verifier's making."""
     binary = _build(RECOVERY_PATH)
@@ -277,8 +236,15 @@ def test_the_replay_is_a_program_at_the_documented_path():
     assert re.search(r"^package main$", source, re.MULTILINE)
 
 
-def test_the_replay_runs_over_a_snapshot_and_journal_it_has_never_seen():
-    """The submitted replay is executed over a world the fixtures do not cover."""
+def _crafted_world() -> tuple:
+    """A snapshot and journal the fixtures do not cover, built deterministically.
+
+    Derived from the shipped sources by a fixed rule so the world is the same on
+    every run, which is what lets its answer be sealed rather than recomputed
+    here. The added movements cover replay order, retraction, a movement posted
+    to a retracted item, an added receipt, a cancellation naming a receipt that
+    is not there, and a movement naming an item the snapshot never had.
+    """
     snapshot = [dict(row, on_hand=row["on_hand"] + 7) for row in _load_json(SNAPSHOT_PATH)[::3]]
     journal = [m for m in _load_json(JOURNAL_PATH) if m["seq"] % 2 == 0]
     top = max(m["seq"] for m in journal) + 1
@@ -294,10 +260,22 @@ def test_the_replay_runs_over_a_snapshot_and_journal_it_has_never_seen():
          "receipt_id": "PO-NOT-HERE"},
         {"seq": top + 7, "item_id": "ITM-99999", "kind": "adjust", "on_hand": 5},
     ]
-    expected = _governed_replay(snapshot, journal)
-    assert _run_recovery(snapshot, journal) == expected
+    return snapshot, journal
+
+
+def test_the_replay_runs_over_a_snapshot_and_journal_it_has_never_seen():
+    """The submitted replay is executed over a world the fixtures do not cover.
+
+    The answer is a sealed digest rather than something recomputed here: a
+    verifier that reimplements the replay to grade the replay is grading one
+    implementation against another, and a mistake shared by both would pass.
+    """
+    snapshot, journal = _crafted_world()
+    recovered = _run_recovery(snapshot, journal)
+    assert _digest(recovered) == FIXTURE["crafted_recovery_digest"]
+    assert len(recovered) == FIXTURE["crafted_recovery_count"]
     # the world really is a different one, so passing here is not the graded run
-    assert _digest(expected) != FIXTURE["recovered_positions_digest"]
+    assert _digest(recovered) != FIXTURE["recovered_positions_digest"]
 
 
 def test_the_replay_follows_the_sequence_number_not_the_file_order():
@@ -1576,6 +1554,47 @@ def test_the_import_check_reads_declarations_not_string_literals():
     assert _go_imports('package main\n\nimport alias "os"\n') == ["os"]
 
 
+def test_a_candidate_that_leaves_the_process_group_does_not_survive_the_run():
+    """A setsid escape is reaped, because the sweep is by owner and not by group.
+
+    The probe forks a child, puts it in a session of its own and leaves it
+    sleeping well past the run. Killing the process group alone would let it
+    live into the next test, holding staged inputs or still writing where a
+    later run reads.
+    """
+    probe_dir = Path("/probe-work")
+    probe_dir.mkdir(parents=True, exist_ok=True)
+    os.chmod(probe_dir, 0o755)
+    probe = probe_dir / "escape.py"
+    probe.write_text(
+        "import os, sys, time\n"
+        "if os.fork() == 0:\n"
+        "    os.setsid()\n"
+        "    time.sleep(600)\n"
+        "    sys.exit(0)\n"
+        "print('spawned')\n",
+        encoding="utf-8")
+    os.chmod(probe, 0o644)
+    _run_agent([sys.executable, str(probe)], cwd=probe_dir)
+    assert not harness._pids_owned_by(harness.CANDIDATE_UID), (
+        "a candidate process outlived its run by leaving its process group")
+
+
+def test_the_strictest_setpriv_this_image_supports_is_the_one_in_use():
+    """Capabilities are dropped as well as the uid, where setpriv allows it."""
+    assert "--no-new-privs" in harness._SETPRIV
+    assert f"--reuid={harness.CANDIDATE_UID}" in harness._SETPRIV
+    probe = subprocess.run(
+        ["setpriv", f"--reuid={harness.CANDIDATE_UID}", f"--regid={harness.CANDIDATE_UID}",
+         "--clear-groups", "--no-new-privs", "--inh-caps=-all", "--bounding-set=-all",
+         "/bin/true"],
+        capture_output=True)
+    if probe.returncode == 0:
+        assert "--inh-caps=-all" in harness._SETPRIV, (
+            "setpriv accepts the strict capability flags but the harness is not using them")
+        assert "--bounding-set=-all" in harness._SETPRIV
+
+
 def test_submitted_program_runs_unprivileged_and_cannot_write_reward(tmp_path):
     """The graded program runs as nobody and cannot touch the reward path."""
     probe = tmp_path / "main.go"
@@ -1645,3 +1664,4 @@ def test_missing_policy_fields_fall_back_to_the_governed_baseline():
                if row["kind"] not in ("inside_fence", "capacity_exceeded"))
     finally:
         path.write_text(saved, encoding="utf-8")
+

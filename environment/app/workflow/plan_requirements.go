@@ -109,16 +109,15 @@ func writeJSON(path string, value interface{}) {
 	}
 }
 
-// #MRP-4210: the release date steps back over WORKING days only, not raw
-// calendar days. Stepping past day zero keeps counting, so the release day goes
-// negative and the order is past due.
+// Steps the release date back by the lead time. The calendar is accepted and
+// ignored here; whether that is what the board settled is a question for the
+// minute book.
 func offsetWorkingDays(day, lead int, _ map[int]bool) int {
 	return day - lead
 }
 
-// #MRP-4250: the firm fence sits the item's firm_fence_days WORKING days after
-// day zero, day zero itself not counted. A fence of zero means the item has no
-// fence at all.
+// Walks forward from day zero counting days the calendar does not mark
+// non-working, and returns where it lands.
 func fenceDay(fence int, nonWorking map[int]bool) int {
 	d := 0
 	remaining := fence
@@ -155,9 +154,7 @@ func main() {
 	var cal calendar
 	var pol policy
 
-	// #MRP-4150: the master data, bill of materials, demand, calendar and policy
-	// are always read from their fixed absolute paths; --input selects the
-	// positions file only.
+	// Operational inputs, read from their fixed absolute paths.
 	readJSON("/app/data/item_master.json", &items)
 	readJSON("/app/data/bill_of_materials.json", &bom)
 	readJSON("/app/data/independent_demand.json", &demand)
@@ -190,10 +187,8 @@ func main() {
 		isComponent[r.Component] = true
 	}
 
-	// #MRP-4190: the low-level code is the DEEPEST level at which an item appears
-	// anywhere in the structure, not the first level it is met at. Computed once
-	// by relaxing over the structure; re-exploding per demand line does not
-	// finish inside the budget.
+	// Low-level codes, computed once over the structure rather than per demand
+	// line so the run stays inside its budget.
 	llc := map[string]int{}
 	seen := map[string]bool{}
 	for _, it := range items {
@@ -237,9 +232,7 @@ func main() {
 		g[d.DueDay] += d.Qty
 	}
 
-	// #MRP-4192: items are planned in ascending low-level code, then ascending
-	// item id, so a parent's planned releases are already known when its
-	// components are netted.
+	// The order items are planned in.
 	planOrder := append([]string(nil), order...)
 	sort.Slice(planOrder, func(i, j int) bool {
 		if llc[planOrder[i]] != llc[planOrder[j]] {
@@ -289,10 +282,9 @@ func main() {
 			if available >= 0 {
 				continue
 			}
-			// #MRP-4200: the shortfall is measured against the safety stock, so
-			// safety stock is covered by the order rather than eaten into.
+			// What the period is short by.
 			shortfall := -available
-			// #MRP-4204: the lot policy sizes the quantity that must ARRIVE good.
+			// Sized by the item's lot policy.
 			receiptQty := shortfall
 			switch it.LotPolicy {
 			case "fixed_quantity":
@@ -311,23 +303,17 @@ func main() {
 					}
 				}
 			}
-			// #MRP-4234: the RELEASED quantity is the arriving quantity inflated for
-			// the item's own yield, rounded up, and the lot policy has already sized
-			// the arrival -- the inflation is never re-sized to a lot multiple.
+			// What is released for the arrival just sized.
 			released := receiptQty
 			netTotal += shortfall
 			totalNet += shortfall
 
-			// #MRP-4242: a phantom is netted like any other item but raises no order,
-			// and what it passes on moves on the day it arrived -- its own lead time
-			// is never offset.
+			// Where this item's release lands.
 			release := day
 			pushed := false
 			if true {
 				release = offsetWorkingDays(day, it.LeadTimeDays, nonWorking)
-				// #MRP-4250: a release inside the firm fence is pushed OUT to the
-				// fence day; the receipt day does not move, so the order is knowingly
-				// late rather than the requirement being moved.
+				// The fence is read but not applied here.
 				_ = fence
 				orders = append(orders, plannedOrder{
 					ItemID: id, ReceiptDay: day, ReleaseDay: release,
@@ -340,15 +326,13 @@ func main() {
 			available += receiptQty
 
 			if pushed {
-				// #MRP-4250: a pushed order is always reported, whatever its size.
+				// Reported when the order was pushed.
 				exceptions = append(exceptions, exceptionRow{
 					ItemID: id, Kind: "inside_fence", ReceiptDay: day,
 					ReleaseDay: release, Qty: released,
 				})
 			} else if !phantom && released >= exceptionMinQty && release < -graceDays {
-				// #MRP-4220: an order whose release falls before day zero by more than
-				// the grace is past due; one that also exceeds the backlog window is
-				// reported separately, and both only when the lot is material.
+				// Reported when the release lands early enough to matter.
 				kind := "past_due_release"
 				if -release > maxBacklog {
 					kind = "backlog_exceeded"
@@ -364,11 +348,11 @@ func main() {
 			// for everything the order starts, scrap included.
 			if day >= 0 && day <= horizon {
 				for _, r := range children[id] {
-					// #MRP-4246: only a line effective on that release day applies.
+					// Skips a line outside its effectivity window.
 					if day < r.EffectiveFrom || day > r.EffectiveTo {
 						continue
 					}
-					// #MRP-4238: the line's scrap allowance inflates what must be issued.
+					// What the line has to issue.
 					need := released * r.QtyPer
 					cg := ensure(r.Component)
 					cg[day] += need
@@ -387,8 +371,7 @@ func main() {
 		})
 	}
 
-	// #MRP-4230: the plan is emitted ascending by item id; the exception queue is
-	// worst backlog first, then by item and receipt day.
+	// Emission order.
 	sort.Slice(plans, func(i, j int) bool { return plans[i].ItemID < plans[j].ItemID })
 	sort.Slice(exceptions, func(i, j int) bool {
 		if exceptions[i].ReleaseDay != exceptions[j].ReleaseDay {

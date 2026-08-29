@@ -53,8 +53,57 @@ HARD_TIMEOUT_SEC = int(RUNTIME_BUDGET_SEC)
 
 CANDIDATE_UID = 65534
 _CWORK = Path("/candidate-work")
-_SETPRIV = ["setpriv", f"--reuid={CANDIDATE_UID}", f"--regid={CANDIDATE_UID}",
+def _setpriv_prefix() -> list:
+    """The strictest setpriv invocation this image actually supports.
+
+    Dropping the uid is not the whole of it: a candidate that kept inheritable
+    or bounding-set capabilities could regain privilege across an exec. Those
+    two flags are probed rather than assumed, because a util-linux without them
+    would make every run fail on the flag rather than on the task.
+    """
+    base = ["setpriv", f"--reuid={CANDIDATE_UID}", f"--regid={CANDIDATE_UID}",
             "--clear-groups", "--no-new-privs"]
+    strict = base + ["--inh-caps=-all", "--bounding-set=-all"]
+    try:
+        probe = subprocess.run(strict + ["/bin/true"], capture_output=True, timeout=30)
+        if probe.returncode == 0:
+            return strict
+    except (OSError, subprocess.SubprocessError):
+        pass
+    return base
+
+
+_SETPRIV = _setpriv_prefix()
+
+# Resource ceilings for anything run as the candidate. Deliberately not
+# RLIMIT_AS or RLIMIT_DATA: the Go runtime reserves a large virtual arena at
+# start-up and capping address space kills a correct program rather than a
+# runaway one. These bound the failure modes that actually escape a process
+# group -- forking without end, filling the disk, dumping core.
+_CANDIDATE_NPROC = 512
+_CANDIDATE_FSIZE = 512 * 1024 * 1024
+_CANDIDATE_NOFILE = 1024
+
+
+def _apply_rlimits() -> None:
+    """Run in the child between fork and exec."""
+    import resource
+
+    cpu = int(HARD_TIMEOUT_SEC) + 60
+    for what, limit in (
+        (resource.RLIMIT_NPROC, _CANDIDATE_NPROC),
+        (resource.RLIMIT_FSIZE, _CANDIDATE_FSIZE),
+        (resource.RLIMIT_NOFILE, _CANDIDATE_NOFILE),
+        (resource.RLIMIT_CORE, 0),
+        (resource.RLIMIT_CPU, cpu),
+    ):
+        try:
+            soft, hard = resource.getrlimit(what)
+            ceiling = limit if hard in (resource.RLIM_INFINITY,) else min(limit, hard)
+            resource.setrlimit(what, (ceiling, ceiling))
+        except (ValueError, OSError):
+            continue
+    os.setsid()
 CHILD_ENV = {"PATH": "/usr/local/bin:/usr/bin:/bin", "HOME": "/candidate-work",
              "LANG": "C.UTF-8", "GOCACHE": "/candidate-work/gocache",
              "GO111MODULE": "off", "GOPATH": "/candidate-work/gopath"}
@@ -150,6 +199,46 @@ def _reap_group(pgid: int) -> None:
         time.sleep(0.02)
 
 
+def _pids_owned_by(uid: int) -> list:
+    """Every live pid whose real uid is `uid`, read from /proc."""
+    pids = []
+    for entry in os.listdir("/proc"):
+        if not entry.isdigit():
+            continue
+        try:
+            if os.stat(f"/proc/{entry}").st_uid == uid:
+                pids.append(int(entry))
+        except OSError:
+            continue
+    return pids
+
+
+def reap_candidate_uid(uid: int = CANDIDATE_UID) -> None:
+    """Kill everything still running as the candidate, whatever group it is in.
+
+    Killing the process group is not enough on its own: a submitted program can
+    call setsid and leave its own group, and would then survive into later tests
+    -- holding the staged inputs of the next run, or still writing into an
+    output directory being read. Ownership is the property that cannot be
+    escaped, so the sweep is by uid.
+    """
+    for _ in range(50):
+        pids = _pids_owned_by(uid)
+        if not pids:
+            return
+        for pid in pids:
+            try:
+                os.kill(pid, signal.SIGKILL)
+            except (ProcessLookupError, PermissionError, OSError):
+                continue
+        for pid in pids:
+            try:
+                os.waitpid(pid, os.WNOHANG)
+            except (ChildProcessError, OSError):
+                continue
+        time.sleep(0.02)
+
+
 def _run_agent(argv, cwd: Path):
     """Run the submitted program unprivileged and in its own process group."""
     with tempfile.TemporaryFile("w+", encoding="utf-8", errors="replace") as out, \
@@ -157,7 +246,9 @@ def _run_agent(argv, cwd: Path):
         proc = subprocess.Popen(
             _SETPRIV + argv, cwd=str(cwd), env=dict(CHILD_ENV),
             stdout=out, stderr=err,
-            start_new_session=True,
+            # the child's own session, plus the ceilings above, applied before
+            # the exec so the candidate never runs without them
+            preexec_fn=_apply_rlimits,
         )
         pgid = proc.pid      # session leader: pgid == pid, captured before the wait
         try:
@@ -168,8 +259,10 @@ def _run_agent(argv, cwd: Path):
             raise
         finally:
             # even on a clean exit, anything the program left running is stopped
-            # before its outputs are read
+            # before its outputs are read -- by group first, then by owner, so a
+            # child that called setsid does not outlive the run
             _reap_group(pgid)
+            reap_candidate_uid()
         out.seek(0)
         err.seek(0)
         return subprocess.CompletedProcess(argv, proc.returncode, out.read(), err.read())

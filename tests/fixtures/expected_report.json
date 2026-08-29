@@ -26,7 +26,9 @@
       "total_receipt_qty": 67965056
     }
   },
-  "broken_planner_sha256": "06b7fe1d830854eeeb7d7df392867daeeb8d756cb63aca1e3fc403689892eebf",
+  "broken_planner_sha256": "6a4e21ac1e76064dd7695d686f915d79c94750cce4306018e3e47c3ea78a6817",
+  "crafted_recovery_count": 198,
+  "crafted_recovery_digest": "28b509a0cf9c63cd0c57f84c064edc213b2e0d0455d3053c96886056f4c66f3a",
   "primary": {
     "exception_digest": "df0923ef445e98c219789f83e710566aa2db05f76a7102a4df32c7e34a461c14",
     "item_plan_digest": "907c30f6f03d12eabc7a672ba72eb293896f428e9945cf3793d284e82ab4c77c",
