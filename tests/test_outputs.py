@@ -156,6 +156,32 @@ def test_recovery_sources_are_intact():
     assert _digest(live) == FIXTURE["rule_sources_digest"]
 
 
+def test_recovery_sources_are_still_intact_after_the_graded_run(primary_outputs):
+    """Checked again once the planner has run, not only before it.
+
+    The digest above is taken at collection time, before the verifier drives the
+    submitted planner. A planner that rewrote one of its own inputs mid-run --
+    repairing data it had misread, say -- would have passed that check and been
+    caught only indirectly. Depending on primary_outputs orders this one after
+    the graded run.
+    """
+    live = {
+        "snapshot": hashlib.sha256(SNAPSHOT_PATH.read_bytes()).hexdigest(),
+        "journal": hashlib.sha256(JOURNAL_PATH.read_bytes()).hexdigest(),
+        "item_master": hashlib.sha256((DATA / "item_master.json").read_bytes()).hexdigest(),
+        "bom": hashlib.sha256((DATA / "bill_of_materials.json").read_bytes()).hexdigest(),
+        "demand": hashlib.sha256((DATA / "independent_demand.json").read_bytes()).hexdigest(),
+        "calendar": hashlib.sha256((DATA / "planning_calendar.json").read_bytes()).hexdigest(),
+        "capacity": hashlib.sha256(
+            (DATA / "work_centre_capacity.json").read_bytes()).hexdigest(),
+        "policy": hashlib.sha256((DATA / "planning_policy.json").read_bytes()).hexdigest(),
+        "contract": hashlib.sha256(SPEC_PATH.read_bytes()).hexdigest(),
+        "log": hashlib.sha256(LOG_PATH.read_bytes()).hexdigest(),
+    }
+    assert _digest(live) == FIXTURE["rule_sources_digest"], (
+        "an input was rewritten while the graded run was in flight")
+
+
 def test_positions_were_recovered():
     """The rebuilt positions match the governed replay: same count and digest,
     only the declared record fields, ascending by item id."""
@@ -671,6 +697,44 @@ def test_shortfall_is_measured_from_the_safety_stock():
             {"demand_id": "D1", "item_id": "ITM-A", "qty": 150, "due_day": 1}],
     }, "ITM-A")
     assert [o["qty"] for o in row["planned_orders"]] == [150]
+
+
+def test_net_requirement_total_sums_the_shortfalls_not_the_gross():
+    """#MRP-4244: the net total is what the periods were short by, added up.
+
+    Two demands of 60 against 100 on hand and no buffer leave the first period
+    covered and the second short by 20, so the gross is 120 and the net is 20.
+    Both figures were graded only through the sealed digest until now, which
+    tells an implementer the run is wrong without telling them where.
+    """
+    row = _probe({
+        "item_master.json": [_item("ITM-A")],
+        "inventory_positions.json": [
+            {"item_id": "ITM-A", "on_hand": 100, "scheduled_receipts": []}],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 60, "due_day": 1},
+            {"demand_id": "D2", "item_id": "ITM-A", "qty": 60, "due_day": 2}],
+    }, "ITM-A")
+    assert row["gross_requirement_total"] == 120
+    assert row["net_requirement_total"] == 20, row
+
+
+def test_ending_on_hand_is_the_balance_left_once_the_horizon_is_planned():
+    """#MRP-4244: the projected balance after the last period, not the opening stock.
+
+    120 on hand meets a demand of 50, and the balance the run ends on is the 70
+    that is left. An implementation reporting the opening figure, or zero, comes
+    out here rather than only in the digest.
+    """
+    row = _probe({
+        "item_master.json": [_item("ITM-A")],
+        "inventory_positions.json": [
+            {"item_id": "ITM-A", "on_hand": 120, "scheduled_receipts": []}],
+        "independent_demand.json": [
+            {"demand_id": "D1", "item_id": "ITM-A", "qty": 50, "due_day": 1}],
+    }, "ITM-A")
+    assert row["planned_orders"] == [], "nothing was short, so nothing is ordered"
+    assert row["ending_on_hand"] == 70, row
 
 
 def test_dependent_demand_lands_on_the_release_day():
