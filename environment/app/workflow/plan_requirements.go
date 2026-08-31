@@ -109,9 +109,7 @@ func writeJSON(path string, value interface{}) {
 	}
 }
 
-// Steps the release date back by the lead time. The calendar is accepted and
-// ignored here; whether that is what the board settled is a question for the
-// minute book.
+// Steps the release date back by the lead time.
 func offsetWorkingDays(day, lead int, _ map[int]bool) int {
 	return day - lead
 }
@@ -309,20 +307,15 @@ func main() {
 			totalNet += shortfall
 
 			// Where this item's release lands.
-			release := day
 			pushed := false
-			if true {
-				release = offsetWorkingDays(day, it.LeadTimeDays, nonWorking)
-				// The fence is read but not applied here.
-				_ = fence
-				orders = append(orders, plannedOrder{
-					ItemID: id, ReceiptDay: day, ReleaseDay: release,
-					Qty: released, ReceiptQty: receiptQty,
-					LotPolicy: it.LotPolicy, Pushed: pushed,
-				})
-			}
-			// the projected balance is credited with what ARRIVES, not what was
-			// released
+			release := offsetWorkingDays(day, it.LeadTimeDays, nonWorking)
+			_ = fence
+			orders = append(orders, plannedOrder{
+				ItemID: id, ReceiptDay: day, ReleaseDay: release,
+				Qty: released, ReceiptQty: receiptQty,
+				LotPolicy: it.LotPolicy, Pushed: pushed,
+			})
+			// Credits the projected balance.
 			available += receiptQty
 
 			if pushed {
@@ -343,9 +336,7 @@ func main() {
 				})
 			}
 
-			// dependent demand lands on the component at the parent's RELEASE day,
-			// driven by the RELEASED quantity because the components must be issued
-			// for everything the order starts, scrap included.
+			// Pushes this item's demand down to its components.
 			if day >= 0 && day <= horizon {
 				for _, r := range children[id] {
 					// Skips a line outside its effectivity window.
