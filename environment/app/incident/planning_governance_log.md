@@ -1,8 +1,8 @@
 # Planning governance log
 
-How the requirements planner is *meant* to behave -- the recovery of the truncated inventory positions, the low-level coding, the netting of gross requirements against on-hand and scheduled receipts, safety-stock treatment, lot sizing, yield and scrap allowances, phantom assemblies, component effectivity, the lead-time offset, the firm fence, dependent demand, the finite capacity of the work centres and exception reporting -- was settled incrementally by the planning board, and those decisions live in the review entries below, not in any single summary. Several stages deliberately DEVIATE from a textbook MRP run: the low-level code is the deepest level rather than the first, the lead-time offset counts working days rather than calendar days, safety stock is covered rather than consumed, dependent demand lands on the release day rather than the receipt day, a released order is over-released for yield while the balance is credited only with what arrives, a line's scrap allowance is added to what it issues, a phantom assembly is blown through without an order or a lead-time offset, a line's effectivity turns on the release day, a release inside the firm fence is pushed out rather than left past due, and an order a work centre has no hours for is pulled earlier rather than pushed later. The February draft proposals were revisited during the 2026-05 planning review and several were reversed; where a draft or interim conflicts with a later decision, the later dated decision governs. `/app/docs/report_spec.json` is the output contract only.
+How the requirements planner is *meant* to behave -- the recovery of the truncated inventory positions, the low-level coding, the netting of gross requirements against on-hand and scheduled receipts, safety-stock treatment, lot sizing, yield and scrap allowances, phantom assemblies, component effectivity, the lead-time offset, the firm fence, dependent demand, the finite capacity of the work centres and exception reporting -- was settled incrementally by the planning board, and those decisions live in the review entries below, not in any single summary. Several stages deliberately depart from a textbook MRP run, and which ones they are is settled in the entries below rather than here. The February draft proposals were revisited during the 2026-05 planning review and several were reversed; where a draft or interim conflicts with a later decision, the later dated decision governs. `/app/docs/report_spec.json` is the output contract only.
 
-- 2026-02-25: Materials review for the goods-in dock in window 1002 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-02-25: A stand-up note recorded a routine observation. A question raised on the floor was withdrawn once the entry was reread. The thread was archived after review.
 
 > **Capacity draft proposal (2026-02-11 - #MRP-4030)** Marek: where a work centre is loaded past its day's hours, the orders that do not fit go to the NEXT working day, since the shop cannot start work it has no hours for and the requirement can wait a day *(Superseded -- reversed in the 2026-05 planning review.)*
 
@@ -20,53 +20,53 @@ How the requirements planner is *meant* to behave -- the recovery of the truncat
 
 > **Recovery draft proposal (2026-02-24 - #MRP-4042)** Rosa: a phantom assembly is planned like any other item -- it is netted, sized, offset by its own lead time and raises its own planned order *(Superseded -- reversed in the 2026-05 planning review.)*
 
-- 2026-02-14: Shift lead recorded a routine note against line 3 assembly for window 1004. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-02-14: A stand-up note spot-checked a routine observation. The variance sat inside tolerance and no adjustment was raised.
 
-- 2026-02-03: Scheduling desk noted a supplier acknowledgement backlog on the packaging lane in window 1005. Chased with procurement; the planning parameters were not touched.
+- 2026-02-03: The controls team filed a routine observation. A batch retried once after a transient timeout and completed on the second pass.
 
-- 2026-02-03: Shift lead recorded a routine note against line 3 assembly for window 1006. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-02-03: The audit lead logged a routine observation. A query about a prior-period entry was answered from the published schedule. No action was carried forward.
 
-- 2026-02-18: Materials review for the sub-assembly cell in window 1007 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-02-18: An on-call engineer carried forward a routine observation. A duplicate order was cancelled at source and never reached the run. Nothing here bears on engine behaviour.
 
-- 2026-02-14: Planner on duty logged a routine observation for the goods-in dock during review window 1009. Cycle-count variances reconciled; no policy change requested.
+- 2026-02-14: A reviewer on shift opened a query on a routine observation. A duplicate order was cancelled at source and never reached the run. No follow-up was requested.
 
-- 2026-02-12: Planner on duty logged a routine observation for supplier portal feeds during review window 1011. Cycle-count variances reconciled; no policy change requested.
+- 2026-02-12: The reconciliation desk signed off a routine observation. Storage on the staging host was extended after the export outgrew its allocation. No action was carried forward.
 
-- 2026-02-08: Shift lead recorded a routine note against the packaging lane for window 1013. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-02-08: The controls team raised and closed a routine observation. A duplicate order was cancelled at source and never reached the run. The desk confirmed no downstream impact.
 
-- 2026-02-09: Scheduling desk noted a supplier acknowledgement backlog on line 3 assembly in window 1016. Chased with procurement; the planning parameters were not touched.
+- 2026-02-09: A weekly review noted a routine observation. A query about a prior-period entry was answered from the published schedule. No follow-up was requested.
 
-- 2026-02-22: Shift lead recorded a routine note against line 3 assembly for window 1019. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-02-22: The audit lead filed a routine observation. Nightly reconciliation matched exactly and the file was released without comment.
 
-- 2026-02-13: Scheduling desk noted a supplier acknowledgement backlog on the goods-in dock in window 1022. Chased with procurement; the planning parameters were not touched.
+- 2026-02-13: The reconciliation desk signed off a routine observation. One record appeared twice in the export after a mid-cycle correction.
 
-- 2026-02-23: Planner on duty logged a routine observation for the goods-in dock during review window 1025. Cycle-count variances reconciled; no policy change requested.
+- 2026-02-23: The duty analyst noted a routine observation. Dashboard tiles lagged the refresh; traced to cache staleness rather than the engine. No follow-up was requested.
 
-- 2026-02-09: Materials review for supplier portal feeds in window 1028 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-02-09: The platform team raised and closed a routine observation. Storage on the staging host was extended after the export outgrew its allocation. No action was carried forward.
 
-- 2026-02-21: Planner on duty logged a routine observation for supplier portal feeds during review window 1030. Cycle-count variances reconciled; no policy change requested.
+- 2026-02-21: A shift handover reviewed a routine observation. A typo in a reference record was corrected before the run started. Referred to the dated decisions and closed.
 
-- 2026-02-18: Planner on duty logged a routine observation for the packaging lane during review window 1033. Cycle-count variances reconciled; no policy change requested.
+- 2026-02-18: The platform team raised and closed a routine observation. A batch retried once after a transient timeout and completed on the second pass. Closed with no parameter change.
 
-- 2026-02-06: Materials review for line 3 assembly in window 1034 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-02-06: The reconciliation desk recorded a routine observation. Two accounts showed a same-day transfer the export had not yet picked up. Closed with no parameter change.
 
-- 2026-02-25: Planner on duty logged a routine observation for line 3 assembly during review window 1037. Cycle-count variances reconciled; no policy change requested.
+- 2026-02-25: The exceptions queue owner logged a routine observation. The variance sat inside tolerance and no adjustment was raised.
 
-- 2026-02-12: Planner on duty logged a routine observation for the goods-in dock during review window 1038. Cycle-count variances reconciled; no policy change requested.
+- 2026-02-12: A reviewer on shift opened a query on a routine observation. The downstream vendor confirmed receipt inside the agreed window. No follow-up was requested.
 
-- 2026-02-09: Scheduling desk noted a supplier acknowledgement backlog on the sub-assembly cell in window 1041. Chased with procurement; the planning parameters were not touched.
+- 2026-02-09: The reconciliation desk signed off a routine observation. An operator asked whether a credit had posted; it had, in the preceding period. Filed for the record.
 
-- 2026-02-13: Scheduling desk noted a supplier acknowledgement backlog on the goods-in dock in window 1042. Chased with procurement; the planning parameters were not touched.
+- 2026-02-13: A reviewer on shift noted a routine observation. Storage on the staging host was extended after the export outgrew its allocation.
 
-- 2026-02-27: Scheduling desk noted a supplier acknowledgement backlog on the goods-in dock in window 1043. Chased with procurement; the planning parameters were not touched.
+- 2026-02-27: A stand-up note reviewed a routine observation. Late inputs arrived from one feed and were loaded before the cut.
 
-- 2026-02-01: Materials review for the packaging lane in window 1045 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-02-01: The operations desk spot-checked a routine observation. The count sat a little above the running mean, entirely from estimated inputs. Closed with no parameter change.
 
-- 2026-02-27: Shift lead recorded a routine note against line 3 assembly for window 1048. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-02-27: The controls team spot-checked a routine observation. The downstream vendor confirmed receipt inside the agreed window. The desk confirmed no downstream impact.
 
-- 2026-02-05: Materials review for the packaging lane in window 1049 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-02-05: A shift handover logged a routine observation. A question raised on the floor was withdrawn once the entry was reread. Filed for the record.
 
-- 2026-03-27: Shift lead recorded a routine note against the goods-in dock for window 1052. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-03-27: The operations desk recorded a routine observation. Dashboard tiles lagged the refresh; traced to cache staleness rather than the engine. Closed with no parameter change.
 
 > **Interim decision (2026-03-06 - #MRP-4048)** Priya: a bill-of-materials line's effectivity window is tested against the day the parent order is RECEIVED, that being the day the components are consumed *(Revised -- see the 2026-05 planning review.)*
 
@@ -74,95 +74,95 @@ How the requirements planner is *meant* to behave -- the recovery of the truncat
 
 > **Interim decision (2026-03-03 - #MRP-4058)** Priya: dependent demand from a parent lands on its components on the day the parent's order is RECEIVED *(Revised -- see the 2026-05 planning review.)*
 
-- 2026-03-14: Planner on duty logged a routine observation for the packaging lane during review window 1053. Cycle-count variances reconciled; no policy change requested.
+- 2026-03-14: The reconciliation desk carried forward a routine observation. A query about a prior-period entry was answered from the published schedule.
 
-- 2026-03-06: Planner on duty logged a routine observation for line 3 assembly during review window 1054. Cycle-count variances reconciled; no policy change requested.
+- 2026-03-06: The platform team reviewed a routine observation. A duplicate order was cancelled at source and never reached the run. Referred to the dated decisions and closed.
 
-- 2026-03-25: Planner on duty logged a routine observation for the sub-assembly cell during review window 1056. Cycle-count variances reconciled; no policy change requested.
+- 2026-03-25: The exceptions queue owner carried forward a routine observation. The variance sat inside tolerance and no adjustment was raised. The desk confirmed no downstream impact.
 
-- 2026-03-08: Scheduling desk noted a supplier acknowledgement backlog on supplier portal feeds in window 1059. Chased with procurement; the planning parameters were not touched.
+- 2026-03-08: The reconciliation desk filed a routine observation. Dashboard tiles lagged the refresh; traced to cache staleness rather than the engine.
 
-- 2026-03-11: Scheduling desk noted a supplier acknowledgement backlog on line 3 assembly in window 1062. Chased with procurement; the planning parameters were not touched.
+- 2026-03-11: The duty analyst signed off a routine observation. An operator asked whether a credit had posted; it had, in the preceding period. No action was carried forward.
 
-- 2026-03-03: Materials review for the packaging lane in window 1064 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-03-03: A reviewer on shift opened a query on a routine observation. A query about a prior-period entry was answered from the published schedule. Filed for the record.
 
-- 2026-03-04: Materials review for the goods-in dock in window 1066 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-03-04: An on-call engineer filed a routine observation. A question raised on the floor was withdrawn once the entry was reread. Filed for the record.
 
-- 2026-03-11: Planner on duty logged a routine observation for line 3 assembly during review window 1067. Cycle-count variances reconciled; no policy change requested.
+- 2026-03-11: The platform team logged a routine observation. Nightly reconciliation matched exactly and the file was released without comment.
 
-- 2026-03-15: Planner on duty logged a routine observation for line 3 assembly during review window 1069. Cycle-count variances reconciled; no policy change requested.
+- 2026-03-15: The platform team logged a routine observation. Dashboard tiles lagged the refresh; traced to cache staleness rather than the engine.
 
-- 2026-03-21: Materials review for line 3 assembly in window 1070 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-03-21: A stand-up note filed a routine observation. A query about a prior-period entry was answered from the published schedule. No action was carried forward.
 
-- 2026-03-14: Planner on duty logged a routine observation for the sub-assembly cell during review window 1072. Cycle-count variances reconciled; no policy change requested.
+- 2026-03-14: A reviewer on shift logged a routine observation. A query about a prior-period entry was answered from the published schedule. Closed with no parameter change.
 
-- 2026-03-09: Materials review for supplier portal feeds in window 1075 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-03-09: The operations desk spot-checked a routine observation. A typo in a reference record was corrected before the run started. The thread was archived after review.
 
-- 2026-03-16: Planner on duty logged a routine observation for the sub-assembly cell during review window 1077. Cycle-count variances reconciled; no policy change requested.
+- 2026-03-16: The operations desk raised and closed a routine observation. An operator asked whether a credit had posted; it had, in the preceding period. Referred to the dated decisions and closed.
 
-- 2026-03-10: Scheduling desk noted a supplier acknowledgement backlog on the packaging lane in window 1079. Chased with procurement; the planning parameters were not touched.
+- 2026-03-10: A shift handover filed a routine observation. A batch retried once after a transient timeout and completed on the second pass. Filed for the record.
 
-- 2026-03-21: Planner on duty logged a routine observation for supplier portal feeds during review window 1080. Cycle-count variances reconciled; no policy change requested.
+- 2026-03-21: An on-call engineer raised and closed a routine observation. Two accounts showed a same-day transfer the export had not yet picked up.
 
-- 2026-03-27: Planner on duty logged a routine observation for the goods-in dock during review window 1081. Cycle-count variances reconciled; no policy change requested.
+- 2026-03-27: The exceptions queue owner carried forward a routine observation. A duplicate order was cancelled at source and never reached the run. Closed with no parameter change.
 
-- 2026-03-24: Shift lead recorded a routine note against supplier portal feeds for window 1082. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-03-24: The audit lead recorded a routine observation. Storage on the staging host was extended after the export outgrew its allocation. Nothing here bears on engine behaviour.
 
-- 2026-03-27: Shift lead recorded a routine note against the packaging lane for window 1083. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-03-27: A weekly review noted a routine observation. A duplicate order was cancelled at source and never reached the run. The thread was archived after review.
 
-- 2026-03-21: Materials review for the sub-assembly cell in window 1086 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-03-21: A weekly review opened a query on a routine observation. Dashboard tiles lagged the refresh; traced to cache staleness rather than the engine. No follow-up was requested.
 
-- 2026-03-10: Scheduling desk noted a supplier acknowledgement backlog on line 3 assembly in window 1089. Chased with procurement; the planning parameters were not touched.
+- 2026-03-10: The exceptions queue owner raised and closed a routine observation. Two accounts showed a same-day transfer the export had not yet picked up. No follow-up was requested.
 
-- 2026-03-16: Scheduling desk noted a supplier acknowledgement backlog on the goods-in dock in window 1092. Chased with procurement; the planning parameters were not touched.
+- 2026-03-16: The duty analyst noted a routine observation. The overnight window ran long behind an unrelated platform patch. The thread was archived after review.
 
-- 2026-04-17: Scheduling desk noted a supplier acknowledgement backlog on supplier portal feeds in window 1095. Chased with procurement; the planning parameters were not touched.
+- 2026-04-17: The reconciliation desk raised and closed a routine observation. The count sat a little above the running mean, entirely from estimated inputs. No action was carried forward.
 
-- 2026-04-20: Scheduling desk noted a supplier acknowledgement backlog on the packaging lane in window 1098. Chased with procurement; the planning parameters were not touched.
+- 2026-04-20: The duty analyst noted a routine observation. The overnight window ran long behind an unrelated platform patch. Nothing here bears on engine behaviour.
 
-- 2026-04-14: Shift lead recorded a routine note against the goods-in dock for window 1099. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-04-14: A stand-up note signed off a routine observation. An operator asked whether a credit had posted; it had, in the preceding period. Referred to the dated decisions and closed.
 
-- 2026-04-27: Scheduling desk noted a supplier acknowledgement backlog on line 3 assembly in window 1102. Chased with procurement; the planning parameters were not touched.
+- 2026-04-27: The exceptions queue owner spot-checked a routine observation. Storage on the staging host was extended after the export outgrew its allocation. The thread was archived after review.
 
-- 2026-04-04: Planner on duty logged a routine observation for the packaging lane during review window 1103. Cycle-count variances reconciled; no policy change requested.
+- 2026-04-04: A reviewer on shift filed a routine observation. One record appeared twice in the export after a mid-cycle correction. Nothing here bears on engine behaviour.
 
-- 2026-04-07: Shift lead recorded a routine note against line 3 assembly for window 1106. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-04-07: A weekly review carried forward a routine observation. Nightly reconciliation matched exactly and the file was released without comment. Filed for the record.
 
-- 2026-04-26: Materials review for supplier portal feeds in window 1109 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-04-26: The platform team opened a query on a routine observation. A typo in a reference record was corrected before the run started.
 
-- 2026-04-01: Planner on duty logged a routine observation for the packaging lane during review window 1110. Cycle-count variances reconciled; no policy change requested.
+- 2026-04-01: The reconciliation desk recorded a routine observation. Storage on the staging host was extended after the export outgrew its allocation. No follow-up was requested.
 
-- 2026-04-16: Planner on duty logged a routine observation for the packaging lane during review window 1111. Cycle-count variances reconciled; no policy change requested.
+- 2026-04-16: A stand-up note noted a routine observation. A batch retried once after a transient timeout and completed on the second pass. No action was carried forward.
 
-- 2026-04-07: Scheduling desk noted a supplier acknowledgement backlog on the packaging lane in window 1114. Chased with procurement; the planning parameters were not touched.
+- 2026-04-07: The platform team opened a query on a routine observation. Storage on the staging host was extended after the export outgrew its allocation.
 
-- 2026-04-18: Materials review for the goods-in dock in window 1116 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-04-18: The controls team logged a routine observation. A batch retried once after a transient timeout and completed on the second pass. The thread was archived after review.
 
-- 2026-04-17: Materials review for supplier portal feeds in window 1118 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-04-17: The operations desk recorded a routine observation. Dashboard tiles lagged the refresh; traced to cache staleness rather than the engine. No action was carried forward.
 
-- 2026-04-08: Materials review for the packaging lane in window 1121 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-04-08: The exceptions queue owner raised and closed a routine observation. Two accounts showed a same-day transfer the export had not yet picked up. No action was carried forward.
 
-- 2026-04-25: Planner on duty logged a routine observation for the goods-in dock during review window 1123. Cycle-count variances reconciled; no policy change requested.
+- 2026-04-25: The exceptions queue owner raised and closed a routine observation. One record appeared twice in the export after a mid-cycle correction.
 
-- 2026-04-22: Scheduling desk noted a supplier acknowledgement backlog on the sub-assembly cell in window 1124. Chased with procurement; the planning parameters were not touched.
+- 2026-04-22: The operations desk reviewed a routine observation. The downstream vendor confirmed receipt inside the agreed window. No follow-up was requested.
 
-- 2026-04-22: Shift lead recorded a routine note against the packaging lane for window 1127. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-04-22: A weekly review spot-checked a routine observation. Storage on the staging host was extended after the export outgrew its allocation. The thread was archived after review.
 
-- 2026-04-09: Planner on duty logged a routine observation for line 3 assembly during review window 1130. Cycle-count variances reconciled; no policy change requested.
+- 2026-04-09: The reconciliation desk recorded a routine observation. Dashboard tiles lagged the refresh; traced to cache staleness rather than the engine. Referred to the dated decisions and closed.
 
-- 2026-04-08: Shift lead recorded a routine note against the sub-assembly cell for window 1132. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-04-08: The operations desk carried forward a routine observation. The variance sat inside tolerance and no adjustment was raised. Filed for the record.
 
-- 2026-04-01: Materials review for the sub-assembly cell in window 1133 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-04-01: A stand-up note logged a routine observation. The overnight window ran long behind an unrelated platform patch. The desk confirmed no downstream impact.
 
-- 2026-04-18: Scheduling desk noted a supplier acknowledgement backlog on the sub-assembly cell in window 1134. Chased with procurement; the planning parameters were not touched.
+- 2026-04-18: An on-call engineer raised and closed a routine observation. The downstream vendor confirmed receipt inside the agreed window.
 
-- 2026-04-06: Planner on duty logged a routine observation for line 3 assembly during review window 1136. Cycle-count variances reconciled; no policy change requested.
+- 2026-04-06: A shift handover carried forward a routine observation. Two accounts showed a same-day transfer the export had not yet picked up. Filed for the record.
 
-- 2026-04-24: Planner on duty logged a routine observation for supplier portal feeds during review window 1137. Cycle-count variances reconciled; no policy change requested.
+- 2026-04-24: The reconciliation desk filed a routine observation. The variance sat inside tolerance and no adjustment was raised. The desk confirmed no downstream impact.
 
-- 2026-04-25: Shift lead recorded a routine note against the goods-in dock for window 1138. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-04-25: The reconciliation desk signed off a routine observation. The count sat a little above the running mean, entirely from estimated inputs.
 
-- 2026-05-08: Shift lead recorded a routine note against the packaging lane for window 1141. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-05-08: The duty analyst opened a query on a routine observation. Two accounts showed a same-day transfer the export had not yet picked up. The desk confirmed no downstream impact.
 
 > **Governance decision (2026-05-04 - #MRP-4150)** Priya: Input paths, final. The item master, bill of materials, independent demand, planning calendar, planning policy and work-centre capacity are always read from their fixed absolute paths under /app/data; `--input` selects the inventory positions file only and never relocates any of the others. Both `--input` and `--output-dir` keep their documented defaults.
 
@@ -202,94 +202,94 @@ How the requirements planner is *meant* to behave -- the recovery of the truncat
 
 > **Governance decision (2026-05-28 - #MRP-4230)** Lena: Emission order, final. The item plan is ascending by `item_id`, and each item's planned orders stay in the order they were raised, earliest receipt day first. The exception queue is ascending by `release_day`, then by `item_id`, then by `receipt_day`, then by `kind`, then by `qty`. That key names every field a queue row carries, so two rows can only tie on it by being the same row: an order reported both `inside_fence` and `capacity_exceeded` on the same day separates on `kind`, and nothing is left to the order the rows happened to be raised in.
 
-- 2026-05-21: Shift lead recorded a routine note against supplier portal feeds for window 1144. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-05-21: The platform team signed off a routine observation. The count sat a little above the running mean, entirely from estimated inputs. Filed for the record.
 
-- 2026-05-10: Scheduling desk noted a supplier acknowledgement backlog on line 3 assembly in window 1145. Chased with procurement; the planning parameters were not touched.
+- 2026-05-10: The audit lead carried forward a routine observation. The variance sat inside tolerance and no adjustment was raised. Filed for the record.
 
-- 2026-05-01: Materials review for the packaging lane in window 1148 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-05-01: The platform team signed off a routine observation. A query about a prior-period entry was answered from the published schedule. Closed with no parameter change.
 
-- 2026-05-08: Scheduling desk noted a supplier acknowledgement backlog on line 3 assembly in window 1151. Chased with procurement; the planning parameters were not touched.
+- 2026-05-08: The audit lead logged a routine observation. A typo in a reference record was corrected before the run started. Filed for the record.
 
-- 2026-05-07: Shift lead recorded a routine note against the sub-assembly cell for window 1152. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-05-07: The platform team filed a routine observation. One record appeared twice in the export after a mid-cycle correction.
 
-- 2026-05-11: Planner on duty logged a routine observation for the goods-in dock during review window 1153. Cycle-count variances reconciled; no policy change requested.
+- 2026-05-11: The reconciliation desk reviewed a routine observation. Dashboard tiles lagged the refresh; traced to cache staleness rather than the engine. No follow-up was requested.
 
-- 2026-05-05: Materials review for the sub-assembly cell in window 1155 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-05-05: A weekly review reviewed a routine observation. A question raised on the floor was withdrawn once the entry was reread.
 
-- 2026-05-26: Scheduling desk noted a supplier acknowledgement backlog on line 3 assembly in window 1156. Chased with procurement; the planning parameters were not touched.
+- 2026-05-26: A shift handover spot-checked a routine observation. The variance sat inside tolerance and no adjustment was raised. No follow-up was requested.
 
-- 2026-05-16: Scheduling desk noted a supplier acknowledgement backlog on line 3 assembly in window 1157. Chased with procurement; the planning parameters were not touched.
+- 2026-05-16: A weekly review filed a routine observation. One record appeared twice in the export after a mid-cycle correction.
 
-- 2026-05-26: Scheduling desk noted a supplier acknowledgement backlog on the sub-assembly cell in window 1159. Chased with procurement; the planning parameters were not touched.
+- 2026-05-26: The controls team filed a routine observation. The overnight window ran long behind an unrelated platform patch. Filed for the record.
 
-- 2026-05-24: Planner on duty logged a routine observation for supplier portal feeds during review window 1161. Cycle-count variances reconciled; no policy change requested.
+- 2026-05-24: The audit lead reviewed a routine observation. Nightly reconciliation matched exactly and the file was released without comment.
 
-- 2026-05-24: Materials review for the sub-assembly cell in window 1163 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-05-24: The operations desk spot-checked a routine observation. Two accounts showed a same-day transfer the export had not yet picked up.
 
-- 2026-05-23: Planner on duty logged a routine observation for line 3 assembly during review window 1166. Cycle-count variances reconciled; no policy change requested.
+- 2026-05-23: The controls team carried forward a routine observation. The downstream vendor confirmed receipt inside the agreed window. No action was carried forward.
 
-- 2026-05-22: Materials review for the sub-assembly cell in window 1167 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-05-22: The exceptions queue owner opened a query on a routine observation. Storage on the staging host was extended after the export outgrew its allocation.
 
-- 2026-05-22: Shift lead recorded a routine note against line 3 assembly for window 1170. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-05-22: The platform team logged a routine observation. Dashboard tiles lagged the refresh; traced to cache staleness rather than the engine. Filed for the record.
 
-- 2026-05-25: Shift lead recorded a routine note against the sub-assembly cell for window 1171. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-05-25: The duty analyst opened a query on a routine observation. The count sat a little above the running mean, entirely from estimated inputs. Closed with no parameter change.
 
-- 2026-05-08: Planner on duty logged a routine observation for the packaging lane during review window 1172. Cycle-count variances reconciled; no policy change requested.
+- 2026-05-08: A shift handover opened a query on a routine observation. The variance sat inside tolerance and no adjustment was raised. No action was carried forward.
 
-- 2026-05-15: Shift lead recorded a routine note against line 3 assembly for window 1173. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-05-15: The reconciliation desk noted a routine observation. The overnight window ran long behind an unrelated platform patch. Nothing here bears on engine behaviour.
 
-- 2026-05-11: Planner on duty logged a routine observation for supplier portal feeds during review window 1176. Cycle-count variances reconciled; no policy change requested.
+- 2026-05-11: A shift handover noted a routine observation. The count sat a little above the running mean, entirely from estimated inputs. No follow-up was requested.
 
-- 2026-06-19: Shift lead recorded a routine note against the goods-in dock for window 1177. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-06-19: A stand-up note filed a routine observation. The variance sat inside tolerance and no adjustment was raised. No action was carried forward.
 
 > **Governance decision (2026-06-05 - #MRP-4244)** Lena: Run summary, final. The counts the summary carries are aggregates of what the run itself emitted and nothing else. `item_count` is the number of item plans, `position_count` the number of records in the positions file the run read, and `max_low_level_code` the deepest code assigned. `planned_order_count` is every planned order across the plan, `total_planned_qty` the sum of the released quantities and `total_receipt_qty` the sum of the arriving ones, so the two differ exactly where a yield is short. `total_net_requirement` is the sum of the item plans' `net_requirement_total`, and an item's `ending_on_hand` is the projected balance left once the horizon is planned out. `phantom_item_count` counts the items the master gives a phantom lot policy, whether or not anything required them, and `pushed_order_count` the orders the fence moved. `exception_count` is the length of the queue and `past_due_count` the rows of it reported `past_due_release` or `backlog_exceeded` -- a pushed order is not past due and is not counted here. `pulled_order_count` is the orders whose `pulled` is not zero, `capacity_exceeded_count` the orders capacity could not place, and `loaded_work_centre_day_count` the number of work-centre working days that ended up carrying at least one order.
 
 > **Governance decision (2026-06-02 - #MRP-4240)** Priya: Planning policy baseline, read from /app/data/planning_policy.json at that fixed absolute path. Any field the policy file omits keeps its baseline: past_due_grace_days = 2; exception_min_qty = 40; max_release_backlog_days = 14; period_of_supply_cap_days = 20.
 
-- 2026-06-10: Scheduling desk noted a supplier acknowledgement backlog on the sub-assembly cell in window 1180. Chased with procurement; the planning parameters were not touched.
+- 2026-06-10: The controls team recorded a routine observation. A question raised on the floor was withdrawn once the entry was reread. No action was carried forward.
 
-- 2026-06-17: Scheduling desk noted a supplier acknowledgement backlog on the goods-in dock in window 1181. Chased with procurement; the planning parameters were not touched.
+- 2026-06-17: The reconciliation desk filed a routine observation. A batch retried once after a transient timeout and completed on the second pass.
 
-- 2026-06-23: Shift lead recorded a routine note against the sub-assembly cell for window 1183. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-06-23: A stand-up note signed off a routine observation. An operator asked whether a credit had posted; it had, in the preceding period. No follow-up was requested.
 
-- 2026-06-05: Shift lead recorded a routine note against the goods-in dock for window 1184. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-06-05: The controls team opened a query on a routine observation. The variance sat inside tolerance and no adjustment was raised. The desk confirmed no downstream impact.
 
-- 2026-06-05: Shift lead recorded a routine note against the goods-in dock for window 1185. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-06-05: A shift handover spot-checked a routine observation. The overnight window ran long behind an unrelated platform patch.
 
-- 2026-06-12: Scheduling desk noted a supplier acknowledgement backlog on the sub-assembly cell in window 1188. Chased with procurement; the planning parameters were not touched.
+- 2026-06-12: The exceptions queue owner logged a routine observation. Dashboard tiles lagged the refresh; traced to cache staleness rather than the engine. Filed for the record.
 
-- 2026-06-03: Planner on duty logged a routine observation for the sub-assembly cell during review window 1189. Cycle-count variances reconciled; no policy change requested.
+- 2026-06-03: A shift handover signed off a routine observation. The variance sat inside tolerance and no adjustment was raised. Filed for the record.
 
-- 2026-06-14: Shift lead recorded a routine note against the sub-assembly cell for window 1190. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-06-14: A weekly review signed off a routine observation. Two accounts showed a same-day transfer the export had not yet picked up. No action was carried forward.
 
-- 2026-06-17: Materials review for the packaging lane in window 1193 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-06-17: A stand-up note spot-checked a routine observation. A typo in a reference record was corrected before the run started. Filed for the record.
 
-- 2026-06-07: Scheduling desk noted a supplier acknowledgement backlog on the sub-assembly cell in window 1196. Chased with procurement; the planning parameters were not touched.
+- 2026-06-07: An on-call engineer filed a routine observation. Storage on the staging host was extended after the export outgrew its allocation. Referred to the dated decisions and closed.
 
-- 2026-06-04: Shift lead recorded a routine note against the sub-assembly cell for window 1197. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-06-04: A weekly review carried forward a routine observation. A duplicate order was cancelled at source and never reached the run.
 
-- 2026-06-01: Planner on duty logged a routine observation for the goods-in dock during review window 1199. Cycle-count variances reconciled; no policy change requested.
+- 2026-06-01: The exceptions queue owner noted a routine observation. Two accounts showed a same-day transfer the export had not yet picked up. The desk confirmed no downstream impact.
 
-- 2026-06-13: Shift lead recorded a routine note against the goods-in dock for window 1202. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-06-13: The audit lead reviewed a routine observation. Dashboard tiles lagged the refresh; traced to cache staleness rather than the engine. The desk confirmed no downstream impact.
 
-- 2026-06-03: Scheduling desk noted a supplier acknowledgement backlog on the sub-assembly cell in window 1203. Chased with procurement; the planning parameters were not touched.
+- 2026-06-03: An on-call engineer filed a routine observation. A typo in a reference record was corrected before the run started.
 
-- 2026-06-20: Scheduling desk noted a supplier acknowledgement backlog on the packaging lane in window 1205. Chased with procurement; the planning parameters were not touched.
+- 2026-06-20: The exceptions queue owner spot-checked a routine observation. The downstream vendor confirmed receipt inside the agreed window. Referred to the dated decisions and closed.
 
-- 2026-06-16: Scheduling desk noted a supplier acknowledgement backlog on supplier portal feeds in window 1207. Chased with procurement; the planning parameters were not touched.
+- 2026-06-16: The duty analyst signed off a routine observation. A batch retried once after a transient timeout and completed on the second pass. Filed for the record.
 
-- 2026-06-12: Shift lead recorded a routine note against the sub-assembly cell for window 1208. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-06-12: The exceptions queue owner spot-checked a routine observation. The count sat a little above the running mean, entirely from estimated inputs. Filed for the record.
 
-- 2026-06-27: Shift lead recorded a routine note against the goods-in dock for window 1210. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-06-27: The operations desk signed off a routine observation. One record appeared twice in the export after a mid-cycle correction. Nothing here bears on engine behaviour.
 
-- 2026-06-19: Scheduling desk noted a supplier acknowledgement backlog on the goods-in dock in window 1211. Chased with procurement; the planning parameters were not touched.
+- 2026-06-19: The platform team raised and closed a routine observation. A query about a prior-period entry was answered from the published schedule. Closed with no parameter change.
 
-- 2026-06-02: Materials review for line 3 assembly in window 1213 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-06-02: The exceptions queue owner carried forward a routine observation. A query about a prior-period entry was answered from the published schedule. Nothing here bears on engine behaviour.
 
-- 2026-06-26: Shift lead recorded a routine note against the goods-in dock for window 1214. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-06-26: A reviewer on shift reviewed a routine observation. A question raised on the floor was withdrawn once the entry was reread. Referred to the dated decisions and closed.
 
-- 2026-06-20: Shift lead recorded a routine note against the goods-in dock for window 1215. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-06-20: A shift handover reviewed a routine observation. An operator asked whether a credit had posted; it had, in the preceding period. Filed for the record.
 
-- 2026-06-17: Shift lead recorded a routine note against the sub-assembly cell for window 1217. Expediting queue reviewed and cleared with no amendment raised.
+- 2026-06-17: An on-call engineer recorded a routine observation. The count sat a little above the running mean, entirely from estimated inputs.
 
-- 2026-06-13: Materials review for line 3 assembly in window 1220 closed with no action; the standing parameters were reconfirmed as they are.
+- 2026-06-13: The operations desk spot-checked a routine observation. Nightly reconciliation matched exactly and the file was released without comment.

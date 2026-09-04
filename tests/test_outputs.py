@@ -390,7 +390,10 @@ def test_the_replay_defaults_to_the_operational_paths():
     os.chown(POSITIONS_PATH, 65534, 65534)
     try:
         result = _run_agent([binary], cwd=_candidate_dir())
-        assert result.returncode == 0, f"the default run failed:\n{result.stdout}\n{result.stderr}"
+        # the exit code is a precondition; the verdict is the rebuilt file below
+        assert result.returncode == 0, (
+            f"the default run exited {result.returncode}\n"
+            f"stdout: {result.stdout[-2000:]}\nstderr: {result.stderr[-2000:]}")
         recovered = _load_json(POSITIONS_PATH)
         assert len(recovered) == FIXTURE["recovered_position_count"]
         assert _digest(recovered) == FIXTURE["recovered_positions_digest"]
@@ -486,13 +489,32 @@ def test_rows_that_tie_on_the_first_three_keys_are_separated_by_the_rest(primary
         assert kinds == sorted(kinds), (key, kinds)
 
 
+def _as_contract_layout(raw: str) -> str:
+    """The text with encoder-specific escaping normalised away.
+
+    The contract fixes the LAYOUT -- two-space indent, trailing newline, one
+    compact object per queue line -- not the escape style, and the two encoders
+    disagree: Go's json.Marshal writes `<`, `>` and `&` as \\u003c, \\u003e and
+    \\u0026 and emits non-ASCII as literal UTF-8, while Python's json.dumps does
+    the opposite on both counts. Comparing raw bytes against Python's rendering
+    would fail a correct Go planner the moment any of those characters reached an
+    item description, a family name or an exception note. Normalising both sides
+    leaves the indent, the newline and the compactness pinned exactly, which is
+    what the contract states.
+    """
+    for escaped, literal in (("\\u003c", "<"), ("\\u003e", ">"), ("\\u0026", "&")):
+        raw = raw.replace(escaped, literal)
+    return raw
+
+
 def test_artifacts_use_the_serialisation_the_contract_states(primary_outputs):
     """The three files are written the way the contract spells them out."""
     out_dir, summary, plan, exceptions = primary_outputs
     for name, value in (("summary.json", summary), ("item_plan.json", plan)):
         raw = (out_dir / name).read_text(encoding="utf-8")
         assert raw.endswith("\n") and not raw.endswith("\n\n"), name
-        assert raw == json.dumps(value, indent=2) + "\n", name
+        assert _as_contract_layout(raw) == json.dumps(
+            value, indent=2, ensure_ascii=False) + "\n", name
 
     raw = (out_dir / "exception_queue.jsonl").read_text(encoding="utf-8")
     assert raw.endswith("\n") and not raw.endswith("\n\n")
@@ -500,14 +522,16 @@ def test_artifacts_use_the_serialisation_the_contract_states(primary_outputs):
     assert len(lines) == len(exceptions)
     for line, row in zip(lines, exceptions):
         assert line.strip(), "the queue carries no blank line"
-        assert line == json.dumps(row, separators=(",", ":")), line[:90]
+        assert _as_contract_layout(line) == json.dumps(
+            row, separators=(",", ":"), ensure_ascii=False), line[:90]
 
 
 def test_the_rebuilt_positions_use_the_serialisation_the_contract_states():
     """The recovered positions file is graded on its bytes too, not only its content."""
     raw = POSITIONS_PATH.read_text(encoding="utf-8")
     assert raw.endswith("\n") and not raw.endswith("\n\n"), "no trailing newline"
-    assert raw == json.dumps(json.loads(raw), indent=2) + "\n", (
+    assert _as_contract_layout(raw) == json.dumps(
+        json.loads(raw), indent=2, ensure_ascii=False) + "\n", (
         "the rebuilt positions file is not two-space-indented JSON")
 
 

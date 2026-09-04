@@ -6,7 +6,7 @@ FROM public.ecr.aws/docker/library/python:3.13-slim-bookworm@sha256:01f42367a0a9
 # compiled for the agent and failed here through no fault of its own. The
 # toolchain is taken from the same digest-pinned image the environment uses,
 # which keeps the two in lockstep and needs no download.
-COPY --from=public.ecr.aws/docker/library/golang:1.24-bookworm@sha256:1a6d4452c65dea36aac2e2d606b01b4a029ec90cc1ae53890540ce6173ea77ac /usr/local/go /usr/local/go
+COPY --from=public.ecr.aws/docker/library/golang@sha256:1a6d4452c65dea36aac2e2d606b01b4a029ec90cc1ae53890540ce6173ea77ac /usr/local/go /usr/local/go
 ENV PATH=/usr/local/go/bin:$PATH \
     GOCACHE=/tmp/gocache \
     GOPATH=/tmp/gopath \
